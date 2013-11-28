@@ -1,0 +1,283 @@
+/* navigation.less */
+// Tool bar
+@has-tools-nav: enabled; //disabled, enabled
+	@tools-nav-position: both; // both, centre, left, right, justify
+	@tools-nav-style: dividers; // blocks, dividers
+	@tools-nav-padding: @padding (@padding + 2);
+	@tools-nav-fg: #fff;
+	@tools-nav-hover-fg: #fc0;
+		// if blocks
+		@tools-nav-bg: #222;
+		@tools-nav-hover-bg: #000;
+		@tools-nav-border: 1px solid #ccc;
+		// if pipes
+		@vertical-divider: \0020 |; // can be anything for example |, \, >, :, ][
+		// You can use utf8 hexc odes like the following 
+		// \b7 = minddot, 
+		// \0020 \BB = double right angle quote
+		// \0020 \2023 = right triangle
+		// \0020 \009B Right single angle quote
+
+// header navigation
+@has-header-nav: enabled; //disabled, enabled
+	@header-nav-position: full-fluid; // full-fluid, full-equal, centre, left, right
+	@header-nav-style: blocks; // blocks, dividers, tabs
+	@header-nav-padding: (@padding + 2) (@padding + 4);
+	@header-nav-fg: #fff;
+	@header-nav-hover-fg: #cf0;
+		// if blocks
+		@header-nav-bg: #222;
+		@header-nav-hover-bg: #000;
+		@header-nav-border: 1px solid #ccc;
+
+// breadcrumbs
+@has-breadcrumbs-nav: enabled; //disabled, enabled
+	@breadcrumbs-style: bullets; // disabled, blocks, bullets, checvrons
+	@breadcrumbs-padding: 1em;
+	@breadcrumbs-space: 1;
+	@breadcrumbs-bullet: >;
+	@breadcrumbs-bg: #ccc;
+	@breadcrumbs-fg: #000;
+
+// side navigation (in main container)
+@has-side-nav: enabled; //disabled, enabled
+	@side-nav-style: disabled; // disabled, simple, blocks, lines
+	@side-nav-padding: @padding (@padding + 2);
+	@side-nav-fg: #fff;
+	@side-nav-hover-fg: #0cf;
+	@side-nav-bg: #222;
+	@side-nav-hover-bg: #000;
+	@side-nav-border: 1px solid #ccc;
+
+// flyouts
+@flyouts-width: disabled; // disabled, single, multi, full
+
+
+
+// ###############################
+// Shared nav styles
+// ###############################
+nav {
+	ul {margin: 0;}
+}
+.nav-dividers(){
+	& nav {display: inline-block;}
+	& li {
+		&:after{content:"@{vertical-divider}"; margin: 0.5em;}
+		&:last-child:after{content:""; margin: 0;}
+	}
+	& a {display: inline-block;}
+}
+.nav-dividers() when not (@tools-nav-position = both) {
+	& nav ~ nav {
+		& li:first-child:before{content:"@{vertical-divider}"; margin: 0.5em;}
+	}
+}
+.nav-blocks(){
+	& ul {.fs-zero;}
+	& a {border-right: 0; text-decoration: none; display: block;}
+}
+
+
+// ###############################
+// tools
+// ###############################
+
+.tools when (@has-tools-nav = enabled) {.tools-nav-position; .tools-nav-style;
+	& nav {font-size: @tools-nav-font-size;
+		& a {padding: @tools-nav-padding;
+			&:link,
+			&:visited{color: @tools-nav-fg;}
+			&:hover,
+			&:active,
+			&:focus{color: @tools-nav-hover-fg;}
+		}
+		& li:first-child a {padding-left: 0;}
+		& li:last-child a {padding-right: 0;}
+	}
+}
+.tools-nav-position() when not (@tools-nav-position = disabled){
+	& nav{
+		& li {display: inline-block;}
+	}
+}
+.tools-nav-position() when (@tools-nav-position = centre){text-align: center;}
+.tools-nav-position() when (@tools-nav-position = left){text-align: left;}
+.tools-nav-position() when (@tools-nav-position = right){text-align: right;}
+.tools-nav-position() when (@tools-nav-position = justify){
+	& nav{
+		& ul {display: table;}
+		& li {display: table-cell;}
+	}
+}
+.tools-nav-position() when (@tools-nav-position = both){text-align: left;
+	& nav{float: left;
+		& + nav{float: right;}
+	}
+}
+
+.tools-nav-style() when (@tools-nav-style = dividers){
+	.nav-dividers;
+}
+.tools-nav-style() when (@tools-nav-style = blocks){
+	.nav-blocks; .tools-nav-blocks;
+}
+.tools-nav-blocks(){
+	& a {font-size: @nav-font-size; border: @tools-nav-border; background-color: @tools-nav-bg;
+		&:link,
+		&:visited{color: @colour-tools-fg;}
+		&:hover,
+		&:active,
+		&:focus {background-color: @tools-nav-hover-bg;}
+	}
+	& li:last-child a{border-right: 1px solid @tools-nav-border;}
+}
+
+
+// ###############################
+// header
+// ###############################
+header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-style;
+	& nav {font-size: @header-nav-font-size;
+		& a {padding: @header-nav-padding;
+			&:link,
+			&:visited{color: @header-nav-fg;}
+			&:hover,
+			&:active,
+			&:focus{color: @header-nav-hover-fg;}
+		}
+	}
+}
+// ###############################
+	.header-nav-position() when not (@header-nav-position = disabled){
+		& nav{display: block;
+			& li {display: inline-block;}
+		}
+	}
+	.header-nav-position() when (@header-nav-position = full-fluid){
+		& nav{width: 100%; 
+			& ul {display: table; width: 100%;}
+			& li {display: table-cell;}
+		}
+	}
+	.header-nav-position() when (@header-nav-position = full-equal){
+		& nav{width: 100%; 
+			& ul {width: 100%; .fs-zero; .classless-grid;}
+			& a {font-size: @header-nav-font-size;}
+		}
+	}
+	.header-nav-position() when (@header-nav-position = centre){
+		& nav,
+		& ul {float: right; position: relative;}
+		& nav {right: 50%;}
+		& ul {right: -50%;}
+	}
+	.header-nav-position() when (@header-nav-position = left){
+		& nav {float: left; width: auto;}
+	}
+	.header-nav-position() when (@header-nav-position = right){
+		& nav {float: right; width: auto;}
+	}
+
+	.header-nav-position() when(@header-nav-style = dividers) and (@header-nav-position = left){
+		& nav {float: left;
+			& ~ nav {
+				& li:first-child:before{content:"@{vertical-divider}"; margin: 0.5em;}
+			}
+		}
+	}
+	.header-nav-position() when (@header-nav-style = dividers) and (@header-nav-position = right){	
+		& nav {float: right;
+			& ~ nav {
+				& li:last-child:after{content:"@{vertical-divider}"; margin: 0.5em;}
+			}
+		}
+	}
+	.header-nav-style() when (@header-nav-style = dividers){
+		.nav-dividers;
+	}
+	.header-nav-style() when (@header-nav-style = blocks){
+		.nav-blocks; .header-nav-blocks;
+	}
+	.header-nav-blocks(){
+		& nav {
+			& li {background-color: @header-nav-bg;  border: @header-nav-border; vertical-align: middle; 
+				&:hover{background-color: @header-nav-hover-bg;}
+			}
+			& a {font-size: @header-nav-font-size; color: @header-nav-fg; padding: @header-nav-padding;}
+			& li:last-child a{border-right: @header-nav-border;}
+		}
+	}
+
+// ###############################
+// breadcrumbs
+// ###############################
+
+.breadcrumbs when (@has-breadcrumbs-nav = enabled) {.fs-zero;
+	li {display: inline-block; .fs-base;}
+	a,
+	& span {display: block;}
+	.breadcrumbs-style;
+}
+// ###############################
+	.breadcrumbs-style() when (@breadcrumbs-style = arrows){
+		& li {vertical-align: middle; margin-left: (-1em + @breadcrumbs-space);
+			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @breadcrumbs-bg; border-right-width: 0;vertical-align: middle;}
+			&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @breadcrumbs-bg; border-left: @breadcrumbs-padding solid transparent; border-right-width: 0; vertical-align: middle;}
+		}
+		& a,
+		& span {display: inline-block; background-color: @breadcrumbs-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
+		& li:first-child {margin-left: 0;
+			&:before {content: ""; border: 0;}
+			& a{padding-left: @breadcrumbs-padding;}
+		}
+	}
+	.breadcrumbs-style() when (@breadcrumbs-style = blocks){
+		& li {vertical-align: middle; margin-left: @breadcrumbs-space;}
+		& a,
+		& span {background-color: @breadcrumbs-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
+	}
+	.breadcrumbs-style() when (@breadcrumbs-style = bullets){
+		& li {vertical-align: middle;
+			&:before{content: "@{breadcrumbs-bullet}";}
+			& a,
+			& span {height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; display: inline-block; padding: 0 @breadcrumbs-padding 0 @breadcrumbs-padding;}
+			&:first-child {
+				&:before{.pseudo;}
+			}
+		}
+	}
+	.breadcrumbs-style() when (@breadcrumbs-style = chevrons){
+		& li {vertical-align: middle; margin-left: (-1.8em + @breadcrumbs-space);
+			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @breadcrumbs-bg; border-bottom: @breadcrumbs-padding solid @breadcrumbs-bg; vertical-align: middle;}
+			&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @breadcrumbs-bg; border-left: @breadcrumbs-padding solid transparent; border-bottom: @breadcrumbs-padding solid transparent; vertical-align: middle;}
+		}
+		& a,
+		& span {display: inline-block; background-color: @breadcrumbs-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
+		& li:first-child {margin-left: 0;
+			&:before {content: ""; border: 0;}
+			& a{padding-left: @breadcrumbs-padding;}
+		}
+	}
+
+// ###############################
+// side
+// ###############################
+nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
+	& li {display: block;}
+	& a {padding: @side-nav-padding; display: block; background-color: @side-nav-bg; border-bottom: @side-nav-border;
+		&:link,
+		&:visited {color: @side-nav-fg;}
+		&:hover,
+		&:active,
+		&:focus{color: @side-nav-hover-fg; background-color: @side-nav-hover-bg;}
+	}
+}
+// ###############################
+	.side-nav-style() when (@side-nav-style = blocks){
+		& li {display: block;}
+		& a {text-decoration: none;}
+	}
+	.side-nav-style() when (@side-nav-style = lines){
+		& li {border-bottom: @side-nav-border;}
+	}

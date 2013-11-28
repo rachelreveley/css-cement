@@ -1,0 +1,96 @@
+/* mixins.less */
+	.respond{max-width:100%;height:auto;}
+	.hide-text{text-indent:100%; white-space:nowrap; overflow:hidden; display:block; font-size:0;}
+	.unhide-text{text-indent:0; white-space:normal; overflow:visible; display:block; font-size:100%}
+	.pseudo{content:"."; .hide-text;}
+	.clearfix{display:block;
+			&:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+			}
+	.clear{clear:both;}
+	.left{float:left!important;margin-right:@framework-h-gutter!important;margin-bottom:@framework-v-gutter;}
+	.right{float:right!important;margin-left:@framework-h-gutter!important;margin-bottom:@framework-v-gutter;}
+	.center{float:none!important;display:block!important;margin:20px auto!important;}
+
+	.br(){content:"\a"; white-space: pre;}
+// save effort with vendor prefixing
+	.border-radius (@radius: 3px){border-radius: @radius;}
+	// example #someDiv{.border-radius(20px);}
+	.box-shadow(@arguments){box-shadow: @arguments}
+
+	.box-sizing(@box){
+-webkit-box-sizing: (@box);
+   -moz-box-sizing: (@box);
+	-ms-box-sizing: (@box);
+		box-sizing: (@box);
+	}
+
+// example #someDiv{.box-shadow(3px 3px 3px #000);}
+	.gradient (@origin: left, @step-1: @white, @step-2: @black, @fallback: @bg){
+		background: -webkit-linear-gradient(@origin, @step-1, @step-2) @fallback;
+		background:    -moz-linear-gradient(@origin, @step-1, @step-2) @fallback;
+		background:     -ms-linear-gradient(@origin, @step-1, @step-2) @fallback;
+		background:      -o-linear-gradient(@origin, @step-1, @step-2) @fallback;
+		background:         linear-gradient(@origin, @step-1, @step-2) @fallback;
+	}
+
+// example #someDiv{.gradient(left, #663333, #333333);}
+	.gradient-3-way (@origin: left, @step-1: @white, @step-2: @black, @step-3: @white){
+		background: -webkit-linear-gradient(@origin, @step-1, @step-2, @step-3);
+		background:    -moz-linear-gradient(@origin, @step-1, @step-2, @step-3);
+		background:     -ms-linear-gradient(@origin, @step-1, @step-2, @step-3);
+		background:      -o-linear-gradient(@origin, @step-1, @step-2, @step-3);
+		background:         linear-gradient(@origin, @step-1, @step-2, @step-3);
+	}
+	.gradient-4-way (@origin: left, @step-1: @white, @step-2: @black, @step-3: @white, @step-4: @black){
+		background: -webkit-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4);
+		background:    -moz-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4);
+		background:     -ms-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4);
+		background:      -o-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4);
+		background:         linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4);
+	}
+
+// This gives elements a width of 100% minus the 20px margin required by the grid system. The fallback size is for older browser who sdon't suuport calc and should be set as close to correct alignment as possible.
+	.calc(@width: ~"100% - 20px", @fallback: 96.7%){
+		width: @fallback;
+		width:         calc(@width);
+		width:    -moz-calc(@width);
+		width: -webkit-calc(@width);
+	}
+
+	.rotate(@angle){
+-webkit-transform: rotate(@angle); /* Chrome, Safari 3.1+ */
+   -moz-transform: rotate(@angle); /* Firefox 3.5-15 */
+    -ms-transform: rotate(@angle); /* IE 9 */
+     -o-transform: rotate(@angle); /* Opera 10.50-12.00 */
+	    transform: rotate(@angle); /* Firefox 16+, IE 10+, Opera 12.10+ */
+	}
+
+	.transition(@transition){
+    -webkit-transition: (@transition);
+       -moz-transition: (@transition);
+         -o-transition: (@transition);
+    	    transition: (@transition);
+	}
+
+	.classless-grid(){
+		& > :first-child:nth-last-child(1),
+		& > :first-child:nth-last-child(1) ~ * {width: round((100% / 1), 2);}
+		& > :first-child:nth-last-child(2),
+		& > :first-child:nth-last-child(2) ~ * {width: round((100% / 2), 2);}
+		& > :first-child:nth-last-child(3),
+		& > :first-child:nth-last-child(3) ~ * {width: round((100% / 3), 2);}
+		& > :first-child:nth-last-child(4),
+		& > :first-child:nth-last-child(4) ~ * {width: round((100% / 4), 2);}
+		& > :first-child:nth-last-child(5),
+		& > :first-child:nth-last-child(5) ~ * {width: round((100% / 5), 2);}
+		& > :first-child:nth-last-child(6),
+		& > :first-child:nth-last-child(6) ~ * {width: round((100% / 6), 2);}
+		& > :first-child:nth-last-child(7),
+		& > :first-child:nth-last-child(7) ~ * {width: round((100% / 7), 2);}
+		& > :first-child:nth-last-child(8),
+		& > :first-child:nth-last-child(8) ~ * {width: round((100% / 8), 2);}
+		& > :first-child:nth-last-child(9),
+		& > :first-child:nth-last-child(9) ~ * {width: round((100% / 9), 2);}
+		& > :first-child:nth-last-child(10),
+		& > :first-child:nth-last-child(10) ~ * {width: round((100% / 10), 2);}
+	}

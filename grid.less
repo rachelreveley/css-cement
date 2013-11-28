@@ -1,0 +1,210 @@
+// 
+@side-gutters: true;
+@padded-grid: true;
+// set Breakpoints
+@dt: 960px;
+@tb: 600px;
+@mb: 320px;
+
+// End config
+
+// default grid margin, padding & borders
+@margin-dt: percentage(1/48);
+@margin-tb: percentage(1/48);
+@margin-mb: percentage(1/32);
+
+@col-16: percentage(1/16);
+@col-15: percentage(1/15);
+@col-14: percentage(1/14);
+@col-13: percentage(1/13);
+@col-12: percentage(1/12);
+@col-11: percentage(1/11);
+@col-10: percentage(1/10);
+@col-9: percentage(1/9);
+@col-8: percentage(1/8);
+@col-7: percentage(1/7);
+@col-6: percentage(1/6);
+@col-5: percentage(1/5);
+@col-4: percentage(1/4);
+@col-3: percentage(1/3);
+@col-2: percentage(1/2);
+@col-1: percentage(1/1);
+
+	.side-gutters() when (@side-gutters = false){
+@media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
+			.side ~ .content & {padding-left: @margin-dt;}
+}
+@media screen and (min-width: @tb) and (max-width: @dt) {padding-left: 0; margin-right: -@margin-tb;
+			.side ~ .content & {padding-left: @margin-tb;}
+}
+@media screen and (min-width: @mb) and (max-width: @tb) {padding-left: 0; margin-right: -@margin-mb;
+			.side ~ .content & {padding-left: @margin-mb;}
+}
+	}
+
+	.side-gutters() when (@side-gutters = true){padding-left: @margin-dt;}
+
+	.header-nav-position() when (@side-gutters = false){
+@media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
+			.side ~ .content & {padding-left: @margin-dt;}
+}
+@media screen and (min-width: @tb) and (max-width: @dt) {padding-left: 0; margin-right: --@margin-tb;
+			.side ~ .content & {padding-left: @margin-tb;}
+}
+@media screen and (min-width: @mb) and (max-width: @tb) {padding-left: 0; margin-right: --@margin-mb;
+			.side ~ .content & {padding-left: @margin-mb;}
+}
+	}
+	.padded-grid() when not (@padded-grid = false){
+@media screen and (min-width: @dt) {padding: @margin-dt;}
+@media screen and (min-width: @tb) and (max-width: @dt) {padding: @margin-tb;}
+@media screen and (min-width: @mb) and (max-width: @tb) {padding: @margin-mb;}
+	}
+
+
+.parent {.side-gutters;
+	& > div{.padded-grid;}
+}
+@media screen and (min-width: @dt) {
+	.parent {
+//		&:first-child{padding-top: @margin-dt;}
+		& > div{margin-right: @margin-dt; margin-bottom: @margin-dt;}
+		&.dt-{
+			&16 > div {width: @col-16 - @margin-dt;}
+			&15 > div {width: @col-15 - @margin-dt;}
+			&14 > div {width: @col-14 - @margin-dt;}
+			&13 > div {width: @col-13 - @margin-dt;}
+			&12 > div {width: @col-12 - @margin-dt;}
+			&11 > div {width: @col-11 - @margin-dt;}
+			&10 > div {width: @col-10 - @margin-dt;}
+			&9 > div {width: @col-9 - @margin-dt;}
+			&8 > div {width: @col-8 - @margin-dt;}
+			&7 > div {width: @col-7 - @margin-dt;}
+			&6 > div {width: @col-6 - @margin-dt;}
+			&5 > div {width: @col-5 - @margin-dt;}
+			&4 > div {width: @col-4 - @margin-dt;}
+			&3 > div {width: @col-3 - @margin-dt;}
+			&2 > div {width: @col-2 - @margin-dt;}
+			&1 > div {width: @col-1 - @margin-dt;}
+		}
+		& .dt-{
+			&16 {width: @col-16 - @margin-dt;}
+			&15 {width: @col-15 - @margin-dt;}
+			&14 {width: @col-14 - @margin-dt;}
+			&13 {width: @col-13 - @margin-dt;}
+			&12 {width: @col-12 - @margin-dt;}
+			&11 {width: @col-11 - @margin-dt;}
+			&10 {width: @col-10 - @margin-dt;}
+			&9 {width: @col-9 - @margin-dt;}
+			&8 {width: @col-8 - @margin-dt;}
+			&7 {width: @col-7 - @margin-dt;}
+			&6 {width: @col-6 - @margin-dt;}
+			&5 {width: @col-5 - @margin-dt;}
+			&4 {width: @col-4 - @margin-dt;}
+			&3 {width: @col-3 - @margin-dt;}
+			&2 {width: @col-2 - @margin-dt;}
+			&1 {width: @col-1 - @margin-dt;}
+		}
+	}
+}
+@media screen and (min-width: @tb) and (max-width: @dt) {
+	.container{}
+	.parent {padding-left: @margin-tb;
+		& > div{margin-right: @margin-tb; margin-bottom: @margin-tb;}
+		&.tb-{
+			&16 > div {width: @col-16 - @margin-tb;}
+			&15 > div {width: @col-15 - @margin-tb;}
+			&14 > div {width: @col-14 - @margin-tb;}
+			&13 > div {width: @col-13 - @margin-tb;}
+			&12 > div {width: @col-12 - @margin-tb;}
+			&11 > div {width: @col-11 - @margin-tb;}
+			&10 > div {width: @col-10 - @margin-tb;}
+			&9 > div {width: @col-9 - @margin-tb;}
+			&8 > div {width: @col-8 - @margin-tb;}
+			&7 > div {width: @col-7 - @margin-tb;}
+			&6 > div {width: @col-6 - @margin-tb;}
+			&5 > div {width: @col-5 - @margin-tb;}
+			&4 > div {width: @col-4 - @margin-tb;}
+			&3 > div {width: @col-3 - @margin-tb;}
+			&2 > div {width: @col-2 - @margin-tb;}
+			&1 > div {width: @col-1 - @margin-tb;}
+		}
+		& .tb-{
+			&16 {width: @col-16 - @margin-tb;}
+			&15 {width: @col-15 - @margin-tb;}
+			&14 {width: @col-14 - @margin-tb;}
+			&13 {width: @col-13 - @margin-tb;}
+			&12 {width: @col-12 - @margin-tb;}
+			&11 {width: @col-11 - @margin-tb;}
+			&10 {width: @col-10 - @margin-tb;}
+			&9 {width: @col-9 - @margin-tb;}
+			&8 {width: @col-8 - @margin-tb;}
+			&7 {width: @col-7 - @margin-tb;}
+			&6 {width: @col-6 - @margin-tb;}
+			&5 {width: @col-5 - @margin-tb;}
+			&4 {width: @col-4 - @margin-tb;}
+			&3 {width: @col-3 - @margin-tb;}
+			&2 {width: @col-2 - @margin-tb;}
+			&1 {width: @col-1 - @margin-tb;}
+		}
+	}
+}
+@media screen and (min-width: @mb) and (max-width: @tb) {
+	.container{}
+	.parent {padding-left: @margin-mb;
+		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
+		&.mb-{
+			&16 > div {width: @col-16 - @margin-mb;}
+			&15 > div {width: @col-15 - @margin-mb;}
+			&14 > div {width: @col-14 - @margin-mb;}
+			&13 > div {width: @col-13 - @margin-mb;}
+			&12 > div {width: @col-12 - @margin-mb;}
+			&11 > div {width: @col-11 - @margin-mb;}
+			&10 > div {width: @col-10 - @margin-mb;}
+			&9 > div {width: @col-9 - @margin-mb;}
+			&8 > div {width: @col-8 - @margin-mb;}
+			&7 > div {width: @col-7 - @margin-mb;}
+			&6 > div {width: @col-6 - @margin-mb;}
+			&5 > div {width: @col-5 - @margin-mb;}
+			&4 > div {width: @col-4 - @margin-mb;}
+			&3 > div {width: @col-3 - @margin-mb;}
+			&2 > div {width: @col-2 - @margin-mb;}
+			&1 > div {width: @col-1 - @margin-mb;}
+		}
+		& .mb-{
+			&16 {width: @col-16 - @margin-mb;}
+			&15 {width: @col-15 - @margin-mb;}
+			&14 {width: @col-14 - @margin-mb;}
+			&13 {width: @col-13 - @margin-mb;}
+			&12 {width: @col-12 - @margin-mb;}
+			&11 {width: @col-11 - @margin-mb;}
+			&10 {width: @col-10 - @margin-mb;}
+			&9 {width: @col-9 - @margin-mb;}
+			&8 {width: @col-8 - @margin-mb;}
+			&7 {width: @col-7 - @margin-mb;}
+			&6 {width: @col-6 - @margin-mb;}
+			&5 {width: @col-5 - @margin-mb;}
+			&4 {width: @col-4 - @margin-mb;}
+			&3 {width: @col-3 - @margin-mb;}
+			&2 {width: @col-2 - @margin-mb;}
+			&1 {width: @col-1 - @margin-mb;}
+		}
+	}
+}
+@media screen and (max-width: @mb) {
+	.container{}
+	.parent {padding-left: @margin-mb;
+		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
+		&.mb-{
+			&16 > div, &15 > div, &14 > div, &13 > div, &12 > div, &11 > div, &10 > div, &9 > div, &8 > div, &7 > div, &6 > div, &5 > div, &4 > div, &3 > div, &2 > div, &1 > div {width: @col-1 - @margin-mb;}
+		}
+		& .mb-{
+			&16, &15, &14, &13, &12, &11, &10, &9, &8, &7, &6, &5, &4, &3, &2, &1 {width: @col-1 - @margin-mb;}
+		}
+	}
+}
+.parent{.fs-zero; display: block;
+	.clear; .clearfix;
+	& > div{.fs-base; display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
+	}
+}

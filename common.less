@@ -1,0 +1,22 @@
+@badge: enabled; // disabled, simple
+@gallery: disabled; // disabled, simple, framed
+@pagination: disabled; // disabled, simple, blocks
+@progress-bar: disabled; // disabled, simple
+@quotes: disabled; // disabled, simple, large, x-large
+@ribbon: enabled; // disabled, simple
+@shaded: disabled; // disabled, simple
+@tables: disabled; // disabled, simple, borders, horizontal-borders, striped
+@tags: disabled; // disabled, blocks, 
+
+.badge when (@badge = enabled){
+	display: inline-block; border-radius: 1em; padding: 3px 4px; min-width: 1em; text-align: center; font-size: 11px; line-height: 1em;
+}
+.ribbon when (@ribbon = enabled){
+	display: inline-block; padding: 3px 4px; .rotate(-45deg);
+	text-align: center; font-size: 11px; line-height: 1em;
+		&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @breadcrumbs-bg; border-bottom: @breadcrumbs-padding solid @breadcrumbs-bg; vertical-align: middle;}
+		&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @breadcrumbs-bg; border-left: @breadcrumbs-padding solid transparent; border-top: @breadcrumbs-padding solid transparent; vertical-align: middle;}
+
+	&.right{.rotate(45deg);}
+}
+

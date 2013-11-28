@@ -1,0 +1,221 @@
+/* colours.less */
+.base-colors(#fff,#333);
+// primary containers
+	@colour-body-fg: #000; // #fff, #000
+	@colour-body-bg: #666; // #fff, #000
+
+	@colour-tools-fg: #fff; // 
+	@colour-tools-bg: #222; // 
+	@colour-tools-inner-bg: #222; // 
+
+	@colour-header-fg: #000; // 
+	@colour-header-bg: #ccc; // 
+	@colour-header-inner-bg: #ddd; // 
+
+	@colour-content-fg: #000; // 
+	@colour-content-bg: #ddd; // 
+	@colour-content-inner-bg: #eee; // 
+
+	@colour-footer-fg: #000; // 
+	@colour-footer-bg: #eee; // 
+	@colour-footer-inner-bg: #fff; // 
+
+// links
+	@colour-link: #009; // 
+	@colour-visited: #909; // 
+	@colour-hover: #099; // 
+	@colour-active: #990; // 
+
+// text
+	@colour-heading: #222; // 
+	@colour-heading-alt: #222; // 
+	@colour-text: #222; // 
+	@colour-text-alt-1: #000; // 
+	@colour-text-alt-2: #000; // 
+	@colour-text-alt-3: #000; //
+	@colour-border: #fff; // 
+
+// navigation
+	@colour-top-nav-level-0-fg: #000; // 
+	@colour-top-nav-level-0-bg: #fff; // 
+	@colour-top-nav-level-1-fg: #000; // 
+	@colour-top-nav-level-1-bg: #fff; // 
+	@colour-top-nav-level-2-fg: #000; // 
+	@colour-top-nav-level-2-bg: #fff; // 
+	@colour-top-nav-level-3-fg: #000; // 
+	@colour-top-nav-level-3-bg: #fff; // 
+	@colour-top-nav-border: #fff; // 
+
+	@colour-side-nav-level-0-fg: #000; // 
+	@colour-side-nav-level-0-bg: #fff; // 
+	@colour-side-nav-level-1-fg: #000; // 
+	@colour-side-nav-level-1-bg: #fff; // 
+	@colour-side-nav-level-2-fg: #000; // 
+	@colour-side-nav-level-2-bg: #fff; // 
+	@colour-side-nav-level-3-fg: #000; // 
+	@colour-side-nav-level-3-bg: #fff; // 
+	@colour-side-nav-border: #fff; // 
+
+	@colour-footer-nav-level-0-fg: #000; // 
+	@colour-footer-nav-level-0-bg: #fff; // 
+	@colour-footer-nav-level-1-fg: #000; // 
+	@colour-footer-nav-level-1-bg: #fff; // 
+	@colour-footer-nav-level-2-fg: #000; // 
+	@colour-footer-nav-level-2-bg: #fff; // 
+	@colour-footer-nav-level-3-fg: #000; // 
+	@colour-footer-nav-level-3-bg: #fff; // 
+	@colour-footer-nav-border: #fff; // 
+
+// ctas
+	@primary-action-bg: blue;
+	@primary-action-fg: blue;
+	@secondary-action-bg: lightgray;
+	@secondary-action-fg: lightgray;
+
+// states
+	@success-bg: green;
+	@success-fg: white;
+	@warning-bg: orange;
+	@warning-fg: white;
+	@danger-bg: red;
+	@danger-fg: white;
+	@disabled-bg: darkgrey;
+	@disabled-fg: lightgrey;
+	@default-bg: blue;
+	@default-fg: white;
+
+// ctas
+	@primary-action-bg: blue;
+	@primary-action-fg: blue;
+	@secondary-action-bg: lightgray;
+	@secondary-action-fg: lightgray;
+
+// containers
+	html {background-color: @colour-body-bg; color: @colour-body-fg;}
+	.tools{background-color: @colour-tools-bg; color: @colour-tools-fg;
+		& > div {background-color: @colour-tools-inner-bg;}
+	}
+	header {background-color: @colour-header-bg; color: @colour-header-fg;
+		& > div {background-color: @colour-header-inner-bg;}
+	}
+	.main {background-color: @colour-content-bg; color: @colour-content-fg;
+		& > div {background-color: @colour-content-inner-bg;}
+	}
+	footer {background-color: @colour-footer-bg; color: @colour-footer-fg;
+		& > div {background-color: @colour-footer-inner-bg;}
+	}
+
+// links
+	a {
+		&:link {color: @colour-link;}
+		&:visited {color: @colour-visited;}
+		&:hover {color: @colour-hover;}
+		&:active {color: @colour-active;}
+	}
+
+// text
+	.color-heading {color: @colour-heading;}
+	.color-heading-alt {color: @colour-heading-alt;} 
+	.color-text{color: @colour-text;}
+	.color-text-alt-1 {color: @colour-text-alt-1;}
+	.color-text-alt-2 {color: @colour-text-alt-2;}
+	.color-text-alt-3 {color: @colour-text-alt-3;}
+	.color-border {color: @colour-border;}
+	
+	h1,h2,h3,h4,h5,h6 {color: @colour-heading-alt;}
+
+// states
+	.success {background-color: @success-bg; color: @success-fg;}
+	.warning {background-color: @warning-bg; color: @warning-fg;}
+	.danger {background-color: @danger-bg; color: @danger-fg;}
+	.disabled {background-color: @disabled-bg; color: @disabled-fg;}
+	.default {background-color: @default-bg; color: @default-fg;}
+
+
+// Colours
+
+// Some of the following colours may result in duplicate values depending on the value of @bg and @text set in the stylesheet
+// In this case you should select the one that would remain most relevant if the website's colours where drastically altered.
+
+// When @bg is light
+.base-colors(@bgx,@textx) when (lightness(@bgx) >= 50%){
+
+    @bg: @bgx;
+    @text: @textx;
+
+   // colours - Variants of bg and text. Will need overriding if site has a dark bg such as CCDM
+	@bg15: (@bgx - 255); // equivalent to #000 when @bg = #fff but you should consider if Text colour is more relevant
+	@bg14: (@bgx - 238);
+	@bg13: (@bgx - 221);
+	@bg12: (@bgx - 204);
+	@bg11: (@bgx - 187);
+	@bg10: (@bgx - 170);
+	@bg9: (@bgx - 153);
+	@bg8: (@bgx - 136);
+	@bg7: (@bgx - 119);
+	@bg6: (@bgx - 102);
+	@bg5: (@bgx - 85);
+	@bg4: (@bgx - 68);
+	@bg3: (@bgx - 51); // equivalent to #ccc on white
+	@bg2: (@bgx - 34);
+	@bg1: (@bgx - 17);
+	@bg-10: (@bgx - 10);
+
+	@text15: (@textx + 255); // equivalent to #fff when @text = #000 but you should consider if Bg colour is more relevant
+	@text14: (@textx + 238);
+	@text13: (@textx + 221);
+	@text12: (@textx + 204);
+	@text10: (@textx + 170);
+	@text9: (@textx + 153);
+	@text8: (@textx + 136);
+	@text7: (@textx + 119);
+	@text6: (@textx + 102);
+	@text5: (@textx + 85);
+	@text4: (@textx + 68);
+	@text3: (@textx + 51);
+	@text2: (@textx + 34);
+	@text1: (@textx + 17);
+	@text-10: (@textx + 10);
+
+}
+
+// When @bg is dark
+.base-colors(@bgx,@textx) when (lightness(@bgx) < 50%){
+
+    @bg: @bgx;
+    @text: @textx;
+
+// colours - Variants of bg and text. Will need overriding if site has a dark bg such as CCDM
+	@bg15: (@bgx + 255); // equivalent to #000 when @bg = #fff but you should consider if Text colour is more relevant
+	@bg14: (@bgx + 238);
+	@bg13: (@bgx + 221);
+	@bg12: (@bgx + 204);
+	@bg11: (@bgx + 187);
+	@bg10: (@bgx + 170);
+	@bg9: (@bgx + 153);
+	@bg8: (@bgx + 136);
+	@bg7: (@bgx + 119);
+	@bg6: (@bgx + 102);
+	@bg5: (@bgx + 85);
+	@bg4: (@bgx + 68);
+	@bg3: (@bgx + 51); // equivalent to #ccc on white
+	@bg2: (@bgx + 34);
+	@bg1: (@bgx + 17);
+	@bg-10: (@bgx + 10);
+
+	@text15: (@textx - 255); // equivalent to #fff when @text = #000 but you should consider if @bg colour is more relevant to your situation
+	@text14: (@textx - 238);
+	@text13: (@textx - 221);
+	@text12: (@textx - 204);
+	@text10: (@textx - 170);
+	@text9: (@textx - 153);
+	@text8: (@textx - 136);
+	@text7: (@textx - 119);
+	@text6: (@textx - 102);
+	@text5: (@textx - 85);
+	@text4: (@textx - 68);
+	@text3: (@textx - 51);
+	@text2: (@textx - 34);
+	@text1: (@textx - 17);
+	@text-10: (@textx - 10);
+}
