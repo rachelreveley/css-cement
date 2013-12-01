@@ -4,11 +4,7 @@
 	@tools-nav-position: both; // both, centre, left, right, justify
 	@tools-nav-style: dividers; // blocks, dividers
 	@tools-nav-padding: @padding (@padding + 2);
-	@tools-nav-fg: #fff;
-	@tools-nav-hover-fg: #fc0;
 		// if blocks
-		@tools-nav-bg: #222;
-		@tools-nav-hover-bg: #000;
 		@tools-nav-border: 1px solid #ccc;
 		// if pipes
 		@vertical-divider: \0020 |; // can be anything for example |, \, >, :, ][
@@ -23,11 +19,7 @@
 	@header-nav-position: full-fluid; // full-fluid, full-equal, centre, left, right
 	@header-nav-style: blocks; // blocks, dividers, tabs
 	@header-nav-padding: (@padding + 2) (@padding + 4);
-	@header-nav-fg: #fff;
-	@header-nav-hover-fg: #cf0;
 		// if blocks
-		@header-nav-bg: #222;
-		@header-nav-hover-bg: #000;
 		@header-nav-border: 1px solid #ccc;
 
 // breadcrumbs
@@ -36,17 +28,11 @@
 	@breadcrumbs-padding: 1em;
 	@breadcrumbs-space: 1;
 	@breadcrumbs-bullet: >;
-	@breadcrumbs-bg: #ccc;
-	@breadcrumbs-fg: #000;
 
 // side navigation (in main container)
 @has-side-nav: enabled; //disabled, enabled
 	@side-nav-style: disabled; // disabled, simple, blocks, lines
 	@side-nav-padding: @padding (@padding + 2);
-	@side-nav-fg: #fff;
-	@side-nav-hover-fg: #0cf;
-	@side-nav-bg: #222;
-	@side-nav-hover-bg: #000;
 	@side-nav-border: 1px solid #ccc;
 
 // flyouts
@@ -87,10 +73,10 @@ nav {
 	& nav {font-size: @tools-nav-font-size;
 		& a {padding: @tools-nav-padding;
 			&:link,
-			&:visited{color: @tools-nav-fg;}
+			&:visited{color: @colour-tools-nav-level-0-fg;}
 			&:hover,
 			&:active,
-			&:focus{color: @tools-nav-hover-fg;}
+			&:focus{color: @colour-tools-nav-level-0-hover-fg;}
 		}
 		& li:first-child a {padding-left: 0;}
 		& li:last-child a {padding-right: 0;}
@@ -123,12 +109,12 @@ nav {
 	.nav-blocks; .tools-nav-blocks;
 }
 .tools-nav-blocks(){
-	& a {font-size: @nav-font-size; border: @tools-nav-border; background-color: @tools-nav-bg;
+	& a {font-size: @nav-font-size; border: @tools-nav-border; background-color: @colour-tools-nav-level-0-bg;
 		&:link,
 		&:visited{color: @colour-tools-fg;}
 		&:hover,
 		&:active,
-		&:focus {background-color: @tools-nav-hover-bg;}
+		&:focus {background-color: @colour-tools-nav-level-0-hover-bg;}
 	}
 	& li:last-child a{border-right: 1px solid @tools-nav-border;}
 }
@@ -141,10 +127,10 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	& nav {font-size: @header-nav-font-size;
 		& a {padding: @header-nav-padding;
 			&:link,
-			&:visited{color: @header-nav-fg;}
+			&:visited{color: @colour-header-nav-level-0-fg;}
 			&:hover,
 			&:active,
-			&:focus{color: @header-nav-hover-fg;}
+			&:focus{color: @colour-header-nav-level-0-hover-fg;}
 		}
 	}
 }
@@ -201,10 +187,10 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	}
 	.header-nav-blocks(){
 		& nav {
-			& li {background-color: @header-nav-bg;  border: @header-nav-border; vertical-align: middle; 
-				&:hover{background-color: @header-nav-hover-bg;}
+			& li {background-color: @colour-header-nav-level-0-bg;  border: @header-nav-border; vertical-align: middle; 
+				&:hover{background-color: @colour-header-nav-level-0-hover-bg;}
 			}
-			& a {font-size: @header-nav-font-size; color: @header-nav-fg; padding: @header-nav-padding;}
+			& a {font-size: @header-nav-font-size; color: @colour-header-nav-level-0-fg; padding: @header-nav-padding;}
 			& li:last-child a{border-right: @header-nav-border;}
 		}
 	}
@@ -217,16 +203,23 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	li {display: inline-block; .fs-base;}
 	a,
 	& span {display: block;}
+	& a{
+		&:link,
+		&:visited{color: @colour-breadcrumbs-nav-level-0-fg;}
+		&:hover,
+		&:active,
+		&:focus{color: @colour-breadcrumbs-nav-level-0-hover-fg;}
+	}
 	.breadcrumbs-style;
 }
 // ###############################
 	.breadcrumbs-style() when (@breadcrumbs-style = arrows){
 		& li {vertical-align: middle; margin-left: (-1em + @breadcrumbs-space);
-			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @breadcrumbs-bg; border-right-width: 0;vertical-align: middle;}
-			&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @breadcrumbs-bg; border-left: @breadcrumbs-padding solid transparent; border-right-width: 0; vertical-align: middle;}
+			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-right-width: 0;vertical-align: middle;}
+			&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-left: @breadcrumbs-padding solid transparent; border-right-width: 0; vertical-align: middle;}
 		}
 		& a,
-		& span {display: inline-block; background-color: @breadcrumbs-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
+		& span {display: inline-block; background-color: @colour-breadcrumbs-nav-level-0-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
 		& li:first-child {margin-left: 0;
 			&:before {content: ""; border: 0;}
 			& a{padding-left: @breadcrumbs-padding;}
@@ -235,7 +228,7 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	.breadcrumbs-style() when (@breadcrumbs-style = blocks){
 		& li {vertical-align: middle; margin-left: @breadcrumbs-space;}
 		& a,
-		& span {background-color: @breadcrumbs-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
+		& span {background-color: @colour-breadcrumbs-nav-level-0-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
 	}
 	.breadcrumbs-style() when (@breadcrumbs-style = bullets){
 		& li {vertical-align: middle;
@@ -249,11 +242,11 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	}
 	.breadcrumbs-style() when (@breadcrumbs-style = chevrons){
 		& li {vertical-align: middle; margin-left: (-1.8em + @breadcrumbs-space);
-			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @breadcrumbs-bg; border-bottom: @breadcrumbs-padding solid @breadcrumbs-bg; vertical-align: middle;}
-			&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @breadcrumbs-bg; border-left: @breadcrumbs-padding solid transparent; border-bottom: @breadcrumbs-padding solid transparent; vertical-align: middle;}
+			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-bottom: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; vertical-align: middle;}
+			&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-left: @breadcrumbs-padding solid transparent; border-bottom: @breadcrumbs-padding solid transparent; vertical-align: middle;}
 		}
 		& a,
-		& span {display: inline-block; background-color: @breadcrumbs-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
+		& span {display: inline-block; background-color: @colour-breadcrumbs-nav-level-0-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
 		& li:first-child {margin-left: 0;
 			&:before {content: ""; border: 0;}
 			& a{padding-left: @breadcrumbs-padding;}
@@ -265,12 +258,12 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 // ###############################
 nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 	& li {display: block;}
-	& a {padding: @side-nav-padding; display: block; background-color: @side-nav-bg; border-bottom: @side-nav-border;
+	& a {padding: @side-nav-padding; display: block; background-color: @colour-side-nav-level-0-bg; border-bottom: @side-nav-border;
 		&:link,
-		&:visited {color: @side-nav-fg;}
+		&:visited {color: @colour-side-nav-level-0-fg;}
 		&:hover,
 		&:active,
-		&:focus{color: @side-nav-hover-fg; background-color: @side-nav-hover-bg;}
+		&:focus{color: @colour-side-nav-level-0-hover-fg; background-color: @colour-side-nav-level-0-hover-bg;}
 	}
 }
 // ###############################
