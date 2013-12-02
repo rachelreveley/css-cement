@@ -20,7 +20,7 @@
 	@header-nav-style: blocks; // blocks, dividers, tabs
 	@header-nav-padding: (@padding + 2) (@padding + 4);
 		// if blocks
-		@header-nav-border: 1px solid #ccc;
+		@header-nav-border: 1px solid @colour-header-nav-border;
 
 // breadcrumbs
 @has-breadcrumbs-nav: enabled; //disabled, enabled
@@ -33,7 +33,7 @@
 @has-side-nav: enabled; //disabled, enabled
 	@side-nav-style: disabled; // disabled, simple, blocks, lines
 	@side-nav-padding: @padding (@padding + 2);
-	@side-nav-border: 1px solid #ccc;
+	@side-nav-border: 1px solid @colour-side-nav-border;
 
 // flyouts
 @flyouts-width: disabled; // disabled, single, multi, full
@@ -80,6 +80,12 @@ nav {
 		}
 		& li:first-child a {padding-left: 0;}
 		& li:last-child a {padding-right: 0;}
+	}
+	& nav:nth-last-child(2):first-child {
+		& li:last-child a {padding: @tools-nav-padding;}
+	}
+	& nav:nth-child(2):last-child {
+		& li:first-child a {padding: @tools-nav-padding;}
 	}
 }
 .tools-nav-position() when not (@tools-nav-position = disabled){
