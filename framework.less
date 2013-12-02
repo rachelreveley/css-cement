@@ -69,5 +69,22 @@ body > * {width: 100%;
 	& .side ~ .content {width: (100% - @nav-width); display: inline-block; vertical-align: top;}
 }
 
+// Common behaviour fixes and tricks
+
+	.pseudo {content: ".";
+		.hide-text;
+	}
+	.respond {max-width: 100%; height: auto;}
+	.hide{display: none;}
+	.hide-text {text-indent: 100% !important; white-space: nowrap !important; overflow: hidden !important; display: block; font-size: 0 !important;}
+	.unhide-text {text-indent: 0 !important; white-space: normal !important; overflow: visible !important; display: block; font-size: 100% !important}
+	.clearfix {display: block;
+		&:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+	}
+	.clear {clear: both;}
+	img {font-size: 10px; line-height: 110%; overflow: hidden; text-align: center;
+		.respond;
+	}
+
 
 // temp
