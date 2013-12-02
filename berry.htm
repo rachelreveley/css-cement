@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>The Flexi Framework</title>
+		<meta name="description" content="The Flexi Framework">
+		<meta name="author" content="Rachel Reveley">
+		<link rel="stylesheet/less" type="text/css" href="all.less" />
+		<script type="text/javascript">
+			less = {
+				env: "development",or "production"
+				async: false,	  load imports async
+				fileAsync: false,  load imports async when in a page under
+									// a file protocol
+				poll: 1000,		when in watch mode, time in ms between polls
+				functions: {},	 user functions, keyed by name
+				dumpLineNumbers: "comments",or "mediaQuery" or "all"
+				relativeUrls: false,// whether to adjust url's to be relative
+									// if false, url's are already relative to the
+									// entry less file
+									//resource
+			};
+		</script>
+		<script src="less.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="tools">
+			<div>
+				<nav>
+					<ul>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Sign in</a></li>
+					</ul>
+				</nav>
+				<nav>
+					<ul>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Sign in</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<header>
+			<div>
+				<div class="logo">
+					<a href="#">Blackberry Juice</a>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Partners</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="main">
+			<div>
+				<nav class="breadcrumbs">
+					<ol>
+						<li><a href="">Home</a></li>
+						<li><a href="">Parent</a></li>
+						<li><a href="">Parent</a></li>
+						<li><span>Current</span></li>
+					</ol>
+				</nav>
+				<nav class="side">
+					<ul>
+						<li>
+							<a href="#">Nav level 1</a>
+							<ul>
+								<li><a href="#">Nav level 2</a></li>
+								<li><a href="#">Nav level 2</a></li>
+								<li><a href="#">Nav level 2</a>
+									<ul>
+										<li><a href="#">Nav level 3</a></li>
+										<li><a href="#">Nav level 3</a></li>
+										<li><a href="#">Nav level 3</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="content">
+					<div class="parent dt-1 tb-1 mb-1">
+						<div>
+							<h1>Heading</h1>
+							<p><img src="http://lorempixel.com/640/640/technics/" alt="" />Ah'll learn thi breadcake god's own county tha what shu' thi gob. Aye big girl's blouse t'foot o' our stairs. Chuffin' nora tha knows bloomin' 'eck sup wi' 'im dahn t'coil oil. Tha daft apeth shu' thi gob breadcake michael palin sup wi' 'im. Th'art nesh thee. Tell thi summat for nowt any rooad ah'll gi' thi summat to rooer</p>
+
+							<h2>Heading</h2>
+							<p>Ah'll learn thi breadcake god's own county tha what shu' thi gob. Aye big girl's blouse t'foot o' our stairs. Chuffin' nora tha knows bloomin' 'eck sup wi' 'im dahn t'coil oil. Tha daft apeth shu' thi gob breadcake michael palin sup wi' 'im. Th'art nesh thee. Tell thi summat for nowt any rooad ah'll gi' thi summat to rooer</p>
+
+							<h3>Heading</h3>
+							<p>Ah'll learn thi breadcake god's own county tha what shu' thi gob. Aye big girl's blouse t'foot o' our stairs. Chuffin' nora tha knows bloomin' 'eck sup wi' 'im dahn t'coil oil. Tha daft apeth shu' thi gob breadcake michael palin sup wi' 'im. Th'art nesh thee. Tell thi summat for nowt any rooad ah'll gi' thi summat to rooer</p>
+
+							<h4>Heading</h4>
+							<p>Ah'll learn thi breadcake god's own county tha what shu' thi gob. Aye big girl's blouse t'foot o' our stairs. Chuffin' nora tha knows bloomin' 'eck sup wi' 'im dahn t'coil oil. Tha daft apeth shu' thi gob breadcake michael palin sup wi' 'im. Th'art nesh thee. Tell thi summat for nowt any rooad ah'll gi' thi summat to rooer</p>
+
+							<h5>Heading</h5>
+							<p>Ah'll learn thi breadcake god's own county tha what shu' thi gob. Aye big girl's blouse t'foot o' our stairs. Chuffin' nora tha knows bloomin' 'eck sup wi' 'im dahn t'coil oil. Tha daft apeth shu' thi gob breadcake michael palin sup wi' 'im. Th'art nesh thee. Tell thi summat for nowt any rooad ah'll gi' thi summat to rooer</p>
+
+							<h6>Heading</h6>
+							<p>Ah'll learn thi breadcake god's own county tha what shu' thi gob. Aye big girl's blouse t'foot o' our stairs. Chuffin' nora tha knows bloomin' 'eck sup wi' 'im dahn t'coil oil. Tha daft apeth shu' thi gob breadcake michael palin sup wi' 'im. Th'art nesh thee. Tell thi summat for nowt any rooad ah'll gi' thi summat to rooer</p>
+
+							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then. Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt. - See more at: http://tlipsum.appspot.com/#sthash.AnEAfMov.dpuf</p>
+							<span>blah blah <span class="badge default">1</span></span>
+							<span>blah blah <span class="badge success">10</span></span>
+							<span>blah blah <span class="badge warning">100</span></span>
+							<span>blah blah <span class="badge danger">1,000</span></span>
+						</div>
+					</div>
+					<div class="parent dt-2 tb-1 mb-1 collapse-bottom">
+						<div>&nbsp;</div>
+						<div>&nbsp;</div>
+					</div>
+					<div class="parent dt-2 tb-1 mb-1 collapse-top">
+						<div>&nbsp;</div>
+						<div>&nbsp;</div>
+					</div>
+					<div class="parent dt-1 tb-1 mb-1 collapse-side">
+						<div>
+
+<div>
+<form class="gsform" action="test">
+<fieldset>
+<legend>Basic form</legend>
+<ol>
+<li>
+<label>Generic text:</label>
+<input type="text">
+</li>
+<li>
+<label>Text Area:</label>
+<textarea></textarea>
+</li>
+<li>
+<label>Email:</label>
+<input type="email">
+</li>
+<li>
+<label>Password:</label>
+<input type="password">
+</li>
+<li>
+<label>Readonly:</label>
+<input type="text" readonly="readonly">
+</li>
+<li>
+<label>File:</label>
+<input type="file">
+</li>
+<li>
+<label>Number:</label>
+<input type="number">
+</li>
+<li>
+<label>Range:</label>
+<input type="range">
+</li>
+<li>
+<label>Select menu:</label>
+<select>
+<optgroup label="Option heading">
+<option>Option 1</option>
+<option>Option 2</option>
+</optgroup>
+<optgroup label="Option heading 2">
+<option>Option 3</option>
+<option>Option 4</option>
+</optgroup>
+<option>Option 5</option>
+<option>Option 6</option>
+<option>Option 7</option>
+<option>Option 8</option>
+</select>
+</li>
+<li>
+<label>Select menu:</label>
+<select multiple="multiple">
+<optgroup label="Option heading">
+<option>Option 1</option>
+<option>Option 2</option>
+</optgroup>
+<optgroup label="Option heading 2">
+<option>Option 3</option>
+<option>Option 4</option>
+</optgroup>
+<option>Option 5</option>
+<option>Option 6</option>
+<option>Option 7</option>
+<option>Option 8</option>
+</select>
+</li>
+<li>
+<fieldset>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+</fieldset>
+</li>
+<li>
+<fieldset>
+<input type="radio">
+<label>Radio:</label>
+<input type="radio">
+<label>Radio:</label>
+<input type="radio">
+<label>Radio:</label>
+<input type="radio">
+<label>Radio:</label>
+<input type="radio">
+<label>Radio:</label>
+<input type="radio">
+<label>Radio:</label>
+</fieldset>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Notes and error messages</legend>
+<ol>
+<li>
+<label>Short note:</label>
+<input type="text">
+<span class="note">A short note about this field.</span>
+</li>
+<li>
+<label>Slightly longer:</label>
+<input type="text">
+<span class="note">This note will wrap sooner than one above.</span>
+</li>
+<li>
+<label>Field with help:</label>
+<input type="text">
+<span class="note"><a href="">Help</a></span>
+</li>
+<li>
+<label>Long note:</label>
+<input type="text">
+<span class="note long">This is a rather verbose note that wraps on to the next line and has an extra class This is a rather verbose note that wraps on to the next line and has an extra class</span>
+</li>
+<li>
+<label>Long note:</label>
+<input type="text">
+<p><span class="note long">This is a rather verbose note that wraps on to the next line and has an extra class This is a rather verbose note that wraps on to the next line and has an extra class</span></p>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Required fields</legend>
+<ol>
+<li>
+<label class="required">Name:</label>
+<input type="text">
+<span class="note">This field is required</span> </li>
+<li>
+<label>Name:</label>
+<input type="text">
+<span class="note">This field is NOT required</span> </li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Buttons</legend>
+<ol>
+<li>
+<input type="submit" class="button" value="submit">
+</li>
+<li>
+<input type="reset" class="button secondary" value="reset">
+<span class="note">Possibly the most useless and annoying form element ever invented.</span>
+</li>
+<li class="buttongroup">
+<input type="button" class="button" value="button">
+<input type="button" class="button secondary" value="button">
+<input type="button" class="button secondary" value="button">
+<span class="note">A Gaggle of buttons</span>
+</li>
+</ol>
+</fieldset>
+<fieldset class="inline">
+<legend>Directly set field widths.</legend>
+<ol>
+<li>
+<input type="text" class="gs40">
+<input type="text" class="gs100">
+<input type="text" class="gs160">
+<input type="text" class="gs220">
+<input type="text" class="gs280">
+<input type="text" class="gs340">
+<input type="text" class="gs400">
+<input type="text" class="gs460">
+<input type="text" class="gs520">
+<input type="text" class="gs580">
+<input type="text" class="gs640">
+<input type="text" class="gs700">
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Prefixes and separators</legend>
+<ol>
+<li>
+<label>Prefix:</label>
+<span class="prefix">AU$</span>
+<input type="text">
+</li>
+<li>
+<label>Suffix:</label>
+<input type="text">
+<span class="suffix">AU$</span>
+</li>
+<li>
+<label>Date:</label>
+<input type="text" class="gs40">
+<span class="separator">/</span>
+<input type="text" class="gs40">
+<span class="separator">/</span>
+<input type="text" class="gs40">
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Labels</legend>
+<ol>
+<li>
+<label>Standard label:</label>
+<input type="text">
+</li>
+<li>
+<label>Long labels auto-wrap, so that inputs still line up:</label>
+<input type="text">
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Labelling a whole paragraph</legend>
+<ol>
+<li>
+<p>
+<label>Sometimes you want a text area with a paragraph of information relating to it. It can still be a label. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</label>
+</p>
+<textarea class="gs700"></textarea>
+</li>
+</ol>
+</fieldset>
+<fieldset class="vertical">
+<legend>Labelling a whole paragraph</legend>
+<ol>
+<li>
+<p>
+<label>Sometimes you want a text area with a paragraph of information relating to it. It can still be a label. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</label>
+</p>
+<textarea class="gs700"></textarea>
+</li>
+</ol>
+</fieldset>
+<fieldset class="vertical">
+<legend>Vertical</legend>
+<ol>
+<li>
+<label>Name:</label>
+<input type="text">
+<span class="note">This is a note relating to this field</span> </li>
+<li>
+<label>Name:</label>
+<input type="text">
+<span class="note">This is a note relating to this field</span> </li>
+<li>
+<label>This layout has more space for longer labels as the input field is on the next row though you might consider putting a paragraph tag around the label instead see below:</label>
+<input type="text">
+<span class="note">This is a note relating to this field</span> </li>
+</ol>
+</fieldset>
+<fieldset class="inline">
+<legend>Inline</legend>
+<ol>
+<li>
+<label>Name:</label>
+<input type="text">
+</li>
+<li>
+<label>Name:</label>
+<input type="text">
+</li>
+<li>
+<label>Longer labels have more space automatically:</label>
+<input type="text">
+</li>
+<li>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+<input type="checkbox">
+<label>Checkbox:</label>
+</li>
+<li>
+<input type="radio">
+<label>Checkbox:</label>
+<input type="radio">
+<label>Checkbox:</label>
+<input type="radio">
+<label>Checkbox:</label>
+<input type="radio">
+<label>Checkbox:</label>
+<input type="radio">
+<label>Checkbox:</label>
+<input type="radio">
+<label>Checkbox:</label>
+</li>
+</ol>
+</fieldset>
+</form>
+<form class="gsform" action="test">
+<legend>Inline-vertical You might find this useful.</legend>
+<fieldset class="inline-vertical">
+<ol>
+<li>
+<label>Name:</label>
+<input type="text">
+</li>
+<li>
+<label>Longer labels have more space automatically:</label>
+<input type="text">
+</li>
+<li>
+<label>Another:</label>
+<input type="text">
+</li>
+</ol>
+</fieldset>
+</form>
+<form class="gsform" action="test">
+<fieldset class="bordered">
+<legend>Basic form</legend>
+<ol>
+<li>
+<label>Generic text:</label>
+<input type="text">
+</li>
+<li>
+<label>Text Area:</label>
+<textarea></textarea>
+</li>
+<li class="buttongroup">
+<input type="button" value="button" class="button">
+<input type="button" value="button" class="button secondary">
+<input type="button" value="button" class="button secondary">
+<span class="note">A Gaggle of buttons</span>
+</li>
+</ol>
+</fieldset>
+</form>
+<div class="product">
+<form action="http://lovehoney.beta/product.cfm?p=16661" method="post" class="gsform suggestions jquery-validate-loaded">
+<fieldset>
+<legend><span>Suggestions</span> &amp; Questions</legend>
+<ol>
+<li>
+<p><label for="suggestion">Got a question about this product? Found something on this page that is confusing or frustrating? Please tell us about it using the box below.</label></p>
+<textarea name="suggestion" id="suggestion" rows="6" cols="66" class="gs700 required" required="true"></textarea>
+</li>
+<li>
+<label for="email">Your e-mail address:</label>
+<input type="email" name="email" id="email" size="40" class="email">
+<p>
+<span class="note long">You do not have to enter your e-mail address, but please do if you would like us to reply to you.</span>
+</p>
+</li>
+<li>
+<p>We need to ask you a question to prove you're a human because evil spam computers abuse our form!</p>
+</li>
+<li>
+<label for="captchatext">What is the opposite of cold?</label>
+<input type="text" name="captchatext" id="captchatext" class="gs40 required" maxlength="3" required="true">
+<span class="note">Type your answer in the box.</span>
+</li>
+<li>
+<input type="submit" value="Submit your suggestion" class="button">
+</li>
+</ol>
+</fieldset>
+</form>
+</div>
+<div class="contact-us">
+<div style="width: 700px;" class="content">
+<form id="formContactUs" action="https://www.lovehoney.co.uk/help/contact-us/" method="post" class="gsform contact-form">
+<fieldset class="gs700">
+<legend>Send us a message</legend>
+<ol>
+<li>
+<label for="fullname" class="required">Name:</label>
+<input type="text" id="fullname" name="fullname" maxlength="100" class="required" required="true" minlength="2">
+</li>
+<li>
+<label class="required">How would you like us to contact you?</label>
+<input type="radio" id="contact_email" name="contact" value="email" checked="checked">
+<label for="contact_email">E-mail</label>
+<input type="radio" id="contact_phone" name="contact" value="phone">
+<label for="contact_phone">Phone</label>
+</li>
+<li class="">
+<label for="email" class="required">E-mail:</label>
+<input type="email" id="email" name="email" maxlength="100">
+</li>
+<li class="">
+<label for="phone" class="">Phone:</label>
+<input type="text" id="phone" name="phone" maxlength="100">
+</li>
+<li class="">
+<label class="required" for="subject">Subject:</label>
+<select id="subject" name="subject" required="true"><option value="">Choose a subject for your message...</option>
+<option value="4">Help with the checkout process</option>
+<option value="16">Item missing from order</option>
+<option value="6">Payment and billing questions</option>
+<option value="2">Question about a product</option>
+<option value="3">Received damaged, defective or wrong item</option>
+<option value="7">Technical site help</option>
+<option value="17">Where's my order?</option>
+<option value="12">Cancel order</option>
+<option value="21">Advertising Enquiry</option>
+<option value="26">I want to say something nice</option>
+<option value="20">Press Enquiry</option>
+<option value="22">Request a demonstration on Sex Toys TV</option>
+<option value="27">Trade Enquiry</option>
+<option value="8">Other</option>
+</select>
+</li>
+<li>
+<label for="frn_order_id">Order No:</label>
+<input type="text" id="frn_order_id" name="frn_order_id" maxlength="8" class="gs100">
+<span class="note long">Where applicable. Look for this number in your order confirmation e-mail. For example: 281752</span>
+</li>
+<li class="">
+<label for="message" class="required">Message:</label>
+<textarea id="message" name="body" class="gs400 vgs100 required" required="true"></textarea>
+</li>
+<li class="">
+<p>We need to ask you a question to prove you're a human because evil spam computers keep abusing our form!</p>
+<label for="captchatext" class="required">What is the opposite of cold?</label>
+<input type="text" id="captchatext" name="captchatext" class="gs40 required" maxlength="3" required="true" minlength="3">
+<span class="note">Type your answer in the box.</span>
+</li>
+<li>
+<input type="submit" name="doit" value="Send message" class="button sml-arrow">
+</li>
+</ol>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+
+						</div>
+					</div>
+					<div class="tabs">
+						<ul>
+							<li><a href="">First tab</a></li>
+							<li><span>Current tab</span></li>
+							<li><a href="">Next tab</a></li>
+							<li><a href="">Another tab</a></li>
+						</ul>
+					</div>
+					<div class="pagination">
+						<ul>
+							<li><a href="">First</a></li>
+							<li><a href="">Previous</a></li>
+							<li><span>Current</span></li>
+							<li><a href="">Next</a></li>
+							<li><a href="">Last</a></li>
+						</ul>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div>
+
+			</div>
+		</footer>
+	</body>
+</html>
