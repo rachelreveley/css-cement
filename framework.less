@@ -8,7 +8,11 @@
 @logo-position: centre; // centre, left, right
 @logo-width: 200px;
 @logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
+@logo-margins: 8px 0 12px;
 @logo-url: "logo.svg"; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
+	// if disabled
+	@logo-font-size: 60px;
+
 @images-url: ; // where you save all your images
 @nav-width: 25%;
 @bp-350: 350px;
@@ -26,7 +30,6 @@
 @bp-tools-nav: @bp-550;
 @bp-header-nav: @bp-550;
 @bp-side-nav: ;
-
 .fs-base {font-size: @fs-base;}
 .fs-zero {font-size: 0;}
 
@@ -40,13 +43,23 @@ body > * {width: 100%;
 }
 
 // logo
-.logo {.logo-position; .logo-size; .logo-graphic;}
-
+.logo {.logo-position; .logo-size; .logo-graphic; font-family: @logo-font-family; font-weight: @logo-font-weight;
+	& a {margin: @logo-margins;}
+}
 .logo-position() when (@logo-position = left){float: left;}
 .logo-position() when (@logo-position = right){float: right; text-align: right;}
 .logo-position() when (@logo-position = centre){margin: 0 auto; text-align: center;}
-.logo-size() {width: @logo-width;
+.logo-size() when not (@logo-url = disabled) {width: @logo-width;
 	& a {height: 0; padding-bottom: @logo-height; display: block;}
+}
+.logo-graphic() when (@logo-url = disabled){font-size: @logo-font-size;
+	a {
+		&:link,
+		&:visited {color: @colour-logo;}
+		&:hover,
+		&:active,
+		&:focus{color: @colour-logo-hover;}
+	}
 }
 .logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; .hide-text;}
 
@@ -58,5 +71,3 @@ body > * {width: 100%;
 
 
 // temp
-
-.parent > div {background-color: #ccc;}
