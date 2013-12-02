@@ -248,8 +248,10 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	}
 	.breadcrumbs-style() when (@breadcrumbs-style = chevrons){
 		& li {vertical-align: middle; margin-left: (-1.8em + @breadcrumbs-space);
-			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-bottom: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; vertical-align: middle;}
-			&:before {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-left: @breadcrumbs-padding solid transparent; border-bottom: @breadcrumbs-padding solid transparent; vertical-align: middle;}
+			&:after {border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-bottom: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg;}
+			&:before {border: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-left: @breadcrumbs-padding solid transparent; border-bottom: @breadcrumbs-padding solid transparent;}
+			&:after,
+			&:before {.pseudo; display: inline-block; vertical-align: middle;}
 		}
 		& a,
 		& span {display: inline-block; background-color: @colour-breadcrumbs-nav-level-0-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
