@@ -9,9 +9,10 @@
 @logo-width: 200px;
 @logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
 @logo-margins: 8px 0 12px;
+@logo-case: uppercase;
 @logo-url: "logo.svg"; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
 	// if disabled
-	@logo-font-size: 60px;
+	@logo-font-size: 70px;
 
 @images-url: ; // where you save all your images
 @nav-width: 25%;
@@ -43,7 +44,7 @@ body > * {width: 100%;
 }
 
 // logo
-.logo {.logo-position; .logo-size; .logo-graphic; font-family: @logo-font-family; font-weight: @logo-font-weight;
+.logo {.logo-position; .logo-size; .logo-graphic; font-family: @logo-font-family; font-weight: @logo-font-weight; text-transform: @logo-case;
 	& a {margin: @logo-margins;}
 }
 .logo-position() when (@logo-position = left){float: left;}
@@ -55,10 +56,10 @@ body > * {width: 100%;
 .logo-graphic() when (@logo-url = disabled){font-size: @logo-font-size;
 	a {
 		&:link,
-		&:visited {color: @colour-logo;}
+		&:visited {color: @colour-logo; text-decoration: none;}
 		&:hover,
 		&:active,
-		&:focus{color: @colour-logo-hover;}
+		&:focus{color: @colour-logo-hover; text-decoration: none;}
 	}
 }
 .logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; .hide-text;}
@@ -68,32 +69,6 @@ body > * {width: 100%;
 	& .content {width: 100%; display: inline-block; vertical-align: top;}
 	& .side ~ .content {width: (100% - @nav-width); display: inline-block; vertical-align: top;}
 }
-
-// Common behaviour fixes and tricks
-
-	.pseudo {content: ".";
-		.hide-text;
-	}
-	.respond {max-width: 100%; height: auto;}
-	.hide{display: none;}
-	.hide-text {text-indent: 100% !important; white-space: nowrap !important; overflow: hidden !important; display: block; font-size: 0 !important;}
-	.unhide-text {text-indent: 0 !important; white-space: normal !important; overflow: visible !important; display: block; font-size: 100% !important}
-	.clearfix {display: block;
-		&:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
-	}
-	.clear {clear: both;}
-	img {font-size: 10px; line-height: 110%; overflow: hidden; text-align: center;
-		.respond;
-	}
-	hr {border: 0; border-top: @border-dotted; clear: both; margin-bottom: 20px;}
-	.left,
-	.fl {float: left !important; margin-right: @col-nav !important; margin-bottom: @gutter;}
-	.right,
-	.fr {float: right !important; margin-left: @col-nav !important; margin-bottom: @gutter;}
-	.center {float: none !important; display: block !important; margin-left: auto !important; margin-right: auto !important; text-align: center;}
-	.right-indent {margin-right: 60px !important;}
-	.left-indent {margin-left: 60px !important;}
-	* {max-width: 100%;}
 
 //  Responsive curated images
 
