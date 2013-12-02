@@ -1,15 +1,30 @@
 /* mixins.less */
-	.respond{max-width:100%;height:auto;}
-	.hide-text{text-indent:100%; white-space:nowrap; overflow:hidden; display:block; font-size:0;}
-	.unhide-text{text-indent:0; white-space:normal; overflow:visible; display:block; font-size:100%}
-	.pseudo{content:"."; .hide-text;}
-	.clearfix{display:block;
-			&:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
-			}
-	.clear{clear:both;}
-	.left{float:left!important;margin-right:@framework-h-gutter!important;margin-bottom:@framework-v-gutter;}
-	.right{float:right!important;margin-left:@framework-h-gutter!important;margin-bottom:@framework-v-gutter;}
-	.center{float:none!important;display:block!important;margin:20px auto!important;}
+
+// Common behaviour fixes and tricks
+
+	.pseudo {content: " ";
+		.hide-text;
+	}
+	.respond {max-width: 100%; height: auto;}
+	.hide{display: none;}
+	.hide-text {text-indent: 100% !important; white-space: nowrap !important; overflow: hidden !important; display: block; font-size: 0 !important;}
+	.unhide-text {text-indent: 0 !important; white-space: normal !important; overflow: visible !important; display: block; font-size: 100% !important}
+	.clearfix {display: block;
+		&:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+	}
+	.clear {clear: both;}
+	img {font-size: 10px; line-height: 110%; overflow: hidden; text-align: center;
+		.respond;
+	}
+	hr {border: 0; border-top: @border-dotted; clear: both; margin-bottom: 20px;}
+	.left,
+	.fl {float: left !important; margin-right: @col-nav !important; margin-bottom: @gutter;}
+	.right,
+	.fr {float: right !important; margin-left: @col-nav !important; margin-bottom: @gutter;}
+	.center {float: none !important; display: block !important; margin-left: auto !important; margin-right: auto !important; text-align: center;}
+	.right-indent {margin-right: 60px !important;}
+	.left-indent {margin-left: 60px !important;}
+	* {max-width: 100%;}
 
 	.br(){content:"\a"; white-space: pre;}
 // save effort with vendor prefixing
