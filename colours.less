@@ -1,6 +1,10 @@
-/* colours.less */
+// ###############################
+// colours.less
+// ###############################
 	.base-colors(#fff,#333);
+// ###############################
 // primary containers
+// ###############################
 	@colour-body-fg: #066; // #fff, #000
 	@colour-body-bg: #666; // #fff, #000
 
@@ -35,8 +39,10 @@
 	@colour-text-alt-3: #000; //
 	@colour-border: #fff; // 
 
+// ###############################
 // navigation
-// tools  nav
+// ###############################
+// tools nav
 	@colour-tools-nav-level-0-fg: #066; // 
 	@colour-tools-nav-level-0-bg: #fff; // 
 	@colour-tools-nav-level-1-fg: #066; // 
@@ -53,7 +59,7 @@
 	@colour-tools-nav-level-2-hover-bg: #eee; // 
 	@colour-tools-nav-border: #fff; // 
 
-// top  nav
+// top nav
 	@colour-header-nav-level-0-fg: #066; // 
 	@colour-header-nav-level-0-bg: #fff; // 
 	@colour-header-nav-level-1-fg: #066; // 
@@ -112,12 +118,18 @@
 	@colour-footer-nav-level-2-hover-bg: #eee; // 
 	@colour-footer-nav-border: #fff; // 
 
-
-// ctas
+// ###############################
+// ctas buttons and messages
+// ###############################
+// button colours
 	@primary-action-bg: blue;
-	@primary-action-fg: blue;
+	@primary-action-fg: white;
 	@secondary-action-bg: lightgray;
-	@secondary-action-fg: lightgray;
+	@secondary-action-fg: white;
+	@disabled-action-bg: lightgray;
+	@disabled-action-fg: darkgrey;
+	@danger-action-bg: red;
+	@danger-action-fg: white;
 
 // states
 	@success-bg: green;
@@ -126,18 +138,14 @@
 	@warning-fg: white;
 	@danger-bg: red;
 	@danger-fg: white;
-	@disabled-bg: darkgrey;
-	@disabled-fg: lightgrey;
+	@disabled-bg: lightgrey;
+	@disabled-fg: darkgrey;
 	@default-bg: blue;
 	@default-fg: white;
 
-// ctas
-	@primary-action-bg: blue;
-	@primary-action-fg: blue;
-	@secondary-action-bg: lightgray;
-	@secondary-action-fg: lightgray;
-
+// ###############################
 // containers
+// ###############################
 	html {background-color: @colour-body-bg; color: @colour-body-fg;}
 	.tools{background-color: @colour-tools-bg; color: @colour-tools-fg;
 		& > div {background-color: @colour-tools-inner-bg;}
@@ -152,7 +160,9 @@
 		& > div {background-color: @colour-footer-inner-bg;}
 	}
 
+// ###############################
 // links
+// ###############################
 	a {
 		&:link {color: @colour-link;}
 		&:visited {color: @colour-visited;}
@@ -160,7 +170,9 @@
 		&:active {color: @colour-active;}
 	}
 
+// ###############################
 // text
+// ###############################
 	.color-heading {color: @colour-heading;}
 	.color-heading-alt {color: @colour-heading-alt;} 
 	.color-text{color: @colour-text;}
@@ -168,30 +180,28 @@
 	.color-text-alt-2 {color: @colour-text-alt-2;}
 	.color-text-alt-3 {color: @colour-text-alt-3;}
 	.color-border {color: @colour-border;}
-	
+
 	h1,h2,h3,h4,h5,h6 {color: @colour-heading-alt;}
 
+// ###############################
 // states
+// ###############################
 	.success {background-color: @success-bg; color: @success-fg;}
 	.warning {background-color: @warning-bg; color: @warning-fg;}
 	.danger {background-color: @danger-bg; color: @danger-fg;}
 	.disabled {background-color: @disabled-bg; color: @disabled-fg;}
 	.default {background-color: @default-bg; color: @default-fg;}
 
-
-// Colours
-
-// Some of the following colours may result in duplicate values depending on the value of @bg and @text set in the stylesheet
-// In this case you should select the one that would remain most relevant if the website's colours where drastically altered.
-
+// ###############################
+// Colours calculated based on base colours
+// ###############################
 // When @bg is light
 .base-colors(@bgx,@textx) when (lightness(@bgx) >= 50%){
 
     @bg: @bgx;
     @text: @textx;
 
-   // colours - Variants of bg and text. Will need overriding if site has a dark bg such as CCDM
-	@bg15: (@bgx - 255); // equivalent to #000 when @bg = #fff but you should consider if Text colour is more relevant
+	@bg15: (@bgx - 255); // equivalent to #000 when @bg = #fff
 	@bg14: (@bgx - 238);
 	@bg13: (@bgx - 221);
 	@bg12: (@bgx - 204);
@@ -203,12 +213,12 @@
 	@bg6: (@bgx - 102);
 	@bg5: (@bgx - 85);
 	@bg4: (@bgx - 68);
-	@bg3: (@bgx - 51); // equivalent to #ccc on white
+	@bg3: (@bgx - 51); // equivalent to #ccc when @bg = #fff
 	@bg2: (@bgx - 34);
 	@bg1: (@bgx - 17);
 	@bg-10: (@bgx - 10);
 
-	@text15: (@textx + 255); // equivalent to #fff when @text = #000 but you should consider if Bg colour is more relevant
+	@text15: (@textx + 255); // equivalent to #fff when @text = #000
 	@text14: (@textx + 238);
 	@text13: (@textx + 221);
 	@text12: (@textx + 204);
@@ -235,7 +245,7 @@
     @bg: @bgx;
     @text: @textx;
 
-// colours - Variants of bg and text. Will need overriding if site has a dark bg such as CCDM
+// Variants of bg and text. Will need overriding if site has a dark bg such as CCDM
 	@bg15: (@bgx + 255); // equivalent to #000 when @bg = #fff but you should consider if Text colour is more relevant
 	@bg14: (@bgx + 238);
 	@bg13: (@bgx + 221);
