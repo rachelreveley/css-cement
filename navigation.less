@@ -26,7 +26,7 @@
 
 // breadcrumbs
 @has-breadcrumbs-nav: enabled; //disabled, enabled
-	@breadcrumbs-style: bullets; // disabled, blocks, bullets, checvrons
+	@breadcrumbs-style: bullets; // disabled, blocks, bullets, checvrons, simple
 	@breadcrumbs-padding: 1em;
 	@breadcrumbs-space: 1;
 	@breadcrumbs-bullet: >;
@@ -64,6 +64,11 @@ nav {
 .nav-blocks(){
 	& ul {.fs-zero;}
 	& a {border-right: 0; text-decoration: none; display: block;}
+}
+
+.nav-simple(){
+	& ul {.fs-zero;}
+	& a {border: 0; text-decoration: none; display: block;}
 }
 
 
@@ -117,16 +122,14 @@ nav {
 	.nav-blocks; .tools-nav-blocks;
 }
 .tools-nav-blocks(){
-	& a {font-size: @nav-font-size; border: @tools-nav-border; background-color: @colour-tools-nav-level-0-bg;
+	& a {font-size: @nav-font-size; background-color: @colour-tools-nav-level-0-bg;
 		&:link,
 		&:visited{color: @colour-tools-fg;}
 		&:hover,
 		&:active,
 		&:focus {background-color: @colour-tools-nav-level-0-hover-bg;}
 	}
-	& li:last-child a{border-right: 1px solid @tools-nav-border;}
 }
-
 
 // ###############################
 // header
@@ -202,6 +205,18 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 			& li:last-child a{border-right: @header-nav-border;}
 		}
 	}
+	.header-nav-style() when (@header-nav-style = simple){
+		.nav-simple; .header-nav-simple;
+	}
+	.header-nav-simple(){
+		& nav {
+			& li {background-color: @colour-header-nav-level-0-bg;  border: @header-nav-border; vertical-align: middle; 
+				&:hover{background-color: @colour-header-nav-level-0-hover-bg;}
+			}
+			& a {font-size: @header-nav-font-size; color: @colour-header-nav-level-0-fg; padding: @header-nav-padding;}
+			& li:last-child a{border-right: @header-nav-border;}
+		}
+	}
 
 // ###############################
 // breadcrumbs
@@ -213,10 +228,10 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	& span {display: block;}
 	& a{
 		&:link,
-		&:visited{color: @colour-breadcrumbs-nav-level-0-fg;}
+		&:visited{color: @colour-breadcrumbs-nav-level-1-fg;}
 		&:hover,
 		&:active,
-		&:focus{color: @colour-breadcrumbs-nav-level-0-hover-fg;}
+		&:focus{color: @colour-breadcrumbs-nav-level-1-hover-fg;}
 	}
 	.breadcrumbs-style;
 }
@@ -248,15 +263,16 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 			}
 		}
 	}
-	.breadcrumbs-style() when (@breadcrumbs-style = chevrons){
-		& li {vertical-align: middle; margin-left: (-1.8em + @breadcrumbs-space);
-			&:after {border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-bottom: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg;}
-			&:before {border: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-left: @breadcrumbs-padding solid transparent; border-bottom: @breadcrumbs-padding solid transparent;}
+	.breadcrumbs-style() when (@breadcrumbs-style = chevrons){ background-color: @colour-breadcrumbs-nav-level-0-bg;
+		@breadcrumbs-overlap: (-@breadcrumbs-padding * 2 + @breadcrumbs-space);
+		& li {vertical-align: middle; margin-left: @breadcrumbs-overlap;
+			&:after {border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-1-bg; border-bottom: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-1-bg;}
+			&:before {border: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-1-bg; border-left: @breadcrumbs-padding solid transparent; border-bottom: @breadcrumbs-padding solid transparent;}
 			&:after,
-			&:before {.pseudo; display: inline-block; vertical-align: middle;}
+			&:before {content:" "; display: inline-block; vertical-align: middle;}
 		}
 		& a,
-		& span {display: inline-block; background-color: @colour-breadcrumbs-nav-level-0-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.7); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
+		& span {display: inline-block; background-color: @colour-breadcrumbs-nav-level-1-bg; height: (@breadcrumbs-padding * 2); line-height: (@breadcrumbs-padding * 1.75); vertical-align: middle; padding: 0 @breadcrumbs-padding;}
 		& li:first-child {margin-left: 0;
 			&:before {content: ""; border: 0;}
 			& a{padding-left: @breadcrumbs-padding;}
