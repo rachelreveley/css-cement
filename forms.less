@@ -1,8 +1,8 @@
 // ###############################
 // forms.less
 // ###############################
-@buttons: ; // simple, boxed, 
-@forms-theme: ; // 
+@buttons: ; // simple, boxed,
+@forms-theme: ; //
 @has-gsform: true;
 @col-nav: 20px;
 @gutter: 20px;
@@ -10,6 +10,88 @@
 @inline-error-bg: ;
 @flash-error-text: ;
 @flash-error-bg: ;
+
+// ###############################
+// buttons
+// ###############################
+
+@button-style: ; // simple, flat 3d, lozenge, cylinder, shiny
+@button-radius: ; // number
+@button-animate: enable; // enable, disable
+
+
+@has-pseudo-buttons: true;
+@button-border: 0;
+@button-font-size: 13px;
+@button-font-weight: bold;
+@button-border-radius: 5px;
+@button-bg-start: top;
+@button-bg-1: #45c351;
+@button-bg-2: #308638;
+@button-bg-fallback: #393;
+@button-fg: #fff;
+@button-hover-bg-start: top;
+@button-hover-bg-1: #56d865;
+@button-hover-bg-2: #3c9646;
+@button-hover-bg-fallback: #4a4;
+@button-hover-fg: #fff;
+@cta-icon-fg: #fff;
+@cta-icon: arrow-in-circle; // disabled, arrow, arrow-in-circle
+@button-scale: 1em;
+@sml-scale: 1;
+@std-scale: 1.2;
+@lrg-scale: 1.4;
+
+// ###############################
+// Start non-editable vars
+// ###############################
+@button-padding-h: @button-scale;
+@button-padding-v: (@button-scale / 2.5);
+@sml-font-size: @button-font-size * @sml-scale;
+@std-font-size: @button-font-size * @std-scale;
+@lrg-font-size: @button-font-size * @lrg-scale;
+@sml-border-radius: @button-border-radius * @sml-scale;
+@std-border-radius: @button-border-radius * @std-scale;
+@lrg-border-radius: @button-border-radius * @lrg-scale;
+@sml-padding: (@button-padding-v * @sml-scale) (@button-padding-h * @sml-scale);
+@std-padding: (@button-padding-v * @std-scale) (@button-padding-h * @std-scale);
+@lrg-padding: (@button-padding-v * @lrg-scale) (@button-padding-h * @lrg-scale);
+// ###############################
+// End non-editable vars
+// ###############################
+.cta-icon(@size: 10) when not (@cta-icon = disabled){}
+.cta-icon(@size: 10) when	  (@cta-icon = arrow){border: (@size * 0.66) solid transparent; border-left-width: @size; border-left-color: @cta-icon-fg; margin: 0 3px 0 0; vertical-align: baseline; line-height: 0;}
+.cta-icon(@size: 10) when	  (@cta-icon = arrow-in-circle){background: url("@{url-all}cta-icon-arrow-in-circle.svg") no-repeat; background-size: 100%; width: (@size * 1.8); height: (@size * 1.8); margin-right: (@size); vertical-align: middle; position: absolute;}
+
+button.button when (@has-pseudo-buttons = true)  {border: @button-border; border-radius: @button-border-radius; padding: (@button-scale / 2.5) @button-scale; font-size: @button-font-size; line-height: 1.3em; font-weight: @button-font-weight; vertical-align: baseline; color: @button-fg; margin: 0 10px 10px 0;
+	.gradient(@button-bg-start,@button-bg-1,@button-bg-2,@button-bg-fallback);
+	&:hover {.gradient(@button-hover-bg-start,@button-hover-bg-1,@button-hover-bg-2,@button-hover-bg-fallback);}
+
+	&.sml-arrow,
+	&.sml-no-arrow{font-size: @button-font-size; padding: @sml-padding; border-radius: @sml-border-radius;}
+	&.std-arrow,
+	&.std-no-arrow{font-size: (@button-font-size * @std-scale); padding: @std-padding; border-radius: @std-border-radius;}
+	&.lrg-arrow,
+	&.lrg-no-arrow{font-size: (@button-font-size * @lrg-scale); padding: @lrg-padding; border-radius: @lrg-border-radius;}
+}
+button.button when not (@cta-icon = disabled) {
+	&.sml-arrow,
+	&.std-arrow,
+	&.lrg-arrow {
+		&:before {.pseudo; display: inline-block;}
+	}
+}
+button.button when (@cta-icon = arrow) {
+	&.sml-arrow{
+		&:before{.cta-icon(@sml-scale * 10px); margin-left: -3px; margin-bottom: -(@sml-scale * 1.5px);}
+	}
+	&.std-arrow{
+		&:before{.cta-icon(@std-scale * 10px); margin-left: -5.25px; margin-bottom: -(@std-scale * 1.5px);}
+	}
+	&.lrg-arrow{
+		&:before{.cta-icon(@lrg-scale * 10px); margin-left: -7.5px; margin-bottom: -(@lrg-scale * 1.5px);}
+	}
+}
 
 // ###############################
 // Forms
