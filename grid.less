@@ -3,12 +3,10 @@
 // ###############################
 @side-gutters: true;
 @padded-grid: true;
-// set Breakpoints
+// set main breakpoints
 @dt: 960px;
 @tb: 600px;
 @mb: 320px;
-
-// End config
 
 // default grid margin, padding & borders
 @margin-dt: percentage(1/48);
@@ -32,6 +30,14 @@
 @col-2: percentage(1/2);
 @col-1: percentage(1/1);
 
+// basic grid
+.parent{.fs-zero; display: block;
+	.clear; .clearfix;
+	& > div{.fs-base; display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
+	}
+}
+
+// side gutters
 	.side-gutters() when (@side-gutters = false){
 @media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
 			.side ~ .content & {padding-left: @margin-dt;}
@@ -64,9 +70,10 @@
 	}
 
 
-.parent {.side-gutters;
-	& > div{.padded-grid;}
-}
+	.parent {.side-gutters;
+		& > div{.padded-grid;}
+	}
+// desktop sized grid
 @media screen and (min-width: @dt) {
 	.parent {
 //		&:first-child{padding-top: @margin-dt;}
@@ -109,8 +116,8 @@
 		}
 	}
 }
+// tablet sized grid
 @media screen and (min-width: @tb) and (max-width: @dt) {
-	.container{}
 	.parent {padding-left: @margin-tb;
 		& > div{margin-right: @margin-tb; margin-bottom: @margin-tb;}
 		&.tb-{
@@ -151,8 +158,8 @@
 		}
 	}
 }
+// mobile sized grid
 @media screen and (min-width: @mb) and (max-width: @tb) {
-	.container{}
 	.parent {padding-left: @margin-mb;
 		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
@@ -193,8 +200,8 @@
 		}
 	}
 }
+// small mobile sized grid
 @media screen and (max-width: @mb) {
-	.container{}
 	.parent {padding-left: @margin-mb;
 		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
@@ -203,10 +210,5 @@
 		& .mb-{
 			&16, &15, &14, &13, &12, &11, &10, &9, &8, &7, &6, &5, &4, &3, &2, &1 {width: @col-1 - @margin-mb;}
 		}
-	}
-}
-.parent{.fs-zero; display: block;
-	.clear; .clearfix;
-	& > div{.fs-base; display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
 	}
 }
