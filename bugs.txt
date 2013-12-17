@@ -1,4 +1,0 @@
-001 @tools-nav-position: justify and @tools-nav-style: dividers are incompatible.
-
-
-

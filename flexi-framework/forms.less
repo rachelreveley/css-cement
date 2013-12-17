@@ -15,7 +15,7 @@
 // buttons
 // ###############################
 
-@button-style: ; // simple, flat 3d, lozenge, cylinder, shiny
+@button-style: ; // simple, flat-3d, lozenge, cylinder, shiny
 @button-radius: ; // number
 @button-animate: enable; // enable, disable
 
@@ -63,9 +63,6 @@
 .cta-icon(@size: 10) when	  (@cta-icon = arrow){border: (@size * 0.66) solid transparent; border-left-width: @size; border-left-color: @cta-icon-fg; margin: 0 3px 0 0; vertical-align: baseline; line-height: 0;}
 
 button when (@has-pseudo-buttons = true)  {border: @button-border; border-radius: @button-border-radius; padding: (@button-scale / 2.5) @button-scale; font-size: @button-font-size; line-height: 1.3em; font-weight: @button-font-weight; vertical-align: baseline; color: @button-fg; margin: 0 10px 10px 0;
-	.gradient-2-way(@button-bg-start,@button-bg-1,@button-bg-2,@button-bg-fallback);
-	&:hover {.gradient-2-way(@button-hover-bg-start,@button-hover-bg-1,@button-hover-bg-2,@button-hover-bg-fallback);}
-
 	&.sml,
 	&.sml.arrow{font-size: @button-font-size; padding: @sml-padding; border-radius: @sml-border-radius;}
 	&.std,
@@ -91,7 +88,32 @@ button when (@cta-icon = arrow) {
 		&:before{.cta-icon(@lrg-scale * 10px); margin-left: -7.5px; margin-bottom: -(@lrg-scale * 1.5px);}
 	}
 }
+button when (@button-style = cylinder) {}
+button when (@button-style = flat-3d) {}
+button when (@button-style = gradient) {
+			 .gradient-2-way(@button-bg-start,@button-bg-1,@button-bg-2,@button-bg-fallback);
+	&:hover {.gradient-2-way(@button-hover-bg-start,@button-hover-bg-1,@button-hover-bg-2,@button-hover-bg-fallback);}
+}
+button when (@button-style = lozenge) {}
+button when (@button-style = shiny) {
+			 .gradient-2-way(@button-bg-start,@button-bg-1,@button-bg-2,@button-bg-fallback);
+	&:hover {.gradient-2-way(@button-hover-bg-start,@button-hover-bg-1,@button-hover-bg-2,@button-hover-bg-fallback);}}
 
+
+
+/*
+
+// flat 3d
+a {position: relative; color: rgba(255,255,255,1); text-decoration: none; background-color: rgba(219,87,5,1); font-family: 'Yanone Kaffeesatz'; font-weight: 700; font-size: 3em; display: block; padding: 4px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7); -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7); box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7); margin: 100px auto; width: 160px; text-align: center; -webkit-transition: all .1s ease; -moz-transition: all .1s ease; -ms-transition: all .1s ease; -o-transition: all .1s ease; transition: all .1s ease; }
+a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); position: relative; top: 6px; }
+
+// shiny
+.button{height:60px; width:240px; padding:0; line-height:60px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; box-shadow:inset 0px 1px 3px #cfeff3; -moz-box-shadow:inset 0px 1px 3px #cfeff3; -webkit-box-shadow:inset 0px 1px 3px #cfeff3; background: -moz-linear-gradient(top, #A2DBDC 0%, #59A5A8 50%, #418F93 51%, #2F777C 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A2DBDC), color-stop(50%,#59A5A8), color-stop(51%,#418F93), color-stop(100%,#2F777C)); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#A2DBDC’, endColorstr=’#2F777C’,GradientType=0 ); border:1px solid #70c9d5; cursor:pointer; color:#e1fdff; font-size:24px; letter-spacing:0px; text-shadow:#CDF2F7 0px 1px 0, #256569 0 -1px 0; -moz-text-shadow:#CDF2F7 0px 1px 0, #256569 0 -1px 0; -webkit-text-shadow:#CDF2F7 0px 1px 0, #256569 0 -1px 0; font-family:helvetica; font-weight:lighter; }
+.button:hover{filter:alpha(opacity=94); opacity:0.94; colour:#afe6e7; }
+.button:active{background: -moz-linear-gradient(top, #95d3d4 0%, #4c9da0 51%, #318185 52%, #226b70 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#95d3d4), color-stop(51%,#4c9da0), color-stop(52%,#318185), color-stop(100%,#226b70)); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#95d3d4′, endColorstr=’#226b70′,GradientType=0 ); box-shadow:inset 0px 0px 15px #256569; -moz-box-shadow:inset 0px 0px 15px #256569; -webkit-box-shadow: inset 0px 0px 15px #256569; border:1px solid #256569; line-height:62px !important; }
+
+// http://designshack.net/tutorialexamples/animatedDownload/index.html
+*/
 // ###############################
 // Forms
 // ###############################
