@@ -1,10 +1,13 @@
-// ###############################
+// -------------------------------
 // colours.less
+// -------------------------------
+// ###############################
+// start vars
 // ###############################
 	.base-colors(#fff,#333); // hex
-// ###############################
+// -------------------------------
 // primary containers
-// ###############################
+// -------------------------------
 	@colour-body-fg: #066; // #fff, #000
 	@colour-body-bg: #666; // #fff, #000
 
@@ -23,14 +26,16 @@
 	@colour-footer-fg: #066; // hex
 	@colour-footer-bg: #ccc; // hex
 	@colour-footer-inner-bg: #ccc; // hex
-
+// -------------------------------
 // links
+// -------------------------------
 	@colour-link: #009; // hex
 	@colour-visited: #909; // hex
 	@colour-hover: #099; // hex
 	@colour-active: #990; // hex
-
+// -------------------------------
 // text
+// -------------------------------
 	@colour-heading: #222; // hex
 	@colour-heading-alt: #222; // hex
 	@colour-text: #222; // hex
@@ -39,10 +44,9 @@
 	@colour-text-alt-3: #000; //
 	@colour-border: #fff; // hex
 
-// ###############################
-// navigation
-// ###############################
-// tools nav
+// -------------------------------
+// tools navigation
+// -------------------------------
 	@colour-tools-nav-level-0-fg: #066; // hex
 	@colour-tools-nav-level-0-bg: #fff; // hex
 	@colour-tools-nav-level-1-fg: #066; // hex
@@ -59,7 +63,9 @@
 	@colour-tools-nav-level-2-hover-bg: #eee; // hex
 	@colour-tools-nav-border: #fff; // hex
 
-// top nav
+// -------------------------------
+// header navigation
+// -------------------------------
 	@colour-header-nav-level-0-fg: #066; // hex
 	@colour-header-nav-level-0-bg: #fff; // hex
 	@colour-header-nav-level-1-fg: #066; // hex
@@ -76,7 +82,9 @@
 	@colour-header-nav-level-2-hover-bg: #eee; // hex
 	@colour-header-nav-border: #fff; // hex
 
-// breadcrumbs
+// -------------------------------
+// breadcrumbs navigation
+// -------------------------------
 	@colour-breadcrumbs-nav-level-0-fg: #066; // hex
 	@colour-breadcrumbs-nav-level-0-bg: #fff; // hex
 	@colour-breadcrumbs-nav-level-1-fg: #066; // hex
@@ -86,7 +94,9 @@
 	@colour-breadcrumbs-nav-level-1-hover-bg: #eee; // hex
 	@colour-breadcrumbs-nav-border: #fff; // hex
 
-// side nav
+// -------------------------------
+// side navigation
+// -------------------------------
 	@colour-side-nav-level-0-fg: #066; // hex
 	@colour-side-nav-level-0-bg: #fff; // hex
 	@colour-side-nav-level-1-fg: #066; // hex
@@ -103,7 +113,9 @@
 	@colour-side-nav-level-2-hover-bg: #eee; //
 	@colour-side-nav-border: #fff; // hex
 
-// footer nav
+// -------------------------------
+// footer navigation
+// -------------------------------
 	@colour-footer-nav-level-0-fg: #066; // hex
 	@colour-footer-nav-level-0-bg: #fff; // hex
 	@colour-footer-nav-level-1-fg: #066; // hex
@@ -120,10 +132,9 @@
 	@colour-footer-nav-level-2-hover-bg: #eee; // hex
 	@colour-footer-nav-border: #fff; // hex
 
-// ###############################
-// ctas buttons and messages
-// ###############################
+// -------------------------------
 // button colours
+// -------------------------------
 	@primary-action-bg: blue; // hex
 	@primary-action-fg: white; // hex
 	@secondary-action-bg: lightgray; // hex
@@ -133,7 +144,9 @@
 	@danger-action-bg: red; // hex
 	@danger-action-fg: white; // hex
 
-// states
+// -------------------------------
+// generic states
+// -------------------------------
 	@success-bg: green; // hex
 	@success-fg: white; // hex
 	@warning-bg: orange; // hex
@@ -146,8 +159,12 @@
 	@default-fg: white; // hex
 
 // ###############################
-// containers
+// end vars
 // ###############################
+
+// -------------------------------
+// primary containers
+// -------------------------------
 	html {background-color: @colour-body-bg; color: @colour-body-fg;}
 	.tools{background-color: @colour-tools-bg; color: @colour-tools-fg; // hex
 		& > div {background-color: @colour-tools-inner-bg;}
@@ -162,9 +179,9 @@
 		& > div {background-color: @colour-footer-inner-bg;}
 	}
 
-// ###############################
+// -------------------------------
 // links
-// ###############################
+// -------------------------------
 	a {
 		&:link {color: @colour-link;}
 		&:visited {color: @colour-visited;}
@@ -172,9 +189,9 @@
 		&:active {color: @colour-active;}
 	}
 
-// ###############################
+// -------------------------------
 // text
-// ###############################
+// -------------------------------
 	.color-heading {color: @colour-heading;}
 	.color-heading-alt {color: @colour-heading-alt;} 
 	.color-text{color: @colour-text;}
@@ -185,18 +202,18 @@
 
 	h1,h2,h3,h4,h5,h6 {color: @colour-heading-alt;}
 
-// ###############################
+// -------------------------------
 // states
-// ###############################
+// -------------------------------
 	.success {background-color: @success-bg; color: @success-fg;}
 	.warning {background-color: @warning-bg; color: @warning-fg;}
 	.danger {background-color: @danger-bg; color: @danger-fg;}
 	.disabled {background-color: @disabled-bg; color: @disabled-fg;}
 	.default {background-color: @default-bg; color: @default-fg;}
 
-// ###############################
+// -------------------------------
 // Colours calculated based on base colours
-// ###############################
+// -------------------------------
 // When @bg is light
 .base-colors(@bgx,@textx) when (lightness(@bgx) >= 50%){
 

@@ -1,6 +1,6 @@
-// ###############################
+// -------------------------------
 // navigation.less
-// ###############################
+// -------------------------------
 // Tool bar
 @has-tools-nav: enabled; //disabled, enabled
 	@tools-nav-position: both; // both, centre, left, right, justify
@@ -42,9 +42,9 @@
 
 
 
-// ###############################
+// -------------------------------
 // Shared nav styles
-// ###############################
+// -------------------------------
 nav {
 	ul {margin: 0;}
 }
@@ -72,9 +72,9 @@ nav {
 }
 
 
-// ###############################
+// -------------------------------
 // tools
-// ###############################
+// -------------------------------
 
 .tools when (@has-tools-nav = enabled) {.tools-nav-position; .tools-nav-style;
 	& nav {font-size: @tools-nav-font-size;
@@ -131,9 +131,9 @@ nav {
 	}
 }
 
-// ###############################
+// -------------------------------
 // header
-// ###############################
+// -------------------------------
 header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-style;
 	& nav {font-size: @header-nav-font-size;
 		& a {padding: @header-nav-padding;
@@ -145,7 +145,7 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 		}
 	}
 }
-// ###############################
+// -------------------------------
 	.header-nav-position() when not (@header-nav-position = disabled){
 		& nav{display: block;
 			& li {display: inline-block;}
@@ -218,9 +218,9 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 		}
 	}
 
-// ###############################
+// -------------------------------
 // breadcrumbs
-// ###############################
+// -------------------------------
 
 .breadcrumbs when (@has-breadcrumbs-nav = enabled) {.fs-zero;
 	li {display: inline-block; .fs-base;}
@@ -235,7 +235,7 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 	}
 	.breadcrumbs-style;
 }
-// ###############################
+// -------------------------------
 	.breadcrumbs-style() when (@breadcrumbs-style = arrows){
 		& li {vertical-align: middle; margin-left: (-1em + @breadcrumbs-space);
 			&:after {content: "."; width: 0; height: 0; display: inline-block; border: @breadcrumbs-padding solid transparent; border-left: @breadcrumbs-padding solid @colour-breadcrumbs-nav-level-0-bg; border-right-width: 0;vertical-align: middle;}
@@ -279,9 +279,9 @@ header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-styl
 		}
 	}
 
-// ###############################
+// -------------------------------
 // side
-// ###############################
+// -------------------------------
 nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 	& li {display: block;}
 	& a {padding: @side-nav-padding; display: block; background-color: @colour-side-nav-level-0-bg; border-bottom: @side-nav-border;
@@ -292,7 +292,7 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 		&:focus{color: @colour-side-nav-level-0-hover-fg; background-color: @colour-side-nav-level-0-hover-bg;}
 	}
 }
-// ###############################
+// -------------------------------
 	.side-nav-style() when (@side-nav-style = blocks){
 		& li {display: block;}
 		& a {text-decoration: none;}

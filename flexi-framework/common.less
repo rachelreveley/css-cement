@@ -1,5 +1,8 @@
-// ###############################
+// -------------------------------
 // common.less
+// -------------------------------
+// ###############################
+// start vars
 // ###############################
 @badge: enabled; // disabled, simple
 @gallery: disabled; // disabled, simple, framed
@@ -11,13 +14,21 @@
 @tables: disabled; // disabled, simple, borders, horizontal-borders, striped
 @tags: disabled; // disabled, blocks
 @tabs: enabled; // disabled, blocks
-
 // ###############################
+// end vars
+// ###############################
+// -------------------------------
 // Widgets
-// ###############################
+// -------------------------------
 .badge when (@badge = enabled){
 	display: inline-block; border-radius: 1em; padding: 3px 4px; min-width: 1em; text-align: center; font-size: 11px; line-height: 1em;
 }
+@colour-tab-bg: #eee; // hex
+@colour-tab-fg: #222; // hex
+@colour-tab-current-bg: #222; // hex
+@colour-tab-current-fg: #eee; // hex
+@tab-padding: 1em 2em; // 1 - 4 numbers
+@tab-radius: ; // disabled, number
 .tabs  when (@tabs = enabled){
 	& ul {display: table;
 		& li {display: table-cell;
@@ -34,9 +45,3 @@
 		}
 	}
 }
-@colour-tab-bg: #eee; // hex
-@colour-tab-fg: #222; // hex
-@colour-tab-current-bg: #222; // hex
-@colour-tab-current-fg: #eee; // hex
-@tab-padding: 1em 2em; // 1 - 4 numbers
-@tab-radius: ; // disabled, number
