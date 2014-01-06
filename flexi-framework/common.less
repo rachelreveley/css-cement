@@ -5,7 +5,7 @@
 // start editable
 // ###############################
 @badge: enabled; // disabled, simple
-@gallery: disabled; // disabled, simple, framed
+@gallery: disabled; // disabled, simple, rounded-grid, filmstrip
 @pagination: disabled; // disabled, simple, blocks
 @progress-bar: disabled; // disabled, simple
 @quotes: disabled; // disabled, simple, large, x-large
@@ -13,23 +13,62 @@
 @shaded: disabled; // disabled, simple
 @tables: disabled; // disabled, simple, borders, horizontal-borders, striped
 @tags: disabled; // disabled, blocks
-@tabs: enabled; // disabled, blocks
+@tabs: blocks; // disabled, blocks
 // ###############################
 // end editable
 // ###############################
 // -------------------------------
-// Widgets
+// Badges
 // -------------------------------
 .badge when (@badge = enabled){
 	display: inline-block; border-radius: 1em; padding: 3px 4px; min-width: 1em; text-align: center; font-size: 11px; line-height: 1em;
 }
+
+// -------------------------------
+// Gallery
+// -------------------------------
+@gallery-columns: 4; // disabled, number
+@gallery-style: ; // simple, framed, polaroid
+@gallery-hover: ; // border, zoom, opacity
+
+.gallery when not (@gallery = disabled){
+	& li {display: inline-block;
+		& a {display: block;}
+		& img {display: block;}
+		& .caption {}
+	}
+}
+.gallery when not (@gallery-columns = disabled){
+	& li {width: (100% / @gallery-columns);}
+}
+.gallery when (@gallery-hover = opacity){
+	& li a {
+		&:hover {opacity: 0.7;}
+	}
+}
+.gallery when (@gallery-hover = border){
+	& li a {
+		&:hover {outline: @border-solid;}
+	}
+}
+
+
+// -------------------------------
+// Gallery
+// -------------------------------
+.pagination when not (@gallery = disabled){
+	
+}
+// -------------------------------
+// Tabs
+// -------------------------------
 @colour-tab-bg: #eee; // hex
 @colour-tab-fg: #222; // hex
 @colour-tab-current-bg: #222; // hex
 @colour-tab-current-fg: #eee; // hex
 @tab-padding: 1em 2em; // 1 - 4 numbers
 @tab-radius: ; // disabled, number
-.tabs  when (@tabs = enabled){
+.tabs  when not (@tabs = disabled){
 	& ul {display: table;
 		& li {display: table-cell;
 			& a,
