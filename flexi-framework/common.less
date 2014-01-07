@@ -13,7 +13,7 @@
 @pull-quotes: disabled; // disabled, overhang-right, overhang-left
 @tables: disabled; // disabled, simple, borders, horizontal-borders, striped
 @tags: disabled; // disabled, simple, deletable
-@tabs: blocks; // disabled, blocks, chevrons
+@tabs: blocks; // disabled, blocks, chevrons, trapezoid
 // ###############################
 // end editable
 // ###############################
@@ -60,7 +60,9 @@
 // Gallery
 // -------------------------------
 .pagination when not (@gallery = disabled){
-	
+	& li {}
+	& a,
+	& span {}
 }
 // -------------------------------
 // Tabs
