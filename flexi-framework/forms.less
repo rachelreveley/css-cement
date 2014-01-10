@@ -75,10 +75,15 @@
 	@sml-padding: (@button-padding-v * @sml-scale) (@button-padding-h * @sml-scale);
 	@std-padding: (@button-padding-v * @std-scale) (@button-padding-h * @std-scale);
 	@lrg-padding: (@button-padding-v * @lrg-scale) (@button-padding-h * @lrg-scale);
+	@button-grad: ;
+	@button-hover-grad: ;
+	@button-secondary-grad: ;
+	@button-secondary-hover-grad: ;
 
 	.cta-icon(@size: 10) when not (@cta-icon = disabled){}
 	.cta-icon(@size: 10) when	  (@cta-icon = arrow){border: (@size * 0.66) solid transparent; border-left-width: @size; border-left-color: @cta-icon-fg; margin: 0 3px 0 0; vertical-align: baseline; line-height: 0;}
 	.cta-icon(@size: 10) when	  (@cta-icon = arrow-in-circle){background: url("@{url-all}cta-icon-arrow-in-circle.svg") no-repeat; background-size: 100%; width: (@size * 1.8); height: (@size * 1.8); margin-right: (@size); vertical-align: middle; position: absolute;}
+
 // general button styles
 button.button,
 a.button {.pseudo-button;}
