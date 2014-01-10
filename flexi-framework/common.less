@@ -42,7 +42,7 @@
 	& li {width: (100% / @gallery-columns);}
 }
 .gallery when (@gallery-style = framed){
-	& li {border: @border-solid; padding: (@padding / 2); .box-sizing: @border-box;
+	& li {border: @border-solid; padding: (@padding / 2); .box-sizing(border-box);
 	}
 }
 .gallery when (@gallery-hover = opacity){
