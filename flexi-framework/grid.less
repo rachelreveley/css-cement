@@ -18,6 +18,10 @@
 @margin-tb: percentage(1/48);
 @margin-mb: percentage(1/32);
 
+@col-20: percentage(1/16);
+@col-19: percentage(1/16);
+@col-18: percentage(1/16);
+@col-17: percentage(1/16);
 @col-16: percentage(1/16);
 @col-15: percentage(1/15);
 @col-14: percentage(1/14);
@@ -84,6 +88,10 @@
 //		&:first-child{padding-top: @margin-dt;}
 		& > div{margin-right: @margin-dt; margin-bottom: @margin-dt;}
 		&.dt-{
+			&20 > div {width: @col-20 - @margin-dt;}
+			&19 > div {width: @col-19 - @margin-dt;}
+			&18 > div {width: @col-18 - @margin-dt;}
+			&17 > div {width: @col-17 - @margin-dt;}
 			&16 > div {width: @col-16 - @margin-dt;}
 			&15 > div {width: @col-15 - @margin-dt;}
 			&14 > div {width: @col-14 - @margin-dt;}
@@ -102,6 +110,10 @@
 			&1 > div {width: @col-1 - @margin-dt;}
 		}
 		& div.dt-{
+			&20 {width: @col-20 - @margin-dt;}
+			&19 {width: @col-19 - @margin-dt;}
+			&18 {width: @col-18 - @margin-dt;}
+			&17 {width: @col-17 - @margin-dt;}
 			&16 {width: @col-16 - @margin-dt;}
 			&15 {width: @col-15 - @margin-dt;}
 			&14 {width: @col-14 - @margin-dt;}
@@ -126,6 +138,10 @@
 	.parent {padding-left: @margin-tb;
 		& > div{margin-right: @margin-tb; margin-bottom: @margin-tb;}
 		&.tb-{
+			&20 > div {width: @col-20 - @margin-tb;}
+			&19 > div {width: @col-19 - @margin-tb;}
+			&18 > div {width: @col-18 - @margin-tb;}
+			&17 > div {width: @col-17 - @margin-tb;}
 			&16 > div {width: @col-16 - @margin-tb;}
 			&15 > div {width: @col-15 - @margin-tb;}
 			&14 > div {width: @col-14 - @margin-tb;}
@@ -144,6 +160,10 @@
 			&1 > div {width: @col-1 - @margin-tb;}
 		}
 		& div.tb-{
+			&20 {width: @col-20 - @margin-tb;}
+			&19 {width: @col-19 - @margin-tb;}
+			&18 {width: @col-18 - @margin-tb;}
+			&17 {width: @col-17 - @margin-tb;}
 			&16 {width: @col-16 - @margin-tb;}
 			&15 {width: @col-15 - @margin-tb;}
 			&14 {width: @col-14 - @margin-tb;}
@@ -168,6 +188,10 @@
 	.parent {padding-left: @margin-mb;
 		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
+			&20 > div {width: @col-20 - @margin-mb;}
+			&19 > div {width: @col-19 - @margin-mb;}
+			&18 > div {width: @col-18 - @margin-mb;}
+			&17 > div {width: @col-17 - @margin-mb;}
 			&16 > div {width: @col-16 - @margin-mb;}
 			&15 > div {width: @col-15 - @margin-mb;}
 			&14 > div {width: @col-14 - @margin-mb;}
@@ -186,6 +210,10 @@
 			&1 > div {width: @col-1 - @margin-mb;}
 		}
 		& div.mb-{
+			&20 {width: @col-20 - @margin-mb;}
+			&19 {width: @col-19 - @margin-mb;}
+			&18 {width: @col-18 - @margin-mb;}
+			&17 {width: @col-17 - @margin-mb;}
 			&16 {width: @col-16 - @margin-mb;}
 			&15 {width: @col-15 - @margin-mb;}
 			&14 {width: @col-14 - @margin-mb;}
@@ -210,10 +238,10 @@
 	.parent {padding-left: @margin-mb;
 		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
-			&16 > div, &15 > div, &14 > div, &13 > div, &12 > div, &11 > div, &10 > div, &9 > div, &8 > div, &7 > div, &6 > div, &5 > div, &4 > div, &3 > div, &2 > div, &1 > div {width: @col-1 - @margin-mb;}
+			&20 > div, &19 > div, &18 > div, &17 > div, &16 > div, &15 > div, &14 > div, &13 > div, &12 > div, &11 > div, &10 > div, &9 > div, &8 > div, &7 > div, &6 > div, &5 > div, &4 > div, &3 > div, &2 > div, &1 > div {width: @col-1 - @margin-mb;}
 		}
 		& .mb-{
-			&16, &15, &14, &13, &12, &11, &10, &9, &8, &7, &6, &5, &4, &3, &2, &1 {width: @col-1 - @margin-mb;}
+			&20, &19, &18, &17, &16, &15, &14, &13, &12, &11, &10, &9, &8, &7, &6, &5, &4, &3, &2, &1 {width: @col-1 - @margin-mb;}
 		}
 	}
 }
