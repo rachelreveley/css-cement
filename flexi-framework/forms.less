@@ -166,76 +166,96 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 // Forms
 // -------------------------------
 
+@gsform-font-size: @fs-reset;
+@gsforms-input-border-radius: 2px;
+
+@gsforms-input-bg: @white;
+@gsforms-input-border: 1px solid #ccc;
+@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset;
+
+@gsforms-input-required-border: 1px solid @text6;
+@gsforms-input-required-bg: @white;
+
+@gsforms-input-focus-bg: @bg - 6;
+@gsforms-input-focus-border: 1px solid #666;
+@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+@gsforms-highlight-bg: @bg - 10;
+
+@gsforms-bordered-bg: transparent;
+@gsforms-bordered-border: @border-solid;
+@gsforms-bordered-footer: #f8f8f8;
+
 // basic layout
 	.gsform when (@has-gsform = true){float: left; width: 100%;
 		.clearfix;
-		& .box{border: 0;}
-		& fieldset{margin-bottom: 15px; width: 100%; border: 0;}
+		& .box {border: 0;}
+		& ol li fieldset {display: block; margin-bottom: 15px; width: 100%; border: 0;}
 
 		& ol li,
-		& .gs700 ol li{margin-bottom: 0; padding: 0 0 0 36%; text-indent: -32%; border: 0; float: none; width: 100% !important; font-size: 0; .box-sizing(border-box);
-			& *{text-indent: 0; font-size: @text-size; display: inline-block; vertical-align: middle;}
+		& .gs700 ol li {margin-bottom: 0; padding: 0 0 0 36%; text-indent: -32%; border: 0; float: none; width: 100% !important; font-size: 0; .box-sizing(border-box);
+			& *{text-indent: 0; font-size: @gsform-font-size; display: inline-block; vertical-align: middle;}
 		}
-///		& ol,
-		& optgroup,
-		& option{display: block !important;}
-		& fieldset{display: block;}
+///		& ul {margin-right: 0;}
+///		& ul li {margin-right: @col-nav;}
 
 		& li > textarea,
 		& .gs700 li > textarea,
 		& select[multiple],
 		& select[size]{vertical-align: top;}
-		& ul{margin-right: 0;}
-		& ul li{margin-right: @col-nav;}
+
 // legends paras & labels
 		& legend {.h3; white-space: normal; margin-right: @gutter;}
 		& legend + *,
-		& legend + input[type=hidden] + * {-webkit-margin-top-collapse: separate; margin-top: 5px;}
+		& legend + input[type=hidden] + * {-webkit-margin-top-collapse: separate; margin-top: 5px;} // adds a litle separation between legend and next element in webkiT, firefox behaves differently.
 		& label,
-		& .logic {width: 50%; margin-right: 0!important; text-align: right; padding: 0 3% 0 0; margin-bottom: 10px;
+		& .label,
+		& .logic {width: 50%; margin-right: 0; text-align: right; padding: 0 @gutter 0 0; margin-bottom: 10px;
 			.box-sizing(border-box);
 		}
 		& .logic {padding-bottom: 0.5em;}
 
-		& label:first-child,
-		& p:first-child,
-		& p:first-child + label{text-indent: 0; margin-left: 0; display: inline-block; -moz-box-sizing: border-box;}
 		& label img {vertical-align: middle; margin-right: @col-nav / 2;}
-		& label strong + span{display: block;}
+		& label strong + span {display: block;}
 		& ol li p label,
 		& ol li p .note,
 		& .optional {width: auto; max-width: 100%; margin: 0 @col-nav 0 0; text-align: left;/*possible conflict - used on prod suggest form*/}
 
-		& p:first-child{margin-left: -56%; display: block; max-width: 150%; width: 150%;
-			& + label{margin-left: -50% !important;}
+		& label:first-child,
+		& .label:first-child,
+		& p:first-child,
+		& p:first-child + label {text-indent: 0; margin-left: 0; display: inline-block; -moz-box-sizing: border-box;}
+	
+		& p:first-child {margin-left: -56%; display: block; max-width: 150%; width: 150%;
+			& + label {margin-left: -50% !important;}
 		}
 		& p:only-child {width: 150%;}
-		& p{display: block; margin: 0 @col-nav .5em -56%;}
-		& p:last-child{margin-bottom: .5em;}
-		& p + textarea.gs700{margin-left: -56%;}
-
-		& .vertical p{margin-left: 0; max-width: 100%;}
-		& .vertical p + textarea.gs700{margin-left: 0; width: 97.2222% !important;}
+		& p {display: block; margin: 0 @col-nav .5em -56%;}
+		& p:last-child {margin-bottom: .5em;}
+		& p + textarea.gs700 {margin-left: -56%;}
 
 // Labels after input such as bolean inputs and erros
 		& input + p {display: inline-block; width: 160%;}
 		& ol li input ~ label,
 		& ol li textarea ~ label,
-		& ol li select ~ label,
-		& .vertical li input ~ label,
-		& .vertical li textarea ~ label,
-		& .vertical li select ~ label{width: 90%; max-width: none; text-align: left; padding: 0;}
+		& ol li select ~ label
+///		,
+///		& .vertical li input ~ label,
+///		& .vertical li textarea ~ label,
+///		& .vertical li select ~ label 
+		{width: 90%; max-width: none; text-align: left; padding: 0;}
 
 // Notes after inputs
-		& .note {color: @text6; margin-bottom: 10px; margin-right: 10px;}
+		& .note {color: @text6; margin-bottom: 10px; margin-right: 10px;
+			& a:first-child {margin-left: 0 !important;}
+		}
 		& .summary {font-size: 13px; font-weight: bold; margin-bottom: 2em!important;}
-		& .note a:first-child{margin-left: 0 !important;}
-		& input[type=submit]:first-child,
-		& button:first-child,
-		& .button:first-child,
-		& a:first-child{margin-left: 50%;}
 
-// Webkit disagrees on what constitutes baseline on textareas
+// Indent buttons
+		& .button:first-child,
+		& a:first-child {margin-left: 50%;}
+
+// Webkit disagrees with all other browsers on what constitutes baseline on textareas
 		& textarea,
 		& label[for="newsletter"] {vertical-align: top;}
 
@@ -244,12 +264,7 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		& button,
 		& select,
 		& textarea,
-		& span.readonly{margin-bottom: 10px; margin-right: 4%;}
-		& span.readonly,& input[readonly],& input[readonly]:focus{border-color:@bg1 !important; background-color:@bg1; color: @text2; box-shadow: none !important; pointer-events: none;}
-
-// bolean inputs
-		& input[type=checkbox],
-		& input[type=radio]{clear: left; margin-right: 10px !important;  margin-bottom: 10px; position: relative;}
+		& span.readonly {margin-bottom: 10px; margin-right: 4%;}
 
 // Text inputs
 		& input[type=text],
@@ -259,22 +274,24 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		& input[type=date],
 		& input[type=range],
 		& textarea,
-		& span.readonly{width: 50%; padding: 1px 4px 2px; background-color: @bg; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05) inset;
-			.border-radius(2px); .box-sizing(border-box);
+		& span.readonly {width: 50%; padding: 1px 4px 2px; background-color: @gsforms-input-bg; box-shadow: @gsforms-input-shadow; border: @gsforms-input-border;
+			.border-radius(@gsforms-input-border-radius); .box-sizing(border-box);
 		}
-		& select{margin-right:@col-nav;}
-// borders
-body:not(.hi-vis) & {
-		& select,
-		& input[type=text],
-		& input[type=password],
-		& input[type=email],
-		& input[type=number],
-		& input[type=date],
-		& input[type=range],
-		& textarea,
-		& span.readonly{border: 1px solid #ccc;}
-}
+		& select {margin-right:@col;}
+
+// read only
+		& span.readonly,
+		& input[readonly],
+		& input[readonly]:focus {border-color:@bg1 !important; background-color:@bg1; color: @text2; box-shadow: none !important; pointer-events: none;}
+
+// select menus
+		& optgroup,
+		& option {display: block !important;}
+
+// bolean inputs
+		& input[type=checkbox],
+		& input[type=radio]{clear: left; margin-right: 10px !important;  margin-bottom: 10px; position: relative; background-color: transparent !important;}
+
 // min width on text inputs when no direct gs class used
 		& input[type=text]:not([class*="gs"]),
 		& input[type=password]:not([class*="gs"]),
@@ -284,76 +301,73 @@ body:not(.hi-vis) & {
 		& input[type=range]:not([class*="gs"]),
 		& select,
 		& textarea,
-		& span.readonly{min-width: 160px;}
-		& input.gs40{min-width: 40px}
-		& input.gs100{min-width: 100px}
-		& .button{margin-bottom: 10px;}
-		input[type="file"]::-moz-file-upload-button{color: green;}
+		& span.readonly {min-width: 160px;}
+		& input.gs40 {min-width: 40px}
+		& input.gs100 {min-width: 100px}
+		& .button {margin-bottom: 10px;}
 
 // Prefixes and separators for currency inputs, dates etc
 		& .prefix,
-		& .suffix{position: relative; z-index: 1; text-align: center;}
-		& .prefix{border-right: 1px solid #ccc; left: 34px; width: 31px; margin: 0 0 10px -33px!important; padding: 2px 0 1px 2px;}
-		& .suffix{border-left: 1px solid #ccc; width: 31px; padding: 2px 0 1px 2px; left: -64px; text-align: right; margin: 0 0 10px; color: @text;}
-		& .separator{margin: 0 6px 10px -6px;}
-		& .prefix + input{padding-left: 35px;}
-		& .suffix + input{padding-right: 35px; margin-left: -33px;}
+		& .suffix {position: relative; z-index: 1; text-align: center;}
+		& .prefix {border-right: 1px solid #ccc; left: 34px; width: 31px; margin: 0 0 10px -33px!important; padding: 2px 0 1px 2px;}
+		& .suffix {border-left: 1px solid #ccc; width: 31px; padding: 2px 0 1px 2px; left: -64px; text-align: right; margin: 0 0 10px; color: @text;}
+		& .separator {margin: 0 6px 10px -6px;}
+		& .prefix + input {padding-left: 35px;}
+		& .suffix + input {padding-right: 35px; margin-left: -33px;}
 
 // Add and Remove buttons (GV)
 		& .add,
-		& .remove{padding: 1px 4px 2px; margin-bottom: 12px;
-			&:before{background-image:url("add-and-remove.png"); background-repeat:no-repeat; margin-right: 2px;
+		& .remove {padding: 1px 4px 2px; margin-bottom: 12px;
+			&:before {background-image:url("@{url-all}sprite-add-and-remove.png"); background-repeat:no-repeat; margin-right: 2px;
 				.pseudo; width: 12px; height: 12px; display:inline-block !important; vertical-align: middle;
 			}
 		}
-		& .add:before{background-position: 0 -20px;}
-		& .remove:before{background-position: 0 0;}
+		& .add:before {background-position: 0 -20px;}
+		& .remove:before {background-position: 0 0;}
 
 // interaction
-	body:not(.hi-vis) & {
 		& li  input[type=text]:focus,
 		& li  input[type=password]:focus,
 		& li  input[type=email]:focus,
 		& li  input[type=number]:focus,
 		& li  input[type=date]:focus,
 		& li  input[type=range]:focus,
-		& li textarea:focus{border-color: #666; background-color: @bg - 6; box-shadow: 0 0 3px rgba(0,0,0,.2);}
-		& input.button:focus{box-shadow: 0 0 transparent;}
-	}
+		& li textarea:focus {border: @gsforms-input-focus-border; background-color: @gsforms-input-focus-bg; box-shadow: @gsforms-input-focus-shadow;}
+		& input.button:focus {box-shadow: 0 0 transparent;}
+
 // buttongroups
-	buttongroup{margin: 0 @col-nav 10px (@col-nav * 12);
-		& .button{margin: 0 -3px 0 0 !important;}
-		.button:last-child{margin-right: 0 !important;}
+	buttongroup {margin: 0 @col-nav 10px (@col-nav * 12);
+		& .button {margin: 0 -3px 0 0 !important;}
+		.button:last-child {margin-right: 0 !important;}
 		& .button:not(:last-child){border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;}
 		& .button:not(:first-child){border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important;}
 	}
 
 // required fields
-	body:not(.hi-vis) & {
 		& [required=true],
 		& [class="required"] ~ input,
 		& [class="required"] ~ textarea,
-		& [class="required"] ~ select{border-color: @text6;}
-	}
-		& [title="Required"] label:after{content: "*"}
+		& [class="required"] ~ select {border: @gsforms-input-required-border; background-color: @gsforms-input-required-bg;}
+		& [title="Required"] label:after {content: "*"}
 		& [title="Required"] [type=radio] ~ label:after,
-		& [title="Required"] [type=checkbox] ~ label:after{content: "";}
-		& label.required{font-weight: bold;}
+		& [title="Required"] [type=checkbox] ~ label:after {content: "";}
+		& label.required {font-weight: bold;}
 
 // Errors
 		& ol li label.error,
-		& ol li.error label{color: @inline-error-text;}
-		& ol li label.error{width: auto !important;}
+		& ol li.error label {color: @inline-error-text;}
+		& ol li label.error {width: auto !important;}
 		& .error ~ .note,
-		& li.error .note{display: none;}
+		& li.error .note {display: none;}
 		& input.error,
 		& textarea.error,
 		& li.error input,
-		& li.error textarea{border-color: @flash-error-text!important; background-color: saturate(@flash-error-bg, 45%)!important; color: @inline-error-text;}
+		& li.error textarea {border-color: @flash-error-text!important; background-color: lighten(@flash-error-bg, 45%)!important; color: @inline-error-text;}
 
 // fat forms
-		&.fatform,& .fatform{
-			& li{padding: 10px;}
+		&.fatform,
+		& .fatform {
+			& li {padding: 10px;}
 			& input[type=text],
 			& input[type=password],
 			& input[type=email],
@@ -361,16 +375,19 @@ body:not(.hi-vis) & {
 			& input[type=date],
 			& input[type=range],
 			& textarea,
-			& select{padding: 10px; font-size: 20px;}
+			& select {padding: 10px; font-size: 20px;}
 			& input[type="submit"]{font-size: 20px;}
-			& label, span{font-size: 20px;}
+			& label, span {font-size: 20px;}
 		}
+
 // vertical forms
-		& .vertical{
+		& .vertical p {margin-left: 0; max-width: 100%;}
+		& .vertical p + textarea.gs700 {margin-left: 0; width: 97.2222% !important;}
+		& .vertical {
 			& input[type=file]+input[type=file],
-			& buttongroup{margin-left: 0;}
+			& buttongroup {margin-left: 0;}
 			& label,
-			p label{width: 90%; text-align: left;}
+			p label {width: 90%; text-align: left;}
 			& .button,
 			& .button:first-child,
 			& a,
@@ -379,52 +396,72 @@ body:not(.hi-vis) & {
 			& input[type="text"],
 			& input[type="password"],
 			& input[type="email"],
-			& textarea,& span.readonly{width: 95%;}
-			& .note{max-width: 100%; margin: -5px 0 8px 0;}
-			// & .note.long{padding-left: 0;}
+			& textarea,& span.readonly {width: 95%;}
+			& .note {max-width: 100%; margin: -5px 0 8px 0;}
+			// & .note.long {padding-left: 0;}
 			& input[type="checkbox"] + label,
-			& input[type="radio"] + label {width: 90%;}
+			& input[type="radio"] + label {margin-left: -30px; padding-left: 30px; width: 100% !important;}
 		}
 
 // 2 column forms (in progress)
-		& .wide{
-			& label{width: 47.4%;}
+		& .wide {
+			& label {width: 47.4%;}
 			& input,
 			& select,
 			& textarea,
-			& span.readonly{width: 47%;}
-			& input[type="checkbox"] + label, & input[type="radio"] + label{width: 91%;}
+			& span.readonly {width: 47%;}
+			& input[type="checkbox"] + label, & input[type="radio"] + label {width: 91%;}
 				& .button:first-child,
 				& a:first-child,
 				& input[type="checkbox"],
 				& input[type="radio"],
 				& input[type="file"] + input[type="file"]{margin-left: 0;}
-				& .note{max-width: 45%;}
-				& input[type=submit] + .note{display: block; margin-top: 10px;}
+				& .note {max-width: 45%;}
+				& input[type=submit] + .note {display: block; margin-top: 10px;}
 				& input[type=submit] + .note a {text-decoration: underline;}
 		}
 
 // inline forms
-		& .inline{
-			& li{display: inline;}
+		& .inline {
+			& li {display: inline;}
 			& label,
 			& .note,
 			& input,
 			& input + label {width: auto; display: inline-block; margin-bottom: 5px;}
 			& input,
-			& label{margin-left: 0; margin-right: @col-nav;}
-			& label{padding: 0 (@col-nav / 2) 0 0!important;}
+			& label {margin-left: 0; margin-right: @col;}
+			& label {padding: 0 (@col / 2) 0 0!important;}
 		}
 // inline vertical forms
-		& .inline-vertical{
-			& li{width: auto !important; display: inline-block;}
+		& .inline-vertical {
+			& li {width: auto !important; display: inline-block;}
 			& label,
 			& .note,
 			& input,
 			& input + label {width: auto; display: block; text-align: left; margin-bottom: 5px;}
 			& input,
-			& label{margin-left: 0; margin-right: @col-nav;}
-			& label{padding: 0 (@col-nav / 2) 0 0!important;}
+			& label {margin-left: 0; margin-right: @col;}
+			& label {padding: 0 (@col / 2) 0 0!important;}
+
+			& input[type="checkbox"] + label,
+			& input[type="radio"] + label {}
+		}
+		& .hidden-labels {
+			& label {.hide-text; display: inline-block; margin: 0 !important; padding: 0 !important;}
+			&  input {margin-right: 10px; padding-right: 10px;
+				&.gs700 {width:  calc(~"100% - 10px") !important;}
+				&.gs640 {width: calc(~"91.667% - 10px") !important;}
+				&.gs580 {width: calc(~"83.333% - 10px") !important;}
+				&.gs520 {width: calc(~"75% - 10px") !important;}
+				&.gs460 {width: calc(~"66.667% - 10px") !important;}
+				&.gs400 {width: calc(~"58.333% - 10px") !important;}
+				&.gs340 {width: calc(~"50% - 10px") !important;}
+				&.gs280 {width: calc(~"41.667% - 10px") !important;}
+				&.gs220 {width: calc(~"33.333% - 10px") !important;}
+				&.gs160 {width: calc(~"25% - 10px") !important;}
+				&.gs100 {width: calc(~"16.667% - 10px") !important;}
+				&.gs40 {width: calc(~"8.333% - 10px") !important;}
+			}
 		}
 // override indenting style for inline, vertical and inline-vertical fields as well as nested fieldsets.
 		& fieldset fieldset li,
@@ -432,49 +469,26 @@ body:not(.hi-vis) & {
 		& .inline li,
 		& .inline-vertical li {padding-left: 0 !important; text-indent: 0;
 			.box-sizing(border-box);
-			& label:first-child{text-indent: 0;}
+			& label:first-child {text-indent: 0;}
 		}
-		& .vertical p:first-child{margin-left: 0; display: block; max-width: 100%;}
+		& .vertical p:first-child {margin-left: 0; display: block; max-width: 100%;}
 
 //Special styled forms
 // Boxed forms
-		&.highlight li,
-		&.dividers li,
-		&.bordered li{margin-bottom: 2px; padding-top: 10px; z-index: 1; position: relative;}
-	    &.highlight li:hover{background-color: @bg - 10;}
-		&.dividers li:after{border-bottom: 1px dotted #ccc; margin-left: -47%; width: 143%;
+		& .highlight li,
+		& .dividers li,
+		& .bordered li {margin-bottom: 2px; padding-top: 10px; z-index: 1; position: relative;}
+	   
+	    & .highlight li:hover {background-color: @gsforms-highlight-bg;}
+		& .dividers li:after {border-bottom: 1px dotted #ccc; margin-left: -47%; width: 143%;
 			.pseudo;
 		}
-		&.bordered{position: relative;
+		& .bordered {position: relative; background-color: @gsforms-bordered-bg;
 	    	.clearfix;
-			&:before{border: @border-solid; position: absolute; top: 0; left: 0; bottom: 0; right: @gutter; z-index: 0; pointer-events: none;
+			&:before {border: @gsforms-bordered-border; position: absolute; top: 0; left: 0; bottom: 0; right: @gutter; z-index: 0; pointer-events: none;
 	    		.pseudo;
 	    	}
-			& legend {padding: 10px 0 0 10px !important;}
-	    	& .note{margin-right: 20px;}
-	    	.buttongroup {width: auto !important; background-color: #f8f8f8; display: block; margin: 0 24px 4px 4px; padding-left: 40%}
+			& legend {padding: 10px 0 0 12px !important;}
+	    	& .note {margin-right: 20px;}
+	    	.buttongroup {width: auto !important; background-color: @gsforms-bordered-footer; display: block; margin: 0 24px 4px 4px; padding-left: 40%}
 		}
-
-// widths
-		// & .gs700+.note{width: 100%}
-		& .gs40 input,
-		& .gs40 textarea,
-		& .gs40 label{width: 40px;}
-		& .gs100 input,
-		& .gs100 textarea,
-		& .gs100 label{width: 100px;}
-		& .gs160 input,
-		& .gs160 textarea{width: 160px;}
-		& textarea.gs940{width: 95%;}
-		& input[type=radio],
-		& input[type=checkbox]{width: auto;}
-		& input[value=Choose],
-		& input[value=Edit],
-		& input[value=Change],
-		& input[value~=Find]{min-width: 50px;}
-		& .date-month{width: 140px !important; min-width: 140px !important;}
-		& .date-year{width: 80px !important; min-width: 80px !important;}
-		& .issue-number{width: 70px !important; min-width: 70px !important;}
-		& #card_type{width: 160px !important; min-width: 160px !important;}
-
-}
