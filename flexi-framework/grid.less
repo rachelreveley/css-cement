@@ -13,31 +13,56 @@
 // ###############################
 // end editable
 // ###############################
+// -------------------------------
+// Fractions based grid system
+// -------------------------------
 // default grid margin, padding & borders
 @margin-dt: percentage(1/48);
 @margin-tb: percentage(1/48);
 @margin-mb: percentage(1/32);
 
-@col-20: percentage(1/20);
-@col-19: percentage(1/19);
-@col-18: percentage(1/18);
-@col-17: percentage(1/17);
-@col-16: percentage(1/16);
-@col-15: percentage(1/15);
-@col-14: percentage(1/14);
-@col-13: percentage(1/13);
-@col-12: percentage(1/12);
-@col-11: percentage(1/11);
-@col-10: percentage(1/10);
-@col-9: percentage(1/9);
-@col-8: percentage(1/8);
-@col-7: percentage(1/7);
-@col-6: percentage(1/6);
-@col-5: percentage(1/5);
-@col-4: percentage(1/4);
-@col-3: percentage(1/3);
-@col-2: percentage(1/2);
-@col-1: percentage(1/1);
+@col-19-20: percentage(19/20);
+@col-17-20: percentage(17/20);
+@col-15-20: percentage(15/20);
+@col-13-20: percentage(13/20);
+@col-11-20: percentage(11/20);
+@col-9-20: percentage(9/20);
+@col-7-20: percentage(7/20);
+@col-3-20: percentage(3/20);
+@col-1-20: percentage(1/20);
+@col-15-16: percentage(15/16);
+@col-13-16: percentage(13/16);
+@col-11-16: percentage(11/16);
+@col-9-16: percentage(9/16);
+@col-7-16: percentage(7/16);
+@col-5-16: percentage(5/16);
+@col-3-16: percentage(3/16);
+@col-1-16: percentage(1/16);
+@col-11-12: percentage(11/12);
+@col-7-12: percentage(7/12);
+@col-5-12: percentage(5/12);
+@col-1-12: percentage(1/12);
+@col-9-10: percentage(9/10);
+@col-7-10: percentage(7/10);
+@col-5-10: percentage(5/10);
+@col-3-10: percentage(3/10);
+@col-1-10: percentage(1/10);
+@col-7-8: percentage(7/8);
+@col-5-8: percentage(5/8);
+@col-3-8: percentage(3/8);
+@col-1-8: percentage(1/8);
+@col-5-6: percentage(5/6);
+@col-1-6: percentage(1/6);
+@col-4-5: percentage(4/5);
+@col-3-5: percentage(3/5);
+@col-2-5: percentage(2/5);
+@col-1-5: percentage(1/5);
+@col-3-4: percentage(3/4);
+@col-1-4: percentage(1/4);
+@col-2-3: percentage(2/3);
+@col-1-3: percentage(1/3);
+@col-1-2: percentage(1/2);
+@col-1-1: percentage(1/1);
 
 // basic grid
 .parent{.fs-zero; display: block;
@@ -88,48 +113,92 @@
 //		&:first-child{padding-top: @margin-dt;}
 		& > div{margin-right: @margin-dt; margin-bottom: @margin-dt;}
 		&.dt-{
-			&20 > div {width: @col-20 - @margin-dt;}
-			&19 > div {width: @col-19 - @margin-dt;}
-			&18 > div {width: @col-18 - @margin-dt;}
-			&17 > div {width: @col-17 - @margin-dt;}
-			&16 > div {width: @col-16 - @margin-dt;}
-			&15 > div {width: @col-15 - @margin-dt;}
-			&14 > div {width: @col-14 - @margin-dt;}
-			&13 > div {width: @col-13 - @margin-dt;}
-			&12 > div {width: @col-12 - @margin-dt;}
-			&11 > div {width: @col-11 - @margin-dt;}
-			&10 > div {width: @col-10 - @margin-dt;}
-			&9 > div {width: @col-9 - @margin-dt;}
-			&8 > div {width: @col-8 - @margin-dt;}
-			&7 > div {width: @col-7 - @margin-dt;}
-			&6 > div {width: @col-6 - @margin-dt;}
-			&5 > div {width: @col-5 - @margin-dt;}
-			&4 > div {width: @col-4 - @margin-dt;}
-			&3 > div {width: @col-3 - @margin-dt;}
-			&2 > div {width: @col-2 - @margin-dt;}
-			&1 > div {width: @col-1 - @margin-dt;}
+			&19-20 > div {width: @col-19-20 - @margin-dt;}
+			&17-20 > div {width: @col-17-20 - @margin-dt;}
+			&15-20 > div {width: @col-15-20 - @margin-dt;}
+			&13-20 > div {width: @col-13-20 - @margin-dt;}
+			&11-20 > div {width: @col-11-20 - @margin-dt;}
+			&9-20 > div {width: @col-9-20 - @margin-dt;}
+			&7-20 > div {width: @col-7-20 - @margin-dt;}
+			&3-20 > div {width: @col-3-20 - @margin-dt;}
+			&1-20 > div {width: @col-1-20 - @margin-dt;}
+			&15-16 > div {width: @col-15-16 - @margin-dt;}
+			&13-16 > div {width: @col-13-16 - @margin-dt;}
+			&11-16 > div {width: @col-11-16 - @margin-dt;}
+			&9-16 > div {width: @col-9-16 - @margin-dt;}
+			&7-16 > div {width: @col-7-16 - @margin-dt;}
+			&5-16 > div {width: @col-5-16 - @margin-dt;}
+			&3-16 > div {width: @col-3-16 - @margin-dt;}
+			&1-16 > div {width: @col-1-16 - @margin-dt;}
+			&11-12 > div {width: @col-11-12 - @margin-dt;}
+			&7-12 > div {width: @col-7-12 - @margin-dt;}
+			&5-12 > div {width: @col-5-12 - @margin-dt;}
+			&1-12 > div {width: @col-1-12 - @margin-dt;}
+			&9-10 > div {width: @col-9-10 - @margin-dt;}
+			&7-10 > div {width: @col-7-10 - @margin-dt;}
+			&5-10 > div {width: @col-5-10 - @margin-dt;}
+			&3-10 > div {width: @col-3-10 - @margin-dt;}
+			&1-10 > div {width: @col-1-10 - @margin-dt;}
+			&7-8 > div {width: @col-7-8 - @margin-dt;}
+			&5-8 > div {width: @col-5-8 - @margin-dt;}
+			&3-8 > div {width: @col-3-8 - @margin-dt;}
+			&1-8 > div {width: @col-1-8 - @margin-dt;}
+			&5-6 > div {width: @col-5-6 - @margin-dt;}
+			&1-6 > div {width: @col-1-6 - @margin-dt;}
+			&4-5 > div {width: @col-4-5 - @margin-dt;}
+			&3-5 > div {width: @col-3-5 - @margin-dt;}
+			&2-5 > div {width: @col-2-5 - @margin-dt;}
+			&1-5 > div {width: @col-1-5 - @margin-dt;}
+			&3-4 > div {width: @col-3-4 - @margin-dt;}
+			&1-4 > div {width: @col-1-4 - @margin-dt;}
+			&2-3 > div {width: @col-2-3 - @margin-dt;}
+			&1-3 > div {width: @col-1-3 - @margin-dt;}
+			&1-2 > div {width: @col-1-2 - @margin-dt;}
+			&1-1 > div {width: @col-1-1 - @margin-dt;}
 		}
 		& div.dt-{
-			&20 {width: @col-20 - @margin-dt;}
-			&19 {width: @col-19 - @margin-dt;}
-			&18 {width: @col-18 - @margin-dt;}
-			&17 {width: @col-17 - @margin-dt;}
-			&16 {width: @col-16 - @margin-dt;}
-			&15 {width: @col-15 - @margin-dt;}
-			&14 {width: @col-14 - @margin-dt;}
-			&13 {width: @col-13 - @margin-dt;}
-			&12 {width: @col-12 - @margin-dt;}
-			&11 {width: @col-11 - @margin-dt;}
-			&10 {width: @col-10 - @margin-dt;}
-			&9 {width: @col-9 - @margin-dt;}
-			&8 {width: @col-8 - @margin-dt;}
-			&7 {width: @col-7 - @margin-dt;}
-			&6 {width: @col-6 - @margin-dt;}
-			&5 {width: @col-5 - @margin-dt;}
-			&4 {width: @col-4 - @margin-dt;}
-			&3 {width: @col-3 - @margin-dt;}
-			&2 {width: @col-2 - @margin-dt;}
-			&1 {width: @col-1 - @margin-dt;}
+			&19-20 {width: @col-19-20 - @margin-dt;}
+			&17-20 {width: @col-17-20 - @margin-dt;}
+			&15-20 {width: @col-15-20 - @margin-dt;}
+			&13-20 {width: @col-13-20 - @margin-dt;}
+			&11-20 {width: @col-11-20 - @margin-dt;}
+			&9-20 {width: @col-9-20 - @margin-dt;}
+			&7-20 {width: @col-7-20 - @margin-dt;}
+			&3-20 {width: @col-3-20 - @margin-dt;}
+			&1-20 {width: @col-1-20 - @margin-dt;}
+			&15-16 {width: @col-15-16 - @margin-dt;}
+			&13-16 {width: @col-13-16 - @margin-dt;}
+			&11-16 {width: @col-11-16 - @margin-dt;}
+			&9-16 {width: @col-9-16 - @margin-dt;}
+			&7-16 {width: @col-7-16 - @margin-dt;}
+			&5-16 {width: @col-5-16 - @margin-dt;}
+			&3-16 {width: @col-3-16 - @margin-dt;}
+			&1-16 {width: @col-1-16 - @margin-dt;}
+			&11-12 {width: @col-11-12 - @margin-dt;}
+			&7-12 {width: @col-7-12 - @margin-dt;}
+			&5-12 {width: @col-5-12 - @margin-dt;}
+			&1-12 {width: @col-1-12 - @margin-dt;}
+			&9-10 {width: @col-9-10 - @margin-dt;}
+			&7-10 {width: @col-7-10 - @margin-dt;}
+			&5-10 {width: @col-5-10 - @margin-dt;}
+			&3-10 {width: @col-3-10 - @margin-dt;}
+			&1-10 {width: @col-1-10 - @margin-dt;}
+			&7-8 {width: @col-7-8 - @margin-dt;}
+			&5-8 {width: @col-5-8 - @margin-dt;}
+			&3-8 {width: @col-3-8 - @margin-dt;}
+			&1-8 {width: @col-1-8 - @margin-dt;}
+			&5-6 {width: @col-5-6 - @margin-dt;}
+			&1-6 {width: @col-1-6 - @margin-dt;}
+			&4-5 {width: @col-4-5 - @margin-dt;}
+			&3-5 {width: @col-3-5 - @margin-dt;}
+			&2-5 {width: @col-2-5 - @margin-dt;}
+			&1-5 {width: @col-1-5 - @margin-dt;}
+			&3-4 {width: @col-3-4 - @margin-dt;}
+			&1-4 {width: @col-1-4 - @margin-dt;}
+			&2-3 {width: @col-2-3 - @margin-dt;}
+			&1-3 {width: @col-1-3 - @margin-dt;}
+			&1-2 {width: @col-1-2 - @margin-dt;}
+			&1-1 {width: @col-1-1 - @margin-dt;}
 		}
 	}
 }
@@ -138,48 +207,92 @@
 	.parent {padding-left: @margin-tb;
 		& > div{margin-right: @margin-tb; margin-bottom: @margin-tb;}
 		&.tb-{
-			&20 > div {width: @col-20 - @margin-tb;}
-			&19 > div {width: @col-19 - @margin-tb;}
-			&18 > div {width: @col-18 - @margin-tb;}
-			&17 > div {width: @col-17 - @margin-tb;}
-			&16 > div {width: @col-16 - @margin-tb;}
-			&15 > div {width: @col-15 - @margin-tb;}
-			&14 > div {width: @col-14 - @margin-tb;}
-			&13 > div {width: @col-13 - @margin-tb;}
-			&12 > div {width: @col-12 - @margin-tb;}
-			&11 > div {width: @col-11 - @margin-tb;}
-			&10 > div {width: @col-10 - @margin-tb;}
-			&9 > div {width: @col-9 - @margin-tb;}
-			&8 > div {width: @col-8 - @margin-tb;}
-			&7 > div {width: @col-7 - @margin-tb;}
-			&6 > div {width: @col-6 - @margin-tb;}
-			&5 > div {width: @col-5 - @margin-tb;}
-			&4 > div {width: @col-4 - @margin-tb;}
-			&3 > div {width: @col-3 - @margin-tb;}
-			&2 > div {width: @col-2 - @margin-tb;}
-			&1 > div {width: @col-1 - @margin-tb;}
+			&19-20 > div {width: @col-19-20 - @margin-tb;}
+			&17-20 > div {width: @col-17-20 - @margin-tb;}
+			&15-20 > div {width: @col-15-20 - @margin-tb;}
+			&13-20 > div {width: @col-13-20 - @margin-tb;}
+			&11-20 > div {width: @col-11-20 - @margin-tb;}
+			&9-20 > div {width: @col-9-20 - @margin-tb;}
+			&7-20 > div {width: @col-7-20 - @margin-tb;}
+			&3-20 > div {width: @col-3-20 - @margin-tb;}
+			&1-20 > div {width: @col-1-20 - @margin-tb;}
+			&15-16 > div {width: @col-15-16 - @margin-tb;}
+			&13-16 > div {width: @col-13-16 - @margin-tb;}
+			&11-16 > div {width: @col-11-16 - @margin-tb;}
+			&9-16 > div {width: @col-9-16 - @margin-tb;}
+			&7-16 > div {width: @col-7-16 - @margin-tb;}
+			&5-16 > div {width: @col-5-16 - @margin-tb;}
+			&3-16 > div {width: @col-3-16 - @margin-tb;}
+			&1-16 > div {width: @col-1-16 - @margin-tb;}
+			&11-12 > div {width: @col-11-12 - @margin-tb;}
+			&7-12 > div {width: @col-7-12 - @margin-tb;}
+			&5-12 > div {width: @col-5-12 - @margin-tb;}
+			&1-12 > div {width: @col-1-12 - @margin-tb;}
+			&9-10 > div {width: @col-9-10 - @margin-tb;}
+			&7-10 > div {width: @col-7-10 - @margin-tb;}
+			&5-10 > div {width: @col-5-10 - @margin-tb;}
+			&3-10 > div {width: @col-3-10 - @margin-tb;}
+			&1-10 > div {width: @col-1-10 - @margin-tb;}
+			&7-8 > div {width: @col-7-8 - @margin-tb;}
+			&5-8 > div {width: @col-5-8 - @margin-tb;}
+			&3-8 > div {width: @col-3-8 - @margin-tb;}
+			&1-8 > div {width: @col-1-8 - @margin-tb;}
+			&5-6 > div {width: @col-5-6 - @margin-tb;}
+			&1-6 > div {width: @col-1-6 - @margin-tb;}
+			&4-5 > div {width: @col-4-5 - @margin-tb;}
+			&3-5 > div {width: @col-3-5 - @margin-tb;}
+			&2-5 > div {width: @col-2-5 - @margin-tb;}
+			&1-5 > div {width: @col-1-5 - @margin-tb;}
+			&3-4 > div {width: @col-3-4 - @margin-tb;}
+			&1-4 > div {width: @col-1-4 - @margin-tb;}
+			&2-3 > div {width: @col-2-3 - @margin-tb;}
+			&1-3 > div {width: @col-1-3 - @margin-tb;}
+			&1-2 > div {width: @col-1-2 - @margin-tb;}
+			&1-1 > div {width: @col-1-1 - @margin-tb;}
 		}
 		& div.tb-{
-			&20 {width: @col-20 - @margin-tb;}
-			&19 {width: @col-19 - @margin-tb;}
-			&18 {width: @col-18 - @margin-tb;}
-			&17 {width: @col-17 - @margin-tb;}
-			&16 {width: @col-16 - @margin-tb;}
-			&15 {width: @col-15 - @margin-tb;}
-			&14 {width: @col-14 - @margin-tb;}
-			&13 {width: @col-13 - @margin-tb;}
-			&12 {width: @col-12 - @margin-tb;}
-			&11 {width: @col-11 - @margin-tb;}
-			&10 {width: @col-10 - @margin-tb;}
-			&9 {width: @col-9 - @margin-tb;}
-			&8 {width: @col-8 - @margin-tb;}
-			&7 {width: @col-7 - @margin-tb;}
-			&6 {width: @col-6 - @margin-tb;}
-			&5 {width: @col-5 - @margin-tb;}
-			&4 {width: @col-4 - @margin-tb;}
-			&3 {width: @col-3 - @margin-tb;}
-			&2 {width: @col-2 - @margin-tb;}
-			&1 {width: @col-1 - @margin-tb;}
+			&19-20 {width: @col-19-20 - @margin-tb;}
+			&17-20 {width: @col-17-20 - @margin-tb;}
+			&15-20 {width: @col-15-20 - @margin-tb;}
+			&13-20 {width: @col-13-20 - @margin-tb;}
+			&11-20 {width: @col-11-20 - @margin-tb;}
+			&9-20 {width: @col-9-20 - @margin-tb;}
+			&7-20 {width: @col-7-20 - @margin-tb;}
+			&3-20 {width: @col-3-20 - @margin-tb;}
+			&1-20 {width: @col-1-20 - @margin-tb;}
+			&15-16 {width: @col-15-16 - @margin-tb;}
+			&13-16 {width: @col-13-16 - @margin-tb;}
+			&11-16 {width: @col-11-16 - @margin-tb;}
+			&9-16 {width: @col-9-16 - @margin-tb;}
+			&7-16 {width: @col-7-16 - @margin-tb;}
+			&5-16 {width: @col-5-16 - @margin-tb;}
+			&3-16 {width: @col-3-16 - @margin-tb;}
+			&1-16 {width: @col-1-16 - @margin-tb;}
+			&11-12 {width: @col-11-12 - @margin-tb;}
+			&7-12 {width: @col-7-12 - @margin-tb;}
+			&5-12 {width: @col-5-12 - @margin-tb;}
+			&1-12 {width: @col-1-12 - @margin-tb;}
+			&9-10 {width: @col-9-10 - @margin-tb;}
+			&7-10 {width: @col-7-10 - @margin-tb;}
+			&5-10 {width: @col-5-10 - @margin-tb;}
+			&3-10 {width: @col-3-10 - @margin-tb;}
+			&1-10 {width: @col-1-10 - @margin-tb;}
+			&7-8 {width: @col-7-8 - @margin-tb;}
+			&5-8 {width: @col-5-8 - @margin-tb;}
+			&3-8 {width: @col-3-8 - @margin-tb;}
+			&1-8 {width: @col-1-8 - @margin-tb;}
+			&5-6 {width: @col-5-6 - @margin-tb;}
+			&1-6 {width: @col-1-6 - @margin-tb;}
+			&4-5 {width: @col-4-5 - @margin-tb;}
+			&3-5 {width: @col-3-5 - @margin-tb;}
+			&2-5 {width: @col-2-5 - @margin-tb;}
+			&1-5 {width: @col-1-5 - @margin-tb;}
+			&3-4 {width: @col-3-4 - @margin-tb;}
+			&1-4 {width: @col-1-4 - @margin-tb;}
+			&2-3 {width: @col-2-3 - @margin-tb;}
+			&1-3 {width: @col-1-3 - @margin-tb;}
+			&1-2 {width: @col-1-2 - @margin-tb;}
+			&1-1 {width: @col-1-1 - @margin-tb;}
 		}
 	}
 }
@@ -188,48 +301,92 @@
 	.parent {padding-left: @margin-mb;
 		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
-			&20 > div {width: @col-20 - @margin-mb;}
-			&19 > div {width: @col-19 - @margin-mb;}
-			&18 > div {width: @col-18 - @margin-mb;}
-			&17 > div {width: @col-17 - @margin-mb;}
-			&16 > div {width: @col-16 - @margin-mb;}
-			&15 > div {width: @col-15 - @margin-mb;}
-			&14 > div {width: @col-14 - @margin-mb;}
-			&13 > div {width: @col-13 - @margin-mb;}
-			&12 > div {width: @col-12 - @margin-mb;}
-			&11 > div {width: @col-11 - @margin-mb;}
-			&10 > div {width: @col-10 - @margin-mb;}
-			&9 > div {width: @col-9 - @margin-mb;}
-			&8 > div {width: @col-8 - @margin-mb;}
-			&7 > div {width: @col-7 - @margin-mb;}
-			&6 > div {width: @col-6 - @margin-mb;}
-			&5 > div {width: @col-5 - @margin-mb;}
-			&4 > div {width: @col-4 - @margin-mb;}
-			&3 > div {width: @col-3 - @margin-mb;}
-			&2 > div {width: @col-2 - @margin-mb;}
-			&1 > div {width: @col-1 - @margin-mb;}
+			&19-20 > div {width: @col-19-20 - @margin-mb;}
+			&17-20 > div {width: @col-17-20 - @margin-mb;}
+			&15-20 > div {width: @col-15-20 - @margin-mb;}
+			&13-20 > div {width: @col-13-20 - @margin-mb;}
+			&11-20 > div {width: @col-11-20 - @margin-mb;}
+			&9-20 > div {width: @col-9-20 - @margin-mb;}
+			&7-20 > div {width: @col-7-20 - @margin-mb;}
+			&3-20 > div {width: @col-3-20 - @margin-mb;}
+			&1-20 > div {width: @col-1-20 - @margin-mb;}
+			&15-16 > div {width: @col-15-16 - @margin-mb;}
+			&13-16 > div {width: @col-13-16 - @margin-mb;}
+			&11-16 > div {width: @col-11-16 - @margin-mb;}
+			&9-16 > div {width: @col-9-16 - @margin-mb;}
+			&7-16 > div {width: @col-7-16 - @margin-mb;}
+			&5-16 > div {width: @col-5-16 - @margin-mb;}
+			&3-16 > div {width: @col-3-16 - @margin-mb;}
+			&1-16 > div {width: @col-1-16 - @margin-mb;}
+			&11-12 > div {width: @col-11-12 - @margin-mb;}
+			&7-12 > div {width: @col-7-12 - @margin-mb;}
+			&5-12 > div {width: @col-5-12 - @margin-mb;}
+			&1-12 > div {width: @col-1-12 - @margin-mb;}
+			&9-10 > div {width: @col-9-10 - @margin-mb;}
+			&7-10 > div {width: @col-7-10 - @margin-mb;}
+			&5-10 > div {width: @col-5-10 - @margin-mb;}
+			&3-10 > div {width: @col-3-10 - @margin-mb;}
+			&1-10 > div {width: @col-1-10 - @margin-mb;}
+			&7-8 > div {width: @col-7-8 - @margin-mb;}
+			&5-8 > div {width: @col-5-8 - @margin-mb;}
+			&3-8 > div {width: @col-3-8 - @margin-mb;}
+			&1-8 > div {width: @col-1-8 - @margin-mb;}
+			&5-6 > div {width: @col-5-6 - @margin-mb;}
+			&1-6 > div {width: @col-1-6 - @margin-mb;}
+			&4-5 > div {width: @col-4-5 - @margin-mb;}
+			&3-5 > div {width: @col-3-5 - @margin-mb;}
+			&2-5 > div {width: @col-2-5 - @margin-mb;}
+			&1-5 > div {width: @col-1-5 - @margin-mb;}
+			&3-4 > div {width: @col-3-4 - @margin-mb;}
+			&1-4 > div {width: @col-1-4 - @margin-mb;}
+			&2-3 > div {width: @col-2-3 - @margin-mb;}
+			&1-3 > div {width: @col-1-3 - @margin-mb;}
+			&1-2 > div {width: @col-1-2 - @margin-mb;}
+			&1-1 > div {width: @col-1-1 - @margin-mb;}
 		}
 		& div.mb-{
-			&20 {width: @col-20 - @margin-mb;}
-			&19 {width: @col-19 - @margin-mb;}
-			&18 {width: @col-18 - @margin-mb;}
-			&17 {width: @col-17 - @margin-mb;}
-			&16 {width: @col-16 - @margin-mb;}
-			&15 {width: @col-15 - @margin-mb;}
-			&14 {width: @col-14 - @margin-mb;}
-			&13 {width: @col-13 - @margin-mb;}
-			&12 {width: @col-12 - @margin-mb;}
-			&11 {width: @col-11 - @margin-mb;}
-			&10 {width: @col-10 - @margin-mb;}
-			&9 {width: @col-9 - @margin-mb;}
-			&8 {width: @col-8 - @margin-mb;}
-			&7 {width: @col-7 - @margin-mb;}
-			&6 {width: @col-6 - @margin-mb;}
-			&5 {width: @col-5 - @margin-mb;}
-			&4 {width: @col-4 - @margin-mb;}
-			&3 {width: @col-3 - @margin-mb;}
-			&2 {width: @col-2 - @margin-mb;}
-			&1 {width: @col-1 - @margin-mb;}
+			&19-20 {width: @col-19-20 - @margin-mb;}
+			&17-20 {width: @col-17-20 - @margin-mb;}
+			&15-20 {width: @col-15-20 - @margin-mb;}
+			&13-20 {width: @col-13-20 - @margin-mb;}
+			&11-20 {width: @col-11-20 - @margin-mb;}
+			&9-20 {width: @col-9-20 - @margin-mb;}
+			&7-20 {width: @col-7-20 - @margin-mb;}
+			&3-20 {width: @col-3-20 - @margin-mb;}
+			&1-20 {width: @col-1-20 - @margin-mb;}
+			&15-16 {width: @col-15-16 - @margin-mb;}
+			&13-16 {width: @col-13-16 - @margin-mb;}
+			&11-16 {width: @col-11-16 - @margin-mb;}
+			&9-16 {width: @col-9-16 - @margin-mb;}
+			&7-16 {width: @col-7-16 - @margin-mb;}
+			&5-16 {width: @col-5-16 - @margin-mb;}
+			&3-16 {width: @col-3-16 - @margin-mb;}
+			&1-16 {width: @col-1-16 - @margin-mb;}
+			&11-12 {width: @col-11-12 - @margin-mb;}
+			&7-12 {width: @col-7-12 - @margin-mb;}
+			&5-12 {width: @col-5-12 - @margin-mb;}
+			&1-12 {width: @col-1-12 - @margin-mb;}
+			&9-10 {width: @col-9-10 - @margin-mb;}
+			&7-10 {width: @col-7-10 - @margin-mb;}
+			&5-10 {width: @col-5-10 - @margin-mb;}
+			&3-10 {width: @col-3-10 - @margin-mb;}
+			&1-10 {width: @col-1-10 - @margin-mb;}
+			&7-8 {width: @col-7-8 - @margin-mb;}
+			&5-8 {width: @col-5-8 - @margin-mb;}
+			&3-8 {width: @col-3-8 - @margin-mb;}
+			&1-8 {width: @col-1-8 - @margin-mb;}
+			&5-6 {width: @col-5-6 - @margin-mb;}
+			&1-6 {width: @col-1-6 - @margin-mb;}
+			&4-5 {width: @col-4-5 - @margin-mb;}
+			&3-5 {width: @col-3-5 - @margin-mb;}
+			&2-5 {width: @col-2-5 - @margin-mb;}
+			&1-5 {width: @col-1-5 - @margin-mb;}
+			&3-4 {width: @col-3-4 - @margin-mb;}
+			&1-4 {width: @col-1-4 - @margin-mb;}
+			&2-3 {width: @col-2-3 - @margin-mb;}
+			&1-3 {width: @col-1-3 - @margin-mb;}
+			&1-2 {width: @col-1-2 - @margin-mb;}
+			&1-1 {width: @col-1-1 - @margin-mb;}
 		}
 	}
 }
@@ -238,10 +395,10 @@
 	.parent {padding-left: @margin-mb;
 		& > div{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
-			&20 > div, &19 > div, &18 > div, &17 > div, &16 > div, &15 > div, &14 > div, &13 > div, &12 > div, &11 > div, &10 > div, &9 > div, &8 > div, &7 > div, &6 > div, &5 > div, &4 > div, &3 > div, &2 > div, &1 > div {width: @col-1 - @margin-mb;}
+			&20 > div, &19 > div, &18 > div, &17 > div, &16 > div, &15 > div, &14 > div, &13 > div, &12 > div, &11 > div, &10 > div, &9 > div, &8 > div, &7 > div, &6 > div, &5 > div, &4 > div, &3 > div, &2 > div, &1 > div {width: @col-1-1 - @margin-mb;}
 		}
 		& .mb-{
-			&20, &19, &18, &17, &16, &15, &14, &13, &12, &11, &10, &9, &8, &7, &6, &5, &4, &3, &2, &1 {width: @col-1 - @margin-mb;}
+			&20, &19, &18, &17, &16, &15, &14, &13, &12, &11, &10, &9, &8, &7, &6, &5, &4, &3, &2, &1 {width: @col-1-1 - @margin-mb;}
 		}
 	}
 }
