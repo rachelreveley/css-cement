@@ -1,27 +1,22 @@
-// -------------------------------
-// reset.less
-// -------------------------------
+body {color:@text; background-color: @bg}
 // from YUI - 3.0.0 version
 // reset.css
-html{color:@colour-body-fg;background:@colour-body-bg;overflow-y:scroll}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
-table{border-collapse:collapse;border-spacing:0}
-fieldset,img{border:0}
-address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
-li{list-style:none}
-caption,th{text-align:left}
-h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
-q:before,q:after{content:''}
-abbr,acronym{border:0;font-variant:normal}
-sup{vertical-align:text-top}
-sub{vertical-align:text-bottom}
-input,textarea,select{font-family:inherit;font-size:100%;font-weight:normal}
-input,textarea,select{*font-size:100%}
-legend{color:#333;}
+html {color: @text; background: @bg; overflow-y: scroll}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin: 0; padding: 0}table {border-collapse: collapse; border-spacing: 0}fieldset,img {border: 0}address,caption,cite,code,dfn,em,strong,th,var {font-style: normal; font-weight: normal}li {list-style: none}caption,th {text-align: left}h1,h2,h3,h4,h5,h6 {font-size: 100%; font-weight: normal}q:before,q:after {content: ''}abbr,acronym {border: 0; font-variant: normal}sup {vertical-align: text-top}sub {vertical-align: text-bottom}input,textarea,select {font-family: inherit; font-size: 100%; font-weight: normal}input,textarea,select {*font-size: 100%}legend {color: #333;}
 // fonts.css
-body{font:13px/@line-height @body-font-family;*font-size:small;*font:x-small}
-select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif}
-table{font-size:inherit;font:100%}
-pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
-p,ul{margin-bottom:1em;}
-script,style{display:none !important;}
+body {font: ~"13px/1.231" arial,helvetica,clean,sans-serif; *font-size: small; *font: x-small}select,input,button,textarea {font: 99% arial,helvetica,clean,sans-serif}table {font-size: inherit; font: 100%}pre,code,kbd,samp,tt {font-family: monospace; *font-size: 108%; line-height: 100%}
+p,ul {margin-bottom: 1em;}
+script,style {display: none !important;}
+// Others
+input::-webkit-clear-button {-webkit-appearance: none; margin: 0;} // search cross in chrome
+input[type=number],
+input[type=search]{-webkit-appearance: none; -moz-appearance: none;} // deafult input style
+input[type="file"]::-moz-file-upload-button {-webkit-appearance: none; -moz-appearance: none;} // basic upload button style
+input[type=number]{
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance: none; margin: 0;} // remove spinners on date inputs
+}
+.button{-webkit-appearance: none; -moz-appearance: none;} // removes internal fat
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {display: none;}
