@@ -4,190 +4,103 @@
 // ###############################
 // start editable
 // ###############################
-@buttons: ; // simple, boxed,
-@forms-theme: ; //
-@has-gsform: true;
-@col-nav: 20px;
-@gutter: 20px;
-@inline-error-text: ;
-@inline-error-bg: ;
-@flash-error-text: ;
-@flash-error-bg: ;
-
 // -------------------------------
-// buttons
+// Basic styles
 // -------------------------------
+	@gsform-font-size: @text-size;
+	@gsforms-input-border-radius: 2px;
+	@gsforms-gutter: 20px;
+	@gsforms-col: 3%;
 
-@button-style: ; // simple, flat-3d, lozenge, cylinder, shiny
-@button-radius: ; // number
-@button-animate: enable; // enable, disable
+	@gsforms-input-bg: @white;
+	@gsforms-input-border: 1px solid #ccc;
+	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset;
 
+	@gsforms-input-required-border: 1px solid @text6;
+	@gsforms-input-required-bg: @white;
 
-@has-pseudo-buttons: true;
-@button-border: 0;
-@button-font-size: 13px;
-@button-font-weight: bold;
-@button-border-radius: 5px;
-@button-bg-start: top;
-@button-bg-1: #45c351;
-@button-bg-2: #308638;
-@button-bg-fallback: #393;
-@button-fg: #fff;
-@button-hover-bg-start: top;
-@button-hover-bg-1: #56d865;
-@button-hover-bg-2: #3c9646;
-@button-hover-bg-fallback: #4a4;
-@button-hover-fg: #fff;
-@cta-icon-fg: #fff;
-@cta-icon: arrow-in-circle; // disabled, arrow, arrow-in-circle
-@button-scale: 1em;
-@sml-scale: 1;
-@std-scale: 1.2;
-@lrg-scale: 1.4;
+	@gsforms-input-focus-bg: @bg - 6;
+	@gsforms-input-focus-border: 1px solid #666;
+	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+	@gsforms-highlight-bg: @bg - 10;
+
+	@gsforms-error-text: #c00;
+	@gsforms-error-border: #fcc;
+	@gsforms-error-bg: #c00;
+
+	@gsforms-bordered-bg: transparent;
+	@gsforms-bordered-border: @border-solid;
+	@gsforms-bordered-footer: #f8f8f8;
+// General styles
+	@has-pseudo-buttons: true;
+	@button-border: 0;
+	@button-font-size: 13px;
+	@button-font-weight: bold;
+	@button-border-radius: 5px;
+	@button-box-shadow: none;
+	@button-text-shadow: none;
+	@button-hover-box-shadow: none;
+	@button-hover-text-shadow: none;
+// Colours - primary
+	@button-grad: @button-bg-start,	@button-bg-1, @button-bg-2;
+	@button-hover-grad: @button-hover-bg-start,	@button-hover-bg-1, @button-hover-bg-2;
+	@button-secondary-grad: @button-secondary-bg-start,	@button-secondary-bg-1, @button-secondary-bg-2;
+	@button-secondary-hover-grad: @button-secondary-hover-bg-start,	@button-secondary-hover-bg-1, @button-secondary-hover-bg-2;
+	@button-disabled-grad: @button-disabled-bg-start,	@button-disabled-bg-1, @button-disabled-bg-2;
+	@button-bg-start: top;
+	@button-bg-1: #45c351;
+	@button-bg-2: #308638;
+	@button-bg-fallback: #393;
+	@button-fg: #fff;
+	@cta-icon-fg: #fff;
+// Colours - primary - hover
+	@button-hover-bg-start: top;
+	@button-hover-bg-1: saturate(lighten(@button-bg-1,8),10);
+	@button-hover-bg-2: saturate(lighten(@button-bg-2,8),10);
+	@button-hover-bg-fallback: saturate(lighten(@button-bg-fallback,8),10);
+	@button-hover-fg: #fff;
+// Colours - secondary
+	@button-secondary-bg-start: top;
+	@button-secondary-bg-1: #3fb3f8;
+	@button-secondary-bg-2: #2b77a5;
+	@button-secondary-bg-fallback: #41b3f9;
+	@button-secondary-fg: #fff;
+// Colours - secondary - hover
+	@button-secondary-hover-bg-start: top;
+	@button-secondary-hover-bg-1: saturate(lighten(@button-secondary-bg-1,8),10);;
+	@button-secondary-hover-bg-2: saturate(lighten(@button-secondary-bg-2,8),10);;
+	@button-secondary-hover-bg-fallback: #2493d6;
+	@button-secondary-hover-fg: #fff;
+	@cta-icon-secondary-hover-fg: #fff;
+// Colours - disabled
+	@button-disabled-bg-start: top;
+	@button-disabled-bg-1: #ccc;
+	@button-disabled-bg-2: #ccc;
+	@button-disabled-bg-fallback: #ccc;
+	@button-disabled-fg: #eee;
+// Colours - disabled - hover
+	@button-disabled-hover-bg-start: top;
+	@button-disabled-hover-bg-1: #ccc;
+	@button-disabled-hover-bg-2: #ccc;
+	@button-disabled-hover-bg-fallback: #ccc;
+	@button-disabled-hover-fg: #eee;
+	@cta-icon-disabled-hover-fg: #eee;
+// Icons
+	@cta-icon: arrow-in-circle; // disabled, arrow, arrow-in-circle
+// Button sizing and padding
+	@button-scale: 1em;
+	@sml-scale: 1;
+	@std-scale: 1.2;
+	@lrg-scale: 1.4;
 // ###############################
 // end editable
 // ###############################
-// -------------------------------
-// Start non-editable vars
-// -------------------------------
-@button-padding-h: @button-scale;
-@button-padding-v: (@button-scale / 2.5);
-@sml-font-size: @button-font-size * @sml-scale;
-@std-font-size: @button-font-size * @std-scale;
-@lrg-font-size: @button-font-size * @lrg-scale;
-@sml-border-radius: @button-border-radius * @sml-scale;
-@std-border-radius: @button-border-radius * @std-scale;
-@lrg-border-radius: @button-border-radius * @lrg-scale;
-@sml-padding: (@button-padding-v * @sml-scale) (@button-padding-h * @sml-scale);
-@std-padding: (@button-padding-v * @std-scale) (@button-padding-h * @std-scale);
-@lrg-padding: (@button-padding-v * @lrg-scale) (@button-padding-h * @lrg-scale);
-// -------------------------------
-// End non-editable vars
-// -------------------------------
-	@button-padding-h: @button-scale;
-	@button-padding-v: (@button-scale / 2.5);
-	@sml-font-size: @button-font-size * @sml-scale;
-	@std-font-size: @button-font-size * @std-scale;
-	@lrg-font-size: @button-font-size * @lrg-scale;
-	@sml-border-radius: @button-border-radius * @sml-scale;
-	@std-border-radius: @button-border-radius * @std-scale;
-	@lrg-border-radius: @button-border-radius * @lrg-scale;
-	@sml-padding: (@button-padding-v * @sml-scale) (@button-padding-h * @sml-scale);
-	@std-padding: (@button-padding-v * @std-scale) (@button-padding-h * @std-scale);
-	@lrg-padding: (@button-padding-v * @lrg-scale) (@button-padding-h * @lrg-scale);
-	@button-grad: ;
-	@button-hover-grad: ;
-	@button-secondary-grad: ;
-	@button-secondary-hover-grad: ;
-
-	.cta-icon(@size: 10) when not (@cta-icon = disabled){}
-	.cta-icon(@size: 10) when	  (@cta-icon = arrow){border: (@size * 0.66) solid transparent; border-left-width: @size; border-left-color: @cta-icon-fg; margin: 0 3px 0 0; vertical-align: baseline; line-height: 0;}
-	.cta-icon(@size: 10) when	  (@cta-icon = arrow-in-circle){background: url("@{url-all}cta-icon-arrow-in-circle.svg") no-repeat; background-size: 100%; width: (@size * 1.8); height: (@size * 1.8); margin-right: (@size); vertical-align: middle; position: absolute;}
-
-// general button styles
-button.button,
-a.button {.pseudo-button;}
-	.pseudo-button() when (@has-pseudo-buttons = true)  {display: inline-block; line-height: 1.3em; font-weight: @button-font-weight; vertical-align: baseline; color: @button-fg; margin: 0 10px 10px 0; position: relative; border: @button-border; box-shadow: @button-box-shadow; text-shadow: @button-text-shadow; text-decoration: none;
-					font-size: @button-font-size;					padding: (@button-scale / 2.5) @button-scale;	border-radius: @button-border-radius;
-	&.sml-arrow,
-	&.sml-no-arrow{	font-size: @button-font-size; 					padding: @sml-padding;							border-radius: @sml-border-radius;}
-	&.std-arrow,
-	&.std-no-arrow{	font-size: (@button-font-size * @std-scale);	padding: @std-padding;							border-radius: @std-border-radius;}
-	&.lrg-arrow,
-	&.lrg-no-arrow{	font-size: (@button-font-size * @lrg-scale); 	padding: @lrg-padding;							border-radius: @lrg-border-radius;}
-// colours
-	.gradient(		       	@stops: @button-grad;					@fallback: @button-bg-fallback;);
-	&:hover {.gradient(		@stops: @button-hover-grad;				@fallback: @button-hover-bg-fallback;);}
-	&.secondary {.gradient(	@stops: @button-secondary-grad;			@fallback: @button-secondary-bg-fallback;); color: @button-secondary-fg;
-		&:hover {.gradient(	@stops: @button-secondary-hover-grad;	@fallback: @button-secondary-hover-bg-fallback;); color: @button-secondary-hover-fg;}
-	}
-	&[disabled] {cursor: default; text-shadow: none; color: @button-disabled-fg;
-		.gradient(			@stops: @button-disabled-grad;			@fallback: @button-disabled-bg-fallback;);
-	}
-}
-// buttons without icons
-a.button, 
-button.button when not (@cta-icon = disabled) {
-	&.sml-arrow,
-	&.std-arrow,
-	&.lrg-arrow {
-		&:before {.pseudo; display: inline-block;}
-	}
-}
-// buttons with arrows
-a.button, 
-button.button when (@cta-icon = arrow) {
-	&.sml-arrow{
-		&:before{.cta-icon(@sml-scale * 10px); margin-left: -3px; margin-bottom: -(@sml-scale * 1.5px);}
-	}
-	&.std-arrow{
-		&:before{.cta-icon(@std-scale * 10px); margin-left: -5.25px; margin-bottom: -(@std-scale * 1.5px);}
-	}
-	&.lrg-arrow{
-		&:before{.cta-icon(@lrg-scale * 10px); margin-left: -7.5px; margin-bottom: -(@lrg-scale * 1.5px);}
-	}
-}
-// buttons with arrows within circles
-a.button,
-button.button when (@cta-icon = arrow-in-circle) {
-	&.sml-arrow{padding-left: (@sml-scale * 18) + 14px;
-		&:before{.cta-icon(@sml-scale * 10px); margin-left: -(@sml-scale * 18) - 7px;}
-	}
-	&.std-arrow{padding-left: (@std-scale * 18) + 17px;
-		&:before{.cta-icon(@std-scale * 10px); margin-left: -(@std-scale * 18) - 8.5px;}
-	}
-	&.lrg-arrow{padding-left: (@lrg-scale * 18) + 20px;
-		&:before{.cta-icon(@lrg-scale * 10px); margin-left: -(@lrg-scale * 18) - 10px;}
-	}
-}
-// Double decker button
-	button.button {
-		&.double-decker {font-size: @fs-11; height: 4.3em; font-weight: normal; width: 16em;
-			&:before {top: 30%;}
-			& span{display: inline-block; width: 100%;}
-			& .top-deck{font-size: @fs-22;}
-		}
-	}
-
-/*
-
-// flat 3d
-a {position: relative; color: rgba(255,255,255,1); text-decoration: none; background-color: rgba(219,87,5,1); font-family: 'Yanone Kaffeesatz'; font-weight: 700; font-size: 3em; display: block; padding: 4px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7); -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7); box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7); margin: 100px auto; width: 160px; text-align: center; -webkit-transition: all .1s ease; -moz-transition: all .1s ease; -ms-transition: all .1s ease; -o-transition: all .1s ease; transition: all .1s ease; }
-a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); position: relative; top: 6px; }
-
-// shiny
-.button{height:60px; width:240px; padding:0; line-height:60px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; box-shadow:inset 0px 1px 3px #cfeff3; -moz-box-shadow:inset 0px 1px 3px #cfeff3; -webkit-box-shadow:inset 0px 1px 3px #cfeff3; background: -moz-linear-gradient(top, #A2DBDC 0%, #59A5A8 50%, #418F93 51%, #2F777C 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A2DBDC), color-stop(50%,#59A5A8), color-stop(51%,#418F93), color-stop(100%,#2F777C)); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#A2DBDC’, endColorstr=’#2F777C’,GradientType=0 ); border:1px solid #70c9d5; cursor:pointer; color:#e1fdff; font-size:24px; letter-spacing:0px; text-shadow:#CDF2F7 0px 1px 0, #256569 0 -1px 0; -moz-text-shadow:#CDF2F7 0px 1px 0, #256569 0 -1px 0; -webkit-text-shadow:#CDF2F7 0px 1px 0, #256569 0 -1px 0; font-family:helvetica; font-weight:lighter; }
-.button:hover{filter:alpha(opacity=94); opacity:0.94; colour:#afe6e7; }
-.button:active{background: -moz-linear-gradient(top, #95d3d4 0%, #4c9da0 51%, #318185 52%, #226b70 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#95d3d4), color-stop(51%,#4c9da0), color-stop(52%,#318185), color-stop(100%,#226b70)); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#95d3d4′, endColorstr=’#226b70′,GradientType=0 ); box-shadow:inset 0px 0px 15px #256569; -moz-box-shadow:inset 0px 0px 15px #256569; -webkit-box-shadow: inset 0px 0px 15px #256569; border:1px solid #256569; line-height:62px !important; }
-
-// http://designshack.net/tutorialexamples/animatedDownload/index.html
-*/
-// -------------------------------
-// Forms
-// -------------------------------
-
-@gsform-font-size: @fs-reset;
-@gsforms-input-border-radius: 2px;
-
-@gsforms-input-bg: @white;
-@gsforms-input-border: 1px solid #ccc;
-@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset;
-
-@gsforms-input-required-border: 1px solid @text6;
-@gsforms-input-required-bg: @white;
-
-@gsforms-input-focus-bg: @bg - 6;
-@gsforms-input-focus-border: 1px solid #666;
-@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-
-@gsforms-highlight-bg: @bg - 10;
-
-@gsforms-bordered-bg: transparent;
-@gsforms-bordered-border: @border-solid;
-@gsforms-bordered-footer: #f8f8f8;
-
+// -------------------- //
+// gsform
+// -------------------- //
 // basic layout
-	.gsform when (@has-gsform = true){float: left; width: 100%;
+	.gsform {float: left; width: 100%;
 		.clearfix;
 		& .box {border: 0;}
 		& ol li fieldset {display: block; margin-bottom: 15px; width: 100%; border: 0;}
@@ -196,8 +109,6 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		& .gs700 ol li {margin-bottom: 0; padding: 0 0 0 36%; text-indent: -32%; border: 0; float: none; width: 100% !important; font-size: 0; .box-sizing(border-box);
 			& *{text-indent: 0; font-size: @gsform-font-size; display: inline-block; vertical-align: middle;}
 		}
-///		& ul {margin-right: 0;}
-///		& ul li {margin-right: @col-nav;}
 
 		& li > textarea,
 		& .gs700 li > textarea,
@@ -205,34 +116,35 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		& select[size]{vertical-align: top;}
 
 // legends paras & labels
-		& legend {.h3; white-space: normal; margin-right: @gutter;}
+		& legend {.h3; white-space: normal; margin-right: @gsforms-gutter;}
 		& legend + *,
 		& legend + input[type=hidden] + * {-webkit-margin-top-collapse: separate; margin-top: 5px;} // adds a litle separation between legend and next element in webkiT, firefox behaves differently.
 		& label,
 		& .label,
-		& .logic {width: 50%; margin-right: 0; text-align: right; padding: 0 @gutter 0 0; margin-bottom: 10px;
+		& .logic {width: 50%; margin-right: 0; text-align: right; padding: 0 @gsforms-gutter 0 0; margin-bottom: 10px;
 			.box-sizing(border-box);
 		}
 		& .logic {padding-bottom: 0.5em;}
 
-		& label img {vertical-align: middle; margin-right: @col-nav / 2;}
+		& label img {vertical-align: middle;}
 		& label strong + span {display: block;}
 		& ol li p label,
 		& ol li p .note,
-		& .optional {width: auto; max-width: 100%; margin: 0 @col-nav 0 0; text-align: left;/*possible conflict - used on prod suggest form*/}
+		& .optional {width: auto; max-width: 100%; margin: 0 @gsforms-col 0 0; text-align: left;/*possible conflict - used on prod suggest form*/}
 
 		& label:first-child,
 		& .label:first-child,
 		& p:first-child,
 		& p:first-child + label {text-indent: 0; margin-left: 0; display: inline-block; -moz-box-sizing: border-box;}
-	
-		& p:first-child {margin-left: -56%; display: block; max-width: 150%; width: 150%;
-			& + label {margin-left: -50% !important;}
+
+		& p {display: block; margin: 0 @gsforms-col .5em -56%;
+			&:first-child {margin-left: -56%; display: block; max-width: 150%; width: 150%;
+				& + label {margin-left: -50% !important;}
+			}
+			&:only-child {width: 150%;}
+			&:last-child {margin-bottom: .5em;}
+			& + textarea.gs700 {margin-left: -56%;}
 		}
-		& p:only-child {width: 150%;}
-		& p {display: block; margin: 0 @col-nav .5em -56%;}
-		& p:last-child {margin-bottom: .5em;}
-		& p + textarea.gs700 {margin-left: -56%;}
 
 // Labels after input such as bolean inputs and erros
 		& input + p {display: inline-block; width: 160%;}
@@ -265,6 +177,7 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		& select,
 		& textarea,
 		& span.readonly {margin-bottom: 10px; margin-right: 4%;}
+		& select {margin-right:@gsforms-col;}
 
 // Text inputs
 		& input[type=text],
@@ -277,7 +190,6 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		& span.readonly {width: 50%; padding: 1px 4px 2px; background-color: @gsforms-input-bg; box-shadow: @gsforms-input-shadow; border: @gsforms-input-border;
 			.border-radius(@gsforms-input-border-radius); .box-sizing(border-box);
 		}
-		& select {margin-right:@col;}
 
 // read only
 		& span.readonly,
@@ -315,32 +227,23 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		& .prefix + input {padding-left: 35px;}
 		& .suffix + input {padding-right: 35px; margin-left: -33px;}
 
-// Add and Remove buttons (GV)
-		& .add,
-		& .remove {padding: 1px 4px 2px; margin-bottom: 12px;
-			&:before {background-image:url("@{url-all}sprite-add-and-remove.png"); background-repeat:no-repeat; margin-right: 2px;
-				.pseudo; width: 12px; height: 12px; display:inline-block !important; vertical-align: middle;
-			}
-		}
-		& .add:before {background-position: 0 -20px;}
-		& .remove:before {background-position: 0 0;}
-
 // interaction
-		& li  input[type=text]:focus,
-		& li  input[type=password]:focus,
-		& li  input[type=email]:focus,
-		& li  input[type=number]:focus,
-		& li  input[type=date]:focus,
-		& li  input[type=range]:focus,
+		& li input[type=text]:focus,
+		& li input[type=password]:focus,
+		& li input[type=email]:focus,
+		& li input[type=number]:focus,
+		& li input[type=date]:focus,
+		& li input[type=range]:focus,
 		& li textarea:focus {border: @gsforms-input-focus-border; background-color: @gsforms-input-focus-bg; box-shadow: @gsforms-input-focus-shadow;}
 		& input.button:focus {box-shadow: 0 0 transparent;}
 
 // buttongroups
-	buttongroup {margin: 0 @col-nav 10px (@col-nav * 12);
-		& .button {margin: 0 -3px 0 0 !important;}
-		.button:last-child {margin-right: 0 !important;}
-		& .button:not(:last-child){border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;}
-		& .button:not(:first-child){border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important;}
+	buttongroup {margin: 0 @gsforms-col 10px (@gsforms-col * 12);
+		& .button {margin: 0 -3px 0 0 !important;
+			&:last-child {margin-right: 0 !important;}
+			&:not(:last-child){border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;}
+			&:not(:first-child){border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important;}
+		}
 	}
 
 // required fields
@@ -355,14 +258,14 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 
 // Errors
 		& ol li label.error,
-		& ol li.error label {color: @inline-error-text;}
+		& ol li.error label {color: @gsforms-error-text;}
 		& ol li label.error {width: auto !important;}
 		& .error ~ .note,
 		& li.error .note {display: none;}
 		& input.error,
 		& textarea.error,
 		& li.error input,
-		& li.error textarea {border-color: @flash-error-text!important; background-color: lighten(@flash-error-bg, 45%)!important; color: @inline-error-text;}
+		& li.error textarea {border-color: @gsforms-error-border!important; background-color: lighten(@gsforms-error-bg, 45%)!important; color: @gsforms-error-text;}
 
 // fat forms
 		&.fatform,
@@ -377,7 +280,8 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 			& textarea,
 			& select {padding: 10px; font-size: 20px;}
 			& input[type="submit"]{font-size: 20px;}
-			& label, span {font-size: 20px;}
+			& label,
+			& span {font-size: 20px;}
 		}
 
 // vertical forms
@@ -396,9 +300,9 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 			& input[type="text"],
 			& input[type="password"],
 			& input[type="email"],
-			& textarea,& span.readonly {width: 95%;}
+			& textarea,
+			& span.readonly {width: 95%;}
 			& .note {max-width: 100%; margin: -5px 0 8px 0;}
-			// & .note.long {padding-left: 0;}
 			& input[type="checkbox"] + label,
 			& input[type="radio"] + label {margin-left: -30px; padding-left: 30px; width: 100% !important;}
 		}
@@ -410,7 +314,8 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 			& select,
 			& textarea,
 			& span.readonly {width: 47%;}
-			& input[type="checkbox"] + label, & input[type="radio"] + label {width: 91%;}
+			& input[type="checkbox"] + label,
+			& input[type="radio"] + label {width: 91%;}
 				& .button:first-child,
 				& a:first-child,
 				& input[type="checkbox"],
@@ -429,8 +334,8 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 			& input,
 			& input + label {width: auto; display: inline-block; margin-bottom: 5px;}
 			& input,
-			& label {margin-left: 0; margin-right: @col;}
-			& label {padding: 0 (@col / 2) 0 0!important;}
+			& label {margin-left: 0; margin-right: @gsforms-col;}
+			& label {padding: 0 (@gsforms-col / 2) 0 0!important;}
 		}
 // inline vertical forms
 		& .inline-vertical {
@@ -440,15 +345,12 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 			& input,
 			& input + label {width: auto; display: block; text-align: left; margin-bottom: 5px;}
 			& input,
-			& label {margin-left: 0; margin-right: @col;}
-			& label {padding: 0 (@col / 2) 0 0!important;}
-
-			& input[type="checkbox"] + label,
-			& input[type="radio"] + label {}
+			& label {margin-left: 0; margin-right: @gsforms-col;}
+			& label {padding: 0 (@gsforms-col / 2) 0 0!important;}
 		}
 		& .hidden-labels {
 			& label {.hide-text; display: inline-block; margin: 0 !important; padding: 0 !important;}
-			&  input {margin-right: 10px; padding-right: 10px;
+			& input {margin-right: 10px; padding-right: 10px;
 				&.gs700 {width:  calc(~"100% - 10px") !important;}
 				&.gs640 {width: calc(~"91.667% - 10px") !important;}
 				&.gs580 {width: calc(~"83.333% - 10px") !important;}
@@ -485,10 +387,112 @@ a:active {-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0
 		}
 		& .bordered {position: relative; background-color: @gsforms-bordered-bg;
 	    	.clearfix;
-			&:before {border: @gsforms-bordered-border; position: absolute; top: 0; left: 0; bottom: 0; right: @gutter; z-index: 0; pointer-events: none;
+			&:before {border: @gsforms-bordered-border; position: absolute; top: 0; left: 0; bottom: 0; right: @gsforms-gutter; z-index: 0; pointer-events: none;
 	    		.pseudo;
 	    	}
 			& legend {padding: 10px 0 0 12px !important;}
 	    	& .note {margin-right: 20px;}
 	    	.buttongroup {width: auto !important; background-color: @gsforms-bordered-footer; display: block; margin: 0 24px 4px 4px; padding-left: 40%}
 		}
+
+// widths
+		// & .gs700+.note {width: 100%}
+		& .gs40 input,
+		& .gs40 textarea,
+		& .gs40 label {width: 40px;}
+		& .gs100 input,
+		& .gs100 textarea,
+		& .gs100 label {width: 100px;}
+		& .gs160 input,
+		& .gs160 textarea {width: 160px;}
+		& textarea.gs940 {width: 95%;}
+		& input[type=radio],
+		& input[type=checkbox]{width: auto;}
+		& input[value=Choose],
+		& input[value=Edit],
+		& input[value=Change],
+		& input[value~=Find]{min-width: 50px;}
+		& .date-month {width: 140px !important; min-width: 140px !important;}
+		& .date-year {width: 80px !important; min-width: 80px !important;}
+		& .issue-number {width: 70px !important; min-width: 70px !important;}
+		& #card_type {width: 160px !important; min-width: 160px !important;}
+	}
+// -------------------- //
+// Buttons
+// -------------------- //
+// construction vars & mixins (not to be used in skins)
+	@button-padding-h: @button-scale;
+	@button-padding-v: (@button-scale / 2.5);
+	@sml-font-size: @button-font-size * @sml-scale;
+	@std-font-size: @button-font-size * @std-scale;
+	@lrg-font-size: @button-font-size * @lrg-scale;
+	@sml-border-radius: @button-border-radius * @sml-scale;
+	@std-border-radius: @button-border-radius * @std-scale;
+	@lrg-border-radius: @button-border-radius * @lrg-scale;
+	@sml-padding: (@button-padding-v * @sml-scale) (@button-padding-h * @sml-scale);
+	@std-padding: (@button-padding-v * @std-scale) (@button-padding-h * @std-scale);
+	@lrg-padding: (@button-padding-v * @lrg-scale) (@button-padding-h * @lrg-scale);
+	@button-secondary-border: @button-border;
+	@button-secondary-border-hover: @button-border;
+	@button-disabled-border: @button-border;
+	.cta-icon(@size: 10) when not (@cta-icon = disabled) {}
+	.cta-icon(@size: 10) when	  (@cta-icon = arrow) {border: (@size * 0.66) solid transparent; border-left-width: @size; border-left-color: @cta-icon-fg; vertical-align: baseline; line-height: 0;}
+// general button styles
+button.button,
+a.button {.pseudo-button;}
+	.pseudo-button() when (@has-pseudo-buttons = true)  {display: inline-block; line-height: 1.3em; font-weight: @button-font-weight; vertical-align: baseline; color: @button-fg; margin: 0 10px 10px 0; position: relative; border: @button-border; box-shadow: @button-box-shadow; text-shadow: @button-text-shadow; text-decoration: none; white-space: nowrap;
+					font-size: @button-font-size;					padding: (@button-scale / 2.5) @button-scale;	border-radius: @button-border-radius;
+	&.sml-arrow,
+	&.sml-no-arrow {	font-size: @button-font-size; 					padding: @sml-padding;							border-radius: @sml-border-radius;}
+	&.std-arrow,
+	&.std-no-arrow {	font-size: (@button-font-size * @std-scale);	padding: @std-padding;							border-radius: @std-border-radius;}
+	&.lrg-arrow,
+	&.lrg-no-arrow {	font-size: (@button-font-size * @lrg-scale); 	padding: @lrg-padding;							border-radius: @lrg-border-radius;}
+// colours
+	.gradient(		       	@stops: @button-grad;					@fallback: @button-bg-fallback;);
+	&:hover {.gradient(		@stops: @button-hover-grad;				@fallback: @button-hover-bg-fallback;);}
+	&.secondary {.gradient(	@stops: @button-secondary-grad;			@fallback: @button-secondary-bg-fallback;); 		color: @button-secondary-fg;		border: @button-secondary-border;
+		&:hover {.gradient(	@stops: @button-secondary-hover-grad;	@fallback: @button-secondary-hover-bg-fallback;); 	color: @button-secondary-hover-fg;	border: @button-secondary-border-hover;}
+	}
+	&[disabled] {cursor: default; text-shadow: none; color: @button-disabled-fg;
+		.gradient(			@stops: @button-disabled-grad;			@fallback: @button-disabled-bg-fallback;);border: @button-disabled-border;
+	}
+}
+// buttons without icons
+button.button when not (@cta-icon = disabled) {
+	&.sml-arrow,
+	&.std-arrow,
+	&.lrg-arrow {
+		&:before {.pseudo; display: inline-block; position: absolute; left: 0;}
+	}
+}
+a.button when not (@cta-icon = disabled) {
+	&.sml-arrow,
+	&.std-arrow,
+	&.lrg-arrow {
+		&:before {.pseudo; display: inline-block; position: absolute; left: 0;}
+	}
+}
+// buttons with arrows
+button.button when (@cta-icon = arrow) {
+	&.sml-arrow{padding-left: (@sml-scale * 18) + 10px;
+		&:before{.cta-icon(@sml-scale * 10px); margin-left: (@sml-scale + 10px); margin-top: (@sml-scale * 1.5px);}
+	}
+	&.std-arrow{padding-left: (@std-scale * 18) + 10px;
+		&:before{.cta-icon(@std-scale * 10px); margin-left: (@std-scale + 10px); margin-top: (@std-scale * 1.5px);}
+	}
+	&.lrg-arrow{padding-left: (@lrg-scale * 18) + 10px;
+		&:before{.cta-icon(@lrg-scale * 10px); margin-left: (@lrg-scale + 10px); margin-top: (@lrg-scale * 1.5px);}
+	}
+}
+a.button when (@cta-icon = arrow) {
+	&.sml-arrow{padding-left: (@sml-scale * 18) + 10px;
+		&:before{.cta-icon(@sml-scale * 10px); margin-left: (@sml-scale + 10px); margin-top: (@sml-scale * 1.5px);}
+	}
+	&.std-arrow{padding-left: (@std-scale * 18) + 10px;
+		&:before{.cta-icon(@std-scale * 10px); margin-left: (@std-scale + 10px); margin-top: (@std-scale * 1.5px);}
+	}
+	&.lrg-arrow{padding-left: (@lrg-scale * 18) + 10px;
+		&:before{.cta-icon(@lrg-scale * 10px); margin-left: (@lrg-scale + 10px); margin-top: (@lrg-scale * 1.5px);}
+	}
+}
