@@ -40,29 +40,21 @@
 		box-sizing: (@box);
 	}
 
-// example #someDiv{.box-shadow(3px 3px 3px #000);}
-	.gradient-2-way (@origin: left, @step-1: @white,  @step-2: @black, @fallback: @bg){
-		background: -webkit-linear-gradient(@origin, @step-1, @step-2) @fallback no-repeat;
-		background:    -moz-linear-gradient(@origin, @step-1, @step-2) @fallback no-repeat;
-		background:    -ms-linear-gradient(@origin, @step-1, @step-2) @fallback no-repeat;
-		background:      -o-linear-gradient(@origin, @step-1, @step-2) @fallback no-repeat;
-		background:         linear-gradient(@origin, @step-1, @step-2) @fallback no-repeat;
-	}
-// example #someDiv{.gradient(left,  #633,  #333);}
-	.gradient-3-way (@origin: left,  @step-1: @white,  @step-2: @black,  @step-3: @white, @fallback: @bg){
-		background: -webkit-linear-gradient(@origin, @step-1, @step-2, @step-3) @fallback no-repeat;
-		background:    -moz-linear-gradient(@origin, @step-1, @step-2, @step-3) @fallback no-repeat;
-		background:      -ms-linear-gradient(@origin, @step-1, @step-2, @step-3) @fallback no-repeat;
-		background:      -o-linear-gradient(@origin, @step-1, @step-2, @step-3) @fallback no-repeat;
-		background:         linear-gradient(@origin, @step-1, @step-2, @step-3) @fallback no-repeat;
-	}
-	.gradient-4-way (@origin: left,  @step-1: @white,  @step-2: @black,  @step-3: @white,  @step-4: @black, @fallback: @bg){
-		background: -webkit-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4) @fallback no-repeat;
-		background:    -moz-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4) @fallback no-repeat;
-		background:      -ms-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4) @fallback no-repeat;
-		background:      -o-linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4) @fallback no-repeat;
-		background:         linear-gradient(@origin, @step-1, @step-2, @step-3, @step-4) @fallback no-repeat;
-	}
+
+.gradient (@stops: @bg 0, @fallback: @white){
+    background-color: @fallback;
+    background: -webkit-linear-gradient(@stops) @fallback no-repeat;
+    background:    -moz-linear-gradient(@stops) @fallback no-repeat;
+    background:    -ms-linear-gradient(@stops) @fallback no-repeat;
+    background:         linear-gradient(@stops) @fallback no-repeat;
+}
+.multi-gradient (@stops: @black 0, @fallback: @white, @stops2: red 0, @fallback2: transparent){
+ //   background-color: @fallback;
+   	background: -webkit-linear-gradient(@stops), -webkit-linear-gradient(@stops2);
+    background:    -moz-linear-gradient(@stops), -moz-linear-gradient(@stops2);
+    background:    -ms-linear-gradient(@stops), -ms-linear-gradient(@stops2);
+    background:         linear-gradient(@stops), linear-gradient(@stops2);
+}
 
 // This gives elements a width of 100% minus the 20px margin required by the grid system. The fallback size is for older browser who sdon't suuport calc and should be set as close to correct alignment as possible.
 	.calc(@width: ~"100% - 20px", @fallback: 96.7%){
