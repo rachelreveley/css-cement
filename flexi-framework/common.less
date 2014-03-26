@@ -128,6 +128,8 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 @colour-tab-bg: #eee; // hex
 @colour-tab-fg: #222; // hex
+@colour-tab-hover-bg: #ddd; // hex
+@colour-tab-hover-fg: #111; // hex
 @colour-tab-current-bg: #222; // hex
 @colour-tab-current-fg: #eee; // hex
 @tab-padding: 1em 2em; // 1 - 4 numbers
@@ -136,13 +138,13 @@ right: (@chat-tail-size / 2);
 	& ul {display: table;
 		& li {display: table-cell;
 			& a,
-			& span {display: block; padding:@tab-padding;}
+			& span {display: block; padding:@tab-padding; text-decoration: none;}
 			& span {background-color: @colour-tab-current-bg; color: @colour-tab-current-fg;}
 			& a {
 				&:link,
 				&:visited {background-color: @colour-tab-bg; color: @colour-tab-fg;}
 				&:hover,
-				&:active {}
+				&:active {background-color: @colour-tab-hover-bg; color: @colour-tab-hover-fg;}
 				
 			}
 		}
