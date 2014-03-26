@@ -116,6 +116,14 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 // Highlight-block
 // -------------------------------
+@colour-highlight-bg: #eee;
+@colour-highlight-fg: #000;
+@highlight-padding: @padding;
+@highlight-radius: @border-radius; // disabled, number
+@highlight-border: @border-solid;
+.highlight {padding: @highlight-padding; background-color: @colour-highlight-bg; color: @colour-highlight-fg; margin-bottom: 1em; border-radius: @highlight-radius; border: @highlight-border;
+	& p:last-child {margin-bottom: 0;}
+}
 // -------------------------------
 // Pagination
 // -------------------------------
@@ -130,7 +138,7 @@ right: (@chat-tail-size / 2);
 @pagination-border-colour: #ccc; // disabled, colour
 @pagination-margin: 5px;
 @pagination-padding: 0.75em 1em; // 1 - 4 numbers
-@pagination-radius: 5px; // disabled, number
+@pagination-radius: @border-radius; // disabled, number
 .pagination when not (@pagination = disabled){
 	& ol {display: table;
 		& li {display: table-cell; padding-right: @pagination-margin;
