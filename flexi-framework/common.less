@@ -9,7 +9,7 @@
 @feaure-hovers: darken; // disabled, lighten, darken
 @gallery: disabled; // disabled, simple, rounded-grid, filmstrip
 @highlight-block: disabled; // disabled, simple
-@pagination: disabled; // disabled, simple, blocks
+@pagination: blocks; // disabled, simple, blocks
 @progress-bar: disabled; // disabled, simple
 @quotes: disabled; // disabled, simple, large, x-large
 @pull-quotes: disabled; // disabled, overhang-right, overhang-left
@@ -119,10 +119,33 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 // Pagination
 // -------------------------------
-.pagination when not (@gallery = disabled){
-	& li {}
-	& a,
-	& span {}
+@colour-pagination-bg: #eee; // hex
+@colour-pagination-fg: #222; // hex
+@colour-pagination-hover-bg: #ddd; // hex
+@colour-pagination-hover-fg: #111; // hex
+@colour-pagination-current-bg: #222; // hex
+@colour-pagination-current-fg: #eee; // hex
+@pagination-border-width: 1px; // disabled, 
+@pagination-border-style: solid; // disabled, style
+@pagination-border-colour: #ccc; // disabled, colour
+@pagination-margin: 5px;
+@pagination-padding: 0.75em 1em; // 1 - 4 numbers
+@pagination-radius: 5px; // disabled, number
+.pagination when not (@pagination = disabled){
+	& ol {display: table;
+		& li {display: table-cell; padding-right: @pagination-margin;
+			&:last-child {padding-right: 0;}
+			& a,
+			& span {display: block; padding:@pagination-padding; text-decoration: none; border-radius: @pagination-radius; border: @pagination-border-width @pagination-border-style @pagination-border-colour;}
+			& span {background-color: @colour-pagination-current-bg; color: @colour-pagination-current-fg;}
+			& a {
+				&:link,
+				&:visited {background-color: @colour-pagination-bg; color: @colour-pagination-fg;}
+				&:hover,
+				&:active {background-color: @colour-pagination-hover-bg; color: @colour-pagination-hover-fg;}
+			}
+		}
+	}
 }
 // -------------------------------
 // Progress-bar
@@ -153,7 +176,7 @@ right: (@chat-tail-size / 2);
 @tabs-border-colour: #ccc; // disabled, colour
 @tabs-padding: 0.75em 2em; // 1 - 4 numbers
 @tabs-radius: 5px; // disabled, number
-.tabs  when not (@tabs = disabled){
+.tabs when not (@tabs = disabled){
 	& ul {display: table;
 		& li {display: table-cell;
 			& a,
@@ -168,7 +191,7 @@ right: (@chat-tail-size / 2);
 		}
 	}
 }
-.tabs  when not (@tabs-border-width = disabled){
+.tabs when not (@tabs-border-width = disabled){
 	& a,
 	& span {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
 }
