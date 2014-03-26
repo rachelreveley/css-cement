@@ -126,27 +126,34 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 // Tabs
 // -------------------------------
-@colour-tab-bg: #eee; // hex
-@colour-tab-fg: #222; // hex
-@colour-tab-hover-bg: #ddd; // hex
-@colour-tab-hover-fg: #111; // hex
-@colour-tab-current-bg: #222; // hex
-@colour-tab-current-fg: #eee; // hex
-@tab-padding: 1em 2em; // 1 - 4 numbers
-@tab-radius: ; // disabled, number
+@colour-tabs-bg: #eee; // hex
+@colour-tabs-fg: #222; // hex
+@colour-tabs-hover-bg: #ddd; // hex
+@colour-tabs-hover-fg: #111; // hex
+@colour-tabs-current-bg: #222; // hex
+@colour-tabs-current-fg: #eee; // hex
+@tabs-border-width: 1px; // disabled, 
+@tabs-border-style: solid; // disabled, style
+@tabs-border-colour: #ccc; // disabled, colour
+@tabs-padding: 0.75em 2em; // 1 - 4 numbers
+@tabs-radius: 5px; // disabled, number
 .tabs  when not (@tabs = disabled){
 	& ul {display: table;
 		& li {display: table-cell;
 			& a,
-			& span {display: block; padding:@tab-padding; text-decoration: none;}
-			& span {background-color: @colour-tab-current-bg; color: @colour-tab-current-fg;}
+			& span {display: block; padding:@tabs-padding; text-decoration: none; border-radius: @tabs-radius @tabs-radius 0 0;}
+			& span {background-color: @colour-tabs-current-bg; color: @colour-tabs-current-fg;}
 			& a {
 				&:link,
-				&:visited {background-color: @colour-tab-bg; color: @colour-tab-fg;}
+				&:visited {background-color: @colour-tabs-bg; color: @colour-tabs-fg;}
 				&:hover,
-				&:active {background-color: @colour-tab-hover-bg; color: @colour-tab-hover-fg;}
-				
+				&:active {background-color: @colour-tabs-hover-bg; color: @colour-tabs-hover-fg;}
 			}
 		}
 	}
 }
+.tabs  when not (@tabs-border-width = disabled){
+	& a,
+	& span {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
+}
+
