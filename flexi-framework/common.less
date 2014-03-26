@@ -5,6 +5,8 @@
 // start editable
 // ###############################
 @badge: enabled; // disabled, simple
+@chat: bubbles; // disable, bubbles
+@feaure-hovers: darken; // disabled, lighten, darken
 @gallery: disabled; // disabled, simple, rounded-grid, filmstrip
 @highlight-block: disabled; // disabled, simple
 @pagination: disabled; // disabled, simple, blocks
@@ -14,8 +16,6 @@
 @tables: disabled; // disabled, simple, borders, horizontal-borders, striped
 @tags: disabled; // disabled, simple, deletable
 @tabs: blocks; // disabled, blocks, chevrons, trapezoid
-@feaure-hovers: darken; // disabled, lighten, darken,
-@chat: bubbles; // disable, bubbles
 
 // ###############################
 // end editable
@@ -27,7 +27,7 @@
 	display: inline-block; border-radius: 1em; padding: 3px 4px; min-width: 1em; text-align: center; font-size: 11px; line-height: 1em;
 }
 // -------------------------------
-// Speech bubbles
+// Chat bubbles
 // -------------------------------
 @chat-start: left; // left, right
 @chat-odd-bg: #ddd; // hex
@@ -82,7 +82,6 @@ right: (@chat-tail-size / 2);
 .feature when (@feaure-hovers = darken){
 	& a {background-color: #000;}
 }
-
 // -------------------------------
 // Gallery
 // -------------------------------
@@ -114,15 +113,32 @@ right: (@chat-tail-size / 2);
 		&:hover {border: @border-solid;}
 	}
 }
-
 // -------------------------------
-// Gallery
+// Highlight-block
+// -------------------------------
+// -------------------------------
+// Pagination
 // -------------------------------
 .pagination when not (@gallery = disabled){
 	& li {}
 	& a,
 	& span {}
 }
+// -------------------------------
+// Progress-bar
+// -------------------------------
+// -------------------------------
+// Quotes
+// -------------------------------
+// -------------------------------
+// Pull-quotes
+// -------------------------------
+// -------------------------------
+// Tables
+// -------------------------------
+// -------------------------------
+// Tags
+// -------------------------------
 // -------------------------------
 // Tabs
 // -------------------------------
