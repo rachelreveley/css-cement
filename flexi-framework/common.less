@@ -14,7 +14,7 @@
 @quotes: disabled; // disabled, simple, large, x-large
 @pull-quotes: disabled; // disabled, overhang-right, overhang-left
 @tables: disabled; // disabled, simple, borders, horizontal-borders, striped
-@tags: disabled; // disabled, simple, deletable
+@tags: simple; // disabled, simple
 @tabs: blocks; // disabled, blocks, chevrons, trapezoid
 
 // ###############################
@@ -168,9 +168,6 @@ right: (@chat-tail-size / 2);
 // Tables
 // -------------------------------
 // -------------------------------
-// Tags
-// -------------------------------
-// -------------------------------
 // Tabs
 // -------------------------------
 @colour-tabs-bg: #eee; // hex
@@ -204,3 +201,27 @@ right: (@chat-tail-size / 2);
 	& span {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
 }
 
+
+// -------------------------------
+// Tags
+// -------------------------------
+@colour-tags-bg: #eee; // hex
+@colour-tags-fg: #222; // hex
+@colour-tags-hover-bg: #ddd; // hex
+@colour-tags-hover-fg: #111; // hex
+@tags-border: @border-solid;
+@tags-padding: 0.25em 1em; // 1 - 4 numbers
+
+.tags when not (@tags = disabled){display: block;
+	& li {float: left;
+		& a,
+		& span {display: block; padding:@tags-padding; text-decoration: none;}
+		& span {background-color: @colour-tags-bg; color: @colour-tags-fg;}
+		& a {
+			&:link,
+			&:visited {background-color: @colour-tags-bg; color: @colour-tags-fg;}
+			&:hover,
+			&:active {background-color: @colour-tags-hover-bg; color: @colour-tags-hover-fg;}
+		}
+	}
+}
