@@ -13,7 +13,7 @@
 @progress-bar: disabled; // disabled, simple
 @quotes: disabled; // disabled, simple, large, x-large
 @pull-quotes: disabled; // disabled, overhang-right, overhang-left
-@tables: disabled; // disabled, simple, borders, horizontal-borders, striped
+@tables: disabled; // disabled, enabled
 @tags: simple; // disabled, simple
 @tabs: blocks; // disabled, blocks, chevrons, trapezoid
 
@@ -135,7 +135,7 @@ right: (@chat-tail-size / 2);
 @colour-pagination-current-fg: #eee; // hex
 @pagination-border-width: 1px; // disabled, 
 @pagination-border-style: solid; // disabled, style
-@pagination-border-colour: #ccc; // disabled, colour
+@pagination-border-colour: #ccc; // disabled, hex
 @pagination-margin: 5px;
 @pagination-padding: 0.75em 1em; // 1 - 4 numbers
 @pagination-radius: @border-radius; // disabled, number
@@ -167,6 +167,97 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 // Tables
 // -------------------------------
+@table-border-style: 1px solid #ccc;
+@table-padding: (@padding / 1.2) (@padding * 1.5);
+@colour-table-even-bg: #ddd; // hex
+@colour-table-head-bg: #ccc; // hex
+@colour-table-body-bg: #fff; // hex
+@colour-table-foot-bg: #eee; // hex
+@colour-table-head-fg: #000; // hex
+@colour-table-body-fg: #222; // hex
+@colour-table-foot-fg: #333; // hex
+@colour-table-hover-bg: #ccc;
+@table-head-font-weight: bold; // bold, normal
+@colour-table-comparrison-col-1-bg: #fff;
+@colour-table-comparrison-col-2-bg: #f6f6f6;
+@colour-table-comparrison-col-3-bg: #eee;
+@colour-table-comparrison-col-4-bg: #e5e5e5;
+@colour-table-comparrison-col-5-bg: #ddd;
+@colour-table-comparrison-col-6-bg: #d4d4d4;
+
+@colour-table-comparrison-col-1-fg: #000;
+@colour-table-comparrison-col-2-fg: #000;
+@colour-table-comparrison-col-3-fg: #000;
+@colour-table-comparrison-col-4-fg: #000;
+@colour-table-comparrison-col-5-fg: #000;
+@colour-table-comparrison-col-6-fg: #000;
+
+@table-promote-border-style: 2px solid #000;
+
+table {
+// General styles
+	& tr {}
+	& th {padding: @table-padding;}
+	& td {padding: @table-padding;}
+	& thead {
+		& th {background-color: @colour-table-head-bg; color: @colour-table-head-fg; font-weight: @table-head-font-weight;}
+	}
+	& tbody {
+		& th,
+		& td {background-color: @colour-table-body-bg; color: @colour-table-body-fg;}
+	}
+	& tfoot {
+		& th,
+		& td {background-color: @colour-table-foot-bg; color: @colour-table-foot-fg;}
+	}
+
+// Types of tables
+	&.all-borders {border: @table-border-style;
+		& th,
+		& td {border: @table-border-style;}
+	}
+	&.h-borders {
+		& th,
+		& td {border-bottom: @table-border-style;}
+	}
+	&.striped {
+		& tr:nth-child(even) {
+			& th,
+			& td {background-color: @colour-table-even-bg;}
+		}
+	}
+	&.hover {
+		& tr:nth-child(even):hover,
+		& tr:nth-child(odd):hover {
+			& th,
+			& td {background-color: @colour-table-hover-bg;}
+		}
+	}
+	&.comparrison {
+		& th,
+		& td {
+			&:nth-child(1) {background-color: @colour-table-comparrison-col-1-bg; color: @colour-table-comparrison-col-1-fg;}
+			&:nth-child(2) {background-color: @colour-table-comparrison-col-2-bg; color: @colour-table-comparrison-col-2-fg;}
+			&:nth-child(3) {background-color: @colour-table-comparrison-col-3-bg; color: @colour-table-comparrison-col-3-fg;}
+			&:nth-child(4) {background-color: @colour-table-comparrison-col-4-bg; color: @colour-table-comparrison-col-4-fg;}
+			&:nth-child(5) {background-color: @colour-table-comparrison-col-5-bg; color: @colour-table-comparrison-col-5-fg;}
+			&:nth-child(6) {background-color: @colour-table-comparrison-col-6-bg; color: @colour-table-comparrison-col-6-fg;}
+		}
+		& .promote {border-left: @table-promote-border-style; border-right: @table-promote-border-style; border-top: 0; border-bottom: 0;}
+		& > :first-child tr:first-child .promote {
+			border-top: @table-promote-border-style;
+		}
+		& tfoot .promote,
+		& > :last-child tr:last-child .promote {
+			border-bottom: @table-promote-border-style;
+		}
+		& tfoot + tbody:last-child tr:last-child .promote {border-bottom: 0;}
+	}
+
+
+// overides
+	& .numeric {text-align: right;}
+}
 // -------------------------------
 // Tabs
 // -------------------------------
