@@ -7,16 +7,15 @@
 @badge: enabled; // disabled, simple
 @chat: bubbles; // disable, bubbles
 @feaure-hovers: darken; // disabled, lighten, darken
-@gallery: disabled; // disabled, simple, rounded-grid, filmstrip
-@highlight-block: disabled; // disabled, simple
+@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
+@highlight-block: enabled; // disabled, simple
 @pagination: blocks; // disabled, simple, blocks
 @progress: enabled; // disabled, simple
-@quotes: disabled; // disabled, simple, large, x-large
-@pull-quotes: disabled; // disabled, overhang-right, overhang-left
+@pullquotes: enabled; // disabled, overhang-right, overhang-left
 @tables: enabled; // disabled, enabled
-@tags: simple; // disabled, simple
 @tabs: blocks; // disabled, blocks, chevrons, trapezoid
-@pullquotes: enabled;
+@tags: simple; // disabled, simple
+
 
 // ###############################
 // end editable
@@ -31,11 +30,12 @@
 // -------------------------------
 // Chat bubbles
 // -------------------------------
+@colour-chat-even-bg: #eee; // hex
+@colour-chat-even-fg: #333; // hex
+@colour-chat-odd-bg: #ddd; // hex
+@colour-chat-odd-fg: #222; // hex
+
 @chat-start: left; // left, right
-@chat-odd-bg: #ddd; // hex
-@chat-even-bg: #eee; // hex
-@chat-odd-fg: #222; // hex
-@chat-even-fg: #333; // hex
 @chat-margin: 20px;
 @chat-padding: 10px;
 @chat-radius: 4px;
@@ -49,19 +49,11 @@
 			.pseudo;
 		}
 	}
-	& blockquote:nth-child(odd) 	{background-color: @chat-odd-bg; margin-right: @chat-tail-size;
-		&:before {
-border-color: transparent @chat-odd-bg;
-border-width: 0 0 (@chat-tail-size / 1.5) @chat-tail-size;
-left: (@chat-tail-size / 2);
-		}
+	& blockquote:nth-child(odd) 	{background-color: @colour-chat-odd-bg; color: @colour-chat-odd-fg; margin-right: @chat-tail-size;
+		&:before {border-color: transparent @colour-chat-odd-bg; border-width: 0 0 (@chat-tail-size / 1.5) @chat-tail-size; left: (@chat-tail-size / 2);}
 	}
-	& blockquote:nth-child(even) 	{background-color: @chat-even-bg; margin-left: @chat-tail-size;
-		&:before {
-border-color: transparent @chat-even-bg;
-border-width: 0 @chat-tail-size (@chat-tail-size / 1.5) 0;
-right: (@chat-tail-size / 2);
-		}
+	& blockquote:nth-child(even) 	{background-color: @colour-chat-even-bg; color: @colour-chat-even-fg; margin-left: @chat-tail-size;
+		&:before {border-color: transparent @colour-chat-even-bg; border-width: 0 @chat-tail-size (@chat-tail-size / 1.5) 0; right: (@chat-tail-size / 2);}
 	}
 }
 
@@ -99,6 +91,7 @@ right: (@chat-tail-size / 2);
 		& img {display: block;}
 		& .caption {}
 	}
+
 }
 .gallery when not (@gallery-columns = disabled){
 	& li {width: (100% / @gallery-columns);}
@@ -123,10 +116,12 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 @colour-highlight-bg: #eee;
 @colour-highlight-fg: #000;
+
+@highlight-border: @border-solid;
 @highlight-padding: @padding;
 @highlight-radius: @border-radius; // disabled, number
-@highlight-border: @border-solid;
-.highlight {padding: @highlight-padding; background-color: @colour-highlight-bg; color: @colour-highlight-fg; margin-bottom: 1em; border-radius: @highlight-radius; border: @highlight-border;
+
+.highlight when not (@highlight-block = disabled){padding: @highlight-padding; background-color: @colour-highlight-bg; color: @colour-highlight-fg; margin-bottom: 1em; border-radius: @highlight-radius; border: @highlight-border;
 	& p:last-child {margin-bottom: 0;}
 }
 
@@ -135,16 +130,18 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 @colour-pagination-bg: #eee; // hex
 @colour-pagination-fg: #222; // hex
-@colour-pagination-hover-bg: #ddd; // hex
-@colour-pagination-hover-fg: #111; // hex
 @colour-pagination-current-bg: #222; // hex
 @colour-pagination-current-fg: #eee; // hex
-@pagination-border-width: 1px; // disabled, 
-@pagination-border-style: solid; // disabled, style
+@colour-pagination-hover-bg: #ddd; // hex
+@colour-pagination-hover-fg: #111; // hex
+
 @pagination-border-colour: #ccc; // disabled, hex
+@pagination-border-style: solid; // disabled, style
+@pagination-border-width: 1px; // disabled, 
 @pagination-margin: 5px;
 @pagination-padding: 0.75em 1em; // 1 - 4 numbers
 @pagination-radius: @border-radius; // disabled, number
+
 .pagination when not (@pagination = disabled){
 	& ol {display: table;
 		& li {display: table-cell; padding-right: @pagination-margin;
@@ -167,6 +164,7 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 @colour-progress-bg: #eee;
 @colour-progress-fg: #999;
+
 progress when not (@progress = disabled) {
 	-webkit-appearance: none; border: 0; height: @padding; 
 	background: @colour-progress-bg;
@@ -178,13 +176,15 @@ progress when not (@progress = disabled) {
 // -------------------------------
 // Pull-quotes
 // -------------------------------
-@pullquotes-width: 20%;
-@pullquotes-padding: @padding;
-@pullquotes-margin: @padding;
-@pullquotes-font-size: 16px;
-@pullquotes-border-radius: @border-radius;
 @colour-pullquotes-bg: #eee;
 @colour-pullquotes-fg: #666;
+
+@pullquotes-border-radius: @border-radius;
+@pullquotes-font-size: 16px;
+@pullquotes-margin: @padding;
+@pullquotes-padding: @padding;
+@pullquotes-width: 20%;
+
 p[data-pullquote] when not (@pullquotes = disabled) {
 	&:before{content: attr(data-pullquote); background-color: @colour-pullquotes-bg; color: @colour-pullquotes-fg; padding: @pullquotes-padding; width: @pullquotes-width; font-size: @pullquotes-font-size; border-radius: @pullquotes-border-radius; display: block;}
 	&[data-pullquote-position="left"]:before {float: left; margin: 0 @padding @padding 0;}
@@ -195,17 +195,8 @@ p[data-pullquote] when not (@pullquotes = disabled) {
 // -------------------------------
 // Tables
 // -------------------------------
-@table-border-style: 1px solid #ccc;
-@table-padding: (@padding / 1.2) (@padding * 1.5);
-@colour-table-even-bg: #ddd; // hex
-@colour-table-head-bg: #ccc; // hex
 @colour-table-body-bg: #fff; // hex
-@colour-table-foot-bg: #eee; // hex
-@colour-table-head-fg: #000; // hex
 @colour-table-body-fg: #222; // hex
-@colour-table-foot-fg: #333; // hex
-@colour-table-hover-bg: #ccc;
-@table-head-font-weight: bold; // bold, normal
 @colour-table-comparrison-col-1-bg: #fff;
 @colour-table-comparrison-col-2-bg: #f6f6f6;
 @colour-table-comparrison-col-3-bg: #eee;
@@ -218,6 +209,17 @@ p[data-pullquote] when not (@pullquotes = disabled) {
 @colour-table-comparrison-col-4-fg: #000;
 @colour-table-comparrison-col-5-fg: #000;
 @colour-table-comparrison-col-6-fg: #000;
+@colour-table-even-bg: #ddd; // hex
+@colour-table-foot-bg: #eee; // hex
+@colour-table-foot-fg: #333; // hex
+@colour-table-head-bg: #ccc; // hex
+@colour-table-head-fg: #000; // hex
+@colour-table-hover-bg: #ccc;
+@colour-table-hover-fg: #ccc;
+
+@table-border-style: 1px solid #ccc;
+@table-head-font-weight: bold; // bold, normal
+@table-padding: (@padding / 1.2) (@padding * 1.5);
 @table-promote-border-style: 2px solid #000;
 
 table when not (@tables = disabled) {
@@ -254,7 +256,7 @@ table when not (@tables = disabled) {
 		& tr:nth-child(even):hover,
 		& tr:nth-child(odd):hover {
 			& th,
-			& td {background-color: @colour-table-hover-bg;}
+			& td {background-color: @colour-table-hover-bg; color: @colour-table-hover-fg;}
 		}
 	}
 	&.comparrison {
@@ -280,20 +282,22 @@ table when not (@tables = disabled) {
 // overides
 	& .numeric {text-align: right;}
 }
+
 // -------------------------------
 // Tabs
 // -------------------------------
 @colour-tabs-bg: #eee; // hex
 @colour-tabs-fg: #222; // hex
-@colour-tabs-hover-bg: #ddd; // hex
-@colour-tabs-hover-fg: #111; // hex
 @colour-tabs-current-bg: #222; // hex
 @colour-tabs-current-fg: #eee; // hex
-@tabs-border-width: 1px; // disabled, 
-@tabs-border-style: solid; // disabled, style
+@colour-tabs-hover-bg: #ddd; // hex
+@colour-tabs-hover-fg: #111; // hex
+
 @tabs-border-colour: #ccc; // disabled, colour
+@tabs-border-style: solid; // disabled, style
+@tabs-border-width: 1px; // disabled, 
 @tabs-padding: 0.75em 2em; // 1 - 4 numbers
-@tabs-radius: 5px; // disabled, number
+@tabs-radius: @border-radius; // disabled, number
 .tabs when not (@tabs = disabled){
 	& ul {display: table;
 		& li {display: table-cell;
@@ -314,7 +318,6 @@ table when not (@tables = disabled) {
 	& span {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
 }
 
-
 // -------------------------------
 // Tags
 // -------------------------------
@@ -322,6 +325,7 @@ table when not (@tables = disabled) {
 @colour-tags-fg: #222; // hex
 @colour-tags-hover-bg: #ddd; // hex
 @colour-tags-hover-fg: #111; // hex
+
 @tags-border: @border-solid;
 @tags-padding: 0.25em 1em; // 1 - 4 numbers
 
