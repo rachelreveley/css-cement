@@ -81,32 +81,19 @@
 // -------------------------------
 // Gallery
 // -------------------------------
-@gallery-columns: 4; // disabled, number
-@gallery-style: ; // simple, framed, polaroid
-@gallery-hover: ; // border, zoom, opacity
+@gallery-style: framed; // simple, framed
+@gallery-hover: opacity; // border, opacity, zoom
 
 .gallery when not (@gallery = disabled){
 	& li {display: inline-block;
 		& a {display: block;}
 		& img {display: block;}
-		& .caption {}
 	}
-
-}
-.gallery when not (@gallery-columns = disabled){
-	& li {width: (100% / @gallery-columns);}
-}
-.gallery when (@gallery-style = framed){
-	& li {border: @border-solid; padding: (@padding / 2); .box-sizing(border-box);
-	}
-}
-.gallery when (@gallery-hover = opacity){
-	& li a {
+	& div when (@gallery-style = framed){border: @border-solid; padding: (@padding / 2); .box-sizing(border-box);}
+	& div when (@gallery-hover = opacity){
 		&:hover {opacity: 0.7;}
 	}
-}
-.gallery when (@gallery-hover = border){
-	& li a {
+	& div when (@gallery-hover = border){
 		&:hover {border: @border-solid;}
 	}
 }
