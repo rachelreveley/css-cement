@@ -13,7 +13,7 @@
 @progress-bar: disabled; // disabled, simple
 @quotes: disabled; // disabled, simple, large, x-large
 @pull-quotes: disabled; // disabled, overhang-right, overhang-left
-@tables: disabled; // disabled, enabled
+@tables: enabled; // disabled, enabled
 @tags: simple; // disabled, simple
 @tabs: blocks; // disabled, blocks, chevrons, trapezoid
 
@@ -184,17 +184,15 @@ right: (@chat-tail-size / 2);
 @colour-table-comparrison-col-4-bg: #e5e5e5;
 @colour-table-comparrison-col-5-bg: #ddd;
 @colour-table-comparrison-col-6-bg: #d4d4d4;
-
 @colour-table-comparrison-col-1-fg: #000;
 @colour-table-comparrison-col-2-fg: #000;
 @colour-table-comparrison-col-3-fg: #000;
 @colour-table-comparrison-col-4-fg: #000;
 @colour-table-comparrison-col-5-fg: #000;
 @colour-table-comparrison-col-6-fg: #000;
-
 @table-promote-border-style: 2px solid #000;
 
-table {
+table when not (@tables = disabled) {
 // General styles
 	& tr {}
 	& th {padding: @table-padding;}
