@@ -10,7 +10,7 @@
 @gallery: disabled; // disabled, simple, rounded-grid, filmstrip
 @highlight-block: disabled; // disabled, simple
 @pagination: blocks; // disabled, simple, blocks
-@progress-bar: disabled; // disabled, simple
+@progress: enabled; // disabled, simple
 @quotes: disabled; // disabled, simple, large, x-large
 @pull-quotes: disabled; // disabled, overhang-right, overhang-left
 @tables: enabled; // disabled, enabled
@@ -158,6 +158,27 @@ right: (@chat-tail-size / 2);
 // -------------------------------
 // Progress-bar
 // -------------------------------
+/* Moving on to the styling, we'll start with the main progress bar first and then the value part of it. After that, we'll do some experiments :D */
+@colour-progress-bg: #eee;
+@colour-progress-fg: #999;
+progress when not (@progress = disabled) {
+	-webkit-appearance: none; border: 0; height: @padding; 
+	background: @colour-progress-bg;
+	&::-webkit-progress-bar {background: @colour-progress-bg;}
+	&::-moz-progress-bar {background: @colour-progress-fg;}
+	&::-webkit-progress-value {background: @colour-progress-fg;}
+}
+
+
+
+
+
+
+
+
+
+
+
 // -------------------------------
 // Quotes
 // -------------------------------
@@ -194,7 +215,6 @@ right: (@chat-tail-size / 2);
 
 table when not (@tables = disabled) {
 // General styles
-	& tr {}
 	& th {padding: @table-padding;}
 	& td {padding: @table-padding;}
 	& thead {
@@ -208,7 +228,6 @@ table when not (@tables = disabled) {
 		& th,
 		& td {background-color: @colour-table-foot-bg; color: @colour-table-foot-fg;}
 	}
-
 // Types of tables
 	&.all-borders {border: @table-border-style;
 		& th,
@@ -251,8 +270,6 @@ table when not (@tables = disabled) {
 		}
 		& tfoot + tbody:last-child tr:last-child .promote {border-bottom: 0;}
 	}
-
-
 // overides
 	& .numeric {text-align: right;}
 }
