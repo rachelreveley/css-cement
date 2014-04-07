@@ -81,8 +81,8 @@
 // -------------------------------
 // Gallery
 // -------------------------------
-@gallery-style: framed; // simple, framed
-@gallery-hover: opacity; // border, opacity, zoom
+@gallery-style: ; // simple, framed
+@gallery-hover: border; // border, opacity, zoom
 
 .gallery when not (@gallery = disabled){
 	& li {display: inline-block;
@@ -93,7 +93,7 @@
 	& div when (@gallery-hover = opacity){
 		&:hover {opacity: 0.7;}
 	}
-	& div when (@gallery-hover = border){
+	& div when (@gallery-hover = border){padding: (@padding / 2); .box-sizing(border-box);
 		&:hover {border: @border-solid;}
 	}
 }
