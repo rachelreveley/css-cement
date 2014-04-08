@@ -71,6 +71,11 @@
      -o-transform: rotate(@angle); /* Opera 10.50-12.00 */
 	    transform: rotate(@angle); /* Firefox 16+, IE 10+, Opera 12.10+ */
 	}
+	.origin(@origin) {
+			transform-origin: (@origin);
+		-ms-transform-origin: (@origin);
+	-webkit-transform-origin: (@origin);
+	}
 
 	.transition(@transition){
     -webkit-transition: (@transition);
