@@ -371,8 +371,8 @@ table when not (@tables = disabled) {
 @bar-chart-bar-margin: 2px;
 @bar-chart-bar-padding: 2px 6px;
 @bar-chart-value-location: right; // left, center, right, hide
-@bar-chart-value-move-below: 19;
-@bar-chart-value-move-below-indent: 20%;
+@bar-chart-value-move-below: 20;
+@bar-chart-value-move-below-indent: 30px;
 .bar-chart when not (@bar-chart = disabled) {padding: @bar-chart-outer-padding; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg;
 	.clearfix;
 	& dt {float: left; clear: left; text-align: right; margin: @bar-chart-bar-margin;}
@@ -386,14 +386,14 @@ table when not (@tables = disabled) {
 		}
 		.loopingClass (@iterations);
 
-		&:before{content: attr(data-value); display: block;}
+		&:before{content: attr(data-value); display: block; font-size: 13px;}
 	}
 	& dd when (@bar-chart-value-location = hide) {}
 	& dd {
 // set bar sizes
 		@iterations: @bar-chart-value-move-below;
 		.valueLoopingClass (@index) when (@index > -1){
-			&[data-value="@{index}"] {color: @colour-bar-chart-bars-below-fg;}
+			&[data-value="@{index}"]:before {color: @colour-bar-chart-bars-below-fg; position: relative; text-align: right; left: @bar-chart-value-move-below-indent;}
 			.valueLoopingClass (@index - 1);
 		}
 		.valueLoopingClass (@iterations);
