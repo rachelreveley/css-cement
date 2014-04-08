@@ -329,3 +329,28 @@ table when not (@tables = disabled) {
 		}
 	}
 }
+// -------------------------------
+// Stepped content
+// -------------------------------
+@steps: striped; // descending, ascending, striped, disabled
+@steps-stripe-odd-bg: #eee;
+@steps-stripe-odd-fg: #333;
+@steps-stripe-even-bg: #ddd;
+@steps-stripe-even-fg: #000;
+@steps-first-bg: #fff;
+@steps-first-fg: #000;
+@steps-last-bg: #aaa;
+@steps-last-fg: #000;
+
+.stepped when not (@steps = disabled) {
+	& .step when (@steps = striped) {
+		&:nth-child(odd) {background-color: @steps-stripe-odd-bg; color: @steps-stripe-odd-fg;}
+		&:nth-child(even) {background-color: @steps-stripe-even-bg; color: @steps-stripe-even-fg;}
+	}
+	& .step when (@steps = descending) {
+		&:nth-child(1) {}
+	}
+	& .step when (@steps = ascending) {
+
+	}
+}
