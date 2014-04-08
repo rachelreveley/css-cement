@@ -329,6 +329,7 @@ table when not (@tables = disabled) {
 		}
 	}
 }
+
 // -------------------------------
 // Stepped content
 // -------------------------------
@@ -353,4 +354,49 @@ table when not (@tables = disabled) {
 	& .step when (@steps = ascending) {
 
 	}
+}
+
+// -------------------------------
+// Bar charts
+// -------------------------------
+@colour-bar-chart-bars-bg: #666;
+@colour-bar-chart-bars-fg: #fff;
+@colour-bar-chart-bars-below-fg: #000;
+@colour-bar-chart-bg: #fff;
+@colour-bar-chart-fg: #000;
+
+@bar-chart: enabled;
+@bar-chart-border: 1px solid #ccc;
+@bar-chart-outer-padding: (@padding / 2);
+@bar-chart-bar-margin: 2px;
+@bar-chart-bar-padding: 2px 6px;
+@bar-chart-value-location: right; // left, center, right, hide
+@bar-chart-value-move-below: 19;
+@bar-chart-value-move-below-indent: 20%;
+.bar-chart when not (@bar-chart = disabled) {padding: @bar-chart-outer-padding; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg;
+	.clearfix;
+	& dt {float: left; clear: left; text-align: right; margin: @bar-chart-bar-margin;}
+	& dd {float: left; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding; .box-sizing(border-box); text-align: @bar-chart-value-location;
+		text-indent: 999em; font-size: 0; background-color: @colour-bar-chart-bars-bg; color: @colour-bar-chart-bars-fg;
+// set bar sizes
+		@iterations: 100;
+		.loopingClass (@index) when (@index > -1){
+			&[data-value="@{index}"] {width: ~"@{index}%";}
+			.loopingClass (@index - 1);
+		}
+		.loopingClass (@iterations);
+
+		&:before{content: attr(data-value); display: block;}
+	}
+	& dd when (@bar-chart-value-location = hide) {}
+	& dd {
+// set bar sizes
+		@iterations: @bar-chart-value-move-below;
+		.valueLoopingClass (@index) when (@index > -1){
+			&[data-value="@{index}"] {color: @colour-bar-chart-bars-below-fg;}
+			.valueLoopingClass (@index - 1);
+		}
+		.valueLoopingClass (@iterations);
+	}
+	&-vertical {.rotate(-90deg);}
 }
