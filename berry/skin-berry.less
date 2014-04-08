@@ -207,7 +207,8 @@
 	@side-nav-padding: @padding (@padding + 2);
 	@side-nav-border: 1px solid @colour-side-nav-border;
 
-header {.gradient-3-way (left, #141031, #752663, #6c4fad, #141031); position: relative; overflow: hidden;
+header {position: relative; overflow: hidden;
+	.gradient (@stops: left, #141031, #752663, #6c4fad, #141031; @fallback: #141031;);
 	&:after  {.circle;border: 30px solid rgba(255,255,255,0.1); top: 35px; left: 60%;}
 	&:before {.circle; border: 70px solid rgba(255,255,255,0.1); top: 30px; left: 30%;}
 	& > div {
