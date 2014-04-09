@@ -285,8 +285,10 @@ table when not (@tables = disabled) {
 @tabs-border-width: 1px; // disabled, 
 @tabs-padding: 0.75em 2em; // 1 - 4 numbers
 @tabs-radius: @border-radius; // disabled, number
+@tabs-content-padding: @padding; // 1 - 4 numbers
+
 .tabs when not (@tabs = disabled){
-	& ul {display: table;
+	& ul {display: table; margin-bottom: 0;
 		& li {display: table-cell;
 			& a,
 			& span,
@@ -302,6 +304,9 @@ table when not (@tables = disabled) {
 			}
 		}
 	}
+	& .tabbed-content {
+		& > div {padding: @tabs-content-padding; border: @tabs-border-width @tabs-border-style @tabs-border-colour; margin-top: (-@tabs-border-width)}
+	}
 }
 .tabs when not (@tabs-border-width = disabled){
 	& a,
@@ -309,15 +314,18 @@ table when not (@tables = disabled) {
 	& label {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
 }
 @dynamic-tabs: enabled; // 
+@dynamic-tabs-qty: 4;
 .tabs when not (@dynamic-tabs = disabled){
-	& .tabbed-content {
-		& > div {display: none; border: @tabs-border-width @tabs-border-style @tabs-border-colour; margin-top: (-@tabs-border-width)}
+	& fieldset.tabbed-content {
+		& > div,
 		& input[type=radio] {display: none;}
 	}
-	& input[id="tab-1"]:checked ~ #tabbed-content-1,
-	& input[id="tab-2"]:checked ~ #tabbed-content-2,
-	& input[id="tab-3"]:checked ~ #tabbed-content-3,
-	& input[id="tab-4"]:checked ~ #tabbed-content-4, {display: block;}
+	@iterations: @dynamic-tabs-qty;
+	.qtyLoopingClass (@index) when (@index > -1){
+		& input[id="tab-@{index}"]:checked ~ #tabbed-content-@{index} {display: block;}
+		.qtyLoopingClass (@index - 1);
+	}
+	.qtyLoopingClass (@iterations);
 }
 
 // -------------------------------
