@@ -289,9 +289,12 @@ table when not (@tables = disabled) {
 	& ul {display: table;
 		& li {display: table-cell;
 			& a,
-			& span {display: block; padding:@tabs-padding; text-decoration: none; border-radius: @tabs-radius @tabs-radius 0 0;}
-			& span {background-color: @colour-tabs-current-bg; color: @colour-tabs-current-fg;}
-			& a {
+			& span,
+			& label {background-color: @colour-tabs-bg; color: @colour-tabs-fg;display: block; padding: @tabs-padding; text-decoration: none; border-radius: @tabs-radius @tabs-radius 0 0;}
+			& span,
+			& label:active {background-color: @colour-tabs-current-bg; color: @colour-tabs-current-fg;}
+			& a,
+			& label {cursor: pointer;
 				&:link,
 				&:visited {background-color: @colour-tabs-bg; color: @colour-tabs-fg;}
 				&:hover,
@@ -302,7 +305,19 @@ table when not (@tables = disabled) {
 }
 .tabs when not (@tabs-border-width = disabled){
 	& a,
-	& span {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
+	& span,
+	& label {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
+}
+@dynamic-tabs: enabled; // 
+.tabs when not (@dynamic-tabs = disabled){
+	& .tabbed-content {
+		& > div {display: none; border: @tabs-border-width @tabs-border-style @tabs-border-colour; margin-top: (-@tabs-border-width)}
+		& input[type=radio] {display: none;}
+	}
+	& input[id="tab-1"]:checked ~ #tabbed-content-1,
+	& input[id="tab-2"]:checked ~ #tabbed-content-2,
+	& input[id="tab-3"]:checked ~ #tabbed-content-3,
+	& input[id="tab-4"]:checked ~ #tabbed-content-4, {display: block;}
 }
 
 // -------------------------------
