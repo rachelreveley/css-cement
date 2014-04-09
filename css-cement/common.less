@@ -28,6 +28,64 @@
 }
 
 // -------------------------------
+// Bar charts
+// -------------------------------
+@colour-bar-chart-bars-bg: #666;
+@colour-bar-chart-bars-fg: #fff;
+@colour-bar-chart-bars-below-fg: #000;
+@colour-bar-chart-bg: #fff;
+@colour-bar-chart-fg: #000;
+
+@bar-chart: enabled;
+@bar-chart-width: 500px;
+@bar-chart-border: 1px solid #ccc;
+@bar-chart-outer-padding: (@padding + 10px);
+@bar-chart-bar-margin: 2px;
+@bar-chart-bar-padding: 2px 6px;
+@bar-chart-value-location: right; // left, center, right, hide
+@bar-chart-value-move-below: 20;
+@bar-chart-value-move-below-indent: 30px;
+@bar-chart-label-angle: 0deg; // degrees, disabled
+
+.bar-chart when not (@bar-chart = disabled) {position: relative;
+	.clearfix;
+	& .x-axis,
+	& .y-axis {display: block; position: absolute;}
+	& .x-axis {bottom: 0; left: @bar-chart-outer-padding;}
+	& .y-axis {.rotate(90deg); top: @bar-chart-outer-padding; left: 0;  .origin(50% 0% 0);}
+	& dl {width: @bar-chart-width; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg; margin: 0 @bar-chart-outer-padding @bar-chart-outer-padding; 	
+		.clearfix;
+	}
+	& dt {float: left; clear: left; text-align: right; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding;}
+	& dt when not (@bar-chart-label-angle = disabled) {.rotate(@bar-chart-label-angle); .origin(80% 100% 0);}
+	& dd {float: left; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding; .box-sizing(border-box); text-align: @bar-chart-value-location;
+		text-indent: 999em; font-size: 0; background-color: @colour-bar-chart-bars-bg; color: @colour-bar-chart-bars-fg;
+// set bar sizes
+		@iterations: 100;
+		.loopingClass (@index) when (@index > -1){
+			&[data-value="@{index}"] {width: ~"@{index}%";}
+			.loopingClass (@index - 1);
+		}
+		.loopingClass (@iterations);
+
+		&:before{content: attr(data-value); display: block; font-size: 13px;}
+		&:nth-of-type(1) {margin-top: (@bar-chart-bar-margin * 2);}
+		&:nth-last-of-type(1) {margin-bottom: (@bar-chart-bar-margin * 2);}
+	}
+	& dd when (@bar-chart-value-location = hide) {}
+	& dd {
+// set bar sizes
+		@iterations: @bar-chart-value-move-below;
+		.valueLoopingClass (@index) when (@index > -1){
+			&[data-value="@{index}"]:before {color: @colour-bar-chart-bars-below-fg; position: relative; text-align: right; left: @bar-chart-value-move-below-indent;}
+			.valueLoopingClass (@index - 1);
+		}
+		.valueLoopingClass (@iterations);
+	}
+	&-vertical {.rotate(-90deg);}
+}
+
+// -------------------------------
 // Chat bubbles
 // -------------------------------
 @colour-chat-even-bg: #eee; // hex
@@ -283,9 +341,11 @@ table when not (@tables = disabled) {
 @tabs-border-colour: #ccc; // disabled, colour
 @tabs-border-style: solid; // disabled, style
 @tabs-border-width: 1px; // disabled, 
+@tabs-content-padding: @padding; // 1 - 4 numbers
 @tabs-padding: 0.75em 2em; // 1 - 4 numbers
 @tabs-radius: @border-radius; // disabled, number
-@tabs-content-padding: @padding; // 1 - 4 numbers
+@dynamic-tabs: enabled; // 
+@dynamic-tabs-qty: 4;
 
 .tabs when not (@tabs = disabled){
 	& ul {display: table; margin-bottom: 0;
@@ -313,8 +373,6 @@ table when not (@tables = disabled) {
 	& span,
 	& label {border-top: @tabs-border-width @tabs-border-style @tabs-border-colour; border-left:  @tabs-border-width @tabs-border-style @tabs-border-colour; border-right:  @tabs-border-width @tabs-border-style @tabs-border-colour; margin-left: -@tabs-border-width;}
 }
-@dynamic-tabs: enabled; // 
-@dynamic-tabs-qty: 4;
 .tabs when not (@dynamic-tabs = disabled){
 	& fieldset.tabbed-content {
 		& > div,
@@ -377,62 +435,4 @@ table when not (@tables = disabled) {
 	& .step when (@steps = ascending) {
 
 	}
-}
-
-// -------------------------------
-// Bar charts
-// -------------------------------
-@colour-bar-chart-bars-bg: #666;
-@colour-bar-chart-bars-fg: #fff;
-@colour-bar-chart-bars-below-fg: #000;
-@colour-bar-chart-bg: #fff;
-@colour-bar-chart-fg: #000;
-
-@bar-chart: enabled;
-@bar-chart-width: 500px;
-@bar-chart-border: 1px solid #ccc;
-@bar-chart-outer-padding: (@padding + 10px);
-@bar-chart-bar-margin: 2px;
-@bar-chart-bar-padding: 2px 6px;
-@bar-chart-value-location: right; // left, center, right, hide
-@bar-chart-value-move-below: 20;
-@bar-chart-value-move-below-indent: 30px;
-@bar-chart-label-angle: 0deg; // degrees, disabled
-
-.bar-chart when not (@bar-chart = disabled) {position: relative;
-	.clearfix;
-	& .x-axis,
-	& .y-axis {display: block; position: absolute;}
-	& .x-axis {bottom: 0; left: @bar-chart-outer-padding;}
-	& .y-axis {.rotate(90deg); top: @bar-chart-outer-padding; left: 0;  .origin(50% 0% 0);}
-	& dl {width: @bar-chart-width; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg; margin: 0 @bar-chart-outer-padding @bar-chart-outer-padding; 	
-		.clearfix;
-	}
-	& dt {float: left; clear: left; text-align: right; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding;}
-	& dt when not (@bar-chart-label-angle = disabled) {.rotate(@bar-chart-label-angle); .origin(80% 100% 0);}
-	& dd {float: left; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding; .box-sizing(border-box); text-align: @bar-chart-value-location;
-		text-indent: 999em; font-size: 0; background-color: @colour-bar-chart-bars-bg; color: @colour-bar-chart-bars-fg;
-// set bar sizes
-		@iterations: 100;
-		.loopingClass (@index) when (@index > -1){
-			&[data-value="@{index}"] {width: ~"@{index}%";}
-			.loopingClass (@index - 1);
-		}
-		.loopingClass (@iterations);
-
-		&:before{content: attr(data-value); display: block; font-size: 13px;}
-		&:nth-of-type(1) {margin-top: (@bar-chart-bar-margin * 2);}
-		&:nth-last-of-type(1) {margin-bottom: (@bar-chart-bar-margin * 2);}
-	}
-	& dd when (@bar-chart-value-location = hide) {}
-	& dd {
-// set bar sizes
-		@iterations: @bar-chart-value-move-below;
-		.valueLoopingClass (@index) when (@index > -1){
-			&[data-value="@{index}"]:before {color: @colour-bar-chart-bars-below-fg; position: relative; text-align: right; left: @bar-chart-value-move-below-indent;}
-			.valueLoopingClass (@index - 1);
-		}
-		.valueLoopingClass (@iterations);
-	}
-	&-vertical {.rotate(-90deg);}
 }
