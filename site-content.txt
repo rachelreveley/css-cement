@@ -1,0 +1,33 @@
+<p>CSS Cement is a CSS / HTML framework that uses the power of LESS to make a system that you not only build on top of but build with.</p>
+
+<p>The drive behind CSS Cement was my disapointment with some of the leading front-end frameworks. I wanted a framework that was more semantic with less framework specific markup and classes and less reliance on changing markup to change the look of an element. I also wanted something lightweight enough to be usable on a customer facing site, meaning that the code had to be configurable rather tha overidable.</p>
+
+<h2>The Grid</h2>
+
+<p>The grid system is based on fractions and allows you to switch the number of columns even on the same page and allows up to 20 columns. The grid system is nestable and fully responsive with configurable break points and minimum / maximum site widths.
+
+<p>Another feature of the grid is that multiple rows of child elements can be used without specifying an nth class or clearing at a certain point, making the system ideal for ecommerce sites.</p>
+
+<h2>Widgets</h2>
+
+<p>A number of optional and highly configurable widgets are included from tabs to bar charts. If you don't need a feature, you can simply disable it and it's CSS wont be compiled.</p>
+
+<h2>Mixins</h2>
+
+<p>CSS Cement contains a number of mixins designed to make using vendor extensions easier and also a number of page layout helpers and behaviour fixes.</p>
+
+<h2>Themes</h2>
+
+<p>Themes are the key to making a site from CSS Cement, a theme will contain all of the necessary variables from CSS Cement along with any custom CSS and sample HTML to get you started. It is recommended that themes are used as starter points or for inspiration rather than as finished site designs.</p>
+
+<p>Hundreds of eaily configured variables allow complete control of how your website looks, meaning that no two websites built with CSS Cement should look the same.</p>
+
+<p>Though CSS Cement is built with LESS, it has been designed to be simple enough for anyone with basic web skills to use.</p>
+
+<h2>Getting started</h2>
+<p>The best way to get started is to download a theme and have a dig through it's files.</p>
+<p>You will need Less to work with CSS Cement as we deliberately don't provide built versions. Rather than write lots of documenttaion here about how to use LESS I would rather point you to their site at <a href="http://lesscss.org/">http://lesscss.org/</a></p>
+
+
+
+
