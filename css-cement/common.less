@@ -421,8 +421,6 @@ table when not (@tables = disabled) {
 @steps-stripe-even-fg: #000;
 @steps-first-bg: #fff;
 @steps-first-fg: #000;
-@steps-last-bg: #aaa;
-@steps-last-fg: #000;
 
 .stepped when not (@steps = disabled) {
 	& .step when (@steps = striped) {
@@ -430,9 +428,18 @@ table when not (@tables = disabled) {
 		&:nth-child(even) {background-color: @steps-stripe-even-bg; color: @steps-stripe-even-fg;}
 	}
 	& .step when (@steps = descending) {
-		&:nth-child(1) {}
+		&:nth-child(1) {background-color: @steps-first-bg; color: @steps-first-fg;}
+		&:nth-child(2) {background-color: lighten(@steps-first-bg, 10); color: lighten(@steps-first-fg, 10);}
+		&:nth-child(3) {background-color: lighten(@steps-first-bg, 20); color: lighten(@steps-first-fg, 20);}
+		&:nth-child(4) {background-color: lighten(@steps-first-bg, 30); color: lighten(@steps-first-fg, 30);}
+		&:nth-child(5) {background-color: lighten(@steps-first-bg, 40); color: lighten(@steps-first-fg, 40);}
+		&:nth-child(6) {background-color: lighten(@steps-first-bg, 50); color: lighten(@steps-first-fg, 50);}
 	}
 	& .step when (@steps = ascending) {
-
+		&:nth-child(2) {background-color: darken(@steps-first-bg, 10); color: darken(@steps-first-fg, 10);}
+		&:nth-child(3) {background-color: darken(@steps-first-bg, 20); color: darken(@steps-first-fg, 20);}
+		&:nth-child(4) {background-color: darken(@steps-first-bg, 30); color: darken(@steps-first-fg, 30);}
+		&:nth-child(5) {background-color: darken(@steps-first-bg, 40); color: darken(@steps-first-fg, 40);}
+		&:nth-child(6) {background-color: darken(@steps-first-bg, 50); color: darken(@steps-first-fg, 50);}
 	}
 }
