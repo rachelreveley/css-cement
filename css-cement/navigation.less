@@ -81,7 +81,7 @@ nav {
 // tools
 // -------------------------------
 
-.tools when (@has-tools-nav = enabled) {.tools-nav-position; .tools-nav-style;
+.tools when not (@has-tools-nav = disabled) {.tools-nav-position; .tools-nav-style;
 	& nav {font-size: @tools-nav-font-size;
 		& a {padding: @tools-nav-padding;
 			&:link,
@@ -93,12 +93,8 @@ nav {
 		& li:first-child a {padding-left: 0;}
 		& li:last-child a {padding-right: 0;}
 	}
-	& nav:nth-last-child(2):first-child {
-		& li:last-child a {padding: @tools-nav-padding;}
-	}
-	& nav:nth-child(2):last-child {
-		& li:first-child a {padding: @tools-nav-padding;}
-	}
+	& nav:nth-last-child(2):first-child li:last-child a,
+	& nav:nth-child(2):last-child li:first-child a  {padding: @tools-nav-padding;}
 }
 .tools-nav-position() when not (@tools-nav-position = disabled){
 	& nav{
@@ -139,7 +135,7 @@ nav {
 // -------------------------------
 // header
 // -------------------------------
-header  when (@has-header-nav = enabled) {.header-nav-position; .header-nav-style;
+header  when not (@has-header-nav = disabled) {.header-nav-position; .header-nav-style;
 	& nav {font-size: @header-nav-font-size;
 		& a {padding: @header-nav-padding;
 			&:link,
