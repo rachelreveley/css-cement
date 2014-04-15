@@ -136,6 +136,38 @@
 }
 
 // -------------------------------
+// Forums
+// -------------------------------
+@colour-forum-head-bg: #333;
+@colour-forum-head-fg: #fff;
+@colour-forum-meta-bg: #eee;
+@colour-forum-meta-fg: #000;
+@colour-forum-content-bg: #f9f9f9;
+@colour-forum-content-fg: #000;
+@colour-forum-quote-bg: rgba(0,0,0,0.1);
+@colour-forum-quote-fg: #000;
+@forum: enabled; // disabled, enabled
+@forum-style: ; // boxed, bubbles
+@forum-padding: @padding;
+@forum-post-head: left; // left, right
+@forum-post-meta-style: collapsed; // simple, collapsed
+@forum-post-meta-width: 25%;
+
+.forum when not (@forum = disabled){
+	& .post {background-color: @colour-forum-content-bg; color: @colour-forum-content-fg;
+		& .post-head {background-color: @colour-forum-head-bg; color: @colour-forum-head-fg;
+			& ul,
+			& li {float: @forum-post-head;}
+			& ul {
+				& li a {padding: (@forum-padding / 3);
+			}
+		}
+		& .post-meta {width: @forum-post-meta-width; color: @colour-forum-meta-fg;}
+		& .post-content {color: @colour-forum-content-fg;}
+	}
+}
+
+// -------------------------------
 // Gallery
 // -------------------------------
 @gallery-style: ; // simple, framed
