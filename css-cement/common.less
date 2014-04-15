@@ -75,12 +75,25 @@
 
 	& dd when (@bar-chart-value-location = hide) {}
 // Move number out of bar when smaller than certain size
-	@iterations-before: @bar-chart-value-move-below;
-	.valueLoopingClass (@index) when (@index > -1){
-		& [data-value="@{index}"]:before {color: @colour-bar-chart-bars-below-fg; position: relative; text-align: right; left: @bar-chart-value-move-below-indent;}
-		.valueLoopingClass (@index - 1);
+
+.bar-chart [data-value="1"]:before {
+	color: @colour-bar-chart-bars-below-fg; position: relative; text-align: right; left: @bar-chart-value-move-below-indent;
+}
+.loopBuilder (@index) when (@index =< @bar-chart-value-move-below) {
+	@loopClass: ~'.bar-chart [data-value="@{index}"]:before';
+	@{loopClass} 
+	{
+		.extender() when (@index > 1) {
+			&:extend(.bar-chart [data-value="1"]:before all);
+		}
+		.extender() when (@index = 1) {}
+		.extender();
 	}
-	.valueLoopingClass (@iterations-before);
+	.loopBuilder(@index + 1);
+}
+.loopBuilder(1);
+
+
 	&-vertical {.rotate(-90deg);}
 }
 
