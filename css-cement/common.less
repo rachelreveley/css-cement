@@ -66,35 +66,32 @@
 		&:nth-last-of-type(1) {margin-bottom: (@bar-chart-bar-margin * 2);}
 	}
 // set bar sizes
-	@iterations: 100;
-	.loopingClass (@index) when (@index > -1){
-		& [data-value="@{index}"] {width: ~"@{index}%";}
-		.loopingClass (@index - 1);
-	}
-	.loopingClass (@iterations);
-
-	& dd when (@bar-chart-value-location = hide) {}
-// Move number out of bar when smaller than certain size
-		[data-value="1"]:before {
-		    display: inline;
+		@iterations: 100;
+		.loopingClass (@index) when (@index > -1){
+			& [data-value="@{index}"] {width: ~"@{index}%";}
+			.loopingClass (@index - 1);
 		}
-		.loopBuilder (@index) when (@index =< @bar-chart-value-move-below) {
-			@loopClass: ~'[data-value="@{index}"]:before';
-			@{loopClass} 
-			{
-				.extender() when (@index > 1) {
-					&:extend([data-value="1"]:before all);
-				}
-				.extender() when (@index = 1) {}
-				.extender();
-			}
-			.loopBuilder(@index + 1);
-		}
-		.loopBuilder(1);
-
+		.loopingClass (@iterations);
+		& dd when (@bar-chart-value-location = hide) {}
 		&-vertical {.rotate(-90deg);}
 	}
-
+// Move number out of bar when smaller than certain size
+	[data-value="1"]:before {
+    	color: @colour-bar-chart-bars-below-fg; position: relative; text-align: right; left: @bar-chart-value-move-below-indent;
+	}
+	.loopBuilder (@index) when (@index =< @bar-chart-value-move-below) {
+		@loopClass: ~'[data-value="@{index}"]:before';
+		@{loopClass} 
+		{
+			.extender() when (@index > 1) {
+				&:extend([data-value="1"]:before all);
+			}
+			.extender() when (@index = 1) {}
+			.extender();
+		}
+		.loopBuilder(@index + 1);
+	}
+	.loopBuilder(1);
 // -------------------------------
 // Chat bubbles
 // -------------------------------
