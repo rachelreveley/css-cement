@@ -113,12 +113,12 @@
 			position: absolute; border-style: solid; bottom: -((@chat-tail-size / 1.5) - 1);
 			.pseudo;
 		}
-	}
-	& blockquote:nth-child(odd) 	{background-color: @colour-chat-odd-bg; color: @colour-chat-odd-fg; margin-right: @chat-tail-size;
-		&:before {border-color: transparent @colour-chat-odd-bg; border-width: 0 0 (@chat-tail-size / 1.5) @chat-tail-size; left: (@chat-tail-size / 2);}
-	}
-	& blockquote:nth-child(even) 	{background-color: @colour-chat-even-bg; color: @colour-chat-even-fg; margin-left: @chat-tail-size;
-		&:before {border-color: transparent @colour-chat-even-bg; border-width: 0 @chat-tail-size (@chat-tail-size / 1.5) 0; right: (@chat-tail-size / 2);}
+		&:nth-child(odd) {background-color: @colour-chat-odd-bg; color: @colour-chat-odd-fg; margin-right: @chat-tail-size;
+			&:before {border-color: transparent @colour-chat-odd-bg; border-width: 0 0 (@chat-tail-size / 1.5) @chat-tail-size; left: (@chat-tail-size / 2);}
+		}
+		&:nth-child(even) {background-color: @colour-chat-even-bg; color: @colour-chat-even-fg; margin-left: @chat-tail-size;
+			&:before {border-color: transparent @colour-chat-even-bg; border-width: 0 @chat-tail-size (@chat-tail-size / 1.5) 0; right: (@chat-tail-size / 2);}
+		}
 	}
 }
 
@@ -155,23 +155,32 @@
 @colour-forum-quote-bg: rgba(0,0,0,0.1);
 @colour-forum-quote-fg: #000;
 @forum: enabled; // disabled, enabled
-@forum-style: ; // boxed, bubbles
 @forum-padding: @padding;
-@forum-post-head: left; // left, right
+@forum-post-head: right; // left, right
 @forum-post-meta-style: collapsed; // simple, collapsed
 @forum-post-meta-width: 25%;
 
 .forum when not (@forum = disabled){
 	& .post {background-color: @colour-forum-content-bg; color: @colour-forum-content-fg;
 		& .post-head {background-color: @colour-forum-head-bg; color: @colour-forum-head-fg;
+			.clearfix;
+			& ul {margin: 0;}
 			& ul,
 			& li {float: @forum-post-head;}
 			& ul {
-				& li a {padding: (@forum-padding / 2);}
+				& li a {padding: (@forum-padding / 2); color: @colour-forum-head-fg; display: inline-block;}
 			}
 		}
-		& .post-meta {width: @forum-post-meta-width; color: @colour-forum-meta-fg;}
-		& .post-content {color: @colour-forum-content-fg;}
+		& .post-meta,
+		& .post-content {display: table-cell; vertical-align: top; padding: @forum-padding;}
+		& .post-meta {width: @forum-post-meta-width; background-color: @colour-forum-meta-bg; color: @colour-forum-meta-fg;
+			& img {margin: 0 auto @forum-padding;}
+			& dt,
+			& dd {float: left; width: 50%;}
+			& dt {text-align: right; font-weight: bold;}
+			& dd {text-indent: 5px;}
+		}
+		& .post-content {width: (100 - @forum-post-meta-width); color: @colour-forum-content-fg;}
 	}
 }
 
@@ -439,7 +448,7 @@ table when not (@tables = disabled) {
 .tags when not (@tags = disabled){display: block;
 	& li {float: left;
 		& a,
-		& span {display: block; padding:@tags-padding; text-decoration: none;}
+		& span {display: block; padding:@tags-padding; text-decoration: none; margin-right: 2px;}
 		& span {background-color: @colour-tags-bg; color: @colour-tags-fg;}
 		& a {
 			&:link,
