@@ -1,74 +1,26 @@
-// -------------------------------
+// ###############################
 // type.less
-// -------------------------------
 // ###############################
-// start editable
-// ###############################
-// choose font pair from list below or add your own. Delete any that you aren't using.
-// Raleway & Droid Sans
-	@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
-	@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+	.type-heading() {font-family: @heading-font-family; font-weight: @heading-font-weight;}
+	.type-body() {font-family: @body-font-family;}
+	.type-nav() {font-family: @nav-font-family; font-weight: @nav-font-weight;}
+	h1,h2,h3,h4,h5,h6{.type-heading;}
+	.h1 {font-size: @h1-size; line-height: @h1-line-height;}
+	.h2 {font-size: @h2-size; line-height: @h2-line-height;}
+	.h3 {font-size: @h3-size; line-height: @h3-line-height; font-weight: @heading-alt-font-weight;}
+	.h4 {font-size: @h4-size; line-height: @h4-line-height; font-weight: @heading-alt-font-weight;}
+	.h5 {font-size: @h5-size; line-height: @h5-line-height; font-weight: @heading-alt2-font-weight;}
+	.h6 {font-size: @h6-size; line-height: @h6-line-height; font-weight: @heading-alt2-font-weight;}
+	h1 {.h1;}
+	h2 {.h2;}
+	h3 {.h3;}
+	h4 {.h4;}
+	h5 {.h5;}
+	h6 {.h6;}
+	p {.type-body;}
+	strong {font-weight: @body-alt-font-weight;}
 
-// Ubuntu & Vollkorn
-	@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
-	@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700);
-
-@heading-font-family: Raleway;
-@heading-font-weight: 200;
-@heading-alt-font-weight: 300;
-@heading-alt2-font-weight: 400;
-
-@body-font-family: "Droid Sans";
-@body-font-weight: 400;
-@body-alt-font-weight: 700;
-
-@nav-font-family: Raleway;
-@nav-font-weight: 700;
-
-@logo-font-family: Raleway;
-@logo-font-weight: 300;
-
-@text-size: 13px;
-@line-height: 1.4;
-@h1-size: 40px;
-@h1-line-height: 1.2;
-@h2-size: 36px;
-@h2-line-height: 1.2;
-@h3-size: 32px;
-@h3-line-height: 1.2;
-@h4-size: 28px;
-@h4-line-height: 1.2;
-@h5-size: 24px;
-@h5-line-height: 1.2;
-@h6-size: 20px;
-@h6-line-height: 1.4;
-@tools-nav-font-size: 13px;
-@header-nav-font-size: 13px;
-@side-nav-font-size: 14px;
-
-.type-heading() {font-family: @heading-font-family; font-weight: @heading-font-weight;}
-.type-body() {font-family: @body-font-family;}
-.type-nav() {font-family: @nav-font-family; font-weight: @nav-font-weight;}
-h1,h2,h3,h4,h5,h6{.type-heading;}
-.h1 {font-size: @h1-size; line-height: @h1-line-height;}
-.h2 {font-size: @h2-size; line-height: @h2-line-height;}
-.h3 {font-size: @h3-size; line-height: @h3-line-height; font-weight: @heading-alt-font-weight;}
-.h4 {font-size: @h4-size; line-height: @h4-line-height; font-weight: @heading-alt-font-weight;}
-.h5 {font-size: @h5-size; line-height: @h5-line-height; font-weight: @heading-alt2-font-weight;}
-.h6 {font-size: @h6-size; line-height: @h6-line-height; font-weight: @heading-alt2-font-weight;}
-h1 {.h1;}
-h2 {.h2;}
-h3 {.h3;}
-h4 {.h4;}
-h5 {.h5;}
-h6 {.h6;}
-p {.type-body;}
-strong {font-weight: @body-alt-font-weight;}
-
-.tools nav li {.type-nav;}
-header nav li {.type-nav;}
-nav.breadcrumbs li {.type-nav;}
-nav.side li {.type-nav;}
-// ###############################
-// end editable
-// ###############################
+	.tools nav li {.type-nav;}
+	header nav li {.type-nav;}
+	nav.breadcrumbs li {.type-nav;}
+	nav.side li {.type-nav;}

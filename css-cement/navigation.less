@@ -1,51 +1,6 @@
-// -------------------------------
+// ###############################
 // navigation.less
-// -------------------------------
 // ###############################
-// start editable
-// ###############################
-// Tool bar
-@has-tools-nav: enabled; //disabled, enabled
-	@tools-nav-position: both; // both, centre, left, right, justify
-	@tools-nav-style: dividers; // blocks, dividers
-	@tools-nav-padding: @padding (@padding + 2);
-		// if blocks
-		@tools-nav-border: 1px solid #ccc;
-		// if pipes
-		@vertical-divider: \0020 |; // can be anything for example |, \, >, :, ][
-		// You can use utf8 hexc odes like the following 
-		// \b7 = minddot, 
-		// \0020 \BB = double right angle quote
-		// \0020 \2023 = right triangle
-		// \0020 \009B Right single angle quote
-
-// header navigation
-@has-header-nav: enabled; //disabled, enabled
-	@header-nav-position: full-fluid; // full-fluid, full-equal, centre, left, right
-	@header-nav-style: blocks; // blocks, dividers, tabs
-	@header-nav-padding: (@padding + 2) (@padding + 4);
-		// if blocks
-		@header-nav-border: 1px solid @colour-header-nav-border;
-
-// breadcrumbs
-@has-breadcrumbs-nav: enabled; //disabled, enabled
-	@breadcrumbs-style: bullets; // disabled, blocks, bullets, checvrons, simple
-	@breadcrumbs-padding: 1em;
-	@breadcrumbs-space: 1;
-	@breadcrumbs-bullet: >;
-
-// side navigation (in main container)
-@has-side-nav: enabled; //disabled, enabled
-	@side-nav-style: disabled; // disabled, simple, blocks, lines
-	@side-nav-padding: @padding (@padding + 2);
-	@side-nav-border: 1px solid @colour-side-nav-border;
-
-// flyouts
-@flyouts-width: disabled; // disabled, single, multi, full
-// ###############################
-// end editable
-// ###############################
-
 
 // -------------------------------
 // Shared nav styles
