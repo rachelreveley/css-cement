@@ -1,19 +1,159 @@
 // ###############################
 // common.less
 // ###############################
-// ###############################
-// start editable
-// ###############################
+
+// -------------------------------
+// Badges
+// -------------------------------
 @badge: enabled; // disabled, simple
+// -------------------------------
+// Bar charts
+// -------------------------------
+@bar-chart: enabled;
+@colour-bar-chart-bars-bg: #666;
+@colour-bar-chart-bars-fg: #fff;
+@colour-bar-chart-bars-below-fg: #000;
+@colour-bar-chart-bg: #fff;
+@colour-bar-chart-fg: #000;
+@bar-chart-width: 500px;
+@bar-chart-border: 1px solid #ccc;
+@bar-chart-outer-padding: (@padding + 10px);
+@bar-chart-bar-margin: 2px;
+@bar-chart-bar-padding: 2px 6px;
+@bar-chart-value-location: right; // left, center, right, hide
+@bar-chart-value-move-below: 20;
+@bar-chart-value-move-below-indent: 30px;
+@bar-chart-label-angle: 0deg; // degrees, disabled
+// -------------------------------
+// Chat bubbles
+// -------------------------------
 @chat: bubbles; // disable, bubbles
+@colour-chat-even-bg: #eee; // hex
+@colour-chat-even-fg: #333; // hex
+@colour-chat-odd-bg: #ddd; // hex
+@colour-chat-odd-fg: #222; // hex
+@chat-start: left; // left, right
+@chat-margin: 20px;
+@chat-padding: 10px;
+@chat-radius: 4px;
+@chat-tail-size: 20px;
+// -------------------------------
+// Feature hover effects
+// -------------------------------
 @feaure-hovers: darken; // disabled, lighten, darken
+// -------------------------------
+// Forums
+// -------------------------------
+@forum: enabled; // disabled, enabled
+@colour-forum-head-bg: #333;
+@colour-forum-head-fg: #fff;
+@colour-forum-meta-bg: #eee;
+@colour-forum-meta-fg: #000;
+@colour-forum-content-bg: #f9f9f9;
+@colour-forum-content-fg: #000;
+@colour-forum-quote-bg: rgba(0,0,0,0.1);
+@colour-forum-quote-fg: #000;
+@forum-padding: @padding;
+@forum-post-head: right; // left, right
+@forum-post-meta-style: collapsed; // simple, collapsed
+@forum-post-meta-width: 25%;
+// -------------------------------
+// Gallery
+// -------------------------------
 @gallery: enabled; // disabled, simple, rounded-grid, filmstrip
+@gallery-style: ; // simple, framed
+@gallery-hover: border; // border, opacity, zoom
+// -------------------------------
+// Highlight-block
+// -------------------------------
+@highlight-border: @border-solid;
+@colour-highlight-bg: #eee;
+@colour-highlight-fg: #000;
+@highlight-padding: @padding;
+@highlight-radius: @border-radius; // disabled, number
 @highlight-block: enabled; // disabled, simple
+// -------------------------------
+// Pagination
+// -------------------------------
 @pagination: blocks; // disabled, simple, blocks
+@colour-pagination-bg: #eee; // hex
+@colour-pagination-fg: #222; // hex
+@colour-pagination-current-bg: #222; // hex
+@colour-pagination-current-fg: #eee; // hex
+@colour-pagination-hover-bg: #ddd; // hex
+@colour-pagination-hover-fg: #111; // hex
+@pagination-border-colour: #ccc; // disabled, hex
+@pagination-border-style: solid; // disabled, style
+@pagination-border-width: 1px; // disabled, 
+@pagination-margin: 5px;
+@pagination-padding: 0.75em 1em; // 1 - 4 numbers
+@pagination-radius: @border-radius; // disabled, number
+// -------------------------------
+// Progress-bar
+// -------------------------------
 @progress: enabled; // disabled, simple
+@colour-progress-bg: #eee;
+@colour-progress-fg: #999;
+// -------------------------------
+// Pull-quotes
+// -------------------------------
 @pullquotes: enabled; // disabled, overhang-right, overhang-left
+@pullquotes-width: 20%;
+@colour-pullquotes-bg: #eee;
+@colour-pullquotes-fg: #666;
+@pullquotes-border-radius: @border-radius;
+@pullquotes-font-size: 16px;
+@pullquotes-margin: @padding;
+@pullquotes-padding: @padding;
+// -------------------------------
+// Tables
+// -------------------------------
 @tables: enabled; // disabled, enabled
+@colour-table-body-bg: #fff; // hex
+@colour-table-body-fg: #222; // hex
+@colour-table-comparrison-col-1-bg: #fff;
+@colour-table-comparrison-col-2-bg: #f6f6f6;
+@colour-table-comparrison-col-3-bg: #eee;
+@colour-table-comparrison-col-4-bg: #e5e5e5;
+@colour-table-comparrison-col-5-bg: #ddd;
+@colour-table-comparrison-col-6-bg: #d4d4d4;
+@colour-table-comparrison-col-1-fg: #000;
+@colour-table-comparrison-col-2-fg: #000;
+@colour-table-comparrison-col-3-fg: #000;
+@colour-table-comparrison-col-4-fg: #000;
+@colour-table-comparrison-col-5-fg: #000;
+@colour-table-comparrison-col-6-fg: #000;
+@colour-table-even-bg: #ddd; // hex
+@colour-table-foot-bg: #eee; // hex
+@colour-table-foot-fg: #333; // hex
+@colour-table-head-bg: #ccc; // hex
+@colour-table-head-fg: #000; // hex
+@colour-table-hover-bg: #666;
+@colour-table-hover-fg: #fff;
+@table-border-style: 1px solid #ccc;
+@table-head-font-weight: bold; // bold, normal
+@table-padding: (@padding / 1.2) (@padding * 1.5);
+@table-promote-border-style: 2px solid #000;
+// -------------------------------
+// Tabs
+// -------------------------------
 @tabs: blocks; // disabled, blocks, chevrons, trapezoid
+@colour-tabs-bg: #eee; // hex
+@colour-tabs-fg: #222; // hex
+@colour-tabs-current-bg: #222; // hex
+@colour-tabs-current-fg: #eee; // hex
+@colour-tabs-hover-bg: #ddd; // hex
+@colour-tabs-hover-fg: #111; // hex
+@tabs-border-colour: #ccc; // disabled, colour
+@tabs-border-style: solid; // disabled, style
+@tabs-border-width: 1px; // disabled, 
+@tabs-content-padding: @padding; // 1 - 4 numbers
+@tabs-padding: 0.75em 2em; // 1 - 4 numbers
+@tabs-radius: @border-radius; // disabled, number
+@dynamic-tabs: enabled; // 
+@dynamic-tabs-qty: 4;
+
+
 @tags: simple; // disabled, simple
 
 
@@ -30,23 +170,6 @@
 // -------------------------------
 // Bar charts
 // -------------------------------
-@colour-bar-chart-bars-bg: #666;
-@colour-bar-chart-bars-fg: #fff;
-@colour-bar-chart-bars-below-fg: #000;
-@colour-bar-chart-bg: #fff;
-@colour-bar-chart-fg: #000;
-
-@bar-chart: enabled;
-@bar-chart-width: 500px;
-@bar-chart-border: 1px solid #ccc;
-@bar-chart-outer-padding: (@padding + 10px);
-@bar-chart-bar-margin: 2px;
-@bar-chart-bar-padding: 2px 6px;
-@bar-chart-value-location: right; // left, center, right, hide
-@bar-chart-value-move-below: 20;
-@bar-chart-value-move-below-indent: 30px;
-@bar-chart-label-angle: 0deg; // degrees, disabled
-
 .bar-chart when not (@bar-chart = disabled) {position: relative;
 	.clearfix;
 	& .x-axis,
@@ -95,17 +218,6 @@
 // -------------------------------
 // Chat bubbles
 // -------------------------------
-@colour-chat-even-bg: #eee; // hex
-@colour-chat-even-fg: #333; // hex
-@colour-chat-odd-bg: #ddd; // hex
-@colour-chat-odd-fg: #222; // hex
-
-@chat-start: left; // left, right
-@chat-margin: 20px;
-@chat-padding: 10px;
-@chat-radius: 4px;
-@chat-tail-size: 20px;
-
 .chat when (@chat = bubbles){
 	& blockquote {
 		display: block; margin-bottom: @chat-margin; padding: @chat-padding; border-radius: @chat-radius; position: relative;
@@ -146,20 +258,6 @@
 // -------------------------------
 // Forums
 // -------------------------------
-@colour-forum-head-bg: #333;
-@colour-forum-head-fg: #fff;
-@colour-forum-meta-bg: #eee;
-@colour-forum-meta-fg: #000;
-@colour-forum-content-bg: #f9f9f9;
-@colour-forum-content-fg: #000;
-@colour-forum-quote-bg: rgba(0,0,0,0.1);
-@colour-forum-quote-fg: #000;
-@forum: enabled; // disabled, enabled
-@forum-padding: @padding;
-@forum-post-head: right; // left, right
-@forum-post-meta-style: collapsed; // simple, collapsed
-@forum-post-meta-width: 25%;
-
 .forum when not (@forum = disabled){
 	& .post {background-color: @colour-forum-content-bg; color: @colour-forum-content-fg;
 		& .post-head {background-color: @colour-forum-head-bg; color: @colour-forum-head-fg;
@@ -187,9 +285,6 @@
 // -------------------------------
 // Gallery
 // -------------------------------
-@gallery-style: ; // simple, framed
-@gallery-hover: border; // border, opacity, zoom
-
 .gallery when not (@gallery = disabled){
 	& li {display: inline-block;
 		& a {display: block;}
@@ -207,13 +302,6 @@
 // -------------------------------
 // Highlight-block
 // -------------------------------
-@colour-highlight-bg: #eee;
-@colour-highlight-fg: #000;
-
-@highlight-border: @border-solid;
-@highlight-padding: @padding;
-@highlight-radius: @border-radius; // disabled, number
-
 .highlight when not (@highlight-block = disabled){padding: @highlight-padding; background-color: @colour-highlight-bg; color: @colour-highlight-fg; margin-bottom: 1em; border-radius: @highlight-radius; border: @highlight-border;
 	& p:last-child {margin-bottom: 0;}
 }
@@ -221,20 +309,6 @@
 // -------------------------------
 // Pagination
 // -------------------------------
-@colour-pagination-bg: #eee; // hex
-@colour-pagination-fg: #222; // hex
-@colour-pagination-current-bg: #222; // hex
-@colour-pagination-current-fg: #eee; // hex
-@colour-pagination-hover-bg: #ddd; // hex
-@colour-pagination-hover-fg: #111; // hex
-
-@pagination-border-colour: #ccc; // disabled, hex
-@pagination-border-style: solid; // disabled, style
-@pagination-border-width: 1px; // disabled, 
-@pagination-margin: 5px;
-@pagination-padding: 0.75em 1em; // 1 - 4 numbers
-@pagination-radius: @border-radius; // disabled, number
-
 .pagination when not (@pagination = disabled){
 	& ol {display: table;
 		& li {display: table-cell; padding-right: @pagination-margin;
@@ -255,9 +329,6 @@
 // -------------------------------
 // Progress-bar
 // -------------------------------
-@colour-progress-bg: #eee;
-@colour-progress-fg: #999;
-
 progress when not (@progress = disabled) {
 	-webkit-appearance: none; border: 0; height: @padding; 
 	background: @colour-progress-bg;
@@ -269,15 +340,6 @@ progress when not (@progress = disabled) {
 // -------------------------------
 // Pull-quotes
 // -------------------------------
-@colour-pullquotes-bg: #eee;
-@colour-pullquotes-fg: #666;
-
-@pullquotes-border-radius: @border-radius;
-@pullquotes-font-size: 16px;
-@pullquotes-margin: @padding;
-@pullquotes-padding: @padding;
-@pullquotes-width: 20%;
-
 p[data-pullquote] when not (@pullquotes = disabled) {
 	&:before{content: attr(data-pullquote); background-color: @colour-pullquotes-bg; color: @colour-pullquotes-fg; padding: @pullquotes-padding; width: @pullquotes-width; font-size: @pullquotes-font-size; border-radius: @pullquotes-border-radius; display: block;}
 	&[data-pullquote-position="left"]:before {float: left; margin: 0 @padding @padding 0;}
@@ -288,33 +350,6 @@ p[data-pullquote] when not (@pullquotes = disabled) {
 // -------------------------------
 // Tables
 // -------------------------------
-@colour-table-body-bg: #fff; // hex
-@colour-table-body-fg: #222; // hex
-@colour-table-comparrison-col-1-bg: #fff;
-@colour-table-comparrison-col-2-bg: #f6f6f6;
-@colour-table-comparrison-col-3-bg: #eee;
-@colour-table-comparrison-col-4-bg: #e5e5e5;
-@colour-table-comparrison-col-5-bg: #ddd;
-@colour-table-comparrison-col-6-bg: #d4d4d4;
-@colour-table-comparrison-col-1-fg: #000;
-@colour-table-comparrison-col-2-fg: #000;
-@colour-table-comparrison-col-3-fg: #000;
-@colour-table-comparrison-col-4-fg: #000;
-@colour-table-comparrison-col-5-fg: #000;
-@colour-table-comparrison-col-6-fg: #000;
-@colour-table-even-bg: #ddd; // hex
-@colour-table-foot-bg: #eee; // hex
-@colour-table-foot-fg: #333; // hex
-@colour-table-head-bg: #ccc; // hex
-@colour-table-head-fg: #000; // hex
-@colour-table-hover-bg: #666;
-@colour-table-hover-fg: #fff;
-
-@table-border-style: 1px solid #ccc;
-@table-head-font-weight: bold; // bold, normal
-@table-padding: (@padding / 1.2) (@padding * 1.5);
-@table-promote-border-style: 2px solid #000;
-
 table when not (@tables = disabled) {
 // General styles
 	& th {padding: @table-padding;}
@@ -379,22 +414,6 @@ table when not (@tables = disabled) {
 // -------------------------------
 // Tabs
 // -------------------------------
-@colour-tabs-bg: #eee; // hex
-@colour-tabs-fg: #222; // hex
-@colour-tabs-current-bg: #222; // hex
-@colour-tabs-current-fg: #eee; // hex
-@colour-tabs-hover-bg: #ddd; // hex
-@colour-tabs-hover-fg: #111; // hex
-
-@tabs-border-colour: #ccc; // disabled, colour
-@tabs-border-style: solid; // disabled, style
-@tabs-border-width: 1px; // disabled, 
-@tabs-content-padding: @padding; // 1 - 4 numbers
-@tabs-padding: 0.75em 2em; // 1 - 4 numbers
-@tabs-radius: @border-radius; // disabled, number
-@dynamic-tabs: enabled; // 
-@dynamic-tabs-qty: 4;
-
 .tabs when not (@tabs = disabled){
 	& ul {display: table; margin-bottom: 0;
 		& li {display: table-cell;
@@ -494,7 +513,7 @@ table when not (@tables = disabled) {
 
 
 // -------------------------------
-// Stepped content
+// cORNER RIBBONS
 // -------------------------------
 @corner-ribbon: enabled; // disabled, enabled
 @colour-corner-ribbon-bg: #000;
