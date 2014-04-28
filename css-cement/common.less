@@ -152,10 +152,23 @@
 @tabs-radius: @border-radius; // disabled, number
 @dynamic-tabs: enabled; // 
 @dynamic-tabs-qty: 4;
-
-
+// -------------------------------
+// Tags
+// -------------------------------
+@colour-tags-bg: #eee; // hex
+@colour-tags-fg: #222; // hex
+@colour-tags-hover-bg: #ddd; // hex
+@colour-tags-hover-fg: #111; // hex
+@tags-border: @border-solid;
+@tags-padding: 0.25em 1em; // 1 - 4 numbers
 @tags: simple; // disabled, simple
-
+// -------------------------------
+// corner ribbons
+// -------------------------------
+@corner-ribbon: enabled; // disabled, enabled
+@colour-corner-ribbon-bg: #000;
+@colour-corner-ribbon-fg: #fff;
+@corner-ribbon-border: 1px solid #aaa;
 
 // ###############################
 // end editable
@@ -456,14 +469,6 @@ table when not (@tables = disabled) {
 // -------------------------------
 // Tags
 // -------------------------------
-@colour-tags-bg: #eee; // hex
-@colour-tags-fg: #222; // hex
-@colour-tags-hover-bg: #ddd; // hex
-@colour-tags-hover-fg: #111; // hex
-
-@tags-border: @border-solid;
-@tags-padding: 0.25em 1em; // 1 - 4 numbers
-
 .tags when not (@tags = disabled){display: block;
 	& li {float: left;
 		& a,
@@ -513,13 +518,8 @@ table when not (@tables = disabled) {
 
 
 // -------------------------------
-// cORNER RIBBONS
+// corner ribbons
 // -------------------------------
-@corner-ribbon: enabled; // disabled, enabled
-@colour-corner-ribbon-bg: #000;
-@colour-corner-ribbon-fg: #fff;
-@corner-ribbon-border: 1px solid #aaa;
-
 .corner-ribbon when not (@corner-ribbon = disabled) {position: relative; overflow: hidden;
 	.ribbon {padding: 3px 0 5px; position: absolute; text-align: center; background-color: @colour-corner-ribbon-bg; color: @colour-corner-ribbon-fg; border-top: @corner-ribbon-border; border-bottom: @corner-ribbon-border; top: auto; right: auto; bottom: auto; left: auto; width: 150px;
 		.box-sizing(border-box);
