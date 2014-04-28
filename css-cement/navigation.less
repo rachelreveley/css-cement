@@ -264,10 +264,6 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 // -------------------------------
 // Flyout menus
 // -------------------------------
-@has-flyout-header: enabled; // enabled, disabled
-@flyout-layout: full-width; // single-col, multi-col, full-width
-@flyout-width: 300px; // number
-
 	header when not (@has-flyout-header = disabled) {
 		& nav > ul {position: relative;
 			& > li {
