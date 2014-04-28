@@ -61,8 +61,9 @@ nav {
 .tools-nav-position() when (@tools-nav-position = right){text-align: right;}
 .tools-nav-position() when (@tools-nav-position = justify){
 	& nav{
-		& ul {display: table;}
-		& li {display: table-cell;}
+		& > ul {display: table;
+			& > li {display: table-cell;}
+		}
 	}
 }
 .tools-nav-position() when (@tools-nav-position = both){text-align: left;
@@ -104,13 +105,16 @@ header  when not (@has-header-nav = disabled) {.header-nav-position; .header-nav
 // -------------------------------
 	.header-nav-position() when not (@header-nav-position = disabled){
 		& nav{display: block;
-			& li {display: inline-block;}
+			& > ul {
+				& > li {display: inline-block;}
+			}
 		}
 	}
 	.header-nav-position() when (@header-nav-position = full-fluid){
 		& nav{width: 100%; 
-			& ul {display: table; width: 100%;}
-			& li {display: table-cell;}
+			& > ul {display: table; width: 100%;
+				& > li {display: table-cell;}
+			}
 		}
 	}
 	.header-nav-position() when (@header-nav-position = full-equal){
@@ -255,4 +259,30 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 	}
 	.side-nav-style() when (@side-nav-style = lines){
 		& li {border-bottom: @side-nav-border;}
+	}
+
+// -------------------------------
+// Flyout menus
+// -------------------------------
+@has-flyout-header: enabled; // enabled, disabled
+@flyout-layout: full-width; // single-col, multi-col, full-width
+@flyout-width: 300px; // number
+
+	header when not (@has-flyout-header = disabled) {
+		& nav > ul {position: relative;
+			& > li {
+				& > ul {position: absolute; display: none;
+					& > li {display: block; width: 100%;}
+				}
+				&:hover {
+					& > ul {display: block;}
+					& > ul when not (@flyout-layout = full-width) {width: @flyout-width;}
+					& > ul when (@flyout-layout = full-width) {width: 100%; left: 0;}
+					& > ul when not (@flyout-layout = single-col) {display: table;
+						.classless-grid;
+						& > li {display: table-cell;}
+					}
+				}
+			}
+		}
 	}
