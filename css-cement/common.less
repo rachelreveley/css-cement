@@ -74,7 +74,22 @@
 		}
 	}
 }
-
+// -------------------------------
+// corner ribbons
+// -------------------------------
+.corner-ribbon when not (@corner-ribbon = disabled) {position: relative; overflow: hidden;
+	.ribbon {padding: 3px 0 5px; position: absolute; text-align: center; background-color: @colour-corner-ribbon-bg; color: @colour-corner-ribbon-fg; border-top: @corner-ribbon-border; border-bottom: @corner-ribbon-border; top: auto; right: auto; bottom: auto; left: auto; width: 150px;
+		.box-sizing(border-box);
+		&.top{top: 35px;}
+		&.left{left: -35px;}
+		&.right{right: -35px;}
+		&.bottom{bottom: 25px;}
+		&.top.left{.rotate(-45deg);}
+		&.top.right{.rotate(45deg);}
+		&.bottom.left{.rotate(45deg);}
+		&.bottom.right{.rotate(-45deg);}
+	}
+}
 // -------------------------------
 // Feature hover effects
 // -------------------------------
@@ -308,21 +323,5 @@ table when not (@tables = disabled) {
 			&:hover,
 			&:active {background-color: @colour-tags-hover-bg; color: @colour-tags-hover-fg;}
 		}
-	}
-}
-// -------------------------------
-// corner ribbons
-// -------------------------------
-.corner-ribbon when not (@corner-ribbon = disabled) {position: relative; overflow: hidden;
-	.ribbon {padding: 3px 0 5px; position: absolute; text-align: center; background-color: @colour-corner-ribbon-bg; color: @colour-corner-ribbon-fg; border-top: @corner-ribbon-border; border-bottom: @corner-ribbon-border; top: auto; right: auto; bottom: auto; left: auto; width: 150px;
-		.box-sizing(border-box);
-		&.top{top: 35px;}
-		&.left{left: -35px;}
-		&.right{right: -35px;}
-		&.bottom{bottom: 25px;}
-		&.top.left{.rotate(-45deg);}
-		&.top.right{.rotate(45deg);}
-		&.bottom.left{.rotate(45deg);}
-		&.bottom.right{.rotate(-45deg);}
 	}
 }
