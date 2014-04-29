@@ -1,54 +1,7 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>CSS Cement - Grid siszes template</title>
-		<meta name="author" content="Rachel Reveley">
-		<link rel="stylesheet/less" type="text/css" href="mohdern/mohdern.less" />
-		<script type="text/javascript">
-			less = {
-				env: "development", // or "production"
-				async: false,	   // load imports async
-				fileAsync: false,   // load imports async when in a page under
-									// a file protocol
-				poll: 1000,		 // when in watch mode, time in ms between polls
-				functions: {},	  // user functions, keyed by name
-				dumpLineNumbers: "comments", // or "mediaQuery" or "all"
-				relativeUrls: false,// whether to adjust url's to be relative
-									// if false, url's are already relative to the
-									// entry less file
-									//resource
-			};
-		</script>
-		<script src="less.js" type="text/javascript"></script>
-<!-- These styles are specifically to show how this template works -->
 		<style type="text/css">
 			.parent {background-color: #fcfcfc;}
 			.parent > div {background-color: #eee;}
 		</style>
-	</head>
-	<body>
-		<div class="main">
-			<div>
-				<nav class="side">
-					<ul>
-						<li>
-							<a href="#">Nav level 1</a>
-							<ul>
-								<li><a href="#">Nav level 2</a></li>
-								<li><a href="#">Nav level 2</a></li>
-								<li><a href="#">Nav level 2</a>
-									<ul>
-										<li><a href="#">Nav level 3</a></li>
-										<li><a href="#">Nav level 3</a></li>
-										<li><a href="#">Nav level 3</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<div class="content">
 					<div class="parent dt-1-1 tb-1-1 mb-1-1 collapse-top">
 						<div>
 							<h1>The grid system</h1>
@@ -136,8 +89,3 @@
 						<div class="dt-1-10 tb-1-10 mb-1-10">&nbsp;</div>
 						<div class="dt-9-10 tb-9-10 mb-9-10">&nbsp;</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-</html>
