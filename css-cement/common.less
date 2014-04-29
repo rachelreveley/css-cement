@@ -56,6 +56,74 @@
 		.loopBuilder(@index + 1);
 	}
 	.loopBuilder(1);
+
+// -------------------------------
+// Calendar
+// -------------------------------
+@has-calendar: enabled; // enabled, disabled
+
+@colour-calendar-current-bg: #333;
+@colour-calendar-current-fg: #fff;
+@colour-calendar-next-bg: #f9f9f9;
+@colour-calendar-next-fg: #999;
+@colour-calendar-previous-bg: #eee;
+@colour-calendar-previous-fg: #666;
+@colour-calendar-weekend-bg: #ddd;
+@colour-calendar-weekend-fg: #000;
+@colour-calendar-heading-bg: #000;
+@colour-calendar-heading-fg: #fff;
+@calendar-cell-height: 65%;
+@calendar-cell-width: 12%;
+@calendar-margin:2%;
+@calendar-padding: 5px;
+@calendar-heading-padding: 5px;
+@calendar-heading-position: 35px;
+
+	.calendar {width: 100%; position: relative; margin-top: @calendar-heading-position;
+		& li {float: left; margin: 0 @calendar-margin @calendar-margin 0; width: @calendar-cell-width; background-color: @colour-calendar-previous-bg;
+			& a,
+			& span {height: 0; padding: @calendar-padding @calendar-padding @calendar-cell-height; display: block; color: @colour-calendar-previous-fg;}
+		}
+// First day of the month
+		& .monday.day-1 {margin-left: 0;}
+		& .tuesday.day-1 {margin-left: (@calendar-cell-width + @calendar-margin);}
+		& .wednesday.day-1 {margin-left: ((@calendar-cell-width * 2) + (@calendar-margin * 2));}
+		& .thursday.day-1 {margin-left: ((@calendar-cell-width * 3) + (@calendar-margin * 3));}
+		& .friday.day-1 {margin-left: ((@calendar-cell-width * 4) + (@calendar-margin * 4));}
+		& .saturday.day-1 {margin-left: ((@calendar-cell-width * 5) + (@calendar-margin * 5));}
+		& .sunday.day-1 {margin-left: ((@calendar-cell-width * 6) + (@calendar-margin * 6));}
+// weekends
+		& .saturday,
+		& .sunday {background-color: @colour-calendar-weekend-bg;
+			& span {color: @colour-calendar-weekend-fg;}
+		}
+		& .sunday {margin-right: 0;}
+// today
+		& .today {background-color: @colour-calendar-current-bg; color: @colour-calendar-current-fg; font-weight: bold; color: @bg;
+			& a,
+			& span {color: @colour-calendar-current-fg;}
+			& ~ li {background-color: @colour-calendar-next-bg;
+				& a,
+				& span { color: @colour-calendar-next-fg;}
+			}
+		}
+// headings
+		& .day-1:before,
+		& .day-2:before,
+		& .day-3:before,
+		& .day-4:before,
+		& .day-5:before,
+		& .day-6:before,
+		& .day-7:before {position: absolute; top: -@calendar-heading-position; width: @calendar-cell-width; text-align: center; background-color: @colour-calendar-heading-bg; color: @colour-calendar-heading-fg; padding: @calendar-heading-padding 0;}
+		& .day-1:before {content: "Monday"; left: 0;}
+		& .day-2:before {content: "Tuesday"; left: (@calendar-cell-width + @calendar-margin);}
+		& .day-3:before {content: "Wednesday"; left: ((@calendar-cell-width * 2) + (@calendar-margin * 2));}
+		& .day-4:before {content: "Thursday"; left: ((@calendar-cell-width * 3) + (@calendar-margin * 3));}
+		& .day-5:before {content: "Friday"; left: ((@calendar-cell-width * 4) + (@calendar-margin * 4));}
+		& .day-6:before {content: "Saturday"; left: ((@calendar-cell-width * 5) + (@calendar-margin * 5));}
+		& .day-7:before {content: "Sunday"; left: ((@calendar-cell-width * 6) + (@calendar-margin * 6));}
+
+	}
 // -------------------------------
 // Chat bubbles
 // -------------------------------
