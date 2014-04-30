@@ -56,8 +56,8 @@
 // basic grid
 .parent{.fs-zero; display: block;
 	.clear; .clearfix;
-	& > *{.fs-base; display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
-	}
+	& > *{.fs-base; display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+	& .parent {width: (100% + @margin-dt) !important; max-width: none; margin: 0 !important; padding: 0 !important;}
 }
 
 // side gutters
