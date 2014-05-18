@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 					<div class="parent dt-1-1 tb-1-1 mb-1-1 collapse-top">
 						<div>
 							<p>This page is to check that Font Awesome Icons are working OK.</p>
@@ -1024,6 +1025,7 @@
 </section>
 
 </div>
+<?php include("footer.php"); ?>
 
 
 

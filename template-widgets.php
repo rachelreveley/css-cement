@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 					<div class="parent dt-1-1 tb-1-1 mb-1-1">
 						<div>
 							<h1>Widgets</h1>
@@ -554,3 +555,4 @@
 							</ul>
 						</div>
 					</div>
+<?php include("footer.php"); ?>

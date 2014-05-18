@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 					<div class="parent dt-1-1 tb-1-1 mb-1-1">
 						<h1>Typography</h1>
 						<div>
@@ -58,3 +59,4 @@
 							<sup>superscript</sup> <sub>subscript</sub><br>
 						</div>
 					</div>
+<?php include("footer.php"); ?>

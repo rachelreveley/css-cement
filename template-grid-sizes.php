@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 		<style type="text/css">
 			.parent {background-color: #fcfcfc;}
 			.parent > div {background-color: #eee;}
@@ -89,3 +90,4 @@
 						<div class="dt-1-10 tb-1-10 mb-1-10">&nbsp;</div>
 						<div class="dt-9-10 tb-9-10 mb-9-10">&nbsp;</div>
 					</div>
+<?php include("footer.php"); ?>

@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 				<div class="content stepped steps-6">
 					<div class="parent dt-1 tb-1 mb-1 step">
 						<div class="dt-3">
@@ -35,3 +36,5 @@
 							<p>Ah'll learn thi breadcake god's own county tha what shu' thi gob. Aye big girl's blouse t'foot o' our stairs. Chuffin' nora tha knows bloomin' 'eck sup wi' 'im dahn t'coil oil. Tha daft apeth shu' thi gob breadcake michael palin sup wi' 'im. Th'art nesh thee. Tell thi summat for nowt any rooad ah'll gi' thi summat to rooer</p>
 						</div>
 					</div>
+
+<?php include("footer.php"); ?>
