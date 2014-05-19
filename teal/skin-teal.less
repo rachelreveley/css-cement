@@ -1,0 +1,604 @@
+// ###############################
+// start colours.less
+// ###############################
+	.base-colors(#fff,#333); // hex
+// -------------------------------
+// primary containers
+// -------------------------------
+	@colour-body-fg: #222; // #fff, #000
+	@colour-body-bg: #666; // #fff, #000
+
+	@colour-tools-fg: #fff; // 
+	@colour-tools-bg: #fff; // 
+	@colour-tools-inner-bg: #fff; // 
+
+	@colour-header-fg: #fff; // 
+	@colour-header-bg: #006666; // 
+	@colour-header-inner-bg: transparent; // 
+
+	@colour-content-fg: #222; // 
+	@colour-content-bg: #fff; // 
+	@colour-content-inner-bg: #fff; // 
+
+	@colour-footer-fg: #222; // 
+	@colour-footer-bg: #111; // 
+	@colour-footer-inner-bg: #111; // 
+// -------------------------------
+// links
+// -------------------------------
+	@colour-link: #009; // 
+	@colour-visited: #909; // 
+	@colour-hover: #099; // 
+	@colour-active: #990; // 
+// -------------------------------
+// text
+// -------------------------------
+	@colour-heading: #066; // 
+	@colour-heading-alt: #222; // 
+	@colour-text: #222; // 
+	@colour-text-alt-1: #000; // 
+	@colour-text-alt-2: #000; // 
+	@colour-text-alt-3: #000; //
+	@colour-border: #fff; // 
+// -------------------------------
+// tools navigation
+// -------------------------------
+	@colour-tools-nav-level-0-fg: #242424; // 
+	@colour-tools-nav-level-0-bg: #fff; // 
+	@colour-tools-nav-level-1-fg: #242424; // 
+	@colour-tools-nav-level-1-bg: #fff; // 
+	@colour-tools-nav-level-2-fg: #242424; // 
+	@colour-tools-nav-level-2-bg: #fff; // 
+	@colour-tools-nav-border: #fff; // 
+
+	@colour-tools-nav-level-0-hover-fg: #306; // 
+	@colour-tools-nav-level-0-hover-bg: #fff; // 
+	@colour-tools-nav-level-1-hover-fg: #d59f35; // 
+	@colour-tools-nav-level-1-hover-bg: #fff; // 
+	@colour-tools-nav-level-2-hover-fg: #d59f35; // 
+	@colour-tools-nav-level-2-hover-bg: #fff; // 
+	@colour-tools-nav-border: #fff; // 
+
+// -------------------------------
+// header navigation
+// -------------------------------
+	@colour-header-nav-level-0-fg: #242424; // 
+	@colour-header-nav-level-0-bg: #fff; // 
+	@colour-header-nav-level-1-fg: #242424; // 
+	@colour-header-nav-level-1-bg: #fff; // 
+	@colour-header-nav-level-2-fg: #242424; // 
+	@colour-header-nav-level-2-bg: #fff; // 
+	@colour-header-nav-border: #fff; // 
+
+	@colour-header-nav-level-0-hover-fg: #306; // 
+	@colour-header-nav-level-0-hover-bg: #fff; // 
+	@colour-header-nav-level-1-hover-fg: #d59f35; // 
+	@colour-header-nav-level-1-hover-bg: #fff; // 
+	@colour-header-nav-level-2-hover-fg: #d59f35; // 
+	@colour-header-nav-level-2-hover-bg: #fff; // 
+	@colour-header-nav-border: #fff; // 
+
+// -------------------------------
+// breadcrumbs navigation
+// -------------------------------
+	@colour-breadcrumbs-nav-level-0-fg: #066; // 
+	@colour-breadcrumbs-nav-level-0-bg: #fff; // 
+	@colour-breadcrumbs-nav-level-1-fg: #066; // 
+	@colour-breadcrumbs-nav-level-1-bg: #fff; // 
+	@colour-breadcrumbs-nav-level-1-hover-fg: #306; // 
+	@colour-breadcrumbs-nav-level-1-hover-bg: #fff; // 
+	@colour-breadcrumbs-nav-border: #fff; // 
+
+// -------------------------------
+// side navigation
+// -------------------------------
+	@colour-side-nav-level-0-fg: #066; // 
+	@colour-side-nav-level-0-bg: #fff; // 
+	@colour-side-nav-level-1-fg: #066; // 
+	@colour-side-nav-level-1-bg: #fff; // 
+	@colour-side-nav-level-2-fg: #066; // 
+	@colour-side-nav-level-2-bg: #fff; // 
+	@colour-side-nav-border: #fff; // 
+	@colour-side-nav-level-0-hover-fg: #306; // 
+	@colour-side-nav-level-0-hover-bg: #fff; // 
+	@colour-side-nav-level-1-hover-fg: #306; // 
+	@colour-side-nav-level-1-hover-bg: #fff; // 
+	@colour-side-nav-level-2-hover-fg: #306; // 
+	@colour-side-nav-level-2-hover-bg: #fff; //
+	@colour-side-nav-border: #fff; // 
+
+// -------------------------------
+// footer navigation
+// -------------------------------
+// footer nav
+	@colour-footer-nav-level-0-fg: #066; // 
+	@colour-footer-nav-level-0-bg: #fff; // 
+	@colour-footer-nav-level-1-fg: #066; // 
+	@colour-footer-nav-level-1-bg: #fff; // 
+	@colour-footer-nav-level-2-fg: #066; // 
+	@colour-footer-nav-level-2-bg: #fff; // 
+	@colour-footer-nav-border: #fff; // 
+	@colour-footer-nav-level-0-hover-fg: #306; // 
+	@colour-footer-nav-level-0-hover-bg: #fff; // 
+	@colour-footer-nav-level-1-hover-fg: #306; // 
+	@colour-footer-nav-level-1-hover-bg: #fff; // 
+	@colour-footer-nav-level-2-hover-fg: #306; // 
+	@colour-footer-nav-level-2-hover-bg: #fff; // 
+	@colour-footer-nav-border: #fff; // 
+// -------------------------------
+// Flyout menus
+// -------------------------------
+	@has-flyout-header: enabled; // enabled, disabled
+	@flyout-layout: full-width; // single-col, multi-col, full-width
+	@flyout-width: 300px; // number
+// -------------------------------
+// button colours
+// -------------------------------
+	@danger-action-bg: red; // hex
+	@danger-action-fg: white; // hex
+	@disabled-action-bg: lightgray; // hex
+	@disabled-action-fg: darkgrey; // hex
+	@primary-action-bg: blue; // hex
+	@primary-action-fg: white; // hex
+	@secondary-action-bg: lightgray; // hex
+	@secondary-action-fg: white; // hex
+
+// -------------------------------
+// generic states
+// -------------------------------
+	@danger-bg: red; // hex
+	@danger-fg: white; // hex
+	@default-bg: blue; // hex
+	@default-fg: white; // hex
+	@disabled-bg: lightgrey; // hex
+	@disabled-fg: darkgrey; // hex
+	@success-bg: green; // hex
+	@success-fg: white; // hex
+	@warning-bg: orange; // hex
+	@warning-fg: white; // hex
+
+// ###############################
+// end colours.less
+// ###############################
+
+// ###############################
+// start common.less
+// ###############################
+// -------------------------------
+// Badges
+// -------------------------------
+	@badge: enabled; // disabled, simple
+// -------------------------------
+// Bar charts
+// -------------------------------
+	@bar-chart: enabled;
+	@colour-bar-chart-bars-bg: #666;
+	@colour-bar-chart-bars-fg: #fff;
+	@colour-bar-chart-bars-below-fg: #000;
+	@colour-bar-chart-bg: #fff;
+	@colour-bar-chart-fg: #000;
+	@bar-chart-width: 500px;
+	@bar-chart-border: 1px solid #ccc;
+	@bar-chart-outer-padding: (@padding + 10px);
+	@bar-chart-bar-margin: 2px;
+	@bar-chart-bar-padding: 2px 6px;
+	@bar-chart-value-location: right; // left, center, right, hide
+	@bar-chart-value-move-below: 20;
+	@bar-chart-value-move-below-indent: 30px;
+	@bar-chart-label-angle: 0deg; // degrees, disabled
+// -------------------------------
+// Chat bubbles
+// -------------------------------
+	@chat: bubbles; // disable, bubbles
+	@colour-chat-even-bg: #eee; // hex
+	@colour-chat-even-fg: #333; // hex
+	@colour-chat-odd-bg: #ddd; // hex
+	@colour-chat-odd-fg: #222; // hex
+	@chat-start: left; // left, right
+	@chat-margin: 20px;
+	@chat-padding: 10px;
+	@chat-radius: 4px;
+	@chat-tail-size: 20px;
+// -------------------------------
+// corner ribbons
+// -------------------------------
+	@corner-ribbon: enabled; // disabled, enabled
+	@colour-corner-ribbon-bg: #000;
+	@colour-corner-ribbon-fg: #fff;
+	@corner-ribbon-border: 1px solid #aaa;
+// -------------------------------
+// Feature hover effects
+// -------------------------------
+	@feaure-hovers: darken; // disabled, lighten, darken
+// -------------------------------
+// Forums
+// -------------------------------
+	@forum: enabled; // disabled, enabled
+	@colour-forum-head-bg: #333;
+	@colour-forum-head-fg: #fff;
+	@colour-forum-meta-bg: #eee;
+	@colour-forum-meta-fg: #000;
+	@colour-forum-content-bg: #f9f9f9;
+	@colour-forum-content-fg: #000;
+	@colour-forum-quote-bg: rgba(0,0,0,0.1);
+	@colour-forum-quote-fg: #000;
+	@forum-padding: @padding;
+	@forum-post-head: right; // left, right
+	@forum-post-meta-style: collapsed; // simple, collapsed
+	@forum-post-meta-width: 25%;
+// -------------------------------
+// Gallery
+// -------------------------------
+	@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
+	@gallery-style: ; // simple, framed
+	@gallery-hover: border; // border, opacity, zoom
+// -------------------------------
+// Highlight-block
+// -------------------------------
+	@highlight-border: @border-solid;
+	@colour-highlight-bg: #eee;
+	@colour-highlight-fg: #000;
+	@highlight-padding: @padding;
+	@highlight-radius: @border-radius; // disabled, number
+	@highlight-block: enabled; // disabled, simple
+// -------------------------------
+// Pagination
+// -------------------------------
+	@pagination: blocks; // disabled, simple, blocks
+	@colour-pagination-bg: #eee; // hex
+	@colour-pagination-fg: #222; // hex
+	@colour-pagination-current-bg: #222; // hex
+	@colour-pagination-current-fg: #eee; // hex
+	@colour-pagination-hover-bg: #ddd; // hex
+	@colour-pagination-hover-fg: #111; // hex
+	@pagination-border-colour: #ccc; // disabled, hex
+	@pagination-border-style: solid; // disabled, style
+	@pagination-border-width: 1px; // disabled, 
+	@pagination-margin: 5px;
+	@pagination-padding: 0.75em 1em; // 1 - 4 numbers
+	@pagination-radius: @border-radius; // disabled, number
+// -------------------------------
+// Progress-bar
+// -------------------------------
+	@progress: enabled; // disabled, simple
+	@colour-progress-bg: #eee;
+	@colour-progress-fg: #999;
+// -------------------------------
+// Pull-quotes
+// -------------------------------
+	@pullquotes: enabled; // disabled, overhang-right, overhang-left
+	@pullquotes-width: 20%;
+	@colour-pullquotes-bg: #eee;
+	@colour-pullquotes-fg: #666;
+	@pullquotes-border-radius: @border-radius;
+	@pullquotes-font-size: 16px;
+	@pullquotes-margin: @padding;
+	@pullquotes-padding: @padding;
+// -------------------------------
+// Tables
+// -------------------------------
+	@tables: enabled; // disabled, enabled
+	@colour-table-body-bg: #fff; // hex
+	@colour-table-body-fg: #222; // hex
+	@colour-table-comparrison-col-1-bg: #fff;
+	@colour-table-comparrison-col-2-bg: #f6f6f6;
+	@colour-table-comparrison-col-3-bg: #eee;
+	@colour-table-comparrison-col-4-bg: #e5e5e5;
+	@colour-table-comparrison-col-5-bg: #ddd;
+	@colour-table-comparrison-col-6-bg: #d4d4d4;
+	@colour-table-comparrison-col-1-fg: #000;
+	@colour-table-comparrison-col-2-fg: #000;
+	@colour-table-comparrison-col-3-fg: #000;
+	@colour-table-comparrison-col-4-fg: #000;
+	@colour-table-comparrison-col-5-fg: #000;
+	@colour-table-comparrison-col-6-fg: #000;
+	@colour-table-even-bg: #ddd; // hex
+	@colour-table-foot-bg: #eee; // hex
+	@colour-table-foot-fg: #333; // hex
+	@colour-table-head-bg: #ccc; // hex
+	@colour-table-head-fg: #000; // hex
+	@colour-table-hover-bg: #666;
+	@colour-table-hover-fg: #fff;
+	@table-border-style: 1px solid #ccc;
+	@table-head-font-weight: bold; // bold, normal
+	@table-padding: (@padding / 1.2) (@padding * 1.5);
+	@table-promote-border-style: 2px solid #000;
+// -------------------------------
+// Tabs
+// -------------------------------
+	@tabs: blocks; // disabled, blocks, chevrons, trapezoid
+	@colour-tabs-bg: #eee; // hex
+	@colour-tabs-fg: #222; // hex
+	@colour-tabs-current-bg: #222; // hex
+	@colour-tabs-current-fg: #eee; // hex
+	@colour-tabs-hover-bg: #ddd; // hex
+	@colour-tabs-hover-fg: #111; // hex
+	@tabs-border-colour: #ccc; // disabled, colour
+	@tabs-border-style: solid; // disabled, style
+	@tabs-border-width: 1px; // disabled, 
+	@tabs-content-padding: @padding; // 1 - 4 numbers
+	@tabs-padding: 0.75em 2em; // 1 - 4 numbers
+	@tabs-radius: @border-radius; // disabled, number
+	@dynamic-tabs: enabled; // 
+	@dynamic-tabs-qty: 4;
+// -------------------------------
+// Tags
+// -------------------------------
+	@colour-tags-bg: #eee; // hex
+	@colour-tags-fg: #222; // hex
+	@colour-tags-hover-bg: #ddd; // hex
+	@colour-tags-hover-fg: #111; // hex
+	@tags-border: @border-solid;
+	@tags-padding: 0.25em 1em; // 1 - 4 numbers
+	@tags: simple; // disabled, simple
+// ###############################
+// end common.less
+// ###############################
+
+// ###############################
+// start forms.less
+// ###############################
+// -------------------------------
+// Basic styles
+// -------------------------------
+	@gsform-font-size: @text-size;
+	@gsforms-input-border-radius: 2px;
+	@gsforms-gutter: 20px;
+	@gsforms-col: 3%;
+
+	@gsforms-input-bg: @white;
+	@gsforms-input-border: 1px solid #ccc;
+	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset;
+
+	@gsforms-input-required-border: 1px solid @text6;
+	@gsforms-input-required-bg: @white;
+
+	@gsforms-input-focus-bg: @bg - 6;
+	@gsforms-input-focus-border: 1px solid #666;
+	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+	@gsforms-highlight-bg: @bg - 10;
+
+	@gsforms-error-text: #c00;
+	@gsforms-error-border: #fcc;
+	@gsforms-error-bg: #c00;
+
+	@gsforms-bordered-bg: transparent;
+	@gsforms-bordered-border: @border-solid;
+	@gsforms-bordered-footer: #f8f8f8;
+// General styles
+	@has-pseudo-buttons: true;
+	@button-border: 0;
+	@button-font-size: 13px;
+	@button-font-weight: bold;
+	@button-border-radius: 5px;
+	@button-box-shadow: none;
+	@button-text-shadow: none;
+	@button-hover-box-shadow: none;
+	@button-hover-text-shadow: none;
+// Colours - primary
+	@button-grad: @button-bg-start,	@button-bg-1, @button-bg-2;
+	@button-hover-grad: @button-hover-bg-start,	@button-hover-bg-1, @button-hover-bg-2;
+	@button-secondary-grad: @button-secondary-bg-start,	@button-secondary-bg-1, @button-secondary-bg-2;
+	@button-secondary-hover-grad: @button-secondary-hover-bg-start,	@button-secondary-hover-bg-1, @button-secondary-hover-bg-2;
+	@button-disabled-grad: @button-disabled-bg-start,	@button-disabled-bg-1, @button-disabled-bg-2;
+	@button-bg-start: top;
+	@button-bg-1: #45c351;
+	@button-bg-2: #308638;
+	@button-bg-fallback: #393;
+	@button-fg: #fff;
+	@cta-icon-fg: #fff;
+// Colours - primary - hover
+	@button-hover-bg-start: top;
+	@button-hover-bg-1: saturate(lighten(@button-bg-1,8),10);
+	@button-hover-bg-2: saturate(lighten(@button-bg-2,8),10);
+	@button-hover-bg-fallback: saturate(lighten(@button-bg-fallback,8),10);
+	@button-hover-fg: #fff;
+// Colours - secondary
+	@button-secondary-bg-start: top;
+	@button-secondary-bg-1: #3fb3f8;
+	@button-secondary-bg-2: #2b77a5;
+	@button-secondary-bg-fallback: #41b3f9;
+	@button-secondary-fg: #fff;
+// Colours - secondary - hover
+	@button-secondary-hover-bg-start: top;
+	@button-secondary-hover-bg-1: saturate(lighten(@button-secondary-bg-1,8),10);;
+	@button-secondary-hover-bg-2: saturate(lighten(@button-secondary-bg-2,8),10);;
+	@button-secondary-hover-bg-fallback: #2493d6;
+	@button-secondary-hover-fg: #fff;
+	@cta-icon-secondary-hover-fg: #fff;
+// Colours - disabled
+	@button-disabled-bg-start: top;
+	@button-disabled-bg-1: #ccc;
+	@button-disabled-bg-2: #ccc;
+	@button-disabled-bg-fallback: #ccc;
+	@button-disabled-fg: #eee;
+// Colours - disabled - hover
+	@button-disabled-hover-bg-start: top;
+	@button-disabled-hover-bg-1: #ccc;
+	@button-disabled-hover-bg-2: #ccc;
+	@button-disabled-hover-bg-fallback: #ccc;
+	@button-disabled-hover-fg: #eee;
+	@cta-icon-disabled-hover-fg: #eee;
+// Icons
+	@cta-icon: arrow; // disabled, arrow, arrow-in-circle
+// Button sizing and padding
+	@button-scale: 1em;
+	@sml-scale: 1;
+	@std-scale: 1.2;
+	@lrg-scale: 1.4;
+// ###############################
+// end forms.less
+// ###############################
+
+// ###############################
+// start framework.less
+// ###############################
+	@framework-min-width: 320px;
+	@framework-max-width: 940px;
+	@framework-cols: 16;
+	@framework-h-gutter: 20px;
+	@framework-v-gutter: 20px;
+	@fs-base: 13px;
+	@logo-position: centre; // centre, left, right
+	@logo-width: 200px;
+	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
+	@logo-margins: 20px 0 20px;
+	@logo-case: uppercase;
+	@logo-url: disabled; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
+		// if disabled
+		@logo-font-size: 70px;
+
+	@images-url: ; // where you save all your images
+	@nav-width: 25%;
+	@bp-350: 350px;
+	@bp-400: 400px;
+	@bp-450: 450px;
+	@bp-500: 500px;
+	@bp-550: 550px;
+	@bp-600: 600px;
+	@bp-650: 650px;
+	@bp-700: 700px;
+	@bp-750: 750px;
+	@bp-800: 800px;
+	@bp-850: 850px;
+	@bp-900: 900px;
+	@bp-tools-nav: @bp-550;
+	@bp-header-nav: @bp-550;
+	@bp-side-nav: ;
+	.fs-base {font-size: @fs-base;}
+	.fs-zero {font-size: 0;}
+// ###############################
+// end framework.less
+// ###############################
+
+// ###############################
+// start grid.less
+// ###############################
+	@side-gutters: true;
+	@padded-grid: false;
+	@grid-system: fractions; // fractions, disabled
+	// set main breakpoints
+	@dt: 960px;
+	@tb: 600px;
+	@mb: 320px;
+// ###############################
+// end grid.less
+// ###############################
+
+// ###############################
+// start mixins.less
+// ###############################
+
+// ###############################
+// end mixins.less
+// ###############################
+
+// ###############################
+// start navigation.less
+// ###############################
+// Tool bar
+	@has-tools-nav: enabled; //disabled, enabled
+	@tools-nav-position: both; // both, centre, left, right, justify
+	@tools-nav-style: dividers; // blocks, dividers
+	@tools-nav-padding: @padding (@padding + 2);
+		// if blocks
+		@tools-nav-border: 1px solid #ccc;
+		// if pipes
+		@vertical-divider: \0020 |; // can be anything for example |, \, >, :, ][
+		// You can use utf8 hexc odes like the following 
+		// \b7 = minddot, 
+		// \0020 \BB = double right angle quote
+		// \0020 \2023 = right triangle
+		// \0020 \009B Right single angle quote
+
+// header navigation
+	@has-header-nav: enabled; //disabled, enabled
+	@header-nav-position: full-fluid; // full-fluid, full-equal, centre, left, right
+	@header-nav-style: blocks; // blocks, dividers, tabs
+	@header-nav-padding: (@padding + 2) (@padding + 4);
+		// if blocks
+		@header-nav-border: 1px solid @colour-header-nav-border;
+
+// breadcrumbs
+	@has-breadcrumbs-nav: enabled; //disabled, enabled
+	@breadcrumbs-style: chevrons; // disabled, blocks, bullets, chevrons
+	@breadcrumbs-padding: 1em;
+	@breadcrumbs-space: 0.2em;
+	@breadcrumbs-bullet: >;
+
+// side navigation in main container
+	@has-side-nav: enabled; // disabled, enabled
+	@side-nav-style: disabled; // disabled, simple, blocks, lines
+	@side-nav-padding: @padding (@padding + 2);
+	@side-nav-border: 1px solid @colour-side-nav-border;
+
+// flyouts
+	@flyouts-width: disabled; // disabled, single, multi, full
+// ###############################
+// end navigation.less
+// ###############################
+
+// ###############################
+// start styles.less
+// ###############################
+	@padding: 12px; // 0 - 9px
+	@border-radius: 5px; // 0 - 9px
+	@border-solid: 1px solid #ccc;
+	@border-dotted: 1px dotted #ccc;
+	@opacity: 0.8;
+// ###############################
+// end styles.less
+// ###############################
+
+// ###############################
+// start type.less
+// ###############################
+	// choose font pair from list below or add your own. Delete any that you aren't using.
+	// Raleway & Droid Sans
+		@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
+		@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+	// Ubuntu & Vollkorn
+		@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700);
+
+	@heading-font-family: Raleway;
+	@heading-font-weight: 200;
+	@heading-alt-font-weight: 300;
+	@heading-alt2-font-weight: 400;
+
+	@body-font-family: "Droid Sans";
+	@body-font-weight: 400;
+	@body-alt-font-weight: 700;
+
+	@nav-font-family: Raleway;
+	@nav-font-weight: 700;
+
+	@logo-font-family: Raleway;
+	@logo-font-weight: 300;
+
+	@text-size: 13px;
+	@line-height: 1.4;
+	@h1-size: 40px;
+	@h1-line-height: 1.2;
+	@h2-size: 36px;
+	@h2-line-height: 1.2;
+	@h3-size: 32px;
+	@h3-line-height: 1.2;
+	@h4-size: 28px;
+	@h4-line-height: 1.2;
+	@h5-size: 24px;
+	@h5-line-height: 1.2;
+	@h6-size: 20px;
+	@h6-line-height: 1.4;
+	@tools-nav-font-size: 13px;
+	@header-nav-font-size: 13px;
+	@side-nav-font-size: 14px;
+
+// ###############################
+// end type.less
+// ###############################
+
+header {
+}
