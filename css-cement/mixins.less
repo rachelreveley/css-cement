@@ -23,6 +23,10 @@
 	.right-indent {margin-right: 60px !important;}
 	.left-indent {margin-left: 60px !important;}
 	* {max-width: 100%;}
+	.uncollapse-margins {
+		&:before,
+		&:after {content: "\00a0"; display: block; height: 0; overflow: hidden;}
+	}
 
 	.br(){content:"\a"; white-space: pre;}
 // save effort with vendor prefixing
