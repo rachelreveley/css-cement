@@ -443,14 +443,18 @@
 	@logo-position: centre; // centre, left, right
 	@logo-width: 200px;
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
-	@logo-margins: 20px 0 20px;
+	@logo-margins: 60px 0 60px;
 	@logo-case: uppercase;
+	@logo-sub-case: none;
 	@logo-url: disabled; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
+	@logo-sub: enabled; // enabled, disabled
 		// if disabled
 		@logo-font-size: 70px;
+		@logo-sub-font-size: 16px;
 
 	@images-url: ; // where you save all your images
 	@nav-width: 25%;
+// Responsive breakpoints
 	@bp-350: 350px;
 	@bp-400: 400px;
 	@bp-450: 450px;
@@ -530,7 +534,7 @@
 // side navigation in main container
 	@has-side-nav: enabled; // disabled, enabled
 	@side-nav-style: disabled; // disabled, simple, blocks, lines
-	@side-nav-padding: @padding (@padding + 2);
+	@side-nav-padding: (@padding / 2) @padding;
 	@side-nav-border: 1px solid @colour-side-nav-border;
 
 // flyouts
@@ -573,7 +577,7 @@
 	@body-alt-font-weight: 700;
 
 	@nav-font-family: Raleway;
-	@nav-font-weight: 700;
+	@nav-font-weight: 400;
 
 	@logo-font-family: Raleway;
 	@logo-font-weight: 300;

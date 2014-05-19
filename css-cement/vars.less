@@ -450,12 +450,16 @@
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
 	@logo-margins: 8px 0 12px;
 	@logo-case: uppercase;
-	@logo-url: "logo.svg"; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
+	@logo-sub-case: lowercase;
+	@logo-url: "logo.svg"; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo))
+	@logo-sub: disabled; // enabled, disabled
 		// if disabled
 		@logo-font-size: 70px;
+		@logo-sub-font-size: 16px;
 
 	@images-url: ; // where you save all your images
 	@nav-width: 25%;
+// Responsive breakpoints
 	@bp-350: 350px;
 	@bp-400: 400px;
 	@bp-450: 450px;

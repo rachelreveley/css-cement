@@ -29,6 +29,7 @@ body > * {width: 100%;
 		&:active,
 		&:focus{color: @colour-logo-hover; text-decoration: none;}
 	}
+	& span when not (@logo-sub = disabled){font-size: @logo-sub-font-size; display: block; text-transform: @logo-sub-case;}
 }
 .logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; 
 	.hide-text;
