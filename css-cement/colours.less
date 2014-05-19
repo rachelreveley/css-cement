@@ -5,26 +5,26 @@
 // -------------------------------
 // Fixed colours for when changing with a skin file doesn't make sense.
 // -------------------------------
-	@black: #000; // hex
-	@dark-grey: #404040; // hex
-	@light-grey: #bfbfbf; // hex
-	@mid-grey: #808080; // hex
-	@white: #fff; // hex
+	@black: #000; // colour
+	@dark-grey: #404040; // colour
+	@light-grey: #bfbfbf; // colour
+	@mid-grey: #808080; // colour
+	@white: #fff; // colour
 
 // -------------------------------
 // primary containers
 // -------------------------------
 	html {background-color: @colour-body-bg; color: @colour-body-fg;}
-	.tools{background-color: @colour-tools-bg; color: @colour-tools-fg; // hex
+	.tools{background-color: @colour-tools-bg; color: @colour-tools-fg; // colour
 		& > div {background-color: @colour-tools-inner-bg;}
 	}
-	header {background-color: @colour-header-bg; color: @colour-header-fg; // hex
+	header {background-color: @colour-header-bg; color: @colour-header-fg; // colour
 		& > div {background-color: @colour-header-inner-bg;}
 	}
-	.main {background-color: @colour-content-bg; color: @colour-content-fg; // hex
+	.main {background-color: @colour-content-bg; color: @colour-content-fg; // colour
 		& > div {background-color: @colour-content-inner-bg;}
 	}
-	footer {background-color: @colour-footer-bg; color: @colour-footer-fg; // hex
+	footer {background-color: @colour-footer-bg; color: @colour-footer-fg; // colour
 		& > div {background-color: @colour-footer-inner-bg;}
 	}
 
@@ -66,81 +66,81 @@
 // When @bg is light
 .base-colors(@bgx,@textx) when (lightness(@bgx) >= 50%){
 
-    @bg: @bgx; // hex
-    @text: @textx; // hex
+    @bg: @bgx; // colour
+    @text: @textx; // colour
 
 	@bg15: (@bgx - 255); // equivalent to #000 when @bg = #fff
-	@bg14: (@bgx - 238); // hex
-	@bg13: (@bgx - 221); // hex
-	@bg12: (@bgx - 204); // hex
-	@bg11: (@bgx - 187); // hex
-	@bg10: (@bgx - 170); // hex
-	@bg9: (@bgx - 153); // hex
-	@bg8: (@bgx - 136); // hex
-	@bg7: (@bgx - 119); // hex
-	@bg6: (@bgx - 102); // hex
-	@bg5: (@bgx - 85); // hex
-	@bg4: (@bgx - 68); // hex
+	@bg14: (@bgx - 238); // colour
+	@bg13: (@bgx - 221); // colour
+	@bg12: (@bgx - 204); // colour
+	@bg11: (@bgx - 187); // colour
+	@bg10: (@bgx - 170); // colour
+	@bg9: (@bgx - 153); // colour
+	@bg8: (@bgx - 136); // colour
+	@bg7: (@bgx - 119); // colour
+	@bg6: (@bgx - 102); // colour
+	@bg5: (@bgx - 85); // colour
+	@bg4: (@bgx - 68); // colour
 	@bg3: (@bgx - 51); // equivalent to #ccc when @bg = #fff
-	@bg2: (@bgx - 34); // hex
-	@bg1: (@bgx - 17); // hex
-	@bg-10: (@bgx - 10); // hex
+	@bg2: (@bgx - 34); // colour
+	@bg1: (@bgx - 17); // colour
+	@bg-10: (@bgx - 10); // colour
 
 	@text15: (@textx + 255); // equivalent to #fff when @text = #000
-	@text14: (@textx + 238); // hex
-	@text13: (@textx + 221); // hex
-	@text12: (@textx + 204); // hex
-	@text10: (@textx + 170); // hex
-	@text9: (@textx + 153); // hex
-	@text8: (@textx + 136); // hex
-	@text7: (@textx + 119); // hex
-	@text6: (@textx + 102); // hex
-	@text5: (@textx + 85); // hex
-	@text4: (@textx + 68); // hex
-	@text3: (@textx + 51); // hex
-	@text2: (@textx + 34); // hex
-	@text1: (@textx + 17); // hex
-	@text-10: (@textx + 10); // hex
+	@text14: (@textx + 238); // colour
+	@text13: (@textx + 221); // colour
+	@text12: (@textx + 204); // colour
+	@text10: (@textx + 170); // colour
+	@text9: (@textx + 153); // colour
+	@text8: (@textx + 136); // colour
+	@text7: (@textx + 119); // colour
+	@text6: (@textx + 102); // colour
+	@text5: (@textx + 85); // colour
+	@text4: (@textx + 68); // colour
+	@text3: (@textx + 51); // colour
+	@text2: (@textx + 34); // colour
+	@text1: (@textx + 17); // colour
+	@text-10: (@textx + 10); // colour
 
 }
 
 // When @bg is dark
 .base-colors(@bgx,@textx) when (lightness(@bgx) < 50%){
 
-    @bg: @bgx; // hex
-    @text: @textx; // hex
+    @bg: @bgx; // colour
+    @text: @textx; // colour
 
 // Variants of bg and text. Will need overriding if site has a dark bg such as CCDM
 	@bg15: (@bgx + 255); // equivalent to #000 when @bg = #fff but you should consider if Text colour is more relevant
-	@bg14: (@bgx + 238); // hex
-	@bg13: (@bgx + 221); // hex
-	@bg12: (@bgx + 204); // hex
-	@bg11: (@bgx + 187); // hex
-	@bg10: (@bgx + 170); // hex
-	@bg9: (@bgx + 153); // hex
-	@bg8: (@bgx + 136); // hex
-	@bg7: (@bgx + 119); // hex
-	@bg6: (@bgx + 102); // hex
-	@bg5: (@bgx + 85); // hex
-	@bg4: (@bgx + 68); // hex
+	@bg14: (@bgx + 238); // colour
+	@bg13: (@bgx + 221); // colour
+	@bg12: (@bgx + 204); // colour
+	@bg11: (@bgx + 187); // colour
+	@bg10: (@bgx + 170); // colour
+	@bg9: (@bgx + 153); // colour
+	@bg8: (@bgx + 136); // colour
+	@bg7: (@bgx + 119); // colour
+	@bg6: (@bgx + 102); // colour
+	@bg5: (@bgx + 85); // colour
+	@bg4: (@bgx + 68); // colour
 	@bg3: (@bgx + 51); // equivalent to #ccc on white
-	@bg2: (@bgx + 34); // hex
-	@bg1: (@bgx + 17); // hex
-	@bg-10: (@bgx + 10); // hex
+	@bg2: (@bgx + 34); // colour
+	@bg1: (@bgx + 17); // colour
+	@bg-10: (@bgx + 10); // colour
 
 	@text15: (@textx - 255); // equivalent to #fff when @text = #000 but you should consider if @bg colour is more relevant to your situation
-	@text14: (@textx - 238); // hex
-	@text13: (@textx - 221); // hex
-	@text12: (@textx - 204); // hex
-	@text10: (@textx - 170); // hex
-	@text9: (@textx - 153); // hex
-	@text8: (@textx - 136); // hex
-	@text7: (@textx - 119); // hex
-	@text6: (@textx - 102); // hex
-	@text5: (@textx - 85); // hex
-	@text4: (@textx - 68); // hex
-	@text3: (@textx - 51); // hex
-	@text2: (@textx - 34); // hex
-	@text1: (@textx - 17); // hex
-	@text-10: (@textx - 10); // hex
+	@text14: (@textx - 238); // colour
+	@text13: (@textx - 221); // colour
+	@text12: (@textx - 204); // colour
+	@text10: (@textx - 170); // colour
+	@text9: (@textx - 153); // colour
+	@text8: (@textx - 136); // colour
+	@text7: (@textx - 119); // colour
+	@text6: (@textx - 102); // colour
+	@text5: (@textx - 85); // colour
+	@text4: (@textx - 68); // colour
+	@text3: (@textx - 51); // colour
+	@text2: (@textx - 34); // colour
+	@text1: (@textx - 17); // colour
+	@text-10: (@textx - 10); // colour
 }
