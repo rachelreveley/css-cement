@@ -13,11 +13,11 @@ body > * {width: 100%;
 // logo
 .logo {font-family: @logo-font-family; font-weight: @logo-font-weight; text-transform: @logo-case;
 	.logo-position; .logo-size; .logo-graphic; .uncollapse-margins; 
-	& a {margin: @logo-margins;}
+	& a {margin: @logo-margins; display: block;}
 }
 .logo-position() when (@logo-position = left){float: left;}
 .logo-position() when (@logo-position = right){float: right; text-align: right;}
-.logo-position() when (@logo-position = centre){margin: 0 auto; text-align: center;}
+.logo-position() when (@logo-position = center){margin: 0 auto; text-align: center;}
 .logo-size() when not (@logo-url = disabled) {width: @logo-width;
 	& a {height: 0; padding-bottom: @logo-height; display: block;}
 }

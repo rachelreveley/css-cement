@@ -60,24 +60,6 @@
 // -------------------------------
 // Calendar
 // -------------------------------
-@has-calendar: enabled; // enabled, disabled
-
-@colour-calendar-current-bg: #333;
-@colour-calendar-current-fg: #fff;
-@colour-calendar-next-bg: #f9f9f9;
-@colour-calendar-next-fg: #999;
-@colour-calendar-previous-bg: #eee;
-@colour-calendar-previous-fg: #666;
-@colour-calendar-weekend-bg: #ddd;
-@colour-calendar-weekend-fg: #000;
-@colour-calendar-heading-bg: #000;
-@colour-calendar-heading-fg: #fff;
-@calendar-cell-height: 65%;
-@calendar-cell-width: 12%;
-@calendar-margin:2%;
-@calendar-padding: 5px;
-@calendar-heading-padding: 5px;
-@calendar-heading-position: 35px;
 
 	.calendar {width: 100%; position: relative; margin-top: @calendar-heading-position;
 		& li {float: left; margin: 0 @calendar-margin @calendar-margin 0; width: @calendar-cell-width; background-color: @colour-calendar-previous-bg;
@@ -93,18 +75,23 @@
 		& .saturday.day-1 {margin-left: ((@calendar-cell-width * 5) + (@calendar-margin * 5));}
 		& .sunday.day-1 {margin-left: ((@calendar-cell-width * 6) + (@calendar-margin * 6));}
 // weekends
-		& .saturday,
-		& .sunday {background-color: @colour-calendar-weekend-bg;
-			& span {color: @colour-calendar-weekend-fg;}
+		& li.saturday,
+		& li.sunday {background-color: @colour-calendar-previous-weekend-bg;
+			& span {color: @colour-calendar-previous-weekend-fg;}
 		}
 		& .sunday {margin-right: 0;}
 // today
 		& .today {background-color: @colour-calendar-current-bg; color: @colour-calendar-current-fg; font-weight: bold; color: @bg;
 			& a,
 			& span {color: @colour-calendar-current-fg;}
+// Future
 			& ~ li {background-color: @colour-calendar-next-bg;
 				& a,
 				& span { color: @colour-calendar-next-fg;}
+			}
+			&  ~ .saturday,
+			&  ~ .sunday {background-color: @colour-calendar-next-weekend-bg;
+				& span {color: @colour-calendar-next-weekend-fg;}
 			}
 		}
 // headings
@@ -161,7 +148,7 @@
 // -------------------------------
 // Feature hover effects
 // -------------------------------
-.feature when not (@feaure-hovers = disabled){
+.feature when not (@feature-hovers = disabled){
 	& a {position: relative; display: block;}
 	& a img {width: 100%; display: block;}
 	& a img,
@@ -169,13 +156,13 @@
 		.transition(all 0.2s ease-in-out);
 	}
 	& a:hover img {opacity: 0.8;}
-	& .caption {opacity: 0; position: absolute; bottom: 0; left: 0; right: 0; padding: 10px; text-align: center; font-family: Georgia,Constantia,"Times New Roman",sans-serif; font-size: 28px; color: rgb(255,255,255); background-color: rgba(0,0,0,0.4); text-decoration: none;}
+	& .caption {opacity: 0; position: absolute; bottom: 0; left: 0; right: 0; padding: 10px; text-align: center; font-family: Georgia,Constantia,"Times New Roman",sans-serif; font-size: 28px; color: rgb(255,255,255); background-color: @feature-hovers-bg; text-decoration: none;}
 	& a:hover .caption {opacity: 1;}
 }
-.feature when (@feaure-hovers = lighten){
+.feature when (@feature-hovers = lighten){
 	& a {background-color: #fff;}
 }
-.feature when (@feaure-hovers = darken){
+.feature when (@feature-hovers = darken){
 	& a {background-color: #000;}
 }
 
@@ -268,7 +255,7 @@ p[data-pullquote] when not (@pullquotes = disabled) {
 	&:before{content: attr(data-pullquote); background-color: @colour-pullquotes-bg; color: @colour-pullquotes-fg; padding: @pullquotes-padding; width: @pullquotes-width; font-size: @pullquotes-font-size; border-radius: @pullquotes-border-radius; display: block;}
 	&[data-pullquote-position="left"]:before {float: left; margin: 0 @padding @padding 0;}
 	&[data-pullquote-position="right"]:before {float: right; margin: 0 0 @padding @padding;}
-	&[data-pullquote-position="centre"]:before {position: relative; left: (50% - (@pullquotes-width / 2)); right: (50% - (@pullquotes-width / 2));}
+	&[data-pullquote-position="center"]:before {position: relative; left: (50% - (@pullquotes-width / 2)); right: (50% - (@pullquotes-width / 2));}
 }
 
 // -------------------------------

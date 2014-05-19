@@ -12,9 +12,13 @@
 	@colour-tools-fg: #066; // hex
 	@colour-tools-inner-bg: #fff; // hex
 
-	@colour-header-bg: #ddd; // hex
-	@colour-header-fg: #066; // hex
-	@colour-header-inner-bg: #ddd; // hex
+	@colour-header-bg: #fff; // hex
+	@colour-header-fg: #222; // hex
+	@colour-header-inner-bg: #fff; // hex
+
+	@colour-splash-bg: #066; // hex
+	@colour-splash-fg: #fff; // hex
+	@colour-splash-inner-bg: #066; // hex
 
 	@colour-content-bg: #fff; // hex
 	@colour-content-fg: #222; // hex
@@ -176,21 +180,43 @@
 // -------------------------------
 // Bar charts
 // -------------------------------
-@bar-chart: enabled;
-@colour-bar-chart-bars-bg: #666;
-@colour-bar-chart-bars-fg: #fff;
-@colour-bar-chart-bars-below-fg: #000;
-@colour-bar-chart-bg: #fff;
-@colour-bar-chart-fg: #000;
-@bar-chart-width: 500px;
-@bar-chart-border: 1px solid #ccc;
-@bar-chart-outer-padding: (@padding + 10px);
-@bar-chart-bar-margin: 2px;
-@bar-chart-bar-padding: 2px 6px;
-@bar-chart-value-location: right; // left, center, right, hide
-@bar-chart-value-move-below: 20;
-@bar-chart-value-move-below-indent: 30px;
-@bar-chart-label-angle: 0deg; // degrees, disabled
+	@bar-chart: enabled;
+	@colour-bar-chart-bars-bg: #666;
+	@colour-bar-chart-bars-fg: #fff;
+	@colour-bar-chart-bars-below-fg: #000;
+	@colour-bar-chart-bg: #fff;
+	@colour-bar-chart-fg: #000;
+	@bar-chart-width: 500px;
+	@bar-chart-border: 1px solid #ccc;
+	@bar-chart-outer-padding: (@padding + 10px);
+	@bar-chart-bar-margin: 2px;
+	@bar-chart-bar-padding: 2px 6px;
+	@bar-chart-value-location: right; // left, center, right, hide
+	@bar-chart-value-move-below: 20;
+	@bar-chart-value-move-below-indent: 30px;
+	@bar-chart-label-angle: 0deg; // degrees, disabled
+// -------------------------------
+// Calendar
+// -------------------------------
+	@has-calendar: enabled; // enabled, disabled
+	@colour-calendar-current-bg: #333;
+	@colour-calendar-current-fg: #fff;
+	@colour-calendar-next-bg: #f9f9f9;
+	@colour-calendar-next-fg: #999;
+	@colour-calendar-next-weekend-bg: #ddd;
+	@colour-calendar-next-weekend-fg: #000;
+	@colour-calendar-previous-bg: #eee;
+	@colour-calendar-previous-fg: #666;
+	@colour-calendar-previous-weekend-bg: #ddd;
+	@colour-calendar-previous-weekend-fg: #000;
+	@colour-calendar-heading-bg: #000;
+	@colour-calendar-heading-fg: #fff;
+	@calendar-cell-height: 65%;
+	@calendar-cell-width: 12%;
+	@calendar-margin:2%;
+	@calendar-padding: 5px;
+	@calendar-heading-padding: 5px;
+	@calendar-heading-position: 35px;
 // -------------------------------
 // Chat bubbles
 // -------------------------------
@@ -214,7 +240,10 @@
 // -------------------------------
 // Feature hover effects
 // -------------------------------
-@feaure-hovers: darken; // disabled, lighten, darken
+
+	@feature-hovers: darken; // disabled, lighten, darken
+	@feature-hovers-bg: rgba(0,102,102,1);
+
 // -------------------------------
 // Forums
 // -------------------------------
@@ -445,7 +474,10 @@
 	@framework-h-gutter: 20px;
 	@framework-v-gutter: 20px;
 	@fs-base: 13px;
-	@logo-position: centre; // centre, left, right
+// logo
+	@colour-logo: #fff; // hex
+	@colour-logo-hover: #fff; // hex
+	@logo-position: center; // center, left, right
 	@logo-width: 200px;
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
 	@logo-margins: 8px 0 12px;
@@ -508,7 +540,7 @@
 // ###############################
 // Tool bar
 	@has-tools-nav: enabled; //disabled, enabled
-	@tools-nav-position: both; // both, centre, left, right, justify
+	@tools-nav-position: both; // both, center, left, right, justify
 	@tools-nav-style: dividers; // blocks, dividers
 	@tools-nav-padding: @padding (@padding + 2);
 		// if blocks
@@ -523,7 +555,7 @@
 
 // header navigation
 	@has-header-nav: enabled; //disabled, enabled
-	@header-nav-position: full-fluid; // full-fluid, full-equal, centre, left, right
+	@header-nav-position: full-fluid; // full-fluid, full-equal, center, left, right
 	@header-nav-style: blocks; // blocks, dividers, tabs
 	@header-nav-padding: (@padding + 2) (@padding + 4);
 		// if blocks

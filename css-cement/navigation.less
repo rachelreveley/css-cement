@@ -56,7 +56,7 @@ nav {
 		& li {display: inline-block;}
 	}
 }
-.tools-nav-position() when (@tools-nav-position = centre){text-align: center;}
+.tools-nav-position() when (@tools-nav-position = center){text-align: center;}
 .tools-nav-position() when (@tools-nav-position = left){text-align: left;}
 .tools-nav-position() when (@tools-nav-position = right){text-align: right;}
 .tools-nav-position() when (@tools-nav-position = justify){
@@ -91,91 +91,70 @@ nav {
 // -------------------------------
 // header
 // -------------------------------
-header  when not (@has-header-nav = disabled) {.header-nav-position; .header-nav-style;
-	& nav {font-size: @header-nav-font-size;
-		& a {padding: @header-nav-padding;
-			&:link,
-			&:visited{color: @colour-header-nav-level-0-fg;}
-			&:hover,
-			&:active,
-			&:focus{color: @colour-header-nav-level-0-hover-fg;}
-		}
+nav.main when not (@has-header-nav = disabled) {font-size: @header-nav-font-size;
+	.main-nav-position; .main-nav-style; .clear;
+	& a {padding: @header-nav-padding;
+		&:link,
+		&:visited{color: @colour-header-nav-level-0-fg;}
+		&:hover,
+		&:active,
+		&:focus{color: @colour-header-nav-level-0-hover-fg;}
 	}
 }
 // -------------------------------
-	.header-nav-position() when not (@header-nav-position = disabled){
-		& nav{display: block;
-			& > ul {
-				& > li {display: inline-block;}
-			}
+	.main-nav-position() when not (@header-nav-position = disabled){display: block; width: 100%;
+		& > ul {min-width: @framework-min-width; max-width: @framework-max-width; margin: 0 auto;
+			& > li {display: inline-block;}
 		}
 	}
-	.header-nav-position() when (@header-nav-position = full-fluid){
-		& nav{width: 100%; 
-			& > ul {display: table; width: 100%;
-				& > li {display: table-cell;}
-			}
+	.main-nav-position() when (@header-nav-position = full-fluid){width: 100%; 
+		& > ul {display: table; width: 100%;
+			& > li {display: table-cell;}
 		}
 	}
-	.header-nav-position() when (@header-nav-position = full-equal){
-		& nav{width: 100%; 
-			& ul {width: 100%; .fs-zero; .classless-grid;}
-			& a {font-size: @header-nav-font-size;}
-		}
+	.main-nav-position() when (@header-nav-position = full-equal){width: 100%; 
+		& ul {width: 100%; .fs-zero; .classless-grid;}
+		& a {font-size: @header-nav-font-size;}
 	}
-	.header-nav-position() when (@header-nav-position = centre){
-		& nav,
+	.main-nav-position() when (@header-nav-position = center){float: right; position: relative; right: 50%;
 		& ul {float: right; position: relative;}
-		& nav {right: 50%;}
 		& ul {right: -50%;}
 	}
-	.header-nav-position() when (@header-nav-position = left){
-		& nav {float: left; width: auto;}
-	}
-	.header-nav-position() when (@header-nav-position = right){
-		& nav {float: right; width: auto;}
-	}
+	.main-nav-position() when (@header-nav-position = left){float: left; width: auto;}
+	.main-nav-position() when (@header-nav-position = right){float: right; width: auto;}
 
-	.header-nav-position() when(@header-nav-style = dividers) and (@header-nav-position = left){
-		& nav {float: left;
-			& ~ nav {
-				& li:first-child:before{content:"@{vertical-divider}"; margin: 0.5em;}
-			}
+	.main-nav-position() when(@header-nav-style = dividers) and (@header-nav-position = left){float: left;
+		& ~ nav {
+			& li:first-child:before{content:"@{vertical-divider}"; margin: 0.5em;}
 		}
 	}
-	.header-nav-position() when (@header-nav-style = dividers) and (@header-nav-position = right){	
-		& nav {float: right;
-			& ~ nav {
-				& li:last-child:after{content:"@{vertical-divider}"; margin: 0.5em;}
-			}
+	.main-nav-position() when (@header-nav-style = dividers) and (@header-nav-position = right){float: right;
+		& ~ nav {
+			& li:last-child:after{content:"@{vertical-divider}"; margin: 0.5em;}
 		}
 	}
-	.header-nav-style() when (@header-nav-style = dividers){
+	.main-nav-style() when (@header-nav-style = dividers){
 		.nav-dividers;
 	}
-	.header-nav-style() when (@header-nav-style = blocks){
-		.nav-blocks; .header-nav-blocks;
+	.main-nav-style() when (@header-nav-style = blocks){
+		.nav-blocks; .main-nav-blocks;
 	}
-	.header-nav-blocks(){
-		& nav {
-			& li {background-color: @colour-header-nav-level-0-bg;  border: @header-nav-border; vertical-align: middle; 
-				&:hover{background-color: @colour-header-nav-level-0-hover-bg;}
-			}
-			& a {font-size: @header-nav-font-size; color: @colour-header-nav-level-0-fg; padding: @header-nav-padding;}
-			& li:last-child a{border-right: @header-nav-border;}
+	.main-nav-blocks(){
+		& li {background-color: @colour-header-nav-level-0-bg;  border: @header-nav-border; vertical-align: middle; 
+			&:hover{background-color: @colour-header-nav-level-0-hover-bg;}
 		}
+		& a {font-size: @header-nav-font-size; color: @colour-header-nav-level-0-fg; padding: @header-nav-padding;}
+		& li:last-child a{border-right: @header-nav-border;}
 	}
-	.header-nav-style() when (@header-nav-style = simple){
-		.nav-simple; .header-nav-simple;
+	.main-nav-style() when (@header-nav-style = simple){
+		.nav-simple; .main-nav-simple;
 	}
-	.header-nav-simple(){
-		& nav {
-			& li {background-color: @colour-header-nav-level-0-bg;  border: @header-nav-border; vertical-align: middle; 
-				&:hover{background-color: @colour-header-nav-level-0-hover-bg;}
-			}
-			& a {font-size: @header-nav-font-size; color: @colour-header-nav-level-0-fg; padding: @header-nav-padding;}
-			& li:last-child a{border-right: @header-nav-border;}
+	.main-nav-simple(){
+		& li {background-color: @colour-header-nav-level-0-bg;  border: @header-nav-border; vertical-align: middle; 
+			&:hover{background-color: @colour-header-nav-level-0-hover-bg;}
 		}
+		& a {font-size: @header-nav-font-size; color: @colour-header-nav-level-0-fg; padding: @header-nav-padding;}
+		& li:last-child a{border-right: @header-nav-border;}
 	}
 
 // -------------------------------
