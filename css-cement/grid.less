@@ -54,9 +54,11 @@
 @col-1-1: percentage(1/1);
 
 // basic grid
-.parent{.fs-zero; display: block;
-	.clear; .clearfix;
-	& > *{.fs-base; display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.parent when (@grid-system = fractions) {display: block;
+	.fs-zero; .clear; .clearfix; .side-gutters;
+	& > *{ display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
+		.fs-base; .padded-grid;
+	}
 	& .parent {width: (100% + @margin-dt) !important; max-width: none; margin: 0 !important; padding: 0 !important;}
 }
 
@@ -92,13 +94,9 @@
 @media screen and (min-width: @mb) and (max-width: @tb) {padding: @margin-mb;}
 	}
 
-
-	.parent {.side-gutters;
-		& > *{.padded-grid;}
-	}
 // desktop sized grid
+	.parent when (@grid-system = fractions) {
 @media screen and (min-width: @dt) {
-	.parent {
 //		&:first-child{padding-top: @margin-dt;}
 		& > *{margin-right: @margin-dt; margin-bottom: @margin-dt;}
 		&.dt-{
@@ -189,11 +187,10 @@
 			&1-2 {width: @col-1-2 - @margin-dt;}
 			&1-1 {width: @col-1-1 - @margin-dt;}
 		}
-	}
 }
 // tablet sized grid
 @media screen and (min-width: @tb) and (max-width: @dt) {
-	.parent {padding-left: @margin-tb;
+		padding-left: @margin-tb;
 		& > *{margin-right: @margin-tb; margin-bottom: @margin-tb;}
 		&.tb-{
 			&19-20 > * {width: @col-19-20 - @margin-tb;}
@@ -283,11 +280,10 @@
 			&1-2 {width: @col-1-2 - @margin-tb;}
 			&1-1 {width: @col-1-1 - @margin-tb;}
 		}
-	}
 }
 // mobile sized grid
 @media screen and (max-width: @tb) {
-	.parent {padding-left: @margin-mb;
+		padding-left: @margin-mb;
 		& > *{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
 			&19-20 > * {width: @col-19-20 - @margin-mb;}
@@ -377,11 +373,10 @@
 			&1-2 {width: @col-1-2 - @margin-mb;}
 			&1-1 {width: @col-1-1 - @margin-mb;}
 		}
-	}
 }
 // small mobile sized grid
 @media screen and (max-width: @mb) {
-	.parent {padding-left: @margin-mb;
+		padding-left: @margin-mb;
 		& > *{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
 			&20 > *, &19 > *, &18 > *, &17 > *, &16 > *, &15 > *, &14 > *, &13 > *, &12 > *, &11 > *, &10 > *, &9 > *, &8 > *, &7 > *, &6 > *, &5 > *, &4 > *, &3 > *, &2 > *, &1 > * {width: @col-1-1 - @margin-mb;}
@@ -389,5 +384,5 @@
 		& .mb-{
 			&20, &19, &18, &17, &16, &15, &14, &13, &12, &11, &10, &9, &8, &7, &6, &5, &4, &3, &2, &1 {width: @col-1-1 - @margin-mb;}
 		}
-	}
 }
+	}
