@@ -11,7 +11,8 @@ body > * {width: 100%;
 }
 
 // logo
-.logo {.logo-position; .logo-size; .logo-graphic; font-family: @logo-font-family; font-weight: @logo-font-weight; text-transform: @logo-case;
+.logo {font-family: @logo-font-family; font-weight: @logo-font-weight; text-transform: @logo-case;
+	.logo-position; .logo-size; .logo-graphic; .uncollapse-margins; 
 	& a {margin: @logo-margins;}
 }
 .logo-position() when (@logo-position = left){float: left;}
@@ -29,7 +30,9 @@ body > * {width: 100%;
 		&:focus{color: @colour-logo-hover; text-decoration: none;}
 	}
 }
-.logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; .hide-text;}
+.logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; 
+	.hide-text;
+}
 
 .main {.fs-zero;
 	& .side {width: @nav-width; display: inline-block; vertical-align: top;}
