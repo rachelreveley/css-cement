@@ -44,7 +44,6 @@
 	@colour-text-alt-1: #000; // colour
 	@colour-text-alt-2: #000; // colour
 	@colour-text-alt-3: #000; //
-
 // -------------------------------
 // tools navigation
 // -------------------------------
@@ -63,7 +62,6 @@
 	@colour-tools-nav-level-1-hover-fg: #306; // colour
 	@colour-tools-nav-level-2-hover-bg: #eee; // colour
 	@colour-tools-nav-level-2-hover-fg: #306; // colour
-
 // -------------------------------
 // header navigation
 // -------------------------------
@@ -82,7 +80,6 @@
 	@colour-header-nav-level-1-hover-fg: #306; // colour
 	@colour-header-nav-level-2-hover-bg: #eee; // colour
 	@colour-header-nav-level-2-hover-fg: #306; // colour
-
 // -------------------------------
 // breadcrumbs navigation
 // -------------------------------
@@ -96,7 +93,6 @@
 	@colour-breadcrumbs-nav-level-0-hover-fg: #306; // colour
 	@colour-breadcrumbs-nav-level-1-hover-bg: #eee; // colour
 	@colour-breadcrumbs-nav-level-1-hover-fg: #306; // colour
-
 // -------------------------------
 // side navigation
 // -------------------------------
@@ -115,7 +111,6 @@
 	@colour-side-nav-level-2-hover-fg: #306; // colour
 	@colour-side-nav-level-2-hover-bg: #eee; //
 	@colour-side-nav-border: #fff; // colour
-
 // -------------------------------
 // footer navigation
 // -------------------------------
@@ -151,7 +146,6 @@
 	@primary-action-fg: white; // colour
 	@secondary-action-bg: lightgray; // colour
 	@secondary-action-fg: white; // colour
-
 // -------------------------------
 // generic states
 // -------------------------------
@@ -165,7 +159,6 @@
 	@success-fg: white; // colour
 	@warning-bg: orange; // colour
 	@warning-fg: white; // colour
-
 // ###############################
 // end colours.less
 // ###############################
@@ -220,151 +213,149 @@
 // -------------------------------
 // Chat bubbles
 // -------------------------------
-@chat: bubbles; // disable, bubbles
-@colour-chat-even-bg: #eee; // colour
-@colour-chat-even-fg: #333; // colour
-@colour-chat-odd-bg: #ddd; // colour
-@colour-chat-odd-fg: #222; // colour
-@chat-start: left; // left, right
-@chat-margin: 20px;
-@chat-padding: 10px;
-@chat-radius: 4px;
-@chat-tail-size: 20px;
+	@chat: bubbles; // disable, bubbles
+	@colour-chat-even-bg: #eee; // colour
+	@colour-chat-even-fg: #333; // colour
+	@colour-chat-odd-bg: #ddd; // colour
+	@colour-chat-odd-fg: #222; // colour
+	@chat-start: left; // left, right
+	@chat-margin: 20px;
+	@chat-padding: 10px;
+	@chat-radius: 4px;
+	@chat-tail-size: 20px;
 // -------------------------------
 // corner ribbons
 // -------------------------------
-@corner-ribbon: enabled; // disabled, enabled
-@colour-corner-ribbon-bg: #000;
-@colour-corner-ribbon-fg: #fff;
-@corner-ribbon-border: 1px solid #aaa;
+	@corner-ribbon: enabled; // disabled, enabled
+	@colour-corner-ribbon-bg: #000;
+	@colour-corner-ribbon-fg: #fff;
+	@corner-ribbon-border: 1px solid #aaa;
 // -------------------------------
 // Feature hover effects
 // -------------------------------
-
 	@feature-hovers: darken; // disabled, lighten, darken
 	@feature-hovers-bg: rgba(0,102,102,1);
-
 // -------------------------------
 // Forums
 // -------------------------------
-@forum: enabled; // disabled, enabled
-@colour-forum-head-bg: #333;
-@colour-forum-head-fg: #fff;
-@colour-forum-meta-bg: #eee;
-@colour-forum-meta-fg: #000;
-@colour-forum-content-bg: #f9f9f9;
-@colour-forum-content-fg: #000;
-@colour-forum-quote-bg: rgba(0,0,0,0.1);
-@colour-forum-quote-fg: #000;
-@forum-padding: @padding;
-@forum-post-head: right; // left, right
-@forum-post-meta-style: collapsed; // simple, collapsed
-@forum-post-meta-width: 25%;
+	@forum: enabled; // disabled, enabled
+	@colour-forum-head-bg: #333;
+	@colour-forum-head-fg: #fff;
+	@colour-forum-meta-bg: #eee;
+	@colour-forum-meta-fg: #000;
+	@colour-forum-content-bg: #f9f9f9;
+	@colour-forum-content-fg: #000;
+	@colour-forum-quote-bg: rgba(0,0,0,0.1);
+	@colour-forum-quote-fg: #000;
+	@forum-padding: @padding;
+	@forum-post-head: right; // left, right
+	@forum-post-meta-style: collapsed; // simple, collapsed
+	@forum-post-meta-width: 25%;
 // -------------------------------
 // Gallery
 // -------------------------------
-@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
-@gallery-style: ; // simple, framed
-@gallery-hover: border; // border, opacity, zoom
+	@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
+	@gallery-style: ; // simple, framed
+	@gallery-hover: border; // border, opacity, zoom
 // -------------------------------
 // Highlight-block
 // -------------------------------
-@highlight-border: @border-solid;
-@colour-highlight-bg: #eee;
-@colour-highlight-fg: #000;
-@highlight-padding: @padding;
-@highlight-radius: @border-radius; // disabled, number
-@highlight-block: enabled; // disabled, simple
+	@highlight-border: @border-solid;
+	@colour-highlight-bg: #eee;
+	@colour-highlight-fg: #000;
+	@highlight-padding: @padding;
+	@highlight-radius: @border-radius; // disabled, number
+	@highlight-block: enabled; // disabled, simple
 // -------------------------------
 // Pagination
 // -------------------------------
-@pagination: blocks; // disabled, simple, blocks
-@colour-pagination-bg: #eee; // colour
-@colour-pagination-fg: #222; // colour
-@colour-pagination-current-bg: #222; // colour
-@colour-pagination-current-fg: #eee; // colour
-@colour-pagination-hover-bg: #ddd; // colour
-@colour-pagination-hover-fg: #111; // colour
-@pagination-border-colour: #ccc; // disabled, hex
-@pagination-border-style: solid; // disabled, style
-@pagination-border-width: 1px; // disabled, 
-@pagination-margin: 5px;
-@pagination-padding: 0.75em 1em; // 1 - 4 numbers
-@pagination-radius: @border-radius; // disabled, number
+	@pagination: blocks; // disabled, simple, blocks
+	@colour-pagination-bg: #eee; // colour
+	@colour-pagination-fg: #222; // colour
+	@colour-pagination-current-bg: #222; // colour
+	@colour-pagination-current-fg: #eee; // colour
+	@colour-pagination-hover-bg: #ddd; // colour
+	@colour-pagination-hover-fg: #111; // colour
+	@pagination-border-colour: #ccc; // disabled, hex
+	@pagination-border-style: solid; // disabled, style
+	@pagination-border-width: 1px; // disabled, 
+	@pagination-margin: 5px;
+	@pagination-padding: 0.75em 1em; // 1 - 4 numbers
+	@pagination-radius: @border-radius; // disabled, number
 // -------------------------------
 // Progress-bar
 // -------------------------------
-@progress: enabled; // disabled, simple
-@colour-progress-bg: #eee;
-@colour-progress-fg: #999;
+	@progress: enabled; // disabled, simple
+	@colour-progress-bg: #eee;
+	@colour-progress-fg: #999;
 // -------------------------------
 // Pull-quotes
 // -------------------------------
-@pullquotes: enabled; // disabled, overhang-right, overhang-left
-@pullquotes-width: 20%;
-@colour-pullquotes-bg: #eee;
-@colour-pullquotes-fg: #666;
-@pullquotes-border-radius: @border-radius;
-@pullquotes-font-size: 16px;
-@pullquotes-margin: @padding;
-@pullquotes-padding: @padding;
+	@pullquotes: enabled; // disabled, overhang-right, overhang-left
+	@pullquotes-width: 20%;
+	@colour-pullquotes-bg: #eee;
+	@colour-pullquotes-fg: #666;
+	@pullquotes-border-radius: @border-radius;
+	@pullquotes-font-size: 16px;
+	@pullquotes-margin: @padding;
+	@pullquotes-padding: @padding;
 // -------------------------------
 // Tables
 // -------------------------------
-@tables: enabled; // disabled, enabled
-@colour-table-body-bg: #fff; // colour
-@colour-table-body-fg: #222; // colour
-@colour-table-comparrison-col-1-bg: #fff;
-@colour-table-comparrison-col-2-bg: #f6f6f6;
-@colour-table-comparrison-col-3-bg: #eee;
-@colour-table-comparrison-col-4-bg: #e5e5e5;
-@colour-table-comparrison-col-5-bg: #ddd;
-@colour-table-comparrison-col-6-bg: #d4d4d4;
-@colour-table-comparrison-col-1-fg: #000;
-@colour-table-comparrison-col-2-fg: #000;
-@colour-table-comparrison-col-3-fg: #000;
-@colour-table-comparrison-col-4-fg: #000;
-@colour-table-comparrison-col-5-fg: #000;
-@colour-table-comparrison-col-6-fg: #000;
-@colour-table-even-bg: #ddd; // colour
-@colour-table-foot-bg: #eee; // colour
-@colour-table-foot-fg: #333; // colour
-@colour-table-head-bg: #ccc; // colour
-@colour-table-head-fg: #000; // colour
-@colour-table-hover-bg: #666;
-@colour-table-hover-fg: #fff;
-@table-border-style: 1px solid #ccc;
-@table-head-font-weight: bold; // bold, normal
-@table-padding: (@padding / 1.2) (@padding * 1.5);
-@table-promote-border-style: 2px solid #000;
+	@tables: enabled; // disabled, enabled
+	@colour-table-body-bg: #fff; // colour
+	@colour-table-body-fg: #222; // colour
+	@colour-table-comparrison-col-1-bg: #fff;
+	@colour-table-comparrison-col-2-bg: #f6f6f6;
+	@colour-table-comparrison-col-3-bg: #eee;
+	@colour-table-comparrison-col-4-bg: #e5e5e5;
+	@colour-table-comparrison-col-5-bg: #ddd;
+	@colour-table-comparrison-col-6-bg: #d4d4d4;
+	@colour-table-comparrison-col-1-fg: #000;
+	@colour-table-comparrison-col-2-fg: #000;
+	@colour-table-comparrison-col-3-fg: #000;
+	@colour-table-comparrison-col-4-fg: #000;
+	@colour-table-comparrison-col-5-fg: #000;
+	@colour-table-comparrison-col-6-fg: #000;
+	@colour-table-even-bg: #ddd; // colour
+	@colour-table-foot-bg: #eee; // colour
+	@colour-table-foot-fg: #333; // colour
+	@colour-table-head-bg: #ccc; // colour
+	@colour-table-head-fg: #000; // colour
+	@colour-table-hover-bg: #666;
+	@colour-table-hover-fg: #fff;
+	@table-border-style: 1px solid #ccc;
+	@table-head-font-weight: bold; // bold, normal
+	@table-padding: (@padding / 1.2) (@padding * 1.5);
+	@table-promote-border-style: 2px solid #000;
 // -------------------------------
 // Tabs
 // -------------------------------
-@tabs: blocks; // disabled, blocks, chevrons, trapezoid
-@colour-tabs-bg: #eee; // colour
-@colour-tabs-fg: #222; // colour
-@colour-tabs-current-bg: #222; // colour
-@colour-tabs-current-fg: #eee; // colour
-@colour-tabs-hover-bg: #ddd; // colour
-@colour-tabs-hover-fg: #111; // colour
-@tabs-border-colour: #ccc; // disabled, colour
-@tabs-border-style: solid; // disabled, style
-@tabs-border-width: 1px; // disabled, 
-@tabs-content-padding: @padding; // 1 - 4 numbers
-@tabs-padding: 0.75em 2em; // 1 - 4 numbers
-@tabs-radius: @border-radius; // disabled, number
-@dynamic-tabs: enabled; // 
-@dynamic-tabs-qty: 4;
+	@tabs: blocks; // disabled, blocks, chevrons, trapezoid
+	@colour-tabs-bg: #eee; // colour
+	@colour-tabs-fg: #222; // colour
+	@colour-tabs-current-bg: #222; // colour
+	@colour-tabs-current-fg: #eee; // colour
+	@colour-tabs-hover-bg: #ddd; // colour
+	@colour-tabs-hover-fg: #111; // colour
+	@tabs-border-colour: #ccc; // disabled, colour
+	@tabs-border-style: solid; // disabled, style
+	@tabs-border-width: 1px; // disabled, 
+	@tabs-content-padding: @padding; // 1 - 4 numbers
+	@tabs-padding: 0.75em 2em; // 1 - 4 numbers
+	@tabs-radius: @border-radius; // disabled, number
+	@dynamic-tabs: enabled; // 
+	@dynamic-tabs-qty: 4;
 // -------------------------------
 // Tags
 // -------------------------------
-@colour-tags-bg: #eee; // colour
-@colour-tags-fg: #222; // colour
-@colour-tags-hover-bg: #ddd; // colour
-@colour-tags-hover-fg: #111; // colour
-@tags-border: @border-solid;
-@tags-padding: 0.25em 1em; // 1 - 4 numbers
-@tags: simple; // disabled, simple
+	@colour-tags-bg: #eee; // colour
+	@colour-tags-fg: #222; // colour
+	@colour-tags-hover-bg: #ddd; // colour
+	@colour-tags-hover-fg: #111; // colour
+	@tags-border: @border-solid;
+	@tags-padding: 0.25em 1em; // 1 - 4 numbers
+	@tags: simple; // disabled, simple
 // ###############################
 // end common.less
 // ###############################
@@ -560,20 +551,17 @@
 	@header-nav-padding: (@padding + 2) (@padding + 4);
 		// if blocks
 		@header-nav-border: 1px solid @colour-header-nav-border;
-
 // breadcrumbs
 	@has-breadcrumbs-nav: enabled; //disabled, enabled
 	@breadcrumbs-style: bullets; // disabled, blocks, bullets, checvrons, simple
 	@breadcrumbs-padding: 1em;
 	@breadcrumbs-space: 1;
 	@breadcrumbs-bullet: >;
-
 // side navigation in main container
 	@has-side-nav: enabled; // disabled, enabled
 	@side-nav-style: disabled; // disabled, simple, blocks, lines
 	@side-nav-padding: @padding (@padding + 2);
 	@side-nav-border: 1px solid @colour-side-nav-border;
-
 // flyouts
 	@flyouts-width: disabled; // disabled, single, multi, full
 // ###############################
@@ -642,7 +630,6 @@
 	@tools-nav-font-size: 13px;
 	@header-nav-font-size: 13px;
 	@side-nav-font-size: 14px;
-
 // ###############################
 // end type.less
 // ###############################
