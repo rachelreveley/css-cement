@@ -62,9 +62,9 @@
 // -------------------------------
 
 	.calendar {width: 100%; position: relative; margin-top: @calendar-heading-position;
-		& li {float: left; margin: 0 @calendar-margin @calendar-margin 0; width: @calendar-cell-width; background-color: @colour-calendar-previous-bg;
+		& li {float: left; margin: 0 @calendar-margin @calendar-margin 0; width: @calendar-cell-width;
 			& a,
-			& span {height: 0; padding: @calendar-padding @calendar-padding @calendar-cell-height; display: block; color: @colour-calendar-previous-fg;}
+			& span {background-color: @colour-calendar-previous-bg; color: @colour-calendar-previous-fg; height: 0; padding: @calendar-padding @calendar-padding @calendar-cell-height; display: block;}
 		}
 // First day of the month
 		& .monday.day-1 {margin-left: 0;}
@@ -76,23 +76,27 @@
 		& .sunday.day-1 {margin-left: ((@calendar-cell-width * 6) + (@calendar-margin * 6));}
 // weekends
 		& li.saturday,
-		& li.sunday {background-color: @colour-calendar-previous-weekend-bg;
-			& span {color: @colour-calendar-previous-weekend-fg;}
+		& li.sunday {
+			& span {background-color: @colour-calendar-previous-weekend-bg; color: @colour-calendar-previous-weekend-fg;}
 		}
 		& .sunday {margin-right: 0;}
 // today
-		& .today {background-color: @colour-calendar-current-bg; color: @colour-calendar-current-fg; font-weight: bold; color: @bg;
+		& .today {font-weight: bold;
 			& a,
-			& span {color: @colour-calendar-current-fg;}
+			& span {background-color: @colour-calendar-current-bg; color: @colour-calendar-current-fg;}
 // Future
-			& ~ li {background-color: @colour-calendar-next-bg;
+			& ~ li {
 				& a,
-				& span { color: @colour-calendar-next-fg;}
+				& span {background-color: @colour-calendar-next-bg; color: @colour-calendar-next-fg;}
 			}
 			&  ~ .saturday,
-			&  ~ .sunday {background-color: @colour-calendar-next-weekend-bg;
-				& span {color: @colour-calendar-next-weekend-fg;}
+			&  ~ .sunday {
+				& span {background-color: @colour-calendar-next-weekend-bg; color: @colour-calendar-next-weekend-fg;}
 			}
+		}
+// hover
+		& li:hover {color: @colour-calendar-hover-fg;
+			& a {background-color: @colour-calendar-hover-bg; color: @colour-calendar-hover-fg;}
 		}
 // headings
 		& .day-1:before,
