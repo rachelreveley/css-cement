@@ -16,17 +16,17 @@
 	@colour-header-fg: #222; // colour
 	@colour-header-inner-bg: #fff; // colour
 
-	@colour-header-bg: rgba(0,102,102,1); // colour
+	@colour-header-bg: @primary-colour; // colour
 	@colour-header-fg: #fff; // colour
-	@colour-header-inner-bg: rgba(0,102,102,1); // colour
+	@colour-header-inner-bg: @primary-colour; // colour
 
-	@colour-content-fg: #222; // 
-	@colour-content-bg: #fff; // 
+	@colour-content-fg: #222; // colour
+	@colour-content-bg: #fff; // colour
 	@colour-content-inner-bg: #fff; // 
 
 	@colour-footer-fg: #fff; // 
-	@colour-footer-bg: rgba(0,102,102,1); // 
-	@colour-footer-inner-bg: rgba(0,102,102,1); // 
+	@colour-footer-bg: @primary-colour; // 
+	@colour-footer-inner-bg: @primary-colour; // 
 // -------------------------------
 // links
 // -------------------------------
@@ -37,8 +37,8 @@
 // -------------------------------
 // text
 // -------------------------------
-	@colour-heading: rgba(0,102,102,1); // colour
-	@colour-heading-alt: rgba(0,102,102,1); // colour
+	@colour-heading: @primary-colour; // colour
+	@colour-heading-alt: @primary-colour; // colour
 	@colour-text: #222; // colour
 	@colour-text-alt-1: #000; // colour
 	@colour-text-alt-2: #000; // colour
@@ -62,7 +62,6 @@
 	@colour-tools-nav-level-2-hover-fg: #d59f35; // colour
 	@colour-tools-nav-level-2-hover-bg: #fff; // colour
 	@colour-tools-nav-border: #fff; // 
-
 // -------------------------------
 // header navigation
 // -------------------------------
@@ -81,26 +80,24 @@
 	@colour-header-nav-level-2-hover-fg: #d59f35; // colour
 	@colour-header-nav-level-2-hover-bg: #fff; // colour
 	@colour-header-nav-border: #fff; // colour
-
 // -------------------------------
 // breadcrumbs navigation
 // -------------------------------
-	@colour-breadcrumbs-nav-level-0-fg: rgba(0,102,102,1); // colour
+	@colour-breadcrumbs-nav-level-0-fg: @primary-colour; // colour
 	@colour-breadcrumbs-nav-level-0-bg: #fff; // colour
-	@colour-breadcrumbs-nav-level-1-fg: rgba(0,102,102,1); // colour
+	@colour-breadcrumbs-nav-level-1-fg: @primary-colour; // colour
 	@colour-breadcrumbs-nav-level-1-bg: #fff; // colour
 	@colour-breadcrumbs-nav-level-1-hover-fg: #306; // colour
 	@colour-breadcrumbs-nav-level-1-hover-bg: #fff; // colour
 	@colour-breadcrumbs-nav-border: #fff; // colour
-
 // -------------------------------
 // side navigation
 // -------------------------------
-	@colour-side-nav-level-0-fg: rgba(0,102,102,1); // colour
+	@colour-side-nav-level-0-fg: @primary-colour; // colour
 	@colour-side-nav-level-0-bg: #fff; // colour
-	@colour-side-nav-level-1-fg: rgba(0,102,102,1); // colour
+	@colour-side-nav-level-1-fg: @primary-colour; // colour
 	@colour-side-nav-level-1-bg: #fff; // colour
-	@colour-side-nav-level-2-fg: rgba(0,102,102,1); // colour
+	@colour-side-nav-level-2-fg: @primary-colour; // colour
 	@colour-side-nav-level-2-bg: #fff; // colour
 	@colour-side-nav-border: #fff; // colour
 	@colour-side-nav-level-0-hover-fg: #306; // colour
@@ -110,16 +107,15 @@
 	@colour-side-nav-level-2-hover-fg: #306; // colour
 	@colour-side-nav-level-2-hover-bg: #fff; //colour
 	@colour-side-nav-border: #fff; // colour
-
 // -------------------------------
 // footer navigation
 // -------------------------------
 // footer nav
-	@colour-footer-nav-level-0-fg: rgba(0,102,102,1); // colour
+	@colour-footer-nav-level-0-fg: @primary-colour; // colour
 	@colour-footer-nav-level-0-bg: #fff; // colour
-	@colour-footer-nav-level-1-fg: rgba(0,102,102,1); // colour
+	@colour-footer-nav-level-1-fg: @primary-colour; // colour
 	@colour-footer-nav-level-1-bg: #fff; // colour
-	@colour-footer-nav-level-2-fg: rgba(0,102,102,1); // colour
+	@colour-footer-nav-level-2-fg: @primary-colour; // colour
 	@colour-footer-nav-level-2-bg: #fff; // colour
 	@colour-footer-nav-border: #fff; // colour
 	@colour-footer-nav-level-0-hover-fg: #306; // colour
@@ -146,13 +142,12 @@
 	@primary-action-fg: white; // colour
 	@secondary-action-bg: lightgray; // colour
 	@secondary-action-fg: white; // colour
-
 // -------------------------------
 // generic states
 // -------------------------------
 	@danger-bg: #990000; // colour
 	@danger-fg: white; // colour
-	@default-bg: rgba(0,102,102,1); // colour
+	@default-bg: @primary-colour; // colour
 	@default-fg: white; // colour
 	@disabled-bg: lightgrey; // colour
 	@disabled-fg: darkgrey; // colour
@@ -160,7 +155,6 @@
 	@success-fg: white; // colour
 	@warning-bg: orange; // colour
 	@warning-fg: white; // colour
-
 // ###############################
 // end colours.less
 // ###############################
@@ -176,13 +170,13 @@
 // Bar charts
 // -------------------------------
 	@bar-chart: enabled;
-	@colour-bar-chart-bars-bg: rgba(0,102,102,0.2); // colour
+	@colour-bar-chart-bars-bg: fade(@primary-colour,20%); // colour
 	@colour-bar-chart-bars-fg: #000; // colour
 	@colour-bar-chart-bars-below-fg: #000; // colour
 	@colour-bar-chart-bg: #fff; // colour
 	@colour-bar-chart-fg: #000; // colour
 	@bar-chart-width: 500px;
-	@bar-chart-border: 1px solid  rgba(0,102,102,0.5);
+	@bar-chart-border: 1px solid  fade(@primary-colour,5%);
 	@bar-chart-outer-padding: (@padding + 10px);
 	@bar-chart-bar-margin: 2px;
 	@bar-chart-bar-padding: 2px 6px;
@@ -194,17 +188,19 @@
 // Calendar
 // -------------------------------
 	@has-calendar: enabled; // enabled, disabled
-	@colour-calendar-current-bg: rgba(0,102,102,1); // colour
+	@colour-calendar-current-bg: @primary-colour; // colour
 	@colour-calendar-current-fg: #fff; // colour
-	@colour-calendar-next-bg: rgba(0,102,102,0.03); // colour
+	@colour-calendar-hover-bg: fade(@primary-colour,80%); // colour
+	@colour-calendar-hover-fg: #fff; // colour
+	@colour-calendar-next-bg: fade(@primary-colour,3%); // colour
 	@colour-calendar-next-fg: #999; // colour
-	@colour-calendar-next-weekend-bg: #ddd; // colour
+	@colour-calendar-next-weekend-bg: fade(@primary-colour,13%); // colour
 	@colour-calendar-next-weekend-fg: #000; // colour
-	@colour-calendar-previous-bg: rgba(0,102,102,0.1); // colour
+	@colour-calendar-previous-bg: fade(@primary-colour,10%); // colour
 	@colour-calendar-previous-fg: #666; // colour
-	@colour-calendar-previous-weekend-bg: rgba(0,102,102,0.2); // colour
+	@colour-calendar-previous-weekend-bg: fade(@primary-colour,20%); // colour
 	@colour-calendar-previous-weekend-fg: #000; // colour
-	@colour-calendar-heading-bg: rgba(0,102,102,1); // colour
+	@colour-calendar-heading-bg: @primary-colour; // colour
 	@colour-calendar-heading-fg: #fff; // colour
 	@calendar-cell-height: 65%;
 	@calendar-cell-width: 12%;
@@ -216,10 +212,10 @@
 // Chat bubbles
 // -------------------------------
 	@chat: bubbles; // disable, bubbles
-	@colour-chat-even-bg:  rgba(0,102,102,0.1); // colour
-	@colour-chat-even-fg:  rgba(0,102,102,0.8); // colour
-	@colour-chat-odd-bg:  rgba(0,102,102,0.2); // colour
-	@colour-chat-odd-fg:  rgba(0,102,102,1); // colour
+	@colour-chat-even-bg:  fade(@primary-colour,10%); // colour
+	@colour-chat-even-fg:  fade(@primary-colour,80%); // colour
+	@colour-chat-odd-bg:  fade(@primary-colour,20%); // colour
+	@colour-chat-odd-fg:  @primary-colour; // colour
 	@chat-start: left; // left, right
 	@chat-margin: 20px;
 	@chat-padding: 10px;
@@ -229,23 +225,23 @@
 // corner ribbons
 // -------------------------------
 	@corner-ribbon: enabled; // disabled, enabled
-	@colour-corner-ribbon-bg:  rgba(0,102,102,1); // colour // colour
+	@colour-corner-ribbon-bg:  @primary-colour; // colour // colour
 	@colour-corner-ribbon-fg: #fff; // colour
 	@corner-ribbon-border: 1px solid #aaa; // colour
 // -------------------------------
 // Feature hover effects
 // -------------------------------
 	@feature-hovers: darken; // disabled, lighten, darken
-	@feature-hovers-bg: rgba(0,102,102,1); // colour
+	@feature-hovers-bg: @primary-colour; // colour
 // -------------------------------
 // Forums
 // -------------------------------
 	@forum: enabled; // disabled, enabled
-	@colour-forum-head-bg:  rgba(0,102,102,1); // colour
+	@colour-forum-head-bg:  @primary-colour; // colour
 	@colour-forum-head-fg: #fff; // colour
-	@colour-forum-meta-bg:  rgba(0,102,102,0.2); // colour
+	@colour-forum-meta-bg:  fade(@primary-colour,20%); // colour
 	@colour-forum-meta-fg: #000; // colour
-	@colour-forum-content-bg:  rgba(0,102,102,0.05); // colour
+	@colour-forum-content-bg:  fade(@primary-colour,5%); // colour
 	@colour-forum-content-fg: #000; // colour
 	@colour-forum-quote-bg: rgba(0,0,0,0.1); // colour
 	@colour-forum-quote-fg: #000; // colour
@@ -263,7 +259,7 @@
 // Highlight-block
 // -------------------------------
 	@highlight-border: @border-solid;
-	@colour-highlight-bg: rgba(0,102,102,0.03); // colour
+	@colour-highlight-bg: fade(@primary-colour,3%); // colour
 	@colour-highlight-fg: #000; // colour
 	@highlight-padding: @padding;
 	@highlight-radius: @border-radius; // disabled, number
@@ -272,13 +268,13 @@
 // Pagination
 // -------------------------------
 	@pagination: blocks; // disabled, simple, blocks
-	@colour-pagination-bg: rgba(0,102,102,0.03);; // colour
+	@colour-pagination-bg: fade(@primary-colour,3%); // colour
 	@colour-pagination-fg: #222; // colour
-	@colour-pagination-current-bg: rgba(0,102,102,1); // colour
+	@colour-pagination-current-bg: @primary-colour; // colour
 	@colour-pagination-current-fg: #eee; // colour
-	@colour-pagination-hover-bg: rgba(0,102,102,0.1); // colour
+	@colour-pagination-hover-bg: fade(@primary-colour,10%); // colour
 	@colour-pagination-hover-fg: #111; // colour
-	@pagination-border-colour: rgba(0,102,102,1); // disabled, hex
+	@pagination-border-colour: @primary-colour; // disabled, hex
 	@pagination-border-style: solid; // disabled, style
 	@pagination-border-width: 1px; // disabled, 
 	@pagination-margin: 5px;
@@ -288,8 +284,8 @@
 // Progress-bar
 // -------------------------------
 	@progress: enabled; // disabled, simple
-	@colour-progress-bg: rgba(0,102,102,0.1); // colour
-	@colour-progress-fg: rgba(0,102,102,1); // colour
+	@colour-progress-bg: fade(@primary-colour,10%); // colour
+	@colour-progress-fg: @primary-colour; // colour
 // -------------------------------
 // Pull-quotes
 // -------------------------------
@@ -307,39 +303,39 @@
 	@tables: enabled; // disabled, enabled
 	@colour-table-body-bg: #fff; // colour
 	@colour-table-body-fg: #222; // colour
-	@colour-table-comparrison-col-1-bg: rgba(0,102,102,0.03); // colour
-	@colour-table-comparrison-col-2-bg: rgba(0,102,102,0.05); // colour
-	@colour-table-comparrison-col-3-bg: rgba(0,102,102,0.07); // colour
-	@colour-table-comparrison-col-4-bg: rgba(0,102,102,0.09); // colour
-	@colour-table-comparrison-col-5-bg: rgba(0,102,102,0.11); // colour
-	@colour-table-comparrison-col-6-bg: rgba(0,102,102,0.13); // colour
+	@colour-table-comparrison-col-1-bg: fade(@primary-colour,3%); // colour
+	@colour-table-comparrison-col-2-bg: fade(@primary-colour,5%); // colour
+	@colour-table-comparrison-col-3-bg: fade(@primary-colour,7%); // colour
+	@colour-table-comparrison-col-4-bg: fade(@primary-colour,9%); // colour
+	@colour-table-comparrison-col-5-bg: fade(@primary-colour,11%); // colour
+	@colour-table-comparrison-col-6-bg: fade(@primary-colour,13%); // colour
 	@colour-table-comparrison-col-1-fg: #000; // colour
 	@colour-table-comparrison-col-2-fg: #000; // colour
 	@colour-table-comparrison-col-3-fg: #000; // colour
 	@colour-table-comparrison-col-4-fg: #000; // colour
 	@colour-table-comparrison-col-5-fg: #000; // colour
 	@colour-table-comparrison-col-6-fg: #000; // colour
-	@colour-table-even-bg: rgba(0,102,102,0.05); // colour
-	@colour-table-foot-bg: rgba(0,102,102,0.1); // colour
+	@colour-table-even-bg: fade(@primary-colour,5%); // colour
+	@colour-table-foot-bg: fade(@primary-colour,10%); // colour
 	@colour-table-foot-fg: #333; // colour
-	@colour-table-head-bg: rgba(0,102,102,1); // colour
+	@colour-table-head-bg: @primary-colour; // colour
 	@colour-table-head-fg: #fff; // colour
-	@colour-table-hover-bg: rgba(0,102,102,0.8); // colour
+	@colour-table-hover-bg: fade(@primary-colour,80%); // colour
 	@colour-table-hover-fg: #fff; // colour
-	@table-border-style: 1px solid rgba(0,102,102,0.5); // colour
+	@table-border-style: 1px solid fade(@primary-colour,5%); // colour
 	@table-head-font-weight: bold; // bold, normal
 	@table-padding: (@padding / 1.2) (@padding * 1.5);
-	@table-promote-border-style: 2px solid rgba(0,102,102,1);
+	@table-promote-border-style: 2px solid @primary-colour;
 // -------------------------------
 // Tabs
 // -------------------------------
 	@tabs: blocks; // disabled, blocks, chevrons, trapezoid
-	@colour-tabs-bg: rgba(0,102,102,0.03); // colour
-	@colour-tabs-fg: rgba(0,102,102,1); // colour
-	@colour-tabs-current-bg: rgba(0,102,102,1); // colour
+	@colour-tabs-bg: fade(@primary-colour,3%); // colour
+	@colour-tabs-fg: @primary-colour; // colour
+	@colour-tabs-current-bg: @primary-colour; // colour
 	@colour-tabs-current-fg: #fff; // colour
-	@colour-tabs-hover-bg: rgba(0,102,102,0.1); // colour
-	@colour-tabs-hover-fg: rgba(0,102,102,1); // colour
+	@colour-tabs-hover-bg: fade(@primary-colour,10%); // colour
+	@colour-tabs-hover-fg: @primary-colour; // colour
 	@tabs-border-colour: #ccc; // disabled, colour
 	@tabs-border-style: solid; // disabled, style
 	@tabs-border-width: 0; // Number, 
@@ -351,10 +347,10 @@
 // -------------------------------
 // Tags
 // -------------------------------
-	@colour-tags-bg: rgba(0,102,102,0.03); // colour
-	@colour-tags-fg: rgba(0,102,102,1); // colour
-	@colour-tags-hover-bg: rgba(0,102,102,0.1); // colour
-	@colour-tags-hover-fg: rgba(0,102,102,1); // colour
+	@colour-tags-bg: fade(@primary-colour,3%); // colour
+	@colour-tags-fg: @primary-colour; // colour
+	@colour-tags-hover-bg: fade(@primary-colour,10%); // colour
+	@colour-tags-hover-fg: @primary-colour; // colour
 	@tags-border: @border-solid;
 	@tags-padding: 0.25em 1em; // 1 - 4 numbers
 	@tags: simple; // disabled, simple
@@ -611,26 +607,32 @@
 
 	@logo-font-family: Raleway;
 	@logo-font-weight: 300;
-
+ 
 	@text-size: 13px;
 	@line-height: 1.4;
 	@h1-size: 40px;
-	@h1-line-height: 1.2;
+	@h1-line-height: 1.2em;
+	@h1-margin: 0.3em;
 	@h2-size: 36px;
-	@h2-line-height: 1.2;
+	@h2-line-height: 1.2em;
+	@h2-margin:  0.3em;
 	@h3-size: 32px;
-	@h3-line-height: 1.2;
+	@h3-line-height: 1.2em;
+	@h3-margin: 0.3em;
 	@h4-size: 28px;
-	@h4-line-height: 1.2;
+	@h4-line-height: 1.2em;
+	@h4-margin: 0.3em;
 	@h5-size: 24px;
-	@h5-line-height: 1.2;
+	@h5-line-height: 1.2em;
+	@h5-margin: 0.3em;
 	@h6-size: 20px;
-	@h6-line-height: 1.4;
+	@h6-line-height: 1.4em;
+	@h6-margin: 0.3em;
 	@tools-nav-font-size: 13px;
 	@header-nav-font-size: 13px;
 	@side-nav-font-size: 14px;
-
 // ###############################
 // end type.less
 // ###############################
 
+@primary-colour: rgba(0,102,102,1);
