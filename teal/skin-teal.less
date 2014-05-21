@@ -198,7 +198,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@bar-chart-bar-padding: 2px 6px; // Number and unit
 	@bar-chart-value-location: right; // left, center, right, hide
 	@bar-chart-value-move-below: 20; // Number
-	@bar-chart-value-move-below-indent: 30px; // 
+	@bar-chart-value-move-below-indent: 30px; // Number and unit
 	@bar-chart-label-angle: 0deg; // degrees, disabled
 // -------------------------------
 // Calendar
@@ -389,14 +389,14 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 
 	@gsforms-input-bg: @white; // Colour
 	@gsforms-input-border: @border-solid; // Border style
-	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset; // 
+	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset; // Box Shadow style
 
 	@gsforms-input-required-border: 1px solid @text6; // Border style
 	@gsforms-input-required-bg: @white; // Colour
 
 	@gsforms-input-focus-bg: @bg - 6; // Colour
 	@gsforms-input-focus-border: 1px solid #666; // Border style
-	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2); // 
+	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2); // Box shadow style
 
 	@gsforms-highlight-bg: @bg - 10; // Colour
 
@@ -412,19 +412,19 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@has-pseudo-buttons: true; // 
 	@button-border: 0; // Number
 	@button-font-size: 13px; // Number and unit
-	@button-font-weight: bold; // 
+	@button-font-weight: bold; // Font weight
 	@button-border-radius: 5px; // Number and unit
-	@button-box-shadow: none; // 
-	@button-text-shadow: none; // 
-	@button-hover-box-shadow: none; // 
-	@button-hover-text-shadow: none; // 
+	@button-box-shadow: none; // Box Shadow style
+	@button-text-shadow: none; // Text Shadow style
+	@button-hover-box-shadow: none; // Box Shadow style
+	@button-hover-text-shadow: none; // Text Shadow style
 // Colours - primary
-	@button-grad: @button-bg-start,	@button-bg-1, @button-bg-2; // 
-	@button-hover-grad: @button-hover-bg-start,	@button-hover-bg-1, @button-hover-bg-2; // 
-	@button-secondary-grad: @button-secondary-bg-start,	@button-secondary-bg-1, @button-secondary-bg-2; // 
-	@button-secondary-hover-grad: @button-secondary-hover-bg-start,	@button-secondary-hover-bg-1, @button-secondary-hover-bg-2; // 
-	@button-disabled-grad: @button-disabled-bg-start,	@button-disabled-bg-1, @button-disabled-bg-2; // 
-	@button-bg-start: top; // 
+	@button-grad: @button-bg-start,	@button-bg-1, @button-bg-2; // Gradient style
+	@button-hover-grad: @button-hover-bg-start,	@button-hover-bg-1, @button-hover-bg-2; // Gradient style
+	@button-secondary-grad: @button-secondary-bg-start,	@button-secondary-bg-1, @button-secondary-bg-2; // Gradient style
+	@button-secondary-hover-grad: @button-secondary-hover-bg-start,	@button-secondary-hover-bg-1, @button-secondary-hover-bg-2; // Gradient style
+	@button-disabled-grad: @button-disabled-bg-start,	@button-disabled-bg-1, @button-disabled-bg-2; // Gradient style
+	@button-bg-start: top; // Gradient start point
 	@button-bg-1: #45c351; // Colour
 	@button-bg-2: #308638; // Colour
 	@button-bg-fallback: #393; // Colour
@@ -432,36 +432,36 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@cta-icon-fg: #fff; // Colour
 
 // Colours - primary - hover
-	@button-hover-bg-start: top; // 
-	@button-hover-bg-1: saturate(lighten(@button-bg-1,8),10); // 
-	@button-hover-bg-2: saturate(lighten(@button-bg-2,8),10); // 
-	@button-hover-bg-fallback: saturate(lighten(@button-bg-fallback,8),10); // 
+	@button-hover-bg-start: top; // Gradient start point
+	@button-hover-bg-1: saturate(lighten(@button-bg-1,8),10); // Colour
+	@button-hover-bg-2: saturate(lighten(@button-bg-2,8),10); // Colour
+	@button-hover-bg-fallback: saturate(lighten(@button-bg-fallback,8),10); // Colour
 	@button-hover-fg: #fff; // Colour
 
 // Colours - secondary
-	@button-secondary-bg-start: top; // 
+	@button-secondary-bg-start: top; // Gradient start point
 	@button-secondary-bg-1: #3fb3f8; // Colour
 	@button-secondary-bg-2: #2b77a5; // Colour
 	@button-secondary-bg-fallback: #41b3f9; // Colour
 	@button-secondary-fg: #fff; // Colour
 
 // Colours - secondary - hover
-	@button-secondary-hover-bg-start: top; // 
-	@button-secondary-hover-bg-1: saturate(lighten(@button-secondary-bg-1,8),10);; // 
-	@button-secondary-hover-bg-2: saturate(lighten(@button-secondary-bg-2,8),10);; // 
+	@button-secondary-hover-bg-start: top; // Gradient start point
+	@button-secondary-hover-bg-1: saturate(lighten(@button-secondary-bg-1,8),10); // Colour
+	@button-secondary-hover-bg-2: saturate(lighten(@button-secondary-bg-2,8),10); // Colour
 	@button-secondary-hover-bg-fallback: #2493d6; // Colour
 	@button-secondary-hover-fg: #fff; // Colour
 	@cta-icon-secondary-hover-fg: #fff; // Colour
 
 // Colours - disabled
-	@button-disabled-bg-start: top; // 
+	@button-disabled-bg-start: top; // Gradient start point
 	@button-disabled-bg-1: #ccc; // Colour
 	@button-disabled-bg-2: #ccc; // Colour
 	@button-disabled-bg-fallback: #ccc; // Colour
 	@button-disabled-fg: #eee; // Colour
 
 // Colours - disabled - hover
-	@button-disabled-hover-bg-start: top; // 
+	@button-disabled-hover-bg-start: top; // Gradient start point
 	@button-disabled-hover-bg-1: #ccc; // Colour
 	@button-disabled-hover-bg-2: #ccc; // Colour
 	@button-disabled-hover-bg-fallback: #ccc; // Colour
@@ -586,7 +586,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@has-side-nav: enabled; // disabled, enabled
 	@side-nav-style: disabled; // disabled, simple, blocks, lines
 	@side-nav-padding: (@padding / 2) @padding; // Number and unit
-	@side-nav-border: 1px solid @colour-side-nav-border; // 
+	@side-nav-border: 1px solid @colour-side-nav-border; // Border style
 
 // flyouts
 	@flyouts-width: disabled; // disabled, single, multi, full
@@ -599,8 +599,8 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 // ###############################
 	@padding: 12px; // 0 - 9px
 	@border-radius: 5px; // 0 - 9px
-	@border-solid: 1px solid #ccc; // 
-	@border-dotted: 1px dotted #ccc; // 
+	@border-solid: 1px solid #ccc; //  Border style
+	@border-dotted: 1px dotted #ccc; //  Border style
 	@opacity: 0.8; // Number and unit
 // ###############################
 // end styles.less
@@ -611,27 +611,27 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 // ###############################
 	// choose font pair from list below or add your own. Delete any that you aren't using.
 	// Raleway & Droid Sans
-		@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700); // 
-		@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700); // 
+		@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
+		@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
 	// Ubuntu & Vollkorn
-		@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700); // 
-		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700); // 
+		@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700);
 
-	@heading-font-family: Raleway; // 
-	@heading-font-weight: 200; // 
-	@heading-alt-font-weight: 300; // 
-	@heading-alt2-font-weight: 400; // 
+	@heading-font-family: Raleway; // Font family name
+	@heading-font-weight: 200; // Font weight
+	@heading-alt-font-weight: 300; // Font weight
+	@heading-alt2-font-weight: 400; // Font weight
 
-	@body-font-family: "Droid Sans"; // 
-	@body-font-weight: 400; // 
-	@body-alt-font-weight: 700; // 
+	@body-font-family: "Droid Sans"; // Font family name
+	@body-font-weight: 400; // Font weight
+	@body-alt-font-weight: 700; // Font weight
 
-	@nav-font-family: Raleway; // 
-	@nav-font-weight: 400; // 
+	@nav-font-family: Raleway; // Font family name
+	@nav-font-weight: 400; // Font weight
 
-	@logo-font-family: Raleway; // 
-	@logo-font-weight: 300; // 
+	@logo-font-family: Raleway; // Font family name
+	@logo-font-weight: 300; // Font weight
  
 	@text-size: 13px; // Number and unit
 	@line-height: 1.4em; // Number and unit
