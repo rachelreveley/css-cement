@@ -229,7 +229,7 @@
 		& li {display: table-cell; padding-right: @pagination-margin;
 			&:last-child {padding-right: 0;}
 			& a,
-			& span {display: block; padding:@pagination-padding; text-decoration: none; border-radius: @pagination-radius; border: @pagination-border-width @pagination-border-style @pagination-border-colour;}
+			& span {display: block; padding:@pagination-padding; text-decoration: none; border-radius: @pagination-radius; border: @pagination-border;}
 			& span {background-color: @colour-pagination-current-bg; color: @colour-pagination-current-fg;}
 			& a {
 				&:link,
@@ -281,13 +281,13 @@ table when not (@tables = disabled) {
 		& td {background-color: @colour-table-foot-bg; color: @colour-table-foot-fg;}
 	}
 // Types of tables
-	&.all-borders {border: @table-border-style;
+	&.all-borders {border: @table-border;
 		& th,
-		& td {border: @table-border-style;}
+		& td {border: @table-border;}
 	}
 	&.h-borders {
 		& th,
-		& td {border-bottom: @table-border-style;}
+		& td {border-bottom: @table-border;}
 	}
 	&.striped {
 		& tr:nth-child(even) {
@@ -312,13 +312,13 @@ table when not (@tables = disabled) {
 			&:nth-child(5) {background-color: @colour-table-comparrison-col-5-bg; color: @colour-table-comparrison-col-5-fg;}
 			&:nth-child(6) {background-color: @colour-table-comparrison-col-6-bg; color: @colour-table-comparrison-col-6-fg;}
 		}
-		& .promote {border-left: @table-promote-border-style; border-right: @table-promote-border-style; border-top: 0; border-bottom: 0;}
+		& .promote {border-left: @table-promote-border; border-right: @table-promote-border; border-top: 0; border-bottom: 0;}
 		& > :first-child tr:first-child .promote {
-			border-top: @table-promote-border-style;
+			border-top: @table-promote-border;
 		}
 		& tfoot .promote,
 		& > :last-child tr:last-child .promote {
-			border-bottom: @table-promote-border-style;
+			border-bottom: @table-promote-border;
 		}
 		& tfoot + tbody:last-child tr:last-child .promote {border-bottom: 0;}
 	}

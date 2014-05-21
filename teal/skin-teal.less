@@ -192,7 +192,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@colour-bar-chart-bg: #fff; // Colour
 	@colour-bar-chart-fg: #000; // Colour
 	@bar-chart-width: 500px; // Number and unit
-	@bar-chart-border: 1px solid  fade(@primary-colour,5%); // 
+	@bar-chart-border: 1px solid  fade(@primary-colour,5%); // Border style
 	@bar-chart-outer-padding: (@padding + 10px); // Number and unit
 	@bar-chart-bar-margin: 2px; // Number and unit
 	@bar-chart-bar-padding: 2px 6px; // Number and unit
@@ -244,7 +244,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@colour-corner-ribbon-bg:  @primary-colour; // Colour
  // Colour
 	@colour-corner-ribbon-fg: #fff; // Colour
-	@corner-ribbon-border: 1px solid #aaa; // Colour
+	@corner-ribbon-border: 1px solid fade(@primary-colour,20%); // Border style
 
 // -------------------------------
 // Feature hover effects
@@ -273,11 +273,11 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 // -------------------------------
 	@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
 	@gallery-style: ; // simple, framed
-	@gallery-hover: border; // border, opacity, zoom
+	@gallery-hover: border; // border, opacity
 // -------------------------------
 // Highlight-block
 // -------------------------------
-	@highlight-border: @border-solid; // 
+	@highlight-border: @border-solid; // Border style
 	@colour-highlight-bg: fade(@primary-colour,3%); // Colour
 	@colour-highlight-fg: #000; // Colour
 	@highlight-padding: @padding; // Number and unit
@@ -293,9 +293,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@colour-pagination-current-fg: #eee; // Colour
 	@colour-pagination-hover-bg: fade(@primary-colour,10%); // Colour
 	@colour-pagination-hover-fg: #111; // Colour
-	@pagination-border-colour: @primary-colour; // disabled, hex
-	@pagination-border-style: solid; // disabled, style
-	@pagination-border-width: 1px; // disabled, 
+	@pagination-border: 1px solid @primary-colour; // Border style
 	@pagination-margin: 5px; // Number and unit
 	@pagination-padding: 0.75em 1em; // 1 - 4 numbers
 	@pagination-radius: @border-radius; // disabled, number
@@ -342,10 +340,10 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@colour-table-head-fg: #fff; // Colour
 	@colour-table-hover-bg: fade(@primary-colour,80%); // Colour
 	@colour-table-hover-fg: #fff; // Colour
-	@table-border-style: 1px solid fade(@primary-colour,5%); // Colour
+	@table-border: 1px solid fade(@primary-colour,5%); // Border style
 	@table-head-font-weight: bold; // bold, normal
 	@table-padding: (@padding / 1.2) (@padding * 1.5); // Number and unit
-	@table-promote-border-style: 2px solid @primary-colour; // 
+	@table-promote-Border style: 2px solid @primary-colour; // Border style
 // -------------------------------
 // Tabs
 // -------------------------------
@@ -371,7 +369,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@colour-tags-fg: @primary-colour; // Colour
 	@colour-tags-hover-bg: fade(@primary-colour,10%); // Colour
 	@colour-tags-hover-fg: @primary-colour; // Colour
-	@tags-border: @border-solid; // 
+	@tags-border: @border-solid; // Border style
 	@tags-padding: 0.25em 1em; // 1 - 4 numbers
 	@tags: simple; // disabled, simple
 // ###############################
@@ -390,14 +388,14 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@gsforms-col: 3%; // Number and unit
 
 	@gsforms-input-bg: @white; // Colour
-	@gsforms-input-border: 1px solid #ccc; // 
+	@gsforms-input-border: @border-solid; // Border style
 	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset; // 
 
-	@gsforms-input-required-border: 1px solid @text6; // 
+	@gsforms-input-required-border: 1px solid @text6; // Border style
 	@gsforms-input-required-bg: @white; // Colour
 
 	@gsforms-input-focus-bg: @bg - 6; // Colour
-	@gsforms-input-focus-border: 1px solid #666; // 
+	@gsforms-input-focus-border: 1px solid #666; // Border style
 	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2); // 
 
 	@gsforms-highlight-bg: @bg - 10; // Colour
@@ -560,7 +558,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@tools-nav-style: dividers; // blocks, dividers
 	@tools-nav-padding: @padding (@padding + 2); // Number and unit
 		// if blocks
-		@tools-nav-border: 1px solid #ccc; // 
+		@tools-nav-border: @border-solid; // Border style
 		// if pipes
 		@vertical-divider: \0020 |; // can be anything for example |, \, >, :, ][
 		// You can use utf8 hexc odes like the following 
@@ -575,7 +573,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@header-nav-style: blocks; // blocks, dividers, tabs
 	@header-nav-padding: (@padding + 2) (@padding + 4); // Number and unit
 		// if blocks
-		@header-nav-border: 1px solid @colour-header-nav-border; // 
+		@header-nav-border: 1px solid @colour-header-nav-border; // Border style
 
 // breadcrumbs
 	@has-breadcrumbs-nav: enabled; //disabled, enabled
