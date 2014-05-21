@@ -353,7 +353,7 @@
 .button:visited,
 .button:hover,
 .button:active {.pseudo-button;}
-	.pseudo-button() when (@has-pseudo-buttons = true)  {display: inline-block; line-height: (@button-font-size+ 5); font-weight: @button-font-weight; vertical-align: baseline; color: @button-fg; margin: 0 10px 10px 0; position: relative; border: @button-border; box-shadow: @button-box-shadow; text-shadow: @button-text-shadow; text-decoration: none; white-space: nowrap;
+	.pseudo-button() when (@has-pseudo-buttons = enabled)  {display: inline-block; line-height: (@button-font-size+ 5); font-weight: @button-font-weight; vertical-align: baseline; color: @button-fg; margin: 0 10px 10px 0; position: relative; border: @button-border; box-shadow: @button-box-shadow; text-shadow: @button-text-shadow; text-decoration: none; white-space: nowrap;
 					font-size: @button-font-size;					padding: (@button-scale / 2.5) @button-scale;	border-radius: @button-border-radius;
 	&.sml {	font-size: @button-font-size; 					padding: @sml-padding;							border-radius: @sml-border-radius;}
 	&.std {	font-size: (@button-font-size * @std-scale);	padding: @std-padding;							border-radius: @std-border-radius;}
