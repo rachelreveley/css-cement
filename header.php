@@ -37,7 +37,7 @@
 				<div class="logo">
 					<a href="/css-cement">CSS Cement</a>
 				</div>
-				<nav>
+				<nav class="main">
 					<ul>
 						<li><a href="default.php">Home</a></li>
 						<li><a href="template-widgets.php">Standard Widets</a></li>
