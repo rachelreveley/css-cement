@@ -1,134 +1,144 @@
+// Teal Theme
+/* 
+The Teal theme is useful for developing sites with a single dominant colour. 
+imply change the value of the @primary-colour var at the bottom of this file to the colour you want.
+*/
 // ###############################
 // start colours.less
 // ###############################
-	.base-colors(#fff,#333); // colour
+	.base-colors(#fff,#333); // Colour
+
 // -------------------------------
 // primary containers
 // -------------------------------
-	@colour-body-bg: #666; // colour
-	@colour-body-fg: #066; // colour
+	@colour-body-fg: #222; // Colour
+	@colour-body-bg: #666; // Colour
 
-	@colour-tools-bg: #fff; // colour
-	@colour-tools-fg: #066; // colour
-	@colour-tools-inner-bg: #fff; // colour
+	@colour-tools-fg: #fff; // Colour
+	@colour-tools-bg: #fff; // Colour
+	@colour-tools-inner-bg: #fff; // Colour
 
-	@colour-header-bg: #fff; // colour
-	@colour-header-fg: #222; // colour
-	@colour-header-inner-bg: #fff; // colour
+	@colour-header-bg: #fff; // Colour
+	@colour-header-fg: #222; // Colour
+	@colour-header-inner-bg: #fff; // Colour
 
-	@colour-splash-bg: #066; // colour
-	@colour-splash-fg: #fff; // colour
-	@colour-splash-inner-bg: #066; // colour
+	@colour-header-bg: @primary-colour; // Colour
+	@colour-header-fg: #fff; // Colour
+	@colour-header-inner-bg: @primary-colour; // Colour
 
-	@colour-content-bg: #fff; // colour
-	@colour-content-fg: #222; // colour
-	@colour-content-inner-bg: #fff; // colour
+	@colour-content-fg: #222; // Colour
+	@colour-content-bg: #fff; // Colour
+	@colour-content-inner-bg: #fff; // Colour
 
-	@colour-footer-bg: #ccc; // colour
-	@colour-footer-fg: #066; // colour
-	@colour-footer-inner-bg: #ccc; // colour
+	@colour-footer-fg: #fff; // Colour
+	@colour-footer-bg: @primary-colour; // Colour
+	@colour-footer-inner-bg: @primary-colour; // Colour
+
 // -------------------------------
 // links
 // -------------------------------
-	@colour-active: #990; // colour
-	@colour-hover: #099; // colour
-	@colour-link: #009; // colour
-	@colour-visited: #909; // colour
+	@colour-link: #009; // Colour
+	@colour-visited: #909; // Colour
+	@colour-hover: #099; // Colour
+	@colour-active: #990; // Colour
+
 // -------------------------------
 // text
 // -------------------------------
-	@colour-border: #ccc; // colour
-	@colour-heading: #222; // colour
-	@colour-heading-alt: #222; // colour
-	@colour-text: #222; // colour
-	@colour-text-alt-1: #000; // colour
-	@colour-text-alt-2: #000; // colour
-	@colour-text-alt-3: #000; //
+	@colour-heading: @primary-colour; // Colour
+	@colour-heading-alt: @primary-colour; // Colour
+	@colour-text: #222; // Colour
+	@colour-text-alt-1: #000; // Colour
+	@colour-text-alt-2: #000; // Colour
+	@colour-text-alt-3: #000; //colour
+	@colour-border: #fff; // Colour
+
 // -------------------------------
 // tools navigation
 // -------------------------------
-	@colour-tools-nav-border: #fff; // colour
-	@colour-tools-nav-level-0-bg: #fff; // colour
-	@colour-tools-nav-level-0-fg: #066; // colour
-	@colour-tools-nav-level-1-bg: #fff; // colour
-	@colour-tools-nav-level-1-fg: #066; // colour
-	@colour-tools-nav-level-2-bg: #fff; // colour
-	@colour-tools-nav-level-2-fg: #066; // colour
+	@colour-tools-nav-level-0-fg: #242424; // Colour
+	@colour-tools-nav-level-0-bg: #fff; // Colour
+	@colour-tools-nav-level-1-fg: #242424; // Colour
+	@colour-tools-nav-level-1-bg: #fff; // Colour
+	@colour-tools-nav-level-2-fg: #242424; // Colour
+	@colour-tools-nav-level-2-bg: #fff; // Colour
+	@colour-tools-nav-border: #fff; // Colour
 
-	@colour-tools-nav-border: #fff; // colour
-	@colour-tools-nav-level-0-hover-bg: #eee; // colour
-	@colour-tools-nav-level-0-hover-fg: #306; // colour
-	@colour-tools-nav-level-1-hover-bg: #eee; // colour
-	@colour-tools-nav-level-1-hover-fg: #306; // colour
-	@colour-tools-nav-level-2-hover-bg: #eee; // colour
-	@colour-tools-nav-level-2-hover-fg: #306; // colour
+	@colour-tools-nav-level-0-hover-fg: #306; // Colour
+	@colour-tools-nav-level-0-hover-bg: #fff; // Colour
+	@colour-tools-nav-level-1-hover-fg: #d59f35; // Colour
+	@colour-tools-nav-level-1-hover-bg: #fff; // Colour
+	@colour-tools-nav-level-2-hover-fg: #d59f35; // Colour
+	@colour-tools-nav-level-2-hover-bg: #fff; // Colour
+	@colour-tools-nav-border: #fff; // Colour
+
 // -------------------------------
 // header navigation
 // -------------------------------
-	@colour-header-nav-border: #fff; // colour
-	@colour-header-nav-level-0-bg: #fff; // colour
-	@colour-header-nav-level-0-fg: #066; // colour
-	@colour-header-nav-level-1-bg: #fff; // colour
-	@colour-header-nav-level-1-fg: #066; // colour
-	@colour-header-nav-level-2-bg: #fff; // colour
-	@colour-header-nav-level-2-fg: #066; // colour
+	@colour-header-nav-level-0-fg: #242424; // Colour
+	@colour-header-nav-level-0-bg: #fff; // Colour
+	@colour-header-nav-level-1-fg: #242424; // Colour
+	@colour-header-nav-level-1-bg: #fff; // Colour
+	@colour-header-nav-level-2-fg: #242424; // Colour
+	@colour-header-nav-level-2-bg: #fff; // Colour
+	@colour-header-nav-border: #fff; // Colour
 
-	@colour-header-nav-border: #fff; // colour
-	@colour-header-nav-level-0-hover-bg: #eee; // colour
-	@colour-header-nav-level-0-hover-fg: #306; // colour
-	@colour-header-nav-level-1-hover-bg: #eee; // colour
-	@colour-header-nav-level-1-hover-fg: #306; // colour
-	@colour-header-nav-level-2-hover-bg: #eee; // colour
-	@colour-header-nav-level-2-hover-fg: #306; // colour
+	@colour-header-nav-level-0-hover-fg: #306; // Colour
+	@colour-header-nav-level-0-hover-bg: #fff; // Colour
+	@colour-header-nav-level-1-hover-fg: #d59f35; // Colour
+	@colour-header-nav-level-1-hover-bg: #fff; // Colour
+	@colour-header-nav-level-2-hover-fg: #d59f35; // Colour
+	@colour-header-nav-level-2-hover-bg: #fff; // Colour
+	@colour-header-nav-border: #fff; // Colour
+
 // -------------------------------
 // breadcrumbs navigation
 // -------------------------------
-	@colour-breadcrumbs-nav-border: #fff; // colour
-	@colour-breadcrumbs-nav-level-0-bg: #fff; // colour
-	@colour-breadcrumbs-nav-level-0-fg: #066; // colour
-	@colour-breadcrumbs-nav-level-1-bg: #f5f5f5; // colour
-	@colour-breadcrumbs-nav-level-1-fg: #066; // colour
+	@colour-breadcrumbs-nav-level-0-fg: @primary-colour; // Colour
+	@colour-breadcrumbs-nav-level-0-bg: #fff; // Colour
+	@colour-breadcrumbs-nav-level-1-fg: @primary-colour; // Colour
+	@colour-breadcrumbs-nav-level-1-bg: #fff; // Colour
+	@colour-breadcrumbs-nav-level-1-hover-fg: #306; // Colour
+	@colour-breadcrumbs-nav-level-1-hover-bg: #fff; // Colour
+	@colour-breadcrumbs-nav-border: #fff; // Colour
 
-	@colour-breadcrumbs-nav-level-0-hover-bg: #eee; // colour
-	@colour-breadcrumbs-nav-level-0-hover-fg: #306; // colour
-	@colour-breadcrumbs-nav-level-1-hover-bg: #eee; // colour
-	@colour-breadcrumbs-nav-level-1-hover-fg: #306; // colour
 // -------------------------------
 // side navigation
 // -------------------------------
-	@colour-side-nav-level-0-fg: #066; // colour
-	@colour-side-nav-level-0-bg: #fff; // colour
-	@colour-side-nav-level-1-fg: #066; // colour
-	@colour-side-nav-level-1-bg: #fff; // colour
-	@colour-side-nav-level-2-fg: #066; // colour
-	@colour-side-nav-level-2-bg: #fff; // colour
-	@colour-side-nav-border: #fff; // colour
+	@colour-side-nav-level-0-fg: @primary-colour; // Colour
+	@colour-side-nav-level-0-bg: #fff; // Colour
+	@colour-side-nav-level-1-fg: @primary-colour; // Colour
+	@colour-side-nav-level-1-bg: #fff; // Colour
+	@colour-side-nav-level-2-fg: @primary-colour; // Colour
+	@colour-side-nav-level-2-bg: #fff; // Colour
+	@colour-side-nav-border: #fff; // Colour
+	@colour-side-nav-level-0-hover-fg: #306; // Colour
+	@colour-side-nav-level-0-hover-bg: #fff; // Colour
+	@colour-side-nav-level-1-hover-fg: #306; // Colour
+	@colour-side-nav-level-1-hover-bg: #fff; // Colour
+	@colour-side-nav-level-2-hover-fg: #306; // Colour
+	@colour-side-nav-level-2-hover-bg: #fff; //colour
+	@colour-side-nav-border: #fff; // Colour
 
-	@colour-side-nav-level-0-hover-fg: #306; // colour
-	@colour-side-nav-level-0-hover-bg: #eee; // colour
-	@colour-side-nav-level-1-hover-fg: #306; // colour
-	@colour-side-nav-level-1-hover-bg: #eee; // colour
-	@colour-side-nav-level-2-hover-fg: #306; // colour
-	@colour-side-nav-level-2-hover-bg: #eee; //
-	@colour-side-nav-border: #fff; // colour
 // -------------------------------
 // footer navigation
 // -------------------------------
-	@colour-footer-nav-border: #fff; // colour
-	@colour-footer-nav-level-0-bg: #fff; // colour
-	@colour-footer-nav-level-0-fg: #066; // colour
-	@colour-footer-nav-level-1-bg: #fff; // colour
-	@colour-footer-nav-level-1-fg: #066; // colour
-	@colour-footer-nav-level-2-bg: #fff; // colour
-	@colour-footer-nav-level-2-fg: #066; // colour
+// footer nav
+	@colour-footer-nav-level-0-fg: @primary-colour; // Colour
+	@colour-footer-nav-level-0-bg: #fff; // Colour
+	@colour-footer-nav-level-1-fg: @primary-colour; // Colour
+	@colour-footer-nav-level-1-bg: #fff; // Colour
+	@colour-footer-nav-level-2-fg: @primary-colour; // Colour
+	@colour-footer-nav-level-2-bg: #fff; // Colour
+	@colour-footer-nav-border: #fff; // Colour
+	@colour-footer-nav-level-0-hover-fg: #306; // Colour
+	@colour-footer-nav-level-0-hover-bg: #fff; // Colour
+	@colour-footer-nav-level-1-hover-fg: #306; // Colour
+	@colour-footer-nav-level-1-hover-bg: #fff; // Colour
+	@colour-footer-nav-level-2-hover-fg: #306; // Colour
+	@colour-footer-nav-level-2-hover-bg: #fff; // Colour
+	@colour-footer-nav-border: #fff; // Colour
 
-	@colour-footer-nav-border: #fff; // colour
-	@colour-footer-nav-level-0-hover-bg: #eee; // colour
-	@colour-footer-nav-level-0-hover-fg: #306; // colour
-	@colour-footer-nav-level-1-hover-bg: #eee; // colour
-	@colour-footer-nav-level-1-hover-fg: #306; // colour
-	@colour-footer-nav-level-2-hover-bg: #eee; // colour
-	@colour-footer-nav-level-2-hover-fg: #306; // colour
 // -------------------------------
 // Flyout menus
 // -------------------------------
@@ -138,27 +148,29 @@
 // -------------------------------
 // button colours
 // -------------------------------
-	@danger-action-bg: red; // colour
-	@danger-action-fg: white; // colour
-	@disabled-action-bg: lightgray; // colour
-	@disabled-action-fg: darkgrey; // colour
-	@primary-action-bg: blue; // colour
-	@primary-action-fg: white; // colour
-	@secondary-action-bg: lightgray; // colour
-	@secondary-action-fg: white; // colour
+	@danger-action-bg: red; // Colour
+	@danger-action-fg: white; // Colour
+	@disabled-action-bg: lightgray; // Colour
+	@disabled-action-fg: darkgrey; // Colour
+	@primary-action-bg: blue; // Colour
+	@primary-action-fg: white; // Colour
+	@secondary-action-bg: lightgray; // Colour
+	@secondary-action-fg: white; // Colour
+
 // -------------------------------
 // generic states
 // -------------------------------
-	@danger-bg: red; // colour
-	@danger-fg: white; // colour
-	@default-bg: blue; // colour
-	@default-fg: white; // colour
-	@disabled-bg: lightgrey; // colour
-	@disabled-fg: darkgrey; // colour
-	@success-bg: green; // colour
-	@success-fg: white; // colour
-	@warning-bg: orange; // colour
-	@warning-fg: white; // colour
+	@danger-bg: #990000; // Colour
+	@danger-fg: white; // Colour
+	@default-bg: @primary-colour; // Colour
+	@default-fg: white; // Colour
+	@disabled-bg: lightgrey; // Colour
+	@disabled-fg: darkgrey; // Colour
+	@success-bg: #0c6735; // Colour
+	@success-fg: white; // Colour
+	@warning-bg: orange; // Colour
+	@warning-fg: white; // Colour
+
 // ###############################
 // end colours.less
 // ###############################
@@ -169,191 +181,200 @@
 // -------------------------------
 // Badges
 // -------------------------------
-@badge: enabled; // disabled, simple
+	@badge: enabled; // disabled, simple
 // -------------------------------
 // Bar charts
 // -------------------------------
-	@bar-chart: enabled;
-	@colour-bar-chart-bars-bg: #666;
-	@colour-bar-chart-bars-fg: #fff;
-	@colour-bar-chart-bars-below-fg: #000;
-	@colour-bar-chart-bg: #fff;
-	@colour-bar-chart-fg: #000;
-	@bar-chart-width: 500px;
-	@bar-chart-border: 1px solid #ccc;
-	@bar-chart-outer-padding: (@padding + 10px);
-	@bar-chart-bar-margin: 2px;
-	@bar-chart-bar-padding: 2px 6px;
+	@bar-chart: enabled; // enabled, disabled
+	@colour-bar-chart-bars-bg: fade(@primary-colour,20%); // Colour
+	@colour-bar-chart-bars-fg: #000; // Colour
+	@colour-bar-chart-bars-below-fg: #000; // Colour
+	@colour-bar-chart-bg: #fff; // Colour
+	@colour-bar-chart-fg: #000; // Colour
+	@bar-chart-width: 500px; // Number and unit
+	@bar-chart-border: 1px solid  fade(@primary-colour,5%); // Border style
+	@bar-chart-outer-padding: (@padding + 10px); // Number and unit
+	@bar-chart-bar-margin: 2px; // Number and unit
+	@bar-chart-bar-padding: 2px 6px; // Number and unit
 	@bar-chart-value-location: right; // left, center, right, hide
-	@bar-chart-value-move-below: 20;
-	@bar-chart-value-move-below-indent: 30px;
+	@bar-chart-value-move-below: 20; // Number
+	@bar-chart-value-move-below-indent: 30px; // Number and unit
 	@bar-chart-label-angle: 0deg; // degrees, disabled
 // -------------------------------
 // Calendar
 // -------------------------------
-	@has-calendar: enabled; // enabled, disabled
-	@colour-calendar-current-bg: #333;
-	@colour-calendar-current-fg: #fff;
-	@colour-calendar-next-bg: #f9f9f9;
-	@colour-calendar-next-fg: #999;
-	@colour-calendar-next-weekend-bg: #ddd;
-	@colour-calendar-next-weekend-fg: #000;
-	@colour-calendar-previous-bg: #eee;
-	@colour-calendar-previous-fg: #666;
-	@colour-calendar-previous-weekend-bg: #ddd;
-	@colour-calendar-previous-weekend-fg: #000;
-	@colour-calendar-heading-bg: #000;
-	@colour-calendar-heading-fg: #fff;
-	@calendar-cell-height: 65%;
-	@calendar-cell-width: 12%;
-	@calendar-margin:2%;
-	@calendar-padding: 5px;
-	@calendar-heading-padding: 5px;
-	@calendar-heading-position: 35px;
+	@has-calendar: enabled; // disabled, enabled
+	@colour-calendar-current-bg: @primary-colour; // Colour
+	@colour-calendar-current-fg: #fff; // Colour
+	@colour-calendar-hover-bg: fade(@primary-colour,80%); // Colour
+	@colour-calendar-hover-fg: #fff; // Colour
+	@colour-calendar-next-bg: fade(@primary-colour,3%); // Colour
+	@colour-calendar-next-fg: #999; // Colour
+	@colour-calendar-next-weekend-bg: fade(@primary-colour,13%); // Colour
+	@colour-calendar-next-weekend-fg: #000; // Colour
+	@colour-calendar-previous-bg: fade(@primary-colour,10%); // Colour
+	@colour-calendar-previous-fg: #666; // Colour
+	@colour-calendar-previous-weekend-bg: fade(@primary-colour,20%); // Colour
+	@colour-calendar-previous-weekend-fg: #000; // Colour
+	@colour-calendar-heading-bg: @primary-colour; // Colour
+	@colour-calendar-heading-fg: #fff; // Colour
+	@calendar-cell-height: 65%; // Number and unit
+	@calendar-cell-width: 12%; // Number and unit
+	@calendar-margin:2%; // Number and unit
+	@calendar-padding: 5px; // Number and unit
+	@calendar-heading-padding: 5px; // Number and unit
+	@calendar-heading-position: 35px; // Number and unit
 // -------------------------------
 // Chat bubbles
 // -------------------------------
 	@chat: bubbles; // disable, bubbles
-	@colour-chat-even-bg: #eee; // colour
-	@colour-chat-even-fg: #333; // colour
-	@colour-chat-odd-bg: #ddd; // colour
-	@colour-chat-odd-fg: #222; // colour
+	@colour-chat-even-bg:  fade(@primary-colour,10%); // Colour
+	@colour-chat-even-fg:  fade(@primary-colour,80%); // Colour
+	@colour-chat-odd-bg:  fade(@primary-colour,20%); // Colour
+	@colour-chat-odd-fg:  @primary-colour; // Colour
 	@chat-start: left; // left, right
-	@chat-margin: 20px;
-	@chat-padding: 10px;
-	@chat-radius: 4px;
-	@chat-tail-size: 20px;
+	@chat-margin: 20px; // Number and unit
+	@chat-padding: 10px; // Number and unit
+	@chat-radius: 4px; // Number and unit
+	@chat-tail-size: 20px; // Number and unit
 // -------------------------------
 // corner ribbons
 // -------------------------------
 	@corner-ribbon: enabled; // disabled, enabled
-	@colour-corner-ribbon-bg: #000;
-	@colour-corner-ribbon-fg: #fff;
-	@corner-ribbon-border: 1px solid #aaa;
+	@colour-corner-ribbon-bg:  @primary-colour; // Colour
+ // Colour
+	@colour-corner-ribbon-fg: #fff; // Colour
+	@corner-ribbon-border: 1px solid fade(@primary-colour,20%); // Border style
+
 // -------------------------------
 // Feature hover effects
 // -------------------------------
 	@feature-hovers: darken; // disabled, lighten, darken
-	@feature-hovers-bg: rgba(0,102,102,1);
+	@feature-hovers-bg: @primary-colour; // Colour
+
 // -------------------------------
 // Forums
 // -------------------------------
 	@forum: enabled; // disabled, enabled
-	@colour-forum-head-bg: #333;
-	@colour-forum-head-fg: #fff;
-	@colour-forum-meta-bg: #eee;
-	@colour-forum-meta-fg: #000;
-	@colour-forum-content-bg: #f9f9f9;
-	@colour-forum-content-fg: #000;
-	@colour-forum-quote-bg: rgba(0,0,0,0.1);
-	@colour-forum-quote-fg: #000;
-	@forum-padding: @padding;
+	@colour-forum-head-bg:  @primary-colour; // Colour
+	@colour-forum-head-fg: #fff; // Colour
+	@colour-forum-meta-bg:  fade(@primary-colour,20%); // Colour
+	@colour-forum-meta-fg: #000; // Colour
+	@colour-forum-content-bg:  fade(@primary-colour,5%); // Colour
+	@colour-forum-content-fg: #000; // Colour
+	@colour-forum-quote-bg: rgba(0,0,0,0.1); // Colour
+	@colour-forum-quote-fg: #000; // Colour
+	@forum-padding: @padding; // Number and unitNumber and unit
 	@forum-post-head: right; // left, right
 	@forum-post-meta-style: collapsed; // simple, collapsed
-	@forum-post-meta-width: 25%;
+	@forum-post-meta-width: 25%; // Number and unit
 // -------------------------------
 // Gallery
 // -------------------------------
 	@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
 	@gallery-style: ; // simple, framed
-	@gallery-hover: border; // border, opacity, zoom
+	@gallery-hover: border; // border, opacity
 // -------------------------------
 // Highlight-block
 // -------------------------------
-	@highlight-border: @border-solid;
-	@colour-highlight-bg: #eee;
-	@colour-highlight-fg: #000;
-	@highlight-padding: @padding;
+	@highlight-border: @border-solid; // Border style
+	@colour-highlight-bg: fade(@primary-colour,3%); // Colour
+	@colour-highlight-fg: #000; // Colour
+	@highlight-padding: @padding; // Number and unit
 	@highlight-radius: @border-radius; // disabled, number
-	@highlight-block: enabled; // disabled, simple
+	@highlight-block: enabled; // disabled, enabled
+// -------------------------------
+// Modal
+// -------------------------------	
+	@has-modal: enabled;
+	@modal-colour: rgba(0, 0, 0, 0.5);
 // -------------------------------
 // Pagination
 // -------------------------------
 	@pagination: blocks; // disabled, simple, blocks
-	@colour-pagination-bg: #eee; // colour
-	@colour-pagination-fg: #222; // colour
-	@colour-pagination-current-bg: #222; // colour
-	@colour-pagination-current-fg: #eee; // colour
-	@colour-pagination-hover-bg: #ddd; // colour
-	@colour-pagination-hover-fg: #111; // colour
-	@pagination-border-colour: #ccc; // disabled, hex
-	@pagination-border-style: solid; // disabled, style
-	@pagination-border-width: 1px; // disabled, 
-	@pagination-margin: 5px;
+	@colour-pagination-bg: fade(@primary-colour,3%); // Colour
+	@colour-pagination-fg: #222; // Colour
+	@colour-pagination-current-bg: @primary-colour; // Colour
+	@colour-pagination-current-fg: #eee; // Colour
+	@colour-pagination-hover-bg: fade(@primary-colour,10%); // Colour
+	@colour-pagination-hover-fg: #111; // Colour
+	@pagination-border: 1px solid @primary-colour; // Border style
+	@pagination-margin: 5px; // Number and unit
 	@pagination-padding: 0.75em 1em; // 1 - 4 numbers
 	@pagination-radius: @border-radius; // disabled, number
 // -------------------------------
 // Progress-bar
 // -------------------------------
-	@progress: enabled; // disabled, simple
-	@colour-progress-bg: #eee;
-	@colour-progress-fg: #999;
+	@progress: enabled; // disabled, enabled
+	@colour-progress-bg: fade(@primary-colour,10%); // Colour
+	@colour-progress-fg: @primary-colour; // Colour
+
 // -------------------------------
 // Pull-quotes
 // -------------------------------
-	@pullquotes: enabled; // disabled, overhang-right, overhang-left
-	@pullquotes-width: 20%;
-	@colour-pullquotes-bg: #eee;
-	@colour-pullquotes-fg: #666;
-	@pullquotes-border-radius: @border-radius;
-	@pullquotes-font-size: 16px;
-	@pullquotes-margin: @padding;
-	@pullquotes-padding: @padding;
+	@pullquotes: enabled; // disabled, enabled
+	@pullquotes-width: 20%; // Number and unit
+	@colour-pullquotes-bg: #eee; // Colour
+	@colour-pullquotes-fg: #666; // Colour
+	@pullquotes-border-radius: @border-radius; // Number and unit
+	@pullquotes-font-size: 16px; // Number and unit
+	@pullquotes-margin: @padding; // Number and unit
+	@pullquotes-padding: @padding; // Number and unit
 // -------------------------------
 // Tables
 // -------------------------------
 	@tables: enabled; // disabled, enabled
-	@colour-table-body-bg: #fff; // colour
-	@colour-table-body-fg: #222; // colour
-	@colour-table-comparrison-col-1-bg: #fff;
-	@colour-table-comparrison-col-2-bg: #f6f6f6;
-	@colour-table-comparrison-col-3-bg: #eee;
-	@colour-table-comparrison-col-4-bg: #e5e5e5;
-	@colour-table-comparrison-col-5-bg: #ddd;
-	@colour-table-comparrison-col-6-bg: #d4d4d4;
-	@colour-table-comparrison-col-1-fg: #000;
-	@colour-table-comparrison-col-2-fg: #000;
-	@colour-table-comparrison-col-3-fg: #000;
-	@colour-table-comparrison-col-4-fg: #000;
-	@colour-table-comparrison-col-5-fg: #000;
-	@colour-table-comparrison-col-6-fg: #000;
-	@colour-table-even-bg: #ddd; // colour
-	@colour-table-foot-bg: #eee; // colour
-	@colour-table-foot-fg: #333; // colour
-	@colour-table-head-bg: #ccc; // colour
-	@colour-table-head-fg: #000; // colour
-	@colour-table-hover-bg: #666;
-	@colour-table-hover-fg: #fff;
-	@table-border-style: 1px solid #ccc;
+	@colour-table-body-bg: #fff; // Colour
+	@colour-table-body-fg: #222; // Colour
+	@colour-table-comparrison-col-1-bg: fade(@primary-colour,3%); // Colour
+	@colour-table-comparrison-col-2-bg: fade(@primary-colour,5%); // Colour
+	@colour-table-comparrison-col-3-bg: fade(@primary-colour,7%); // Colour
+	@colour-table-comparrison-col-4-bg: fade(@primary-colour,9%); // Colour
+	@colour-table-comparrison-col-5-bg: fade(@primary-colour,11%); // Colour
+	@colour-table-comparrison-col-6-bg: fade(@primary-colour,13%); // Colour
+	@colour-table-comparrison-col-1-fg: #000; // Colour
+	@colour-table-comparrison-col-2-fg: #000; // Colour
+	@colour-table-comparrison-col-3-fg: #000; // Colour
+	@colour-table-comparrison-col-4-fg: #000; // Colour
+	@colour-table-comparrison-col-5-fg: #000; // Colour
+	@colour-table-comparrison-col-6-fg: #000; // Colour
+	@colour-table-even-bg: fade(@primary-colour,5%); // Colour
+	@colour-table-foot-bg: fade(@primary-colour,10%); // Colour
+	@colour-table-foot-fg: #333; // Colour
+	@colour-table-head-bg: @primary-colour; // Colour
+	@colour-table-head-fg: #fff; // Colour
+	@colour-table-hover-bg: fade(@primary-colour,80%); // Colour
+	@colour-table-hover-fg: #fff; // Colour
+	@table-border: 1px solid fade(@primary-colour,5%); // Border style
 	@table-head-font-weight: bold; // bold, normal
-	@table-padding: (@padding / 1.2) (@padding * 1.5);
-	@table-promote-border-style: 2px solid #000;
+	@table-padding: (@padding / 1.2) (@padding * 1.5); // Number and unit
+	@table-promote-border: 2px solid @primary-colour; // Border style
 // -------------------------------
 // Tabs
 // -------------------------------
 	@tabs: blocks; // disabled, blocks, chevrons, trapezoid
-	@colour-tabs-bg: #eee; // colour
-	@colour-tabs-fg: #222; // colour
-	@colour-tabs-current-bg: #222; // colour
-	@colour-tabs-current-fg: #eee; // colour
-	@colour-tabs-hover-bg: #ddd; // colour
-	@colour-tabs-hover-fg: #111; // colour
+	@colour-tabs-bg: fade(@primary-colour,3%); // Colour
+	@colour-tabs-fg: @primary-colour; // Colour
+	@colour-tabs-current-bg: @primary-colour; // Colour
+	@colour-tabs-current-fg: #fff; // Colour
+	@colour-tabs-hover-bg: fade(@primary-colour,10%); // Colour
+	@colour-tabs-hover-fg: @primary-colour; // Colour
 	@tabs-border-colour: #ccc; // disabled, colour
 	@tabs-border-style: solid; // disabled, style
-	@tabs-border-width: 1px; // disabled, 
+	@tabs-border-width: 0; // Number and unit
 	@tabs-content-padding: @padding; // 1 - 4 numbers
 	@tabs-padding: 0.75em 2em; // 1 - 4 numbers
-	@tabs-radius: @border-radius; // disabled, number
-	@dynamic-tabs: enabled; // 
-	@dynamic-tabs-qty: 4;
+	@tabs-radius: @border-radius; // disabled, Number and unit
+	@dynamic-tabs: enabled; // disabled, enabled
+	@dynamic-tabs-qty: 4; // Number only
 // -------------------------------
 // Tags
 // -------------------------------
-	@colour-tags-bg: #eee; // colour
-	@colour-tags-fg: #222; // colour
-	@colour-tags-hover-bg: #ddd; // colour
-	@colour-tags-hover-fg: #111; // colour
-	@tags-border: @border-solid;
+	@colour-tags-bg: fade(@primary-colour,3%); // Colour
+	@colour-tags-fg: @primary-colour; // Colour
+	@colour-tags-hover-bg: fade(@primary-colour,10%); // Colour
+	@colour-tags-hover-fg: @primary-colour; // Colour
+	@tags-border: @border-solid; // Border style
 	@tags-padding: 0.25em 1em; // 1 - 4 numbers
 	@tags: simple; // disabled, simple
 // ###############################
@@ -366,92 +387,99 @@
 // -------------------------------
 // Basic styles
 // -------------------------------
-	@gsform-font-size: @text-size;
-	@gsforms-input-border-radius: 2px;
-	@gsforms-gutter: 20px;
-	@gsforms-col: 3%;
+	@gsform-font-size: @text-size; // Number and unit
+	@gsforms-input-border-radius: 2px; // Number and unit
+	@gsforms-gutter: 20px; // Number and unit
+	@gsforms-col: 3%; // Number and unit
 
-	@gsforms-input-bg: @white;
-	@gsforms-input-border: 1px solid #ccc;
-	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset;
+	@gsforms-input-bg: @white; // Colour
+	@gsforms-input-border: @border-solid; // Border style
+	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset; // Box Shadow style
 
-	@gsforms-input-required-border: 1px solid @text6;
-	@gsforms-input-required-bg: @white;
+	@gsforms-input-required-border: 1px solid @text6; // Border style
+	@gsforms-input-required-bg: @white; // Colour
 
-	@gsforms-input-focus-bg: @bg - 6;
-	@gsforms-input-focus-border: 1px solid #666;
-	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	@gsforms-input-focus-bg: @bg - 6; // Colour
+	@gsforms-input-focus-border: 1px solid #666; // Border style
+	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2); // Box shadow style
 
-	@gsforms-highlight-bg: @bg - 10;
+	@gsforms-highlight-bg: @bg - 10; // Colour
 
-	@gsforms-error-text: #c00;
-	@gsforms-error-border: #fcc;
-	@gsforms-error-bg: #c00;
+	@gsforms-error-text: #c00; // Colour
+	@gsforms-error-border: #fcc; // Colour
+	@gsforms-error-bg: #c00; // Colour
 
-	@gsforms-bordered-bg: transparent;
-	@gsforms-bordered-border: @border-solid;
-	@gsforms-bordered-footer: #f8f8f8;
+	@gsforms-bordered-bg: transparent; // Colour
+	@gsforms-bordered-border: @border-solid; // Number and unit
+	@gsforms-bordered-footer: #f8f8f8; // Colour
+
 // General styles
-	@has-pseudo-buttons: true;
-	@button-border: 0;
-	@button-font-size: 13px;
-	@button-font-weight: bold;
-	@button-border-radius: 5px;
-	@button-box-shadow: none;
-	@button-text-shadow: none;
-	@button-hover-box-shadow: none;
-	@button-hover-text-shadow: none;
+	@has-pseudo-buttons: enabled; // disabled, enabled
+	@button-border: 0; // Number
+	@button-font-size: 13px; // Number and unit
+	@button-font-weight: bold; // Font weight
+	@button-border-radius: 5px; // Number and unit
+	@button-box-shadow: none; // Box Shadow style
+	@button-text-shadow: none; // Text Shadow style
+	@button-hover-box-shadow: none; // Box Shadow style
+	@button-hover-text-shadow: none; // Text Shadow style
 // Colours - primary
-	@button-grad: @button-bg-start,	@button-bg-1, @button-bg-2;
-	@button-hover-grad: @button-hover-bg-start,	@button-hover-bg-1, @button-hover-bg-2;
-	@button-secondary-grad: @button-secondary-bg-start,	@button-secondary-bg-1, @button-secondary-bg-2;
-	@button-secondary-hover-grad: @button-secondary-hover-bg-start,	@button-secondary-hover-bg-1, @button-secondary-hover-bg-2;
-	@button-disabled-grad: @button-disabled-bg-start,	@button-disabled-bg-1, @button-disabled-bg-2;
-	@button-bg-start: top;
-	@button-bg-1: #45c351;
-	@button-bg-2: #308638;
-	@button-bg-fallback: #393;
-	@button-fg: #fff;
-	@cta-icon-fg: #fff;
+	@button-grad: @button-bg-start,	@button-bg-1, @button-bg-2; // Gradient style
+	@button-hover-grad: @button-hover-bg-start,	@button-hover-bg-1, @button-hover-bg-2; // Gradient style
+	@button-secondary-grad: @button-secondary-bg-start,	@button-secondary-bg-1, @button-secondary-bg-2; // Gradient style
+	@button-secondary-hover-grad: @button-secondary-hover-bg-start,	@button-secondary-hover-bg-1, @button-secondary-hover-bg-2; // Gradient style
+	@button-disabled-grad: @button-disabled-bg-start,	@button-disabled-bg-1, @button-disabled-bg-2; // Gradient style
+	@button-bg-start: top; // Gradient start point
+	@button-bg-1: #45c351; // Colour
+	@button-bg-2: #308638; // Colour
+	@button-bg-fallback: #393; // Colour
+	@button-fg: #fff; // Colour
+	@cta-icon-fg: #fff; // Colour
+
 // Colours - primary - hover
-	@button-hover-bg-start: top;
-	@button-hover-bg-1: saturate(lighten(@button-bg-1,8),10);
-	@button-hover-bg-2: saturate(lighten(@button-bg-2,8),10);
-	@button-hover-bg-fallback: saturate(lighten(@button-bg-fallback,8),10);
-	@button-hover-fg: #fff;
+	@button-hover-bg-start: top; // Gradient start point
+	@button-hover-bg-1: saturate(lighten(@button-bg-1,8),10); // Colour
+	@button-hover-bg-2: saturate(lighten(@button-bg-2,8),10); // Colour
+	@button-hover-bg-fallback: saturate(lighten(@button-bg-fallback,8),10); // Colour
+	@button-hover-fg: #fff; // Colour
+
 // Colours - secondary
-	@button-secondary-bg-start: top;
-	@button-secondary-bg-1: #3fb3f8;
-	@button-secondary-bg-2: #2b77a5;
-	@button-secondary-bg-fallback: #41b3f9;
-	@button-secondary-fg: #fff;
+	@button-secondary-bg-start: top; // Gradient start point
+	@button-secondary-bg-1: #3fb3f8; // Colour
+	@button-secondary-bg-2: #2b77a5; // Colour
+	@button-secondary-bg-fallback: #41b3f9; // Colour
+	@button-secondary-fg: #fff; // Colour
+
 // Colours - secondary - hover
-	@button-secondary-hover-bg-start: top;
-	@button-secondary-hover-bg-1: saturate(lighten(@button-secondary-bg-1,8),10);;
-	@button-secondary-hover-bg-2: saturate(lighten(@button-secondary-bg-2,8),10);;
-	@button-secondary-hover-bg-fallback: #2493d6;
-	@button-secondary-hover-fg: #fff;
-	@cta-icon-secondary-hover-fg: #fff;
+	@button-secondary-hover-bg-start: top; // Gradient start point
+	@button-secondary-hover-bg-1: saturate(lighten(@button-secondary-bg-1,8),10); // Colour
+	@button-secondary-hover-bg-2: saturate(lighten(@button-secondary-bg-2,8),10); // Colour
+	@button-secondary-hover-bg-fallback: #2493d6; // Colour
+	@button-secondary-hover-fg: #fff; // Colour
+	@cta-icon-secondary-hover-fg: #fff; // Colour
+
 // Colours - disabled
-	@button-disabled-bg-start: top;
-	@button-disabled-bg-1: #ccc;
-	@button-disabled-bg-2: #ccc;
-	@button-disabled-bg-fallback: #ccc;
-	@button-disabled-fg: #eee;
+	@button-disabled-bg-start: top; // Gradient start point
+	@button-disabled-bg-1: #ccc; // Colour
+	@button-disabled-bg-2: #ccc; // Colour
+	@button-disabled-bg-fallback: #ccc; // Colour
+	@button-disabled-fg: #eee; // Colour
+
 // Colours - disabled - hover
-	@button-disabled-hover-bg-start: top;
-	@button-disabled-hover-bg-1: #ccc;
-	@button-disabled-hover-bg-2: #ccc;
-	@button-disabled-hover-bg-fallback: #ccc;
-	@button-disabled-hover-fg: #eee;
-	@cta-icon-disabled-hover-fg: #eee;
+	@button-disabled-hover-bg-start: top; // Gradient start point
+	@button-disabled-hover-bg-1: #ccc; // Colour
+	@button-disabled-hover-bg-2: #ccc; // Colour
+	@button-disabled-hover-bg-fallback: #ccc; // Colour
+	@button-disabled-hover-fg: #eee; // Colour
+	@cta-icon-disabled-hover-fg: #eee; // Colour
+
 // Icons
 	@cta-icon: arrow; // disabled, arrow, arrow-in-circle
 // Button sizing and padding
-	@button-scale: 1em;
-	@sml-scale: 1;
-	@std-scale: 1.2;
-	@lrg-scale: 1.4;
+	@button-scale: 1em; // Number and unit
+	@sml-scale: 1; // Number
+	@std-scale: 1.2; // Number
+	@lrg-scale: 1.4; // Number
 // ###############################
 // end forms.less
 // ###############################
@@ -459,45 +487,46 @@
 // ###############################
 // start framework.less
 // ###############################
-	@framework-min-width: 320px;
-	@framework-max-width: 940px;
-	@framework-cols: 16;
-	@framework-h-gutter: 20px;
-	@framework-v-gutter: 20px;
-	@fs-base: 13px;
+	@framework-min-width: 320px; // Number and unit
+	@framework-max-width: 940px; // Number and unit
+	@framework-cols: 16; // Number
+	@framework-h-gutter: 20px; // Number and unit
+	@framework-v-gutter: 20px; // Number and unit
+	@fs-base: 13px; // Number and unit
 // logo
-	@colour-logo: #fff; // colour
-	@colour-logo-hover: #fff; // colour
+	@colour-logo: #fff; // Colour
+	@colour-logo-hover: #fff; // Colour
 	@logo-position: center; // center, left, right
-	@logo-width: 200px;
+	@logo-width: 200px; // Number and unit
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
-	@logo-margins: 8px 0 12px;
-	@logo-case: uppercase;
-	@logo-sub-case: lowercase;
-	@logo-url: "logo.svg"; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo))
-	@logo-sub: disabled; // enabled, disabled
+	@logo-margins: 60px 0 60px; // Number and unit
+	@logo-case: uppercase; // none, default, capitalize, uppercase, lowercase, initial, inherit
+	@logo-sub-case: none; // none, default, capitalize, uppercase, lowercase, initial, inherit
+	@logo-url: disabled; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
+	@logo-sub: enabled; // enabled, disabled
 		// if disabled
-		@logo-font-size: 70px;
-		@logo-sub-font-size: 16px;
+		@logo-font-size: 56px; // Number and unit
+		@logo-sub-font-size: 16px; // Number and unit
 
 	@images-url: ; // where you save all your images
-	@nav-width: 25%;
+	@nav-width: 25%; // Number and unit
 // Responsive breakpoints
-	@bp-350: 350px;
-	@bp-400: 400px;
-	@bp-450: 450px;
-	@bp-500: 500px;
-	@bp-550: 550px;
-	@bp-600: 600px;
-	@bp-650: 650px;
-	@bp-700: 700px;
-	@bp-750: 750px;
-	@bp-800: 800px;
-	@bp-850: 850px;
-	@bp-900: 900px;
-	@bp-tools-nav: @bp-550;
-	@bp-header-nav: @bp-550;
-	@bp-side-nav: ;
+	@bp-350: 350px; // Number and unit
+	@bp-400: 400px; // Number and unit
+	@bp-450: 450px; // Number and unit
+	@bp-500: 500px; // Number and unit
+	@bp-550: 550px; // Number and unit
+	@bp-600: 600px; // Number and unit
+	@bp-650: 650px; // Number and unit
+	@bp-700: 700px; // Number and unit
+	@bp-750: 750px; // Number and unit
+	@bp-800: 800px; // Number and unit
+	@bp-850: 850px; // Number and unit
+	@bp-900: 900px; // Number and unit
+	@bp-tools-nav: @bp-550; // Choose a break point from list above or use a number and unit
+	@bp-header-nav: @bp-550; // Choose a break point from list above or use a number and unit
+	@bp-side-nav: ; // Choose a break point from list above or use a number and unit
+
 // ###############################
 // end framework.less
 // ###############################
@@ -505,13 +534,13 @@
 // ###############################
 // start grid.less
 // ###############################
-	@side-gutters: true;
-	@padded-grid: false;
+	@side-gutters: true; // true, false
+	@padded-grid: false; // true, false
 	@grid-system: fractions; // fractions, disabled
 	// set main breakpoints
-	@dt: 960px;
-	@tb: 600px;
-	@mb: 320px;
+	@dt: 960px; // Number and unit
+	@tb: 600px; // Number and unit
+	@mb: 320px; // Number and unit
 // ###############################
 // end grid.less
 // ###############################
@@ -531,9 +560,9 @@
 	@has-tools-nav: enabled; //disabled, enabled
 	@tools-nav-position: both; // both, center, left, right, justify
 	@tools-nav-style: dividers; // blocks, dividers
-	@tools-nav-padding: @padding (@padding + 2);
+	@tools-nav-padding: @padding (@padding + 2); // Number and unit
 		// if blocks
-		@tools-nav-border: 1px solid #ccc;
+		@tools-nav-border: @border-solid; // Border style
 		// if pipes
 		@vertical-divider: \0020 |; // can be anything for example |, \, >, :, ][
 		// You can use utf8 hexc odes like the following 
@@ -546,20 +575,23 @@
 	@has-header-nav: enabled; //disabled, enabled
 	@header-nav-position: full-fluid; // full-fluid, full-equal, center, left, right
 	@header-nav-style: blocks; // blocks, dividers, tabs
-	@header-nav-padding: (@padding + 2) (@padding + 4);
+	@header-nav-padding: (@padding + 2) (@padding + 4); // Number and unit
 		// if blocks
-		@header-nav-border: 1px solid @colour-header-nav-border;
+		@header-nav-border: 1px solid @colour-header-nav-border; // Border style
+
 // breadcrumbs
 	@has-breadcrumbs-nav: enabled; //disabled, enabled
-	@breadcrumbs-style: bullets; // disabled, blocks, bullets, checvrons, simple
-	@breadcrumbs-padding: 1em;
-	@breadcrumbs-space: 1;
-	@breadcrumbs-bullet: >;
+	@breadcrumbs-style: chevrons; // disabled, blocks, bullets, chevrons
+	@breadcrumbs-padding: 1em; // Number and unit
+	@breadcrumbs-space: 0.2em; // Number and unit
+	@breadcrumbs-bullet: >; // Bullet Character
+
 // side navigation in main container
 	@has-side-nav: enabled; // disabled, enabled
 	@side-nav-style: disabled; // disabled, simple, blocks, lines
-	@side-nav-padding: @padding (@padding + 2);
-	@side-nav-border: 1px solid @colour-side-nav-border;
+	@side-nav-padding: (@padding / 2) @padding; // Number and unit
+	@side-nav-border: 1px solid @colour-side-nav-border; // Border style
+
 // flyouts
 	@flyouts-width: disabled; // disabled, single, multi, full
 // ###############################
@@ -571,9 +603,9 @@
 // ###############################
 	@padding: 12px; // 0 - 9px
 	@border-radius: 5px; // 0 - 9px
-	@border-solid: 1px solid #ccc;
-	@border-dotted: 1px dotted #ccc;
-	@opacity: 0.8;
+	@border-solid: 1px solid #ccc; //  Border style
+	@border-dotted: 1px dotted #ccc; //  Border style
+	@opacity: 0.8; // Number and unit
 // ###############################
 // end styles.less
 // ###############################
@@ -590,44 +622,46 @@
 		@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
 		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700);
 
-	@heading-font-family: Raleway;
-	@heading-font-weight: 200;
-	@heading-alt-font-weight: 300;
-	@heading-alt2-font-weight: 400;
+	@heading-font-family: Raleway; // Font family name
+	@heading-font-weight: 200; // Font weight
+	@heading-alt-font-weight: 300; // Font weight
+	@heading-alt2-font-weight: 400; // Font weight
 
-	@body-font-family: "Droid Sans";
-	@body-font-weight: 400;
-	@body-alt-font-weight: 700;
+	@body-font-family: "Droid Sans"; // Font family name
+	@body-font-weight: 400; // Font weight
+	@body-alt-font-weight: 700; // Font weight
 
-	@nav-font-family: Raleway;
-	@nav-font-weight: 700;
+	@nav-font-family: Raleway; // Font family name
+	@nav-font-weight: 400; // Font weight
 
-	@logo-font-family: Raleway;
-	@logo-font-weight: 300;
-
-	@text-size: 13px;
-	@line-height: 1.4;
-	@h1-size: 40px;
-	@h1-line-height: 1.2em;
-	@h1-margin: 0.3em;
-	@h2-size: 36px;
-	@h2-line-height: 1.2em;
-	@h2-margin:  0.3em;
-	@h3-size: 32px;
-	@h3-line-height: 1.2em;
-	@h3-margin: 0.3em;
-	@h4-size: 28px;
-	@h4-line-height: 1.2em;
-	@h4-margin: 0.3em;
-	@h5-size: 24px;
-	@h5-line-height: 1.2em;
-	@h5-margin: 0.3em;
-	@h6-size: 20px;
-	@h6-line-height: 1.4em;
-	@h6-margin: 0.3em;
-	@tools-nav-font-size: 13px;
-	@header-nav-font-size: 13px;
-	@side-nav-font-size: 14px;
+	@logo-font-family: Raleway; // Font family name
+	@logo-font-weight: 300; // Font weight
+ 
+	@text-size: 13px; // Number and unit
+	@line-height: 1.4em; // Number and unit
+	@h1-size: 40px; // Number and unit
+	@h1-line-height: 1.2em; // Number and unit
+	@h1-margin: 0.3em; // Number and unit
+	@h2-size: 36px; // Number and unit
+	@h2-line-height: 1.2em; // Number and unit
+	@h2-margin:  0.3em; // Number and unit
+	@h3-size: 32px; // Number and unit
+	@h3-line-height: 1.2em; // Number and unit
+	@h3-margin: 0.3em; // Number and unit
+	@h4-size: 28px; // Number and unit
+	@h4-line-height: 1.2em; // Number and unit
+	@h4-margin: 0.3em; // Number and unit
+	@h5-size: 24px; // Number and unit
+	@h5-line-height: 1.2em; // Number and unit
+	@h5-margin: 0.3em; // Number and unit
+	@h6-size: 20px; // Number and unit
+	@h6-line-height: 1.4em; // Number and unit
+	@h6-margin: 0.3em; // Number and unit
+	@tools-nav-font-size: 13px; // Number and unit
+	@header-nav-font-size: 13px; // Number and unit
+	@side-nav-font-size: 14px; // Number and unit
 // ###############################
 // end type.less
 // ###############################
+
+@primary-colour: rgba(0,0,0,1);

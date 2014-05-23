@@ -222,6 +222,16 @@
 }
 
 // -------------------------------
+// Modal boxes
+// -------------------------------
+.modal when not (@has-modal = disabled){display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0;z-index: 999; align-items: center; justify-content: center;
+	&:target {display: flex;}
+	& > a {width: 100%; height: 100%; position: fixed; top: 0; left: 0;
+		.hide-text;
+	}
+	& > div {box-shadow: 0 0 1000px 1000px @modal-colour; background-color: @bg; position: relative; width: 90%;}
+}
+// -------------------------------
 // Pagination
 // -------------------------------
 .pagination when not (@pagination = disabled){
