@@ -39,7 +39,7 @@
 				</div>
 				<nav class="main">
 					<ul>
-						<li><a href="default.php">Home</a></li>
+						<li><a href="index.php">Home</a></li>
 						<li><a href="template-widgets.php">Standard Widets</a></li>
 						<li><a href="template-grid-sizes.php">Grid system</a></li>
 						<li><a href="template-forms.php">Forms</a></li>
