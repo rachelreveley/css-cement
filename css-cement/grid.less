@@ -60,8 +60,11 @@
 		.fs-base; .padded-grid;
 	}
 	& .parent {max-width: none; padding-left: 0; width: 100% !important;}
-}
 
+}
+ .nested {
+		& > div > .parent  {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -10px;}
+	}
 // side gutters
 	.side-gutters() when (@side-gutters = false){
 @media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
