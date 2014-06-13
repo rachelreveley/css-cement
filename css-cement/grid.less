@@ -60,10 +60,10 @@
 			.fs-base; .padded-grid;
 		}
 		& .parent {max-width: none; padding-left: 0; width: 100% !important;}
-
+		body > * > div & {margin-left: -10px; margin-right: -10px; width: calc(100% + 20px); max-width: none;}
 	}
 	 .nested {
-			& > div > .parent  {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -10px;}
+			& > div > .parent {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -10px;}
 	}
 // side gutters
 	.side-gutters() when (@side-gutters = false){
@@ -78,7 +78,7 @@
 }
 	}
 
-	.side-gutters() when (@side-gutters = true){padding-left: @margin-dt;}
+// 	.side-gutters() when (@side-gutters = true){padding-left: @margin-dt;}
 
 	.header-nav-position() when (@side-gutters = false){
 @media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
@@ -195,7 +195,6 @@
 }
 // tablet sized grid
 @media screen and (min-width: @tb) and (max-width: @dt) {
-		padding-left: @margin-tb;
 		& > * {margin-right: (@margin-tb / 2); margin-left: (@margin-tb / 2); margin-bottom: @margin-tb;}
 		&.tb-{
 			&19-20 > * {width: calc(@col-19-20 - @margin-tb);}
@@ -288,7 +287,6 @@
 }
 // mobile sized grid
 @media screen and (max-width: @tb) {
-		padding-left: @margin-mb;
 		& > * {margin-right: (@margin-mb / 2); margin-left: (@margin-mb / 2); margin-bottom: @margin-mb;}
 		&.mb-{
 			&19-20 > * {width: calc(@col-19-20 - @margin-mb);}
@@ -381,7 +379,6 @@
 }
 // small mobile sized grid
 @media screen and (max-width: @mb) {
-		padding-left: @margin-mb;
 		& > *{margin-right: @margin-mb; margin-bottom: @margin-mb;}
 		&.mb-{
 			&20 > *, &19 > *, &18 > *, &17 > *, &16 > *, &15 > *, &14 > *, &13 > *, &12 > *, &11 > *, &10 > *, &9 > *, &8 > *, &7 > *, &6 > *, &5 > *, &4 > *, &3 > *, &2 > *, &1 > * {width: calc(@col-1-1 - @margin-mb);}
