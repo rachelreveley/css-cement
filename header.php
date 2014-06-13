@@ -18,6 +18,7 @@
 									// if false, url's are already relative to the
 									// entry less file
 									//resource
+				strictMath: true,
 			};
 		</script>
 		<script src="less.js" type="text/javascript"></script>
