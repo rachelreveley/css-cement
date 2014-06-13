@@ -4,35 +4,35 @@
 						<div>
 							<div class="highlight">
 								<p>CSS Cement is a CSS / HTML framework that uses the power of LESS to make a system that you not only build on top of but build with.</p>
-								<p>The drive behind CSS Cement was my disapointment with some of the leading front-end frameworks. I wanted a framework that was more semantic with less framework specific markup and classes and less reliance on changing markup to change the look of an element. I also wanted something lightweight enough to be usable on a customer facing site, meaning that the code had to be configurable rather tha overridable.</p>
+								<p>The drive behind CSS Cement was my disapointment with some of the leading front-end frameworks. I wanted a framework that was more semantic with less framework specific markup and classes and less reliance on changing markup to change the look of an element. I also wanted something lightweight enough to be usable on customer facing sites, meaning that the code had to be lightweight and therefore configurable rather tha overridable.</p>
 								<p>This is where the name CSS Cement came from, CSS Cement is supposed to be a framework you use to build your site with rather than a framework you build on top of.</p>
 							</div>
 
-							<h2>Widgets</h2>
+							<h2><a href="template-widgets.php">Widgets</a></h2>
 
 							<p>A number of optional and highly configurable widgets are included from tabs to bar charts. If you don't need a feature, you can simply disable it and it's CSS wont be compiled.</p>
 
 							<p>All the semantic widgets are documented in the Standard widgets page above. I have also created some non-semantic widgets that I didn't feel where apropriate to add with the semantic widgets but where nifty enough to include if needed. These are in the other widgets page.</p>
 
-							<h2>The Grid</h2>
+							<h2><a href="template-grid.php"><a href="">The Grid</a></h2>
 
 							<p>The grid system is based on fractions and allows you to switch the number of columns even on the same page and allows up to 20 columns. The grid system is nestable and fully responsive with configurable break points and minimum / maximum site widths.</p>
 
 							<p>Another feature of the grid is that multiple rows of child elements can be used without specifying an nth class or clearing at a certain point, making the system ideal for ecommerce sites.</p>
 
-							<h2>Forms</h2>
+							<h2><a href="template-forms.php">Forms</a></h2>
 							<p>The code used for these forms was first developed a few years ago with the aim that the markup should be simple and not dependent upon the form's layout. More recently I made the code responsive and add more options for styling.</p>
 
 							<p>So no matter if your form is vertical, horizontal or inline, your markup stays the same and just a single class change is needed.</p>
 
-							<h2>Type</h2>
+							<h2><a href="template-type.php">Type</a></h2>
 							<p>I have only included basic type styles for now but plan to refine these at a later date.</p>
 
-							<h2>Mixins</h2>
+							<h2><a href="template-mixins.php">Mixins</a></h2>
 
 							<p>CSS Cement contains a number of mixins designed to make using vendor extensions easier and also a number of page layout helpers and behaviour fixes.</p>
 
-							<h2>Themes</h2>
+							<h2><a href="themes.php">Themes</a></h2>
 
 							<p>Themes are the key to building a site with CSS Cement, a theme will contain all of the necessary variables from CSS Cement along with any custom CSS and sample HTML to get you started. It is recommended that themes are used as starter points or for inspiration rather than as finished site designs.</p>
 
