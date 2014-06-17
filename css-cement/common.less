@@ -274,6 +274,30 @@ p[data-pullquote] when not (@pullquotes = disabled) {
 	&[data-pullquote-position="right"]:before {float: right; margin: 0 0 @padding @padding;}
 	&[data-pullquote-position="center"]:before {position: relative; left: (50% - (@pullquotes-width / 2)); right: (50% - (@pullquotes-width / 2));}
 }
+// -------------------------------
+// Status Messages
+// -------------------------------
+	.status-message when not (@has-status-messages = disabled) {margin-bottom: @status-messages-margin; font-size: @status-messages-font-size; padding: @status-messages-padding  @status-messages-padding 0 @status-messages-padding; border-radius: @status-messages-radius;
+		color: @colour-status-messages-default-fg; background-color: @colour-status-messages-default-bg; border: @status-messages-default-border;
+		& h2 {font-size: @status-messages-heading-font-size; color: @colour-status-messages-default-heading-fg;}
+		& p {color: @colour-status-messages-default-fg;}
+		& a {color: @colour-status-messages-default-a-fg;}
+		&.success {color: @colour-status-messages-success-fg; background-color: @colour-status-messages-success-bg; border: @status-messages-success-border;
+			& h2 {color: @colour-status-messages-success-heading-fg;}
+			& p {color: @colour-status-messages-success-fg;}
+			& a {color: @colour-status-messages-success-a-fg;}
+		}
+		&.danger {color: @colour-status-messages-danger-fg; background-color: @colour-status-messages-danger-bg; border: @status-messages-danger-border;
+			& h2 {color: @colour-status-messages-danger-heading-fg;}
+			& p {color: @colour-status-messages-danger-fg;}
+			& a {color: @colour-status-messages-danger-a-fg;}
+		}
+		&.warning {color: @colour-status-messages-warning-fg; background-color: @colour-status-messages-warning-bg; border: @status-messages-warning-border;
+			& h2 {color: @colour-status-messages-warning-heading-fg;}
+			& p {color: @colour-status-messages-warning-fg;}
+			& a {color: @colour-status-messages-warning-a-fg;}
+		}
+	}
 
 // -------------------------------
 // Tables
@@ -401,7 +425,7 @@ table when not (@tables = disabled) {
 // -------------------------------
 // Zoomer
 // -------------------------------
-.zoomer when not (@zoomer = disabled) {
+.zoomer when not (@has-zoomer = disabled) {
 	& img {.transition(all .1s ease-in-out);}
 	&:hover img {.scale(@zoomer-zoom-level);}
 }
