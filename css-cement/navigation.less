@@ -243,21 +243,46 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 // -------------------------------
 // Flyout menus
 // -------------------------------
-	header when not (@has-flyout-header = disabled) {
+
+	@has-flyout-tools: full-width; // full-width, multi-col, single-col
+	@has-flyout-header: single-col; // full-width, multi-col, single-col
+	@has-flyout-main: full-width; // full-width, multi-col, single-col
+
+	.tools when not (@has-flyout-tools = disabled) {.has-flyouts;}
+	.tool nav > ul > li:hover > ul when (@has-flyout-tools = full-width) {.flyout-layout-full-width;}
+	.tools nav > ul > li:hover > ul when (@has-flyout-tools = multi-col) {.flyout-layout-multi-col;}
+	.tools nav > ul > li:hover > ul when (@has-flyout-tools = single-col) {.flyout-layout-single-col;}
+
+	header when not (@has-flyout-header = disabled) {.has-flyouts;}
+	header nav > ul > li:hover > ul when (@has-flyout-header = full-width) {.flyout-layout-full-width;}
+	header nav > ul > li:hover > ul when (@has-flyout-header = multi-col) {.flyout-layout-multi-col;}
+	header nav > ul > li:hover > ul when (@has-flyout-header = single-col) {.flyout-layout-single-col;}
+
+	.main when not (@has-flyout-main = disabled) {.has-flyouts;}
+	.main nav > ul > li:hover > ul when (@has-flyout-main = full-width) {.flyout-layout-full-width;}
+	.main nav > ul > li:hover > ul when (@has-flyout-main = multi-col) {.flyout-layout-multi-col;}
+	.main nav > ul > li:hover > ul when (@has-flyout-main = single-col) {.flyout-layout-single-col;}
+
+	.has-flyouts(){
 		& nav > ul {position: relative;
 			& > li {
 				& > ul {position: absolute; display: none;
 					& > li {display: block; width: 100%;}
 				}
 				&:hover {
-					& > ul {display: block;}
-					& > ul when not (@flyout-layout = full-width) {width: @flyout-width;}
-					& > ul when (@flyout-layout = full-width) {width: 100%; left: 0;}
-					& > ul when not (@flyout-layout = single-col) {display: table;
-						.classless-grid;
-						& > li {display: table-cell;}
+					& > ul {display: block;
 					}
 				}
 			}
 		}
 	}
+
+	.flyout-layout-full-width() {width: 100%; left: 0; display: table;
+		.classless-grid;
+		& > li {display: table-cell;}
+	}
+	.flyout-layout-multi-col() {width: @flyout-width; display: table;
+		.classless-grid;
+		& > li {display: table-cell;}
+	}
+	.flyout-layout-single-col() {width: @flyout-width;}

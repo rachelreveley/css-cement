@@ -142,9 +142,11 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 // -------------------------------
 // Flyout menus
 // -------------------------------
-	@has-flyout-header: enabled; // enabled, disabled
-	@flyout-layout: full-width; // single-col, multi-col, full-width
-	@flyout-width: 300px; // number
+	@has-flyout-tools: full-width; // full-width, multi-col, single-col
+	@has-flyout-header: single-col; // full-width, multi-col, single-col
+	@has-flyout-main: full-width; // full-width, multi-col, single-col
+	@flyout-width: 70%; // number
+
 // -------------------------------
 // button colours
 // -------------------------------
@@ -592,8 +594,6 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@side-nav-padding: (@padding / 2) @padding; // Number and unit
 	@side-nav-border: 1px solid @colour-side-nav-border; // Border style
 
-// flyouts
-	@flyouts-width: disabled; // disabled, single, multi, full
 // ###############################
 // end navigation.less
 // ###############################
