@@ -401,7 +401,7 @@ table when not (@tables = disabled) {
 // -------------------------------
 // Zoomer
 // -------------------------------
-.zoomer {
+.zoomer when not (@zoomer = disabled) {
 	& img {.transition(all .1s ease-in-out);}
-	&:hover img {.scale(2);}
+	&:hover img {.scale(@zoomer-zoom-level);}
 }
