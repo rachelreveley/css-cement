@@ -78,6 +78,13 @@
 	-webkit-transform-origin: (@origin);
 	}
 
+ 	.scale(@scale: 1) {
+  -webkit-transform: scale(@scale);  /* Chrome, Safari 3.1+ */
+     -moz-transform: scale(@scale);  /* Firefox 3.5-15 */
+      -ms-transform: scale(@scale);  /* IE 9 */
+       -o-transform: scale(@scale);  /* Opera 10.50-12.00 */
+          transform: scale(@scale);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+	}
 	.transition(@transition){
     -webkit-transition: (@transition);
        -moz-transition: (@transition);

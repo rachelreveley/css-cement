@@ -39,6 +39,9 @@
 									</fieldset>	
 								</form>
 							</div>
+							<div class="zoomer" data-uri="http://lorempixel.com/400/200/food/">
+								<img src="http://lorempixel.com/400/200/food/" />
+							</div>
 						</div>
 					</div>
 <?php include("footer.php"); ?>
