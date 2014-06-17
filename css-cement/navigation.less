@@ -243,11 +243,6 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 // -------------------------------
 // Flyout menus
 // -------------------------------
-
-	@has-flyout-tools: full-width; // full-width, multi-col, single-col
-	@has-flyout-header: single-col; // full-width, multi-col, single-col
-	@has-flyout-main: full-width; // full-width, multi-col, single-col
-
 	.tools when not (@has-flyout-tools = disabled) {.has-flyouts;}
 	.tool nav > ul > li:hover > ul when (@has-flyout-tools = full-width) {.flyout-layout-full-width;}
 	.tools nav > ul > li:hover > ul when (@has-flyout-tools = multi-col) {.flyout-layout-multi-col;}

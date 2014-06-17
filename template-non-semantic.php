@@ -39,7 +39,7 @@
 									</fieldset>	
 								</form>
 							</div>
-							<div class="zoomer" data-uri="http://lorempixel.com/400/200/food/">
+							<div class="zoomer">
 								<img src="http://lorempixel.com/400/200/food/" />
 							</div>
 						</div>
