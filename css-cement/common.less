@@ -4,9 +4,9 @@
 // -------------------------------
 // Badges
 // -------------------------------
-.badge when (@badge = enabled){
-	display: inline-block; border-radius: 1em; padding: 3px 4px; min-width: 1em; text-align: center; font-size: 11px; line-height: 1em;
-}
+	.badge when (@has-badge = enabled){
+		display: inline-block; border-radius: @badge-radius; padding: @badge-padding; min-width: 1em; text-align: center; font-size: @badge-font-size; line-height: 1em;
+	}
 
 // -------------------------------
 // Bar charts
