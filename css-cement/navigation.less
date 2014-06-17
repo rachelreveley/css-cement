@@ -253,10 +253,10 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 	header nav > ul > li:hover > ul when (@has-flyout-header = multi-col) {.flyout-layout-multi-col;}
 	header nav > ul > li:hover > ul when (@has-flyout-header = single-col) {.flyout-layout-single-col;}
 
-	.main when not (@has-flyout-main = disabled) {.has-flyouts;}
-	.main nav > ul > li:hover > ul when (@has-flyout-main = full-width) {.flyout-layout-full-width;}
-	.main nav > ul > li:hover > ul when (@has-flyout-main = multi-col) {.flyout-layout-multi-col;}
-	.main nav > ul > li:hover > ul when (@has-flyout-main = single-col) {.flyout-layout-single-col;}
+	nav.main when not (@has-flyout-main = disabled) {.has-flyouts;}
+	nav.main  > ul > li:hover > ul when (@has-flyout-main = full-width) {.flyout-layout-full-width;}
+	nav.main > ul > li:hover > ul when (@has-flyout-main = multi-col) {.flyout-layout-multi-col;}
+	nav.main > ul > li:hover > ul when (@has-flyout-main = single-col) {.flyout-layout-single-col;}
 
 	.has-flyouts(){
 		& nav > ul {position: relative;
@@ -281,3 +281,17 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 		& > li {display: table-cell;}
 	}
 	.flyout-layout-single-col() {width: @flyout-width;}
+
+// -------------------------------
+// Basic piano style mobile menu
+// -------------------------------
+@has-mobile-menu: piano;
+@has-mobile-menu-breapoint: @bp-650;
+	nav.main  > ul when (@has-mobile-menu = piano) {
+@media screen and (max-width: @has-mobile-menu-breapoint) {
+		display: block;
+		& > li {display: block;
+			&:hover ul {display: none;}
+		}
+}
+	}
