@@ -11,41 +11,40 @@
 // -------------------------------
 // Bar charts
 // -------------------------------
-.bar-chart when not (@bar-chart = disabled) {position: relative;
-	.clearfix;
-	& .x-axis,
-	& .y-axis {display: block; position: absolute;}
-	& .x-axis {bottom: 0; left: @bar-chart-outer-padding;}
-	& .y-axis {.rotate(90deg); top: @bar-chart-outer-padding; left: 0;  .origin(50% 0% 0);}
-	& dl {width: @bar-chart-width; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg; margin: 0 @bar-chart-outer-padding @bar-chart-outer-padding; 	
+	.bar-chart when not (@bar-chart = disabled) {position: relative;
 		.clearfix;
-	}
-	& dt {float: left; clear: left; text-align: right; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding;}
-	& dt when not (@bar-chart-label-angle = disabled) {.rotate(@bar-chart-label-angle); .origin(80% 100% 0);}
-	& dd {float: left; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding; .box-sizing(border-box); text-align: @bar-chart-value-location;
-		text-indent: 999em; font-size: 0; background-color: @colour-bar-chart-bars-bg; color: @colour-bar-chart-bars-fg;
-
-		&:before{content: attr(data-value); display: block; font-size: 13px;}
-		&:nth-of-type(1) {margin-top: (@bar-chart-bar-margin * 2);}
-		&:nth-last-of-type(1) {margin-bottom: (@bar-chart-bar-margin * 2);}
-	}
-// set bar sizes
-		@iterations: 100;
-		.loopingClass (@index) when (@index > -1){
-			& [data-value="@{index}"] {width: ~"@{index}%";}
-			.loopingClass (@index - 1);
+		& .x-axis,
+		& .y-axis {display: block; position: absolute;}
+		& .x-axis {bottom: 0; left: @bar-chart-outer-padding;}
+		& .y-axis {.rotate(90deg); top: @bar-chart-outer-padding; left: 0;  .origin(50% 0% 0);}
+		& dl {width: @bar-chart-width; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg; margin: 0 @bar-chart-outer-padding @bar-chart-outer-padding; 	
+			.clearfix;
 		}
-		.loopingClass (@iterations);
-		& dd when (@bar-chart-value-location = hide) {}
+		& dt {float: left; clear: left; text-align: right; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding;}
+		& dt when not (@bar-chart-label-angle = disabled) {.rotate(@bar-chart-label-angle); .origin(80% 100% 0);}
+		& dd {float: left; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding; .box-sizing(border-box); text-align: @bar-chart-value-location;
+			text-indent: 999em; font-size: 0; background-color: @colour-bar-chart-bars-bg; color: @colour-bar-chart-bars-fg;
+
+			&:before{content: attr(data-value); display: block; font-size: 13px;}
+			&:nth-of-type(1) {margin-top: (@bar-chart-bar-margin * 2);}
+			&:nth-last-of-type(1) {margin-bottom: (@bar-chart-bar-margin * 2);}
+		}
+// set bar sizes
+	@iterations: 100;
+	.loopingClass (@index) when (@index > -1){
+		& [data-value="@{index}"] {width: ~"@{index}%";}
+		.loopingClass ((@index - 1));
+	}
+	.loopingClass (@iterations);
 		&-vertical {.rotate(-90deg);}
 	}
 // Move number out of bar when smaller than certain size
-/*	[data-value="1"]:before {
+	[data-value="1"]:before {
     	color: @colour-bar-chart-bars-below-fg; position: relative; text-align: right; left: @bar-chart-value-move-below-indent;
 	}
 	.loopBuilder (@index) when (@index =< @bar-chart-value-move-below) {
 		@loopClass: ~'[data-value="@{index}"]:before';
-		@{loopClass} 
+		@{loopClass}
 		{
 			.extender() when (@index > 1) {
 				&:extend([data-value="1"]:before all);
@@ -53,10 +52,10 @@
 			.extender() when (@index = 1) {}
 			.extender();
 		}
-		.loopBuilder(@index + 1);
+		.loopBuilder((@index + 1));
 	}
 	.loopBuilder(1);
-*/
+
 // -------------------------------
 // Calendar
 // -------------------------------
