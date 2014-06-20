@@ -59,10 +59,11 @@
 		& > *{ display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
 			.fs-base; .padded-grid;
 		}
-		& .parent {max-width: none; padding-left: 0; width: 100% !important;}
+		& .parent {max-width: none; padding-left: 0; width: 100% !important; margin-left: 0;}
 		body > * > div & {margin-left: -10px; margin-right: -10px; width: calc(100% + 20px); max-width: none;}
 	}
 	 .nested {
+	 		& > div {padding: 0 !important;}
 			& > div > .parent {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -10px;}
 	}
 // side gutters
@@ -93,7 +94,6 @@
 	}
 	.padded-grid() when not (@padded-grid = false){
 		.parent .parent > div {margin-bottom: 0;}
-		.nested > div {padding: 0 !important}
 @media screen and (min-width: @dt) {padding: @margin-dt (@margin-dt / 2) @margin-dt (@margin-dt / 2);}
 @media screen and (min-width: @tb) and (max-width: @dt) {padding: @margin-tb;}
 @media screen and (min-width: @mb) and (max-width: @tb) {padding: @margin-mb;}
