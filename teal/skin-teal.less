@@ -142,9 +142,11 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 // -------------------------------
 // Flyout menus
 // -------------------------------
-	@has-flyout-header: enabled; // enabled, disabled
-	@flyout-layout: full-width; // single-col, multi-col, full-width
-	@flyout-width: 300px; // number
+	@has-flyout-tools: single-col; // full-width, multi-col, single-col
+	@has-flyout-header: single-col; // full-width, multi-col, single-col
+	@has-flyout-main: single-col; // full-width, multi-col, single-col
+	@flyout-width: 180%; // number
+
 // -------------------------------
 // button colours
 // -------------------------------
@@ -181,7 +183,11 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 // -------------------------------
 // Badges
 // -------------------------------
-	@badge: enabled; // disabled, simple
+	@has-badge: enabled; // disabled, enabled
+	@badge-radius: 100%;
+	@badge-padding: 3px 4px;
+	@badge-font-size: 11px;
+
 // -------------------------------
 // Bar charts
 // -------------------------------
@@ -200,6 +206,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@bar-chart-value-move-below: 20; // Number
 	@bar-chart-value-move-below-indent: 30px; // Number and unit
 	@bar-chart-label-angle: 0deg; // degrees, disabled
+
 // -------------------------------
 // Calendar
 // -------------------------------
@@ -224,6 +231,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@calendar-padding: 5px; // Number and unit
 	@calendar-heading-padding: 5px; // Number and unit
 	@calendar-heading-position: 35px; // Number and unit
+
 // -------------------------------
 // Chat bubbles
 // -------------------------------
@@ -237,6 +245,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@chat-padding: 10px; // Number and unit
 	@chat-radius: 4px; // Number and unit
 	@chat-tail-size: 20px; // Number and unit
+
 // -------------------------------
 // corner ribbons
 // -------------------------------
@@ -268,12 +277,14 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@forum-post-head: right; // left, right
 	@forum-post-meta-style: collapsed; // simple, collapsed
 	@forum-post-meta-width: 25%; // Number and unit
+
 // -------------------------------
 // Gallery
 // -------------------------------
 	@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
 	@gallery-style: ; // simple, framed
 	@gallery-hover: border; // border, opacity
+
 // -------------------------------
 // Highlight-block
 // -------------------------------
@@ -283,11 +294,13 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@highlight-padding: @padding; // Number and unit
 	@highlight-radius: @border-radius; // disabled, number
 	@highlight-block: enabled; // disabled, enabled
+
 // -------------------------------
 // Modal
 // -------------------------------	
 	@has-modal: enabled;
 	@modal-colour: rgba(0, 0, 0, 0.5);
+
 // -------------------------------
 // Pagination
 // -------------------------------
@@ -302,6 +315,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@pagination-margin: 5px; // Number and unit
 	@pagination-padding: 0.75em 1em; // 1 - 4 numbers
 	@pagination-radius: @border-radius; // disabled, number
+
 // -------------------------------
 // Progress-bar
 // -------------------------------
@@ -320,6 +334,42 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@pullquotes-font-size: 16px; // Number and unit
 	@pullquotes-margin: @padding; // Number and unit
 	@pullquotes-padding: @padding; // Number and unit
+
+// -------------------------------
+// Status Messages
+// -------------------------------
+	@has-status-messages: enabled; // disabled, enabled
+
+	@colour-status-messages-danger-bg: @danger-bg; // Colour
+	@colour-status-messages-danger-fg: @danger-fg; // Colour
+	@colour-status-messages-danger-a-fg: @danger-fg; // Colour
+	@colour-status-messages-danger-heading-fg: @danger-fg; // Colour
+	@status-messages-danger-border: 1px solid @danger-fg; // Border style
+
+	@colour-status-messages-default-bg: @default-bg; // Colour
+	@colour-status-messages-default-fg: @default-fg; // Colour
+	@colour-status-messages-default-a-fg: @default-fg; // Colour
+	@colour-status-messages-default-heading-fg: @default-fg; // Colour
+	@status-messages-default-border: 1px solid @default-fg; // Border style
+
+	@colour-status-messages-success-bg: @success-bg; // Colour
+	@colour-status-messages-success-fg: @success-fg; // Colour
+	@colour-status-messages-success-a-fg: @success-fg; // Colour
+	@colour-status-messages-success-heading-fg: @success-fg; // Colour
+	@status-messages-success-border: 1px solid @success-fg; // Border style
+
+	@colour-status-messages-warning-bg: @warning-bg; // Colour
+	@colour-status-messages-warning-fg: @warning-fg; // Colour
+	@colour-status-messages-warning-a-fg: @warning-fg; // Colour
+	@colour-status-messages-warning-heading-fg: @warning-fg; // Colour
+	@status-messages-warning-border: 1px solid @warning-fg; // Border style
+
+	@status-messages-radius: @border-radius; // Number and unit
+	@status-messages-font-size: 13px; // Number and unit
+	@status-messages-heading-font-size: 16px; // Number and unit
+	@status-messages-margin: @padding; // Number and unit
+	@status-messages-padding: @padding; // Number and unit
+
 // -------------------------------
 // Tables
 // -------------------------------
@@ -349,6 +399,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@table-head-font-weight: bold; // bold, normal
 	@table-padding: (@padding / 1.2) (@padding * 1.5); // Number and unit
 	@table-promote-border: 2px solid @primary-colour; // Border style
+
 // -------------------------------
 // Tabs
 // -------------------------------
@@ -367,6 +418,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@tabs-radius: @border-radius; // disabled, Number and unit
 	@dynamic-tabs: enabled; // disabled, enabled
 	@dynamic-tabs-qty: 4; // Number only
+
 // -------------------------------
 // Tags
 // -------------------------------
@@ -377,6 +429,13 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@tags-border: @border-solid; // Border style
 	@tags-padding: 0.25em 1em; // 1 - 4 numbers
 	@tags: simple; // disabled, simple
+
+// -------------------------------
+// Zoomer
+// -------------------------------
+	@has-zoomer: enabled;
+	@zoomer-zoom-level: 2;
+
 // ###############################
 // end common.less
 // ###############################
@@ -423,6 +482,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@button-text-shadow: none; // Text Shadow style
 	@button-hover-box-shadow: none; // Box Shadow style
 	@button-hover-text-shadow: none; // Text Shadow style
+
 // Colours - primary
 	@button-grad: @button-bg-start,	@button-bg-1, @button-bg-2; // Gradient style
 	@button-hover-grad: @button-hover-bg-start,	@button-hover-bg-1, @button-hover-bg-2; // Gradient style
@@ -475,11 +535,13 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 
 // Icons
 	@cta-icon: arrow; // disabled, arrow, arrow-in-circle
+
 // Button sizing and padding
 	@button-scale: 1em; // Number and unit
 	@sml-scale: 1; // Number
 	@std-scale: 1.2; // Number
 	@lrg-scale: 1.4; // Number
+
 // ###############################
 // end forms.less
 // ###############################
@@ -541,6 +603,7 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@dt: 960px; // Number and unit
 	@tb: 600px; // Number and unit
 	@mb: 320px; // Number and unit
+
 // ###############################
 // end grid.less
 // ###############################
@@ -592,8 +655,6 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@side-nav-padding: (@padding / 2) @padding; // Number and unit
 	@side-nav-border: 1px solid @colour-side-nav-border; // Border style
 
-// flyouts
-	@flyouts-width: disabled; // disabled, single, multi, full
 // ###############################
 // end navigation.less
 // ###############################
@@ -660,8 +721,8 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@tools-nav-font-size: 13px; // Number and unit
 	@header-nav-font-size: 13px; // Number and unit
 	@side-nav-font-size: 14px; // Number and unit
+
 // ###############################
 // end type.less
 // ###############################
-
-@primary-colour: rgba(0,102,102,1);
+	@primary-colour: rgba(0,102,102,1);
