@@ -22,7 +22,7 @@
 		& select[size]{vertical-align: top;}
 
 // legends paras & labels
-		& legend {.h2; white-space: normal; margin-right: @gsforms-gutter;}
+		& legend {white-space: normal; margin-right: @gsforms-gutter;}
 		& legend + *,
 		& legend + input[type=hidden] + * {-webkit-margin-top-collapse: separate; margin-top: 5px;} // adds a litle separation between legend and next element in webkiT, firefox behaves differently.
 		& label,
@@ -283,12 +283,12 @@
 
 //Special styled forms
 // Boxed forms
-		& .highlight li,
+		& .hover li,
 		& .dividers li,
 		& .bordered li {margin-bottom: 2px; padding-top: 10px; z-index: 1; position: relative;}
-	   
-	    & .highlight li:hover {background-color: @gsforms-highlight-bg;}
-		& .dividers li:after {border-bottom: 1px dotted #ccc; margin-left: -47%; width: 143%;
+
+	    & .hover li:hover {background-color: @gsforms-hover-bg;}
+		& .dividers li:after {border-bottom: @gsforms-dividers-border; margin-left: -47%; width: 143%;
 			.pseudo;
 		}
 		& .bordered {position: relative; background-color: @gsforms-bordered-bg;

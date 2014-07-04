@@ -510,8 +510,8 @@
 						</fieldset>
 					</form>
 					<form class="gsform" action="test">
-						<fieldset class="highlight">
-							<legend>Highlighted form</legend>
+						<fieldset class="hover">
+							<legend>Hoverable form</legend>
 							<ol>
 								<li>
 									<label for="">Generic text:</label>

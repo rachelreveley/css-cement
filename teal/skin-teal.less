@@ -452,25 +452,27 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@gsforms-col: 3%; // Number and unit
 
 	@gsforms-input-bg: @white; // Colour
-	@gsforms-input-border: @border-solid; // Border style
+	@gsforms-input-border: 1px solid @primary-colour; // Border style
 	@gsforms-input-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05) inset; // Box Shadow style
 
-	@gsforms-input-required-border: 1px solid @text6; // Border style
+	@gsforms-input-required-border: 1px solid @text; // Border style
 	@gsforms-input-required-bg: @white; // Colour
 
 	@gsforms-input-focus-bg: @bg - 6; // Colour
-	@gsforms-input-focus-border: 1px solid #666; // Border style
+	@gsforms-input-focus-border: 1px solid @text; // Border style
 	@gsforms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2); // Box shadow style
 
-	@gsforms-highlight-bg: @bg - 10; // Colour
+	@gsforms-hover-bg: fade(@primary-colour,3%);  // Colour
 
 	@gsforms-error-text: #c00; // Colour
 	@gsforms-error-border: #fcc; // Colour
 	@gsforms-error-bg: #c00; // Colour
 
 	@gsforms-bordered-bg: transparent; // Colour
-	@gsforms-bordered-border: @border-solid; // Number and unit
-	@gsforms-bordered-footer: #f8f8f8; // Colour
+	@gsforms-bordered-border: 1px solid @primary-colour; // Number and unit
+	@gsforms-bordered-footer: fade(@primary-colour,3%); // Colour
+
+	@gsforms-dividers-border: 1px dotted @primary-colour; // Number and unit
 
 // General styles
 	@has-pseudo-buttons: enabled; // disabled, enabled
