@@ -486,31 +486,25 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 	@button-hover-text-shadow: none; // Text Shadow style
 
 // Colours - primary
-	@button-bg: #393; // Colour
+	@button-bg: @primary-colour; // Colour
 	@button-fg: #fff; // Colour
 	@cta-icon-fg: #fff; // Colour
 
 // Colours - primary - hover
-	@button-hover-bg: saturate(lighten(@button-bg,8),10); // Colour
+	@button-hover-bg: lighten(@primary-colour,5%); // Colour
 	@button-hover-fg: #fff; // Colour
 
 // Colours - secondary
-	@button-secondary-bg: #41b3f9; // Colour
+	@button-secondary-bg: @secondary-colour; // Colour
 	@button-secondary-fg: #fff; // Colour
 
 // Colours - secondary - hover
-	@button-secondary-hover-bg: #2493d6; // Colour
+	@button-secondary-hover-bg: lighten(@secondary-colour,5%); // Colour
 	@button-secondary-hover-fg: #fff; // Colour
-	@cta-icon-secondary-hover-fg: #fff; // Colour
 
 // Colours - disabled
 	@button-disabled-bg: #ccc; // Colour
 	@button-disabled-fg: #eee; // Colour
-
-// Colours - disabled - hover
-	@button-disabled-hover-bg: #ccc; // Colour
-	@button-disabled-hover-fg: #eee; // Colour
-	@cta-icon-disabled-hover-fg: #eee; // Colour
 
 // Icons
 	@cta-icon: arrow; // disabled, arrow
@@ -704,4 +698,5 @@ imply change the value of the @primary-colour var at the bottom of this file to 
 // ###############################
 // end type.less
 // ###############################
-	@primary-colour: rgba(0,0,0,1);
+	@primary-colour: #ddd;
+	@secondary-colour: #ccc;
