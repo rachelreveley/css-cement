@@ -3,17 +3,17 @@
 // ###############################
 
 // -------------------- //
-// gsform
+// form
 // -------------------- //
 // basic layout
-	.gsform {float: left; width: 100%;
+	.form {float: left; width: 100%;
 		.clearfix;
 		& .box {border: 0;}
 		& ol li fieldset {display: block; margin-bottom: 15px; width: 100%; border: 0;}
 
 		& ol li,
 		& .gs700 ol li {margin-bottom: 0; padding: 0 0 0 36%; text-indent: -32%; border: 0; float: none; width: 100% !important; font-size: 0; .box-sizing(border-box);
-			& *{text-indent: 0; font-size: @gsform-font-size; display: inline-block; vertical-align: middle;}
+			& *{text-indent: 0; font-size: @form-font-size; display: inline-block; vertical-align: middle;}
 		}
 
 		& li > textarea,
@@ -22,12 +22,12 @@
 		& select[size]{vertical-align: top;}
 
 // legends paras & labels
-		& legend {white-space: normal; margin-right: @gsforms-gutter;}
+		& legend {white-space: normal; margin-right: @forms-gutter;}
 		& legend + *,
 		& legend + input[type=hidden] + * {-webkit-margin-top-collapse: separate; margin-top: 5px;} // adds a litle separation between legend and next element in webkiT, firefox behaves differently.
 		& label,
 		& .label,
-		& .logic {width: 50%; margin-right: 0; text-align: right; padding: 0 @gsforms-gutter 0 0; margin-bottom: 10px;
+		& .logic {width: 50%; margin-right: 0; text-align: right; padding: 0 @forms-gutter 0 0; margin-bottom: 10px;
 			.box-sizing(border-box);
 		}
 		& .logic {padding-bottom: 0.5em;}
@@ -36,14 +36,14 @@
 		& label strong + span {display: block;}
 		& ol li p label,
 		& ol li p .note,
-		& .optional {width: auto; max-width: 100%; margin: 0 @gsforms-col 0 0; text-align: left;/*possible conflict - used on prod suggest form*/}
+		& .optional {width: auto; max-width: 100%; margin: 0 @forms-col 0 0; text-align: left;/*possible conflict - used on prod suggest form*/}
 
 		& label:first-child,
 		& .label:first-child,
 		& p:first-child,
 		& p:first-child + label {text-indent: 0; margin-left: 0; display: inline-block; -moz-box-sizing: border-box;}
 
-		& p {display: block; margin: 0 @gsforms-col .5em -56%;
+		& p {display: block; margin: 0 @forms-col .5em -56%;
 			&:first-child {margin-left: -56%; display: block; max-width: 150%; width: 150%;
 				& + label {margin-left: -50% !important;}
 			}
@@ -83,7 +83,7 @@
 		& select,
 		& textarea,
 		& span.readonly {margin-bottom: 10px; margin-right: 4%;}
-		& select {margin-right:@gsforms-col;}
+		& select {margin-right:@forms-col;}
 
 // Text inputs
 		& input[type=text],
@@ -93,8 +93,8 @@
 		& input[type=date],
 		& input[type=range],
 		& textarea,
-		& span.readonly {width: 50%; padding: 1px 4px 2px; background-color: @gsforms-input-bg; box-shadow: @gsforms-input-shadow; border: @gsforms-input-border;
-			.border-radius(@gsforms-input-border-radius); .box-sizing(border-box);
+		& span.readonly {width: 50%; padding: 1px 4px 2px; background-color: @forms-input-bg; box-shadow: @forms-input-shadow; border: @forms-input-border;
+			.border-radius(@forms-input-border-radius); .box-sizing(border-box);
 		}
 
 // read only
@@ -140,11 +140,11 @@
 		& li input[type=number]:focus,
 		& li input[type=date]:focus,
 		& li input[type=range]:focus,
-		& li textarea:focus {border: @gsforms-input-focus-border; background-color: @gsforms-input-focus-bg; box-shadow: @gsforms-input-focus-shadow;}
+		& li textarea:focus {border: @forms-input-focus-border; background-color: @forms-input-focus-bg; box-shadow: @forms-input-focus-shadow;}
 		& input.button:focus {box-shadow: 0 0 transparent;}
 
 // buttongroups
-	buttongroup {margin: 0 @gsforms-col 10px (@gsforms-col * 12);
+	buttongroup {margin: 0 @forms-col 10px (@forms-col * 12);
 		& .button {margin: 0 -3px 0 0 !important;
 			&:last-child {margin-right: 0 !important;}
 			&:not(:last-child){border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;}
@@ -156,7 +156,7 @@
 		& [required=true],
 		& [class="required"] ~ input,
 		& [class="required"] ~ textarea,
-		& [class="required"] ~ select {border: @gsforms-input-required-border; background-color: @gsforms-input-required-bg;}
+		& [class="required"] ~ select {border: @forms-input-required-border; background-color: @forms-input-required-bg;}
 		& [title="Required"] label:after {content: "*"}
 		& [title="Required"] [type=radio] ~ label:after,
 		& [title="Required"] [type=checkbox] ~ label:after {content: "";}
@@ -164,14 +164,14 @@
 
 // Errors
 		& ol li label.error,
-		& ol li.error label {color: @gsforms-error-text;}
+		& ol li.error label {color: @forms-error-text;}
 		& ol li label.error {width: auto !important;}
 		& .error ~ .note,
 		& li.error .note {display: none;}
 		& input.error,
 		& textarea.error,
 		& li.error input,
-		& li.error textarea {border-color: @gsforms-error-border!important; background-color: lighten(@gsforms-error-bg, 45%)!important; color: @gsforms-error-text;}
+		& li.error textarea {border-color: @forms-error-border!important; background-color: lighten(@forms-error-bg, 45%)!important; color: @forms-error-text;}
 
 // fat forms
 		&.fatform,
@@ -240,8 +240,8 @@
 			& input,
 			& input + label {width: auto; display: inline-block; margin-bottom: 5px;}
 			& input,
-			& label {margin-left: 0; margin-right: @gsforms-col;}
-			& label {padding: 0 (@gsforms-col / 2) 0 0!important;}
+			& label {margin-left: 0; margin-right: @forms-col;}
+			& label {padding: 0 (@forms-col / 2) 0 0!important;}
 		}
 // inline vertical forms
 		& .inline-vertical {
@@ -251,8 +251,8 @@
 			& input,
 			& input + label {width: auto; display: block; text-align: left; margin-bottom: 5px;}
 			& input,
-			& label {margin-left: 0; margin-right: @gsforms-col;}
-			& label {padding: 0 (@gsforms-col / 2) 0 0!important;}
+			& label {margin-left: 0; margin-right: @forms-col;}
+			& label {padding: 0 (@forms-col / 2) 0 0!important;}
 		}
 		& .hidden-labels {
 			& label {.hide-text; display: inline-block; margin: 0 !important; padding: 0 !important;}
@@ -287,18 +287,18 @@
 		& .dividers li,
 		& .bordered li {margin-bottom: 2px; padding-top: 10px; z-index: 1; position: relative;}
 
-	    & .hover li:hover {background-color: @gsforms-hover-bg;}
-		& .dividers li:after {border-bottom: @gsforms-dividers-border; margin-left: -56%; width: 152%;
+	    & .hover li:hover {background-color: @forms-hover-bg;}
+		& .dividers li:after {border-bottom: @forms-dividers-border; margin-left: -56%; width: 152%;
 			.pseudo;
 		}
-		& .bordered {position: relative; background-color: @gsforms-bordered-bg;
+		& .bordered {position: relative; background-color: @forms-bordered-bg;
 	    	.clearfix;
-			&:before {border: @gsforms-bordered-border; position: absolute; top: 0; left: 0; bottom: 0; right: @gsforms-gutter; z-index: 0; pointer-events: none;
+			&:before {border: @forms-bordered-border; position: absolute; top: 0; left: 0; bottom: 0; right: @forms-gutter; z-index: 0; pointer-events: none;
 	    		.pseudo;
 	    	}
 			& legend {padding: 10px 0 0 12px !important;}
 	    	& .note {margin-right: 20px;}
-	    	.buttongroup {width: auto !important; background-color: @gsforms-bordered-footer; display: block; margin: 0 24px 4px 4px; padding-left: 40%}
+	    	.buttongroup {width: auto !important; background-color: @forms-bordered-footer; display: block; margin: 0 24px 4px 4px; padding-left: 40%}
 		}
 
 // widths

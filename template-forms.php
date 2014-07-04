@@ -72,7 +72,7 @@
 						<a href="" class="button lrg arrow">Button</a>
 						<button class="button lrg arrow">Button</button>
 
-					<form class="gsform" action="test">
+					<form class="form" action="test">
 						<fieldset>
 							<legend>Basic form</legend>
 							<ol>
@@ -488,7 +488,7 @@
 							</ol>
 						</fieldset>
 					</form>
-					<form class="gsform" action="test">
+					<form class="form" action="test">
 						<fieldset class="bordered">
 							<legend>Bordered form</legend>
 							<ol>
@@ -509,7 +509,7 @@
 							</ol>
 						</fieldset>
 					</form>
-					<form class="gsform" action="test">
+					<form class="form" action="test">
 						<fieldset class="hover">
 							<legend>Hoverable form</legend>
 							<ol>
@@ -530,7 +530,7 @@
 							</ol>
 						</fieldset>
 					</form>
-					<form class="gsform" action="test">
+					<form class="form" action="test">
 						<fieldset class="dividers">
 							<legend>Form with Dividers</legend>
 							<ol>
@@ -551,7 +551,7 @@
 							</ol>
 						</fieldset>
 					</form>
-					<form class="gsform" action="test">
+					<form class="form" action="test">
 						<fieldset class="inline hidden-labels">
 							<legend>labels inside fields</legend>
 							<ol>
