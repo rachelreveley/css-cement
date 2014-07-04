@@ -288,7 +288,7 @@
 		& .bordered li {margin-bottom: 2px; padding-top: 10px; z-index: 1; position: relative;}
 
 	    & .hover li:hover {background-color: @gsforms-hover-bg;}
-		& .dividers li:after {border-bottom: @gsforms-dividers-border; margin-left: -47%; width: 143%;
+		& .dividers li:after {border-bottom: @gsforms-dividers-border; margin-left: -56%; width: 152%;
 			.pseudo;
 		}
 		& .bordered {position: relative; background-color: @gsforms-bordered-bg;
@@ -341,14 +341,11 @@
 	&.std {	font-size: (@button-font-size * @std-scale);	padding: @std-padding;							border-radius: @std-border-radius;}
 	&.lrg {	font-size: (@button-font-size * @lrg-scale); 	padding: @lrg-padding;							border-radius: @lrg-border-radius;}
 // colours
-	.gradient(		       	@stops: @button-grad;					@fallback: @button-bg-fallback;);
-	&:hover {.gradient(		@stops: @button-hover-grad;				@fallback: @button-hover-bg-fallback;);}
-	&.secondary {.gradient(	@stops: @button-secondary-grad;			@fallback: @button-secondary-bg-fallback;); 		color: @button-secondary-fg;		border: @button-secondary-border;
-		&:hover {.gradient(	@stops: @button-secondary-hover-grad;	@fallback: @button-secondary-hover-bg-fallback;); 	color: @button-secondary-hover-fg;	border: @button-secondary-border-hover;}
+	&:hover 	{background-color: @button-hover-bg;}
+	&.secondary {background-color: @button-secondary-bg;			color: @button-secondary-fg;		border: @button-secondary-border;
+		&:hover {background-color: @button-secondary-hover-bg;	 	color: @button-secondary-hover-fg;	border: @button-secondary-border-hover;}
 	}
-	&[disabled] {cursor: default; text-shadow: none; color: @button-disabled-fg;
-		.gradient(			@stops: @button-disabled-grad;			@fallback: @button-disabled-bg-fallback;);border: @button-disabled-border;
-	}
+	&[disabled] {cursor: default; text-shadow: none; color: @button-disabled-fg;}
 }
 // buttons without icons
 .button when not (@cta-icon = disabled) {
