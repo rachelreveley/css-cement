@@ -345,7 +345,9 @@
 	&.secondary {background-color: @button-secondary-bg;			color: @button-secondary-fg;		border: @button-secondary-border;
 		&:hover {background-color: @button-secondary-hover-bg;	 	color: @button-secondary-hover-fg;	border: @button-secondary-border-hover;}
 	}
-	&[disabled] {background-color: @button-disabled-bg;  			color: @button-disabled-fg;cursor: default; text-shadow: none;}
+	&[disabled] {background-color: @button-disabled-bg;  			color: @button-disabled-fg;			cursor: default; text-shadow: none;
+		&:hover {color: @button-disabled-fg;}
+	}
 }
 // buttons without icons
 .button when not (@cta-icon = disabled) {
