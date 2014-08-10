@@ -303,12 +303,12 @@
 	@tables: enabled; // disabled, enabled
 	@colour-table-body-bg: @white; // hex
 	@colour-table-body-fg: @black; // hex
-	@colour-table-comparrison-col-1-bg: @white;
-	@colour-table-comparrison-col-2-bg: #f6f6f6;
-	@colour-table-comparrison-col-3-bg: #eee;
-	@colour-table-comparrison-col-4-bg: #e5e5e5;
-	@colour-table-comparrison-col-5-bg: #ddd;
-	@colour-table-comparrison-col-6-bg: #d4d4d4;
+	@colour-table-comparrison-col-1-bg: lighten(@bright-pink,50);
+	@colour-table-comparrison-col-2-bg: lighten(@bright-pink,40);
+	@colour-table-comparrison-col-3-bg: lighten(@bright-pink,30);
+	@colour-table-comparrison-col-4-bg: lighten(@bright-pink,20);
+	@colour-table-comparrison-col-5-bg: lighten(@bright-pink,10);
+	@colour-table-comparrison-col-6-bg: @bright-pink;
 	@colour-table-comparrison-col-1-fg: @black;
 	@colour-table-comparrison-col-2-fg: @black;
 	@colour-table-comparrison-col-3-fg: @black;
@@ -322,10 +322,10 @@
 	@colour-table-head-fg: @white; // hex
 	@colour-table-hover-bg: @purple;
 	@colour-table-hover-fg: @white;
-	@table-border-style: 1px solid @purple;
+	@table-border: 1px solid @purple;
 	@table-head-font-weight: bold; // bold, normal
 	@table-padding: (@padding / 1.2) (@padding * 1.5);
-	@table-promote-border-style: 2px solid @purple;
+	@table-promote-border: 2px solid @purple;
 // -------------------------------
 // Tabs
 // -------------------------------
