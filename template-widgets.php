@@ -91,9 +91,11 @@
 							<p><a href="#modal1" id="modal1-call">Sed quis enim nisl</a>. </p> 
 							<div class="modal" id="modal1">
 								<a href="#modal1-call">Close Dialogue</a>
-								<div class="parent dt-1-1 tb-1-1 mb-1-1">
-									<div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo tortor, sagittis id quam vitae, bibendum lobortis erat. Vestibulum sed dolor aliquam, fermentum eros vitae, aliquet ante. In eget pellentesque nulla, laoreet placerat mi. Nulla id egestas massa. Morbi non mattis tortor, blandit porta magna. Maecenas scelerisque odio non risus eleifend suscipit. Vestibulum diam tellus, mattis ac adipiscing vel, ullamcorper in nulla. Suspendisse mollis turpis vitae gravida lacinia. Pellentesque in congue felis. Aliquam purus augue, accumsan vel elit at, elementum varius arcu. Maecenas nulla massa, iaculis nec consequat molestie, condimentum vitae est. Mauris orci orci, bibendum euismod velit eu, porta consectetur nibh. Duis vulputate odio ac convallis elementum. Sed quis enim nisl. </p>
+								<div>
+									<div class="parent dt-1-1 tb-1-1 mb-1-1">
+										<div>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo tortor, sagittis id quam vitae, bibendum lobortis erat. Vestibulum sed dolor aliquam, fermentum eros vitae, aliquet ante. In eget pellentesque nulla, laoreet placerat mi. Nulla id egestas massa. Morbi non mattis tortor, blandit porta magna. Maecenas scelerisque odio non risus eleifend suscipit. Vestibulum diam tellus, mattis ac adipiscing vel, ullamcorper in nulla. Suspendisse mollis turpis vitae gravida lacinia. Pellentesque in congue felis. Aliquam purus augue, accumsan vel elit at, elementum varius arcu. Maecenas nulla massa, iaculis nec consequat molestie, condimentum vitae est. Mauris orci orci, bibendum euismod velit eu, porta consectetur nibh. Duis vulputate odio ac convallis elementum. Sed quis enim nisl. </p>
+										</div>
 									</div>
 								</div>
 							</div>
