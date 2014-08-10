@@ -62,8 +62,8 @@
 // -------------------------------
 // header navigation
 // -------------------------------
-	@colour-header-nav-level-0-fg: #fff; // 
-	@colour-header-nav-level-0-bg: #242424; // 
+	@colour-header-nav-level-0-fg: @white; // 
+	@colour-header-nav-level-0-bg: rgba(36,36,36,0.8); // 
 	@colour-header-nav-level-1-fg: #fff; // 
 	@colour-header-nav-level-1-bg: #242424; // 
 	@colour-header-nav-level-2-fg: #fff; // 
@@ -464,11 +464,11 @@
 	@logo-position: center; // center, left, right
 	@logo-width: 200px;
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
-	@logo-margins: 8px 0 12px;
+	@logo-margins: 24px 0 24px;
 	@logo-case: uppercase;
-	@logo-url: "logo.svg"; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
+	@logo-url: disabled; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
 		// if disabled
-		@logo-font-size: 70px;
+		@logo-font-size: 72px;
 
 	@images-url: ; // where you save all your images
 	@nav-width: 25%;
@@ -539,7 +539,7 @@
 	@header-nav-style: blocks; // blocks, dividers, tabs
 	@header-nav-padding: (@padding + 2) (@padding + 4);
 		// if blocks
-		@header-nav-border: 1px solid @colour-header-nav-border;
+		@header-nav-border: 0;
 
 // breadcrumbs
 	@has-breadcrumbs-nav: enabled; //disabled, enabled
@@ -632,3 +632,4 @@ header {position: relative; overflow: hidden;
 	& nav {z-index: 1; position: relative;}
 }
 .circle{.pseudo; width:0; height: 0; border-radius: 100%; box-shadow: 0 0 8px 8px rgba(255,255,255,0.1); position: absolute; visibility: visible; pointer-events: none;}
+div.main {padding-top: 20px;}
