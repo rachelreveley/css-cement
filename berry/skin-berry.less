@@ -1,24 +1,24 @@
 // ###############################
 // start colours.less
 // ###############################
-	.base-colors(#fff,#333); // hex
+	.base-colors(@white,#333); // hex
 // -------------------------------
 // primary containers
 // -------------------------------
-	@colour-body-fg: #222; // #fff, #000
-	@colour-body-bg: #666; // #fff, #000
+	@colour-body-fg: #222; // @white, @black
+	@colour-body-bg: #666; // @white, @black
 
-	@colour-tools-fg: #fff; // 
+	@colour-tools-fg: @white; // 
 	@colour-tools-bg: #111; // 
 	@colour-tools-inner-bg: #242424; // 
 
-	@colour-header-fg: #fff; // 
-	@colour-header-bg: #000; // 
+	@colour-header-fg: @white; // 
+	@colour-header-bg: @black; // 
 	@colour-header-inner-bg: transparent; // 
 
 	@colour-content-fg: #222; // 
-	@colour-content-bg: #fff; // 
-	@colour-content-inner-bg: #fff; // 
+	@colour-content-bg: @white; // 
+	@colour-content-inner-bg: @white; // 
 
 	@colour-footer-fg: #222; // 
 	@colour-footer-bg: #111; // 
@@ -33,25 +33,25 @@
 // -------------------------------
 // text
 // -------------------------------
-	@colour-heading: #066; // 
-	@colour-heading-alt: #222; // 
+	@colour-heading: @purple; // 
+	@colour-heading-alt: @deep-pink; // 
 	@colour-text: #222; // 
-	@colour-text-alt-1: #000; // 
-	@colour-text-alt-2: #000; // 
-	@colour-text-alt-3: #000; //
-	@colour-border: #fff; // 
+	@colour-text-alt-1: @black; // 
+	@colour-text-alt-2: @black; // 
+	@colour-text-alt-3: @black; //
+	@colour-border: @white; // 
 // -------------------------------
 // tools navigation
 // -------------------------------
-	@colour-tools-nav-level-0-fg: #fff; // 
+	@colour-tools-nav-level-0-fg: @white; // 
 	@colour-tools-nav-level-0-bg: #242424; // 
-	@colour-tools-nav-level-1-fg: #fff; // 
+	@colour-tools-nav-level-1-fg: @white; // 
 	@colour-tools-nav-level-1-bg: #242424; // 
-	@colour-tools-nav-level-2-fg: #fff; // 
+	@colour-tools-nav-level-2-fg: @white; // 
 	@colour-tools-nav-level-2-bg: #242424; // 
-	@colour-tools-nav-border: #fff; // 
+	@colour-tools-nav-border: @white; // 
 
-	@colour-tools-nav-level-0-hover-fg: #df13a8; // 
+	@colour-tools-nav-level-0-hover-fg: @bright-pink; // 
 	@colour-tools-nav-level-0-hover-bg: #333; // 
 	@colour-tools-nav-level-1-hover-fg: #ff0; // 
 	@colour-tools-nav-level-1-hover-bg: #333; // 
@@ -64,17 +64,17 @@
 // -------------------------------
 	@colour-header-nav-level-0-fg: @white; // 
 	@colour-header-nav-level-0-bg: rgba(36,36,36,0.8); // 
-	@colour-header-nav-level-1-fg: #fff; // 
+	@colour-header-nav-level-1-fg: @white; // 
 	@colour-header-nav-level-1-bg: #242424; // 
-	@colour-header-nav-level-2-fg: #fff; // 
+	@colour-header-nav-level-2-fg: @white; // 
 	@colour-header-nav-level-2-bg: #242424; // 
 	@colour-header-nav-border: #444; // 
 
-	@colour-header-nav-level-0-hover-fg: #fff; // 
-	@colour-header-nav-level-0-hover-bg: #306; // 
-	@colour-header-nav-level-1-hover-fg: #306; // 
+	@colour-header-nav-level-0-hover-fg: @white; // 
+	@colour-header-nav-level-0-hover-bg: rgba(51,0,102,0.8); // 
+	@colour-header-nav-level-1-hover-fg: @purple; // 
 	@colour-header-nav-level-1-hover-bg: #eee; // 
-	@colour-header-nav-level-2-hover-fg: #306; // 
+	@colour-header-nav-level-2-hover-fg: @purple; // 
 	@colour-header-nav-level-2-hover-bg: #eee; // 
 	@colour-header-nav-border: #282828; // 
 
@@ -85,9 +85,9 @@
 	@colour-breadcrumbs-nav-level-0-bg: #f5f5f5; // 
 	@colour-breadcrumbs-nav-level-1-fg: #066; // 
 	@colour-breadcrumbs-nav-level-1-bg: #f0f0f0; // 
-	@colour-breadcrumbs-nav-level-1-hover-fg: #306; // 
+	@colour-breadcrumbs-nav-level-1-hover-fg: @purple; // 
 	@colour-breadcrumbs-nav-level-1-hover-bg: #eee; // 
-	@colour-breadcrumbs-nav-border: #fff; // 
+	@colour-breadcrumbs-nav-border: @white; // 
 
 // -------------------------------
 // side navigation
@@ -95,36 +95,36 @@
 	@colour-side-nav-level-0-fg: #066; // 
 	@colour-side-nav-level-0-bg: #f5f5f5; // 
 	@colour-side-nav-level-1-fg: #066; // 
-	@colour-side-nav-level-1-bg: #fff; // 
+	@colour-side-nav-level-1-bg: @white; // 
 	@colour-side-nav-level-2-fg: #066; // 
-	@colour-side-nav-level-2-bg: #fff; // 
-	@colour-side-nav-border: #fff; // 
-	@colour-side-nav-level-0-hover-fg: #306; // 
+	@colour-side-nav-level-2-bg: @white; // 
+	@colour-side-nav-border: @white; // 
+	@colour-side-nav-level-0-hover-fg: @purple; // 
 	@colour-side-nav-level-0-hover-bg: #eee; // 
-	@colour-side-nav-level-1-hover-fg: #306; // 
+	@colour-side-nav-level-1-hover-fg: @purple; // 
 	@colour-side-nav-level-1-hover-bg: #eee; // 
-	@colour-side-nav-level-2-hover-fg: #306; // 
+	@colour-side-nav-level-2-hover-fg: @purple; // 
 	@colour-side-nav-level-2-hover-bg: #eee; //
-	@colour-side-nav-border: #fff; // 
+	@colour-side-nav-border: @white; // 
 
 // -------------------------------
 // footer navigation
 // -------------------------------
 // footer nav
 	@colour-footer-nav-level-0-fg: #066; // 
-	@colour-footer-nav-level-0-bg: #fff; // 
+	@colour-footer-nav-level-0-bg: @white; // 
 	@colour-footer-nav-level-1-fg: #066; // 
-	@colour-footer-nav-level-1-bg: #fff; // 
+	@colour-footer-nav-level-1-bg: @white; // 
 	@colour-footer-nav-level-2-fg: #066; // 
-	@colour-footer-nav-level-2-bg: #fff; // 
-	@colour-footer-nav-border: #fff; // 
-	@colour-footer-nav-level-0-hover-fg: #306; // 
+	@colour-footer-nav-level-2-bg: @white; // 
+	@colour-footer-nav-border: @white; // 
+	@colour-footer-nav-level-0-hover-fg: @purple; // 
 	@colour-footer-nav-level-0-hover-bg: #eee; // 
-	@colour-footer-nav-level-1-hover-fg: #306; // 
+	@colour-footer-nav-level-1-hover-fg: @purple; // 
 	@colour-footer-nav-level-1-hover-bg: #eee; // 
-	@colour-footer-nav-level-2-hover-fg: #306; // 
+	@colour-footer-nav-level-2-hover-fg: @purple; // 
 	@colour-footer-nav-level-2-hover-bg: #eee; // 
-	@colour-footer-nav-border: #fff; // 
+	@colour-footer-nav-border: @white; // 
 // -------------------------------
 // Flyout menus
 // -------------------------------
@@ -172,11 +172,11 @@
 // Bar charts
 // -------------------------------
 	@bar-chart: enabled;
-	@colour-bar-chart-bars-bg: #666;
-	@colour-bar-chart-bars-fg: #fff;
-	@colour-bar-chart-bars-below-fg: #000;
-	@colour-bar-chart-bg: #fff;
-	@colour-bar-chart-fg: #000;
+	@colour-bar-chart-bars-bg: @deep-pink;
+	@colour-bar-chart-bars-fg: @white;
+	@colour-bar-chart-bars-below-fg: @black;
+	@colour-bar-chart-bg: @white;
+	@colour-bar-chart-fg: @black;
 	@bar-chart-width: 500px;
 	@bar-chart-border: 1px solid #ccc;
 	@bar-chart-outer-padding: (@padding + 10px);
@@ -190,16 +190,18 @@
 // Calendar
 // -------------------------------
 	@has-calendar: enabled; // enabled, disabled
-	@colour-calendar-current-bg: #333;
-	@colour-calendar-current-fg: #fff;
+	@colour-calendar-current-bg: @deep-pink;
+	@colour-calendar-current-fg: @white;
 	@colour-calendar-next-bg: #f9f9f9;
 	@colour-calendar-next-fg: #999;
+	@colour-calendar-hover-bg: @purple;
+	@colour-calendar-hover-fg: @white;
 	@colour-calendar-previous-bg: #eee;
 	@colour-calendar-previous-fg: #666;
 	@colour-calendar-weekend-bg: #ddd;
-	@colour-calendar-weekend-fg: #000;
-	@colour-calendar-heading-bg: #000;
-	@colour-calendar-heading-fg: #fff;
+	@colour-calendar-weekend-fg: @black;
+	@colour-calendar-heading-bg: @deep-pink;
+	@colour-calendar-heading-fg: @white;
 	@calendar-cell-height: 65%;
 	@calendar-cell-width: 12%;
 	@calendar-margin:2%;
@@ -210,10 +212,10 @@
 // Chat bubbles
 // -------------------------------
 	@chat: bubbles; // disable, bubbles
-	@colour-chat-even-bg: #eee; // hex
-	@colour-chat-even-fg: #333; // hex
-	@colour-chat-odd-bg: #ddd; // hex
-	@colour-chat-odd-fg: #222; // hex
+	@colour-chat-even-bg: @bright-pink; // hex
+	@colour-chat-even-fg: @white; // hex
+	@colour-chat-odd-bg: @deep-pink; // hex
+	@colour-chat-odd-fg: @white; // hex
 	@chat-start: left; // left, right
 	@chat-margin: 20px;
 	@chat-padding: 10px;
@@ -223,9 +225,9 @@
 // corner ribbons
 // -------------------------------
 	@corner-ribbon: enabled; // disabled, enabled
-	@colour-corner-ribbon-bg: #000;
-	@colour-corner-ribbon-fg: #fff;
-	@corner-ribbon-border: 1px solid #aaa;
+	@colour-corner-ribbon-bg: @deep-pink;
+	@colour-corner-ribbon-fg: @white;
+	@corner-ribbon-border: 0;
 // -------------------------------
 // Feature hover effects
 // -------------------------------
@@ -235,14 +237,14 @@
 // Forums
 // -------------------------------
 	@forum: enabled; // disabled, enabled
-	@colour-forum-head-bg: #333;
-	@colour-forum-head-fg: #fff;
-	@colour-forum-meta-bg: #eee;
-	@colour-forum-meta-fg: #000;
-	@colour-forum-content-bg: #f9f9f9;
-	@colour-forum-content-fg: #000;
+	@colour-forum-head-bg: @deep-pink;
+	@colour-forum-head-fg: @white;
+	@colour-forum-meta-bg: @pale-pink;
+	@colour-forum-meta-fg: @black;
+	@colour-forum-content-bg: @white;
+	@colour-forum-content-fg: @black;
 	@colour-forum-quote-bg: rgba(0,0,0,0.1);
-	@colour-forum-quote-fg: #000;
+	@colour-forum-quote-fg: @black;
 	@forum-padding: @padding;
 	@forum-post-head: right; // left, right
 	@forum-post-meta-style: collapsed; // simple, collapsed
@@ -256,9 +258,9 @@
 // -------------------------------
 // Highlight-block
 // -------------------------------
-	@highlight-border: @border-solid;
-	@colour-highlight-bg: #eee;
-	@colour-highlight-fg: #000;
+	@highlight-border: none;
+	@colour-highlight-bg: @deep-pink;
+	@colour-highlight-fg: @white;
 	@highlight-padding: @padding;
 	@highlight-radius: @border-radius; // disabled, number
 	@highlight-block: enabled; // disabled, simple
@@ -266,13 +268,13 @@
 // Pagination
 // -------------------------------
 	@pagination: blocks; // disabled, simple, blocks
-	@colour-pagination-bg: #eee; // hex
-	@colour-pagination-fg: #222; // hex
-	@colour-pagination-current-bg: #222; // hex
-	@colour-pagination-current-fg: #eee; // hex
-	@colour-pagination-hover-bg: #ddd; // hex
-	@colour-pagination-hover-fg: #111; // hex
-	@pagination-border-colour: #ccc; // disabled, hex
+	@colour-pagination-bg: @bright-pink; // hex
+	@colour-pagination-fg: @white; // hex
+	@colour-pagination-current-bg: @deep-pink; // hex
+	@colour-pagination-current-fg: @white; // hex
+	@colour-pagination-hover-bg: @purple; // hex
+	@colour-pagination-hover-fg: @white; // hex
+	@pagination-border-colour: @white; // disabled, hex
 	@pagination-border-style: solid; // disabled, style
 	@pagination-border-width: 1px; // disabled, 
 	@pagination-margin: 5px;
@@ -282,8 +284,8 @@
 // Progress-bar
 // -------------------------------
 	@progress: enabled; // disabled, simple
-	@colour-progress-bg: #eee;
-	@colour-progress-fg: #999;
+	@colour-progress-bg: @pale-pink;
+	@colour-progress-fg: @purple;
 // -------------------------------
 // Pull-quotes
 // -------------------------------
@@ -299,42 +301,42 @@
 // Tables
 // -------------------------------
 	@tables: enabled; // disabled, enabled
-	@colour-table-body-bg: #fff; // hex
-	@colour-table-body-fg: #222; // hex
-	@colour-table-comparrison-col-1-bg: #fff;
+	@colour-table-body-bg: @white; // hex
+	@colour-table-body-fg: @black; // hex
+	@colour-table-comparrison-col-1-bg: @white;
 	@colour-table-comparrison-col-2-bg: #f6f6f6;
 	@colour-table-comparrison-col-3-bg: #eee;
 	@colour-table-comparrison-col-4-bg: #e5e5e5;
 	@colour-table-comparrison-col-5-bg: #ddd;
 	@colour-table-comparrison-col-6-bg: #d4d4d4;
-	@colour-table-comparrison-col-1-fg: #000;
-	@colour-table-comparrison-col-2-fg: #000;
-	@colour-table-comparrison-col-3-fg: #000;
-	@colour-table-comparrison-col-4-fg: #000;
-	@colour-table-comparrison-col-5-fg: #000;
-	@colour-table-comparrison-col-6-fg: #000;
-	@colour-table-even-bg: #ddd; // hex
-	@colour-table-foot-bg: #eee; // hex
-	@colour-table-foot-fg: #333; // hex
-	@colour-table-head-bg: #ccc; // hex
-	@colour-table-head-fg: #000; // hex
-	@colour-table-hover-bg: #666;
-	@colour-table-hover-fg: #fff;
-	@table-border-style: 1px solid #ccc;
+	@colour-table-comparrison-col-1-fg: @black;
+	@colour-table-comparrison-col-2-fg: @black;
+	@colour-table-comparrison-col-3-fg: @black;
+	@colour-table-comparrison-col-4-fg: @black;
+	@colour-table-comparrison-col-5-fg: @black;
+	@colour-table-comparrison-col-6-fg: @black;
+	@colour-table-even-bg: @pale-pink; // hex
+	@colour-table-foot-bg: @bright-pink; // hex
+	@colour-table-foot-fg: @white; // hex
+	@colour-table-head-bg: @deep-pink; // hex
+	@colour-table-head-fg: @white; // hex
+	@colour-table-hover-bg: @purple;
+	@colour-table-hover-fg: @white;
+	@table-border-style: 1px solid @purple;
 	@table-head-font-weight: bold; // bold, normal
 	@table-padding: (@padding / 1.2) (@padding * 1.5);
-	@table-promote-border-style: 2px solid #000;
+	@table-promote-border-style: 2px solid @purple;
 // -------------------------------
 // Tabs
 // -------------------------------
 	@tabs: blocks; // disabled, blocks, chevrons, trapezoid
-	@colour-tabs-bg: #eee; // hex
-	@colour-tabs-fg: #222; // hex
-	@colour-tabs-current-bg: #222; // hex
-	@colour-tabs-current-fg: #eee; // hex
-	@colour-tabs-hover-bg: #ddd; // hex
-	@colour-tabs-hover-fg: #111; // hex
-	@tabs-border-colour: #ccc; // disabled, colour
+	@colour-tabs-bg: @bright-pink; // hex
+	@colour-tabs-fg: @white; // hex
+	@colour-tabs-current-bg: @deep-pink; // hex
+	@colour-tabs-current-fg: @white; // hex
+	@colour-tabs-hover-bg: @purple; // hex
+	@colour-tabs-hover-fg: @white; // hex
+	@tabs-border-colour: @white; // disabled, colour
 	@tabs-border-style: solid; // disabled, style
 	@tabs-border-width: 1px; // Number 
 	@tabs-content-padding: @padding; // 1 - 4 numbers
@@ -407,27 +409,27 @@
 	@button-bg-1: #45c351;
 	@button-bg-2: #308638;
 	@button-bg-fallback: #393;
-	@button-fg: #fff;
-	@cta-icon-fg: #fff;
+	@button-fg: @white;
+	@cta-icon-fg: @white;
 // Colours - primary - hover
 	@button-hover-bg-start: top;
 	@button-hover-bg-1: saturate(lighten(@button-bg-1,8),10);
 	@button-hover-bg-2: saturate(lighten(@button-bg-2,8),10);
 	@button-hover-bg-fallback: saturate(lighten(@button-bg-fallback,8),10);
-	@button-hover-fg: #fff;
+	@button-hover-fg: @white;
 // Colours - secondary
 	@button-secondary-bg-start: top;
 	@button-secondary-bg-1: #3fb3f8;
 	@button-secondary-bg-2: #2b77a5;
 	@button-secondary-bg-fallback: #41b3f9;
-	@button-secondary-fg: #fff;
+	@button-secondary-fg: @white;
 // Colours - secondary - hover
 	@button-secondary-hover-bg-start: top;
 	@button-secondary-hover-bg-1: saturate(lighten(@button-secondary-bg-1,8),10);;
 	@button-secondary-hover-bg-2: saturate(lighten(@button-secondary-bg-2,8),10);;
 	@button-secondary-hover-bg-fallback: #2493d6;
-	@button-secondary-hover-fg: #fff;
-	@cta-icon-secondary-hover-fg: #fff;
+	@button-secondary-hover-fg: @white;
+	@cta-icon-secondary-hover-fg: @white;
 // Colours - disabled
 	@button-disabled-bg-start: top;
 	@button-disabled-bg-1: #ccc;
@@ -633,3 +635,8 @@ header {position: relative; overflow: hidden;
 }
 .circle{.pseudo; width:0; height: 0; border-radius: 100%; box-shadow: 0 0 8px 8px rgba(255,255,255,0.1); position: absolute; visibility: visible; pointer-events: none;}
 div.main {padding-top: 20px;}
+
+@bright-pink: #df13a8;
+@deep-pink: #606;
+@purple: #306;
+@pale-pink: #ffddf6;
