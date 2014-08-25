@@ -57,15 +57,35 @@
 	.parent when (@grid-system = fractions) {display: block;
 		.fs-zero; .clear; .clearfix; .side-gutters;
 		& > *{ display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
-			.fs-base; .padded-grid;
+			.fs-base; 
 		}
+		.panel,
+		.inner-panel {.padded-grid;}
 		& .parent {max-width: none; padding-left: 0; width: 100% !important; margin-left: 0;}
-		body > * > div & {margin-left: -10px; margin-right: -10px; width: calc(100% + 20px); max-width: none;}
+//		body > * > div & {margin-left: -10px; margin-right: -10px; width: calc(100% + 20px); max-width: none;}
 	}
+
+@media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
 	 .nested {
 	 		& > div {padding: 0 !important;}
-			& > div > .parent {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -10px;}
+			& > div > .parent {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -5px;}
 	}
+}
+@media screen and (min-width: @tb) and (max-width: @dt) {padding-left: 0; margin-right: -@margin-tb;
+	 .nested {
+	 		& > div {padding: 0 !important;}
+			& > div > .parent {width: calc(100% + 10px) !important; margin-left: -5px; margin-right: -5px;}
+	}
+}
+@media screen and (min-width: @mb) and (max-width: @tb) {padding-left: 0; margin-right: -@margin-mb;
+	 .nested {
+	 		& > div {padding: 0 !important;}
+			& > div > .parent {width: calc(100% + 10px) !important; margin-left: -5px; margin-right: -5px;}
+	}
+}
+
+
+
 // side gutters
 	.side-gutters() when (@side-gutters = false){
 @media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
@@ -94,7 +114,7 @@
 	}
 	.padded-grid() when not (@padded-grid = false){
 		.parent .parent > div {margin-bottom: 0;}
-@media screen and (min-width: @dt) {padding: @margin-dt (@margin-dt / 2) @margin-dt (@margin-dt / 2);}
+@media screen and (min-width: @dt) 						{padding: @margin-dt;}
 @media screen and (min-width: @tb) and (max-width: @dt) {padding: @margin-tb;}
 @media screen and (min-width: @mb) and (max-width: @tb) {padding: @margin-mb;}
 	}

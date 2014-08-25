@@ -155,7 +155,7 @@
 					<div class="parent dt-1-2 tb-1-2 mb-1-2 nested">
 						<div class="panel">&nbsp;</div>
 						<div>
-							<div class="parent dt-1-2 tb-1-2 mb-1-2">
+							<div class="parent dt-1-2 tb-1-2 mb-1-2 nested">
 								<div class="panel">&nbsp;</div>
 								<div class="panel">&nbsp;</div>
 							</div>
