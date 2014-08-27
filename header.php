@@ -22,6 +22,7 @@
 			};
 		</script>
 		<script src="less.js" type="text/javascript"></script>
+		<meta name="viewport" content="initial-scale=1" />
 	</head>
 	<body>
 		<div class="tools fixed fixed-40">
