@@ -2,7 +2,6 @@
 // framework.less
 // ###############################
 // if max width - min-wdth != 0 make responsive
-html {}
 body > * {width: 100%;
 	.clearfix;
 	& > div {min-width: @framework-min-width; max-width: @framework-max-width; margin: 0 auto;
@@ -11,13 +10,13 @@ body > * {width: 100%;
 }
 
 // logo
-.logo {font-family: @logo-font-family; font-weight: @logo-font-weight; text-transform: @logo-case;
+.logo {font-family: @logo-font-family; font-weight: @logo-font-weight; text-transform: @logo-case; margin: @logo-margins; 
 	.logo-position; .logo-size; .logo-graphic; .uncollapse-margins; 
-	& a {margin: @logo-margins; display: block;}
+	& a {display: block;}
 }
 .logo-position() when (@logo-position = left){float: left;}
 .logo-position() when (@logo-position = right){float: right; text-align: right;}
-.logo-position() when (@logo-position = center){margin: 0 auto; text-align: center;}
+.logo-position() when (@logo-position = center){margin-left: auto; margin-right: auto; text-align: center;}
 .logo-size() when not (@logo-url = disabled) {width: @logo-width;
 	& a {height: 0; padding-bottom: @logo-height; display: block;}
 }
@@ -31,7 +30,7 @@ body > * {width: 100%;
 	}
 	& span when not (@logo-sub = disabled){font-size: @logo-sub-font-size; display: block; text-transform: @logo-sub-case;}
 }
-.logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; 
+.logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; background-size: 100% auto;
 	.hide-text;
 }
 
