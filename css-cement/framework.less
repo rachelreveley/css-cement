@@ -33,11 +33,19 @@ body > * {width: 100%;
 .logo-graphic() when not (@logo-url = disabled){background: url("@{logo-url}") 0 0 no-repeat transparent; background-size: 100% auto;
 	.hide-text;
 }
-
 .main {.fs-zero;
 	& .side {width: @nav-width; display: inline-block; vertical-align: top;}
 	& .content {width: 100%; display: inline-block; vertical-align: top;}
 	& .side ~ .content {width: (100% - @nav-width); display: inline-block; vertical-align: top;}
+}
+@media screen and (min-width: @dt) {
+	.main .side when not (@nav-gutter = false) {width: calc(@nav-width - @margin-dt); margin-right: @margin-dt;}
+}
+@media screen and (min-width: @tb) and (max-width: @dt) {
+	.main .side when not (@nav-gutter = false) {width: calc(@nav-width - @margin-tb); margin-right: @margin-tb;}
+}
+@media screen and (min-width: @mb) and (max-width: @tb) {padding-left: 0; margin-right: -@margin-mb;
+	.main .side when not (@nav-gutter = false) {width: calc(@nav-width - @margin-mb); margin-right: @margin-mb;}
 }
 // images
 img {display: block;}

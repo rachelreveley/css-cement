@@ -55,61 +55,46 @@
 
 // basic grid
 	.parent when (@grid-system = fractions) {display: block;
-		.fs-zero; .clear; .clearfix; .side-gutters;
+		.fs-zero; .clear; .clearfix; 
 		& > *{ display: inline-block; vertical-align: top; box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
 			.fs-base; 
 		}
 		.panel,
 		.inner-panel {.padded-grid;}
 		& .parent {max-width: none; padding-left: 0; width: 100% !important; margin-left: 0;}
-//		body > * > div & {margin-left: -10px; margin-right: -10px; width: calc(100% + 20px); max-width: none;}
+		.main > div > .content > & > div {margin-left: 0; margin-right: 0; width: 100%;}
 	}
-
 @media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
 	 .nested {
-	 		& > div {padding: 0 !important;}
-			& > div > .parent {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -5px;}
+ 		& > div {padding: 0 !important;}
+		& > div > .parent {width: calc(100% + 20px) !important; margin-left: -10px; margin-right: -5px;}
 	}
 }
 @media screen and (min-width: @tb) and (max-width: @dt) {padding-left: 0; margin-right: -@margin-tb;
 	 .nested {
-	 		& > div {padding: 0 !important;}
-			& > div > .parent {width: calc(100% + 10px) !important; margin-left: -5px; margin-right: -5px;}
+ 		& > div {padding: 0 !important;}
+		& > div > .parent {width: calc(100% + 10px) !important; margin-left: -5px; margin-right: -5px;}
 	}
 }
 @media screen and (min-width: @mb) and (max-width: @tb) {padding-left: 0; margin-right: -@margin-mb;
 	 .nested {
-	 		& > div {padding: 0 !important;}
-			& > div > .parent {width: calc(100% + 10px) !important; margin-left: -5px; margin-right: -5px;}
+ 		& > div {padding: 0 !important;}
+		& > div > .parent {width: calc(100% + 10px) !important; margin-left: -5px; margin-right: -5px;}
 	}
 }
-
-
-
+.main {.side-gutters;}
 // side gutters
-	.side-gutters() when (@side-gutters = false){
-@media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
-			.side ~ .content & {padding-left: @margin-dt;}
+	.side-gutters() when not (@side-gutters = false){
+			& > div {box-sizing: border-box;}
+			& div > .content > .parent > div {margin-left: 0; margin-right: 0;}		
+@media screen and (min-width: @dt) {
+			& > div {padding-left: @margin-dt; padding-right: @margin-dt;}
 }
-@media screen and (min-width: @tb) and (max-width: @dt) {padding-left: 0; margin-right: -@margin-tb;
-			.side ~ .content & {padding-left: @margin-tb;}
+@media screen and (min-width: @tb) and (max-width: @dt) {
+			& > div {padding-left: @margin-tb; padding-right: @margin-tb;}
 }
 @media screen and (min-width: @mb) and (max-width: @tb) {padding-left: 0; margin-right: -@margin-mb;
-			.side ~ .content & {padding-left: @margin-mb;}
-}
-	}
-
-// 	.side-gutters() when (@side-gutters = true){padding-left: @margin-dt;}
-
-	.header-nav-position() when (@side-gutters = false){
-@media screen and (min-width: @dt) {padding-left: 0; margin-right: -@margin-dt;
-			.side ~ .content & {padding-left: @margin-dt;}
-}
-@media screen and (min-width: @tb) and (max-width: @dt) {padding-left: 0; margin-right: --@margin-tb;
-			.side ~ .content & {padding-left: @margin-tb;}
-}
-@media screen and (min-width: @mb) and (max-width: @tb) {padding-left: 0; margin-right: --@margin-mb;
-			.side ~ .content & {padding-left: @margin-mb;}
+			& > div {padding-left: @margin-mb; padding-right: @margin-mb;}
 }
 	}
 	.padded-grid() when not (@padded-grid = false){
@@ -118,7 +103,6 @@
 @media screen and (min-width: @tb) and (max-width: @dt) {padding: @margin-tb;}
 @media screen and (min-width: @mb) and (max-width: @tb) {padding: @margin-mb;}
 	}
-
 // desktop sized grid
 	.parent when (@grid-system = fractions) {
 @media screen and (min-width: @dt) {
