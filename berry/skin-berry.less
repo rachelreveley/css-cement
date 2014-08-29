@@ -9,7 +9,7 @@
 	@colour-body-bg: #666; // @white, @black
 
 	@colour-tools-fg: @white; // 
-	@colour-tools-bg: #111; // 
+	@colour-tools-bg: #242424; // 
 	@colour-tools-inner-bg: #242424; // 
 
 	@colour-header-fg: @white; // 
@@ -525,7 +525,7 @@
 	@has-tools-nav: enabled; //disabled, enabled
 	@tools-nav-position: both; // both, center, left, right, justify
 	@tools-nav-style: dividers; // blocks, dividers
-	@tools-nav-padding: @padding (@padding + 2);
+	@tools-nav-padding: (@padding  / 2);
 		// if blocks
 		@tools-nav-border: 1px solid #ccc;
 		// if pipes
@@ -540,7 +540,7 @@
 	@has-header-nav: enabled; //disabled, enabled
 	@header-nav-position: full-fluid; // full-fluid, full-equal, center, left, right
 	@header-nav-style: blocks; // blocks, dividers, tabs
-	@header-nav-padding: (@padding + 2) (@padding + 4);
+	@header-nav-padding: (@padding / 2) @padding;
 		// if blocks
 		@header-nav-border: 0;
 
@@ -554,7 +554,7 @@
 // side navigation in main container
 	@has-side-nav: enabled; // disabled, enabled
 	@side-nav-style: disabled; // disabled, simple, blocks, lines
-	@side-nav-padding: @padding (@padding + 2);
+	@side-nav-padding: (@padding / 2) @padding;
 	@side-nav-border: 1px solid @colour-side-nav-border;
 
 // flyouts
@@ -566,7 +566,7 @@
 // ###############################
 // start styles.less
 // ###############################
-	@padding: 12px; // 0 - 9px
+	@padding: 20px; // 0 - 9px
 	@border-radius: 5px; // 0 - 9px
 	@border-solid: 1px solid #ccc;
 	@border-dotted: 1px dotted #ccc;
