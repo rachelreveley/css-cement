@@ -46,6 +46,7 @@
 						<li><a href="template-grid-sizes.php">Grid system</a></li>
 						<li><a href="template-forms.php">Forms</a></li>
 						<li><a href="template-type.php">Type</a></li>
+						<li><a href="template-nav.php">side navigation</a></li>
 						<li><a href="template-non-semantic.php">Other widgets</a></li>
 						<li><a href="themes.php">Themes</a></li>
 						<li><a href="https://github.com/rachelreveley/css-cement">Github</a></li>
