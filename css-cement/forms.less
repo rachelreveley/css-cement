@@ -330,13 +330,13 @@
 	@button-secondary-border-hover: @button-border;
 	@button-disabled-border: @button-border;
 
-	.cta-icon(@size: 10) when	  (@cta-icon = arrow) {border: (@size * 0.66) solid transparent; border-left-width: @size; border-left-color: @cta-icon-fg; vertical-align: baseline; line-height: 0;}
+	.cta-icon(@size: 10) when	  (@cta-icon = arrow) {border: (@size * 0.66) solid transparent; border-left-width: (@size); border-left-color: @cta-icon-fg; vertical-align: baseline; line-height: 0; position: absolute; top: 0;}
 	.cta-icon(@size: 10) when	  (@cta-icon = arrow-in-circle) {background: url("cta-icon-arrow-in-circle.svg") no-repeat; background-size: 100% 100%; width: @size; height: @size; position: absolute; top: 0;}
 
 // -------------------- //
 // general button styles
 // -------------------- //
-.button {display: inline-block; font-weight: @button-font-weight; vertical-align: bottom; color: @button-fg; margin: 0 10px 10px 0; position: relative; border: @button-border; box-shadow: @button-box-shadow; text-align: left; text-shadow: @button-text-shadow; text-decoration: none; white-space: nowrap;
+.button {display: inline-block; font-weight: @button-font-weight; vertical-align: bottom; color: @button-fg; margin: 0 10px 10px 0; position: relative; border: @button-border; box-shadow: @button-box-shadow; text-align: left; text-shadow: @button-text-shadow; text-decoration: none; white-space: nowrap; cursor: pointer;
 								 font-size: @sml-button-font-size;				line-height: (@sml-scale * 10px);						padding: @sml-padding;						border-radius: @sml-border-radius;
 	&.sml			 			{font-size: @sml-button-font-size; 				line-height: (@sml-scale * 10px);						padding: @sml-padding;						border-radius: @sml-border-radius;}
 	&.std			  			{font-size: @std-button-font-size;				line-height: (@std-scale * 10px);						padding: @std-padding;						border-radius: @std-border-radius;}
@@ -391,24 +391,69 @@ a.button{
 // -------------------- //
 // buttons with arrows
 // -------------------- //
-/* .button when (@cta-icon = arrow) {
-	&.sml.arrow when (@cta-icon-position = left) {padding-left: (@sml-scale * 18) + 10px;}
-	&.sml.arrow when (@cta-icon-position = right) {padding-right: (@sml-scale * 18) + 10px;}
-	&.sml.arrow:before {.cta-icon(@sml-scale * 10px); margin-left: (@sml-scale + 10px); margin-top: (@sml-scale * 1.5px);}
-
-	&.std.arrow when (@cta-icon-position = left) {padding-left: (@std-scale * 18) + 10px;}
-	&.std.arrow when (@cta-icon-position = right) {padding-right: (@std-scale * 18) + 10px;}
-	&.std.arrow:before {.cta-icon(@std-scale * 10px); margin-left: (@std-scale + 10px); margin-top: (@std-scale * 1.5px);}
-
-	&.lrg.arrow when (@cta-icon-position = left) {padding-left: (@lrg-scale * 18) + 10px;}
-	&.lrg.arrow when (@cta-icon-position = right) {padding-right: (@lrg-scale * 18) + 10px;}
-	&.lrg.arrow:before {.cta-icon(@lrg-scale * 10px); margin-left: (@lrg-scale + 10px); margin-top: (@lrg-scale * 1.5px);}
-
-	&.double-decker when (@cta-icon-position = left) {padding-left: (@double-decker-scale * 18) + 10px;}
-	&.double-decker when (@cta-icon-position = right) {padding-right: (@double-decker-scale * 18) + 10px;}
-	&.double-decker:before {.cta-icon(@double-decker-scale * 10px); margin-left: (@double-decker-scale + 10px); margin-top: (@double-decker-scale * 1.5px);}
+ .button when (@cta-icon = arrow) {
+	&.sml.arrow.left-arrow {				padding-left: ((@sml-scale * 2) * 10px);}
+	&.sml.arrow.right-arrow {				padding-right: ((@sml-scale * 2) * 10px);}
+	&.sml.arrow.left-arrow,
+	&.sml.arrow.right-arrow {
+		&:before {	.cta-icon((@sml-scale * 10px));							margin-top: ((@sml-scale / 2) * 9px);}
+	}
+	&.std.arrow.left-arrow {				padding-left:( (@std-scale * 2) * 10px);}
+	&.std.arrow.right-arrow {				padding-right: ((@std-scale  * 2) * 10px);}
+	&.std.arrow.left-arrow,
+	&.std.arrow.right-arrow {
+		&:before {	.cta-icon((@std-scale * 8px));							margin-top: ((@std-scale / 2) * 9px);}
+	}
+	&.lrg.arrow.left-arrow {				padding-left: ((@lrg-scale  * 2) * 8px);}
+	&.lrg.arrow.right-arrow {				padding-right: ((@lrg-scale * 2) * 8px);}
+	&.lrg.arrow.left-arrow,
+	&.lrg.arrow.right-arrow {
+		&:before {	.cta-icon((@lrg-scale * 8px));							margin-top: ((@lrg-scale / 2) * 9px);}
+	}
+	&.double-decker.left-arrow {			padding-left: ((@double-decker-scale  * 2) * 10px);}
+	&.double-decker.right-arrow {			padding-right: ((@double-decker-scale * 2) * 10px);}
+	&.double-decker.left-arrow,
+	&.double-decker.right-arrow {
+		&:before {	.cta-icon((@double-decker-scale * 8px));				margin-top: ((@double-decker-scale / 2) * 9px);}
+	}
+	&.double-decker.secondary.left-arrow {	padding-left: ((@double-decker-secondary-scale * 2) * 10px);}
+	&.double-decker.secondary.right-arrow {	padding-right: ((@double-decker-secondary-scale * 2) * 10px);}
+	&.double-decker.secondary.left-arrow,
+	&.double-decker.secondary.right-arrow {
+		&:before {	.cta-icon((@double-decker-secondary-scale * 8px));		margin-top: ((@double-decker-secondary-scale / 2) * 10px);}
+	}
+	&.sml.arrow:not(.right-arrow) when (@cta-icon-position = left) {				padding-left: ((@sml-scale * 2) * 9px);
+		&:before {	.cta-icon((@sml-scale * 8px));						margin-top:  ((@sml-scale / 2) * 10px);}
+	}
+	&.sml.arrow:not(.left-arrow) when (@cta-icon-position = right) {				padding-right: ((@sml-scale * 2) * 9px);
+		&:before {	.cta-icon((@sml-scale * 8px));						margin-top: ((@sml-scale / 2) * 10px);}
+	}
+	&.std.arrow:not(.right-arrow) when (@cta-icon-position = left) {				padding-left: ((@std-scale * 2) * 9px);
+		&:before {	.cta-icon((@std-scale * 8px));						margin-top: ((@std-scale / 2) * 10px);}
+	}
+	&.std.arrow:not(.left-arrow) when (@cta-icon-position = right) {				padding-right: ((@std-scale  * 2) * 9px);
+		&:before {	.cta-icon((@std-scale * 8px));						margin-top: ((@std-scale / 2) * 10px);}
+	}
+	&.lrg.arrow:not(.right-arrow) when (@cta-icon-position = left) {				padding-left: ((@lrg-scale  * 2) * 9px);
+		&:before {	.cta-icon((@lrg-scale * 8px)); 						margin-top: ((@lrg-scale / 2) * 10px);}
+	}
+	&.lrg.arrow:not(.left-arrow) when (@cta-icon-position = right) {				padding-right: ((@lrg-scale * 2) * 9px);
+		&:before {	.cta-icon((@lrg-scale * 8px)); 						margin-top: ((@lrg-scale / 2) * 10px);}
+	}
+	&.double-decker:not(.right-arrow) when (@cta-icon-position = left) {			padding-left: ((@double-decker-scale  * 2) * 9px);
+		&:before {	.cta-icon((@double-decker-scale * 8px)); 			margin-top: ((@double-decker-scale / 2) * 11px);}
+	}
+	&.double-decker:not(.left-arrow) when (@cta-icon-position = right) {			padding-right: ((@double-decker-scale * 2) * 9px);
+		&:before {	.cta-icon((@double-decker-scale * 8px)); 			margin-top: ((@double-decker-scale / 2) * 11px);}
+	}
+	&.double-decker:not(.right-arrow).secondary when (@cta-icon-position = left) {	padding-left: ((@double-decker-secondary-scale * 2) * 9px);
+		&:before {	.cta-icon((@double-decker-secondary-scale * 8px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 11px);}
+	}
+	&.double-decker:not(.left-arrow).secondary when (@cta-icon-position = right) {	padding-right: ((@double-decker-secondary-scale * 2) * 9px);
+		&:before {	.cta-icon((@double-decker-secondary-scale * 8px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 11px);}
+	}
 }
-*/
+
 // -------------------- //
 // buttons with arrows within circles
 // -------------------- //
@@ -443,7 +488,6 @@ a.button{
 	&.double-decker.secondary.right-arrow {	padding-right: ((@double-decker-secondary-scale * 2) * 10px);
 		&:before {	.cta-icon((@double-decker-secondary-scale * 10px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 10px);	margin-right: ((@double-decker-secondary-scale / 2) * 10px);}
 	}
-
 	&.sml.arrow:not(.right-arrow) when (@cta-icon-position = left) {				padding-left: ((@sml-scale * 2) * 10px);
 		&:before {	.cta-icon((@sml-scale * 10px));						margin-top:  ((@sml-scale / 2) * 10px);						margin-left: ((@sml-scale / 2) * 10px);}
 	}
