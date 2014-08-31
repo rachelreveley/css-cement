@@ -325,12 +325,11 @@
 	@std-padding: (@std-scale * 5px);
 	@lrg-padding: (@lrg-scale * 5px);
 	@double-decker-padding: (@double-decker-scale * 3.4px) (@double-decker-scale / 0.2px);
-	@double-decker-secondary-padding: (@double-decker-secondary-scale * 3.4px) (@double-decker-secondary-scale / 0.2px);
 	@button-secondary-border: @button-border;
 	@button-secondary-border-hover: @button-border;
 	@button-disabled-border: @button-border;
 
-	.cta-icon(@size: 10) when	  (@cta-icon = arrow) {border: (@size * 0.66) solid transparent; border-left-width: (@size); border-left-color: @cta-icon-fg; vertical-align: baseline; line-height: 0; position: absolute; top: 0;}
+	.cta-icon(@size: 10) when	  (@cta-icon = arrow) {border: (@size * 0.66) solid transparent; border-left-width: (@size); border-left-color: @cta-icon-fg; vertical-align: baseline; line-height: 0; position: absolute; top: 0; .scale(0.8);}
 	.cta-icon(@size: 10) when	  (@cta-icon = arrow-in-circle) {background: url("cta-icon-arrow-in-circle.svg") no-repeat; background-size: 100% 100%; width: @size; height: @size; position: absolute; top: 0;}
 
 // -------------------- //
@@ -342,7 +341,6 @@
 	&.std			  			{font-size: @std-button-font-size;				line-height: (@std-scale * 10px);						padding: @std-padding;						border-radius: @std-border-radius;}
 	&.lrg			  			{font-size: @lrg-button-font-size; 				line-height: (@lrg-scale * 10px);						padding: @lrg-padding;						border-radius: @lrg-border-radius;}
 	&.double-decker 		  	{font-size: @double-decker-button-font-size; 	line-height: (@double-decker-scale * 10px);				padding: @double-decker-padding;			border-radius: @double-decker-border-radius;}
-	&.double-decker.secondary 	{font-size: @double-decker-button-font-size; 	line-height: (@double-decker-secondary-scale * 10px);	padding: @double-decker-secondary-padding;	border-radius: @double-decker-border-radius;}
 }
 
 a.button{
@@ -416,12 +414,6 @@ a.button{
 	&.double-decker.right-arrow {
 		&:before {	.cta-icon((@double-decker-scale * 8px));				margin-top: ((@double-decker-scale / 2) * 9px);}
 	}
-	&.double-decker.secondary.left-arrow {	padding-left: ((@double-decker-secondary-scale * 2) * 10px);}
-	&.double-decker.secondary.right-arrow {	padding-right: ((@double-decker-secondary-scale * 2) * 10px);}
-	&.double-decker.secondary.left-arrow,
-	&.double-decker.secondary.right-arrow {
-		&:before {	.cta-icon((@double-decker-secondary-scale * 8px));		margin-top: ((@double-decker-secondary-scale / 2) * 10px);}
-	}
 	&.sml.arrow:not(.right-arrow) when (@cta-icon-position = left) {				padding-left: ((@sml-scale * 2) * 9px);
 		&:before {	.cta-icon((@sml-scale * 8px));						margin-top:  ((@sml-scale / 2) * 10px);}
 	}
@@ -445,12 +437,6 @@ a.button{
 	}
 	&.double-decker:not(.left-arrow) when (@cta-icon-position = right) {			padding-right: ((@double-decker-scale * 2) * 9px);
 		&:before {	.cta-icon((@double-decker-scale * 8px)); 			margin-top: ((@double-decker-scale / 2) * 11px);}
-	}
-	&.double-decker:not(.right-arrow).secondary when (@cta-icon-position = left) {	padding-left: ((@double-decker-secondary-scale * 2) * 9px);
-		&:before {	.cta-icon((@double-decker-secondary-scale * 8px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 11px);}
-	}
-	&.double-decker:not(.left-arrow).secondary when (@cta-icon-position = right) {	padding-right: ((@double-decker-secondary-scale * 2) * 9px);
-		&:before {	.cta-icon((@double-decker-secondary-scale * 8px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 11px);}
 	}
 }
 
@@ -482,12 +468,6 @@ a.button{
 	&.double-decker.right-arrow {			padding-right: ((@double-decker-scale * 2) * 10px);
 		&:before {	.cta-icon((@double-decker-scale * 10px)); 			margin-top: ((@double-decker-scale / 2) * 10px);			margin-right: ((@double-decker-scale / 2) * 10px);}
 	}
-	&.double-decker.secondary.left-arrow {	padding-left: ((@double-decker-secondary-scale * 2) * 10px);
-		&:before {	.cta-icon((@double-decker-secondary-scale * 10px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 10px);	margin-left: ((@double-decker-secondary-scale / 2) * 10px);}
-	}
-	&.double-decker.secondary.right-arrow {	padding-right: ((@double-decker-secondary-scale * 2) * 10px);
-		&:before {	.cta-icon((@double-decker-secondary-scale * 10px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 10px);	margin-right: ((@double-decker-secondary-scale / 2) * 10px);}
-	}
 	&.sml.arrow:not(.right-arrow) when (@cta-icon-position = left) {				padding-left: ((@sml-scale * 2) * 10px);
 		&:before {	.cta-icon((@sml-scale * 10px));						margin-top:  ((@sml-scale / 2) * 10px);						margin-left: ((@sml-scale / 2) * 10px);}
 	}
@@ -511,12 +491,6 @@ a.button{
 	}
 	&.double-decker:not(.left-arrow) when (@cta-icon-position = right) {			padding-right: ((@double-decker-scale * 2) * 10px);
 		&:before {	.cta-icon((@double-decker-scale * 10px)); 			margin-top: ((@double-decker-scale / 2) * 10px);			margin-right: ((@double-decker-scale / 2) * 10px);}
-	}
-	&.double-decker:not(.right-arrow).secondary when (@cta-icon-position = left) {	padding-left: ((@double-decker-secondary-scale * 2) * 10px);
-		&:before {	.cta-icon((@double-decker-secondary-scale * 10px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 10px);	margin-left: ((@double-decker-secondary-scale / 2) * 10px);}
-	}
-	&.double-decker:not(.left-arrow).secondary when (@cta-icon-position = right) {	padding-right: ((@double-decker-secondary-scale * 2) * 10px);
-		&:before {	.cta-icon((@double-decker-secondary-scale * 10px)); 	margin-top: ((@double-decker-secondary-scale / 2) * 10px);	margin-right: ((@double-decker-secondary-scale / 2) * 10px);}
 	}
 }
 // -------------------- //
