@@ -1,3 +1,7 @@
+<?php
+$meta_title="CSS Cement - Multiple content areas";
+$slug="Multiple content areas";
+?>
 <?php include("header.php"); ?>
 				<div class="content stepped steps-6">
 					<div class="parent dt-1 tb-1 mb-1 step">

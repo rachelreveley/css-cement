@@ -1,3 +1,7 @@
+<?php
+$meta_title="CSS Cement - The Grid";
+$slug="The optional grid system";
+?>
 <?php include("header.php"); ?>
 <style type="text/css">
 	.outer-panel {background-color: #f1f1f1;}

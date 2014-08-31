@@ -1,3 +1,7 @@
+<?php
+$meta_title="CSS Cement - Widgets";
+$slug="Widgets";
+?>
 <?php include("header.php"); ?>
 					<div class="parent dt-1-1 tb-1-1 mb-1-1">
 						<div>
@@ -12,9 +16,9 @@
 							<span>blah blah <span class="badge danger">1,000</span></span>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="bar-chart">
 						<div>
-							<h2>Bar chart</h2>
+							<h2>Bar charts</h2>
 							<p>Most bar chart solutions rely on Javascript, not any more.</p>
 							<div class="bar-chart bar-chart-horizontal">
 								<span class="x-axis">X Axis</span>
@@ -36,43 +40,44 @@
 							</div>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="calendar">
 						<div>
+							<h2>Calendar</h2>
 							<ul class="calendar month-4">
-								<li class="tuesday day-1"> <a href="/admin/orders-list/2014/04/01/">1</a> </li>
-								<li class="wednesday day-2"> <a href="/admin/orders-list/2014/04/02/">2</a> </li>
-								<li class="thursday day-3"> <a href="/admin/orders-list/2014/04/03/">3</a> </li>
-								<li class="friday day-4"> <a href="/admin/orders-list/2014/04/04/">4</a> </li>
-								<li class="saturday day-5"> <a href="/admin/orders-list/2014/04/05/">5</a> </li>
-								<li class="sunday day-6"> <a href="/admin/orders-list/2014/04/06/">6</a> </li>
-								<li class="monday day-7"> <a href="/admin/orders-list/2014/04/07/">7</a> </li>
-								<li class="tuesday day-8"> <a href="/admin/orders-list/2014/04/08/">8</a> </li>
-								<li class="wednesday day-9"> <a href="/admin/orders-list/2014/04/09/">9</a> </li>
-								<li class="thursday day-10"> <a href="/admin/orders-list/2014/04/10/">10</a> </li>
-								<li class="friday day-11"> <a href="/admin/orders-list/2014/04/11/">11</a> </li>
-								<li class="saturday day-12"> <a href="/admin/orders-list/2014/04/12/">12</a> </li>
-								<li class="sunday day-13"> <a href="/admin/orders-list/2014/04/13/">13</a> </li>
-								<li class="monday day-14"> <a href="/admin/orders-list/2014/04/14/">14</a> </li>
-								<li class="tuesday day-15"> <a href="/admin/orders-list/2014/04/15/">15</a> </li>
-								<li class="wednesday day-16"> <a href="/admin/orders-list/2014/04/16/">16</a> </li>
-								<li class="thursday day-17"> <a href="/admin/orders-list/2014/04/17/">17</a> </li>
-								<li class="friday day-18"> <a href="/admin/orders-list/2014/04/18/">18</a> </li>
-								<li class="saturday day-19"> <a href="/admin/orders-list/2014/04/19/">19</a> </li>
-								<li class="sunday day-20"> <a href="/admin/orders-list/2014/04/20/">20</a> </li>
-								<li class="monday day-21"> <a href="/admin/orders-list/2014/04/21/">21</a> </li>
-								<li class="tuesday day-22"> <a href="/admin/orders-list/2014/04/22/">22</a> </li>
-								<li class="wednesday day-23"> <a href="/admin/orders-list/2014/04/23/">23</a> </li>
-								<li class="thursday day-24"> <a href="/admin/orders-list/2014/04/24/">24</a> </li>
-								<li class="friday day-25"> <a href="/admin/orders-list/2014/04/25/">25</a> </li>
-								<li class="saturday day-26"> <a href="/admin/orders-list/2014/04/26/">26</a> </li>
-								<li class="sunday day-27"> <a href="/admin/orders-list/2014/04/27/">27</a> </li>
-								<li class="monday day-28 today"> <a href="/admin/orders-list/2014/04/28/">28</a> </li>
-								<li class="tuesday day-29"> <span>29</span> </li>
-								<li class="wednesday day-30"> <span>30</span> </li>
+								<li class="tuesday day-1"><a href="/admin/orders-list/2014/04/01/">1</a></li>
+								<li class="wednesday day-2"><a href="/admin/orders-list/2014/04/02/">2</a></li>
+								<li class="thursday day-3"><a href="/admin/orders-list/2014/04/03/">3</a></li>
+								<li class="friday day-4"><a href="/admin/orders-list/2014/04/04/">4</a></li>
+								<li class="saturday day-5"><a href="/admin/orders-list/2014/04/05/">5</a></li>
+								<li class="sunday day-6"><a href="/admin/orders-list/2014/04/06/">6</a></li>
+								<li class="monday day-7"><a href="/admin/orders-list/2014/04/07/">7</a></li>
+								<li class="tuesday day-8"><a href="/admin/orders-list/2014/04/08/">8</a></li>
+								<li class="wednesday day-9"><a href="/admin/orders-list/2014/04/09/">9</a></li>
+								<li class="thursday day-10"><a href="/admin/orders-list/2014/04/10/">10</a></li>
+								<li class="friday day-11"><a href="/admin/orders-list/2014/04/11/">11</a></li>
+								<li class="saturday day-12"><a href="/admin/orders-list/2014/04/12/">12</a></li>
+								<li class="sunday day-13"><a href="/admin/orders-list/2014/04/13/">13</a></li>
+								<li class="monday day-14"><a href="/admin/orders-list/2014/04/14/">14</a></li>
+								<li class="tuesday day-15"><a href="/admin/orders-list/2014/04/15/">15</a></li>
+								<li class="wednesday day-16"><a href="/admin/orders-list/2014/04/16/">16</a></li>
+								<li class="thursday day-17"><a href="/admin/orders-list/2014/04/17/">17</a></li>
+								<li class="friday day-18"><a href="/admin/orders-list/2014/04/18/">18</a></li>
+								<li class="saturday day-19"><a href="/admin/orders-list/2014/04/19/">19</a></li>
+								<li class="sunday day-20"><a href="/admin/orders-list/2014/04/20/">20</a></li>
+								<li class="monday day-21"><a href="/admin/orders-list/2014/04/21/">21</a></li>
+								<li class="tuesday day-22"><a href="/admin/orders-list/2014/04/22/">22</a></li>
+								<li class="wednesday day-23 today"><a href="/admin/orders-list/2014/04/23/">23</a></li>
+								<li class="thursday day-24"><span>24</span></li>
+								<li class="friday day-25"><span>25</span></li>
+								<li class="saturday day-26"><span>26</span></li>
+								<li class="sunday day-27"><span>27</span></li>
+								<li class="monday day-28"><span>28</span></li>
+								<li class="tuesday day-29"><span>29</span></li>
+								<li class="wednesday day-30"><span>30</span></li>
 							</ul>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="chat-boxes">
 						<div>
 							<h2>Chat boxes, messaging or quotes</h2>
 							<p>Comments or live chat can be displayed as speach bubbles.</p>
@@ -85,7 +90,27 @@
 							</div>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-" id="corner-ribbons">
+						<div>
+							<h2>Corner ribbons</h2>
+							<p>Made popular a few years ago, ribbons can be a good way to highlight a feature or mark something as special.</p>
+						</div>
+						<div class="corner-ribbon">
+							<div class="ribbon top left">top left</div>
+							<div class="ribbon top right">top right</div>
+							<div class="ribbon bottom left">bottom left</div>
+							<div class="ribbon bottom right">bottom right</div>
+							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
+							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
+							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
+							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
+							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
+							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
+							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
+							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
+						</div>
+					</div>
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="dialog-boxes">
 						<div>
 							<h2>Dialog boxes</h2>
 							<p><a href="#modal1" id="modal1-call">Sed quis enim nisl</a>. </p> 
@@ -101,7 +126,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="feature-boxes">
 						<div>
 							<h2>Feature boxes with optional caption</h2>
 							<p>Hover effects and captions can be added to a plain old image to make a feature of it.</p>
@@ -113,9 +138,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1 forum">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1 forum" id="forum-threads">
 						<div>
-							<h2>Forum thread</h2>
+							<h2>Forum threads</h2>
 							<p>A clean and simple way to style a user forum.</p>
 							<div class="thread">
 								<div class="post">
@@ -183,7 +208,7 @@
 					</div>
 						<h2>Gallery</h2>
 						<p>Portfolios, brochures and photo sharing sites can all make use of a gallery feature.</p>
-					<div class="parent dt-1-6 tb-1-6 mb-1-3 gallery">
+					<div class="parent dt-1-6 tb-1-6 mb-1-3 gallery" id="gallery">
 						<div> 
 							<a href=""><img src="http://fpoimg.com/200x200?text=1" alt="Alt text here" /></a></li>
 						</div>
@@ -197,7 +222,7 @@
 							<a href=""><img src="http://fpoimg.com/200x200?text=1" alt="Alt text here" /><span class="caption">Another ccaption</span></a>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="highlight">
 						<div>
 							<h2>Highlighted content box</h2>
 							<p>Need to make something stand out? A highlight box is what you need.</p>
@@ -207,12 +232,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="loading">
 						<div>
 							<span class="loading">Loading&hellip;</span>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="pagination">
 						<div>
 							<h2>Pagination</h2>
 							<p>Pagination is particularly useful for blogs and ecommerce sites.</p>
@@ -231,36 +256,16 @@
 							</nav>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="progress-bar">
 						<div>
 							<h2>Progress bar</h2>
 							<p>A new and not often used feature of HTML 5 is the progress bar.</p>
 							<progress value="10" max="100"></progress>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="tables">
 						<div>
-							<h2>Corner ribbons</h2>
-							<p>Made popular a few years ago, ribbons can be a good way to highlight a feature or mark something as special.</p>
-						</div>
-						<div class="corner-ribbon">
-							<div class="ribbon top left">top left</div>
-							<div class="ribbon top right">top right</div>
-							<div class="ribbon bottom left">bottom left</div>
-							<div class="ribbon bottom right">bottom right</div>
-							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
-							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
-							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
-							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
-							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
-							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
-							<p>abaht how much shu' thi gob tha daft apeth. Any rooad. Mardy bum shu' thi gob. Shu' thi gob nay lad nobbut a lad t'foot o' our stairs. Shu' thi gob nay lad. Aye be reet shu' thi gob how much nah then.</p>
-							<p> Nay lad. Michael palin ah'll gi' thi summat to rooer abaht breadcake eeh. Dahn t'coil oil th'art nesh thee tell thi summat for nowt.</p>
-					</div>
-					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
-						<div>
-							<h2>Table</h2>
+							<h2>Tables</h2>
 							<p>Tables are never much fun to style so we have taken some of the effort out of it with a number of different options. Many of the options below can be combined together to create different styles such as horizontal borders on a comparrison table or a hover effect on a stripey table.</p>
 							<h3>Comparrison tables</h3>
 							<table class="comparrison">
@@ -549,7 +554,7 @@
 							</table>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="static-tabs">
 						<div>
 							<h2>Static Tabs</h2>
 							<p>Tabbed content can be great when you need to split content up and want to avoid long scrolling pages.</p>
@@ -569,7 +574,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="parent dt-1-1 tb-1-1 mb-1-1">
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="tags">
 						<div>
 							<h2>Tags</h2>
 							<p>Tags are great for filtering data.</p>

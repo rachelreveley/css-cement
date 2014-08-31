@@ -1,7 +1,8 @@
+<?php
+$meta_title="CSS Cement - Navigation";
+$slug="Navigation";
+?>
 <?php include("header.php"); ?>
-<style type="text/css">
-nav a {}
-</style>
 						<nav class="side">
 							<ul>
 								<li><a href="index.php">Home</a></li>

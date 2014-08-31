@@ -1,3 +1,7 @@
+<?php
+$meta_title="CSS Cement - Icons by font Awesome";
+$slug="Icons";
+?>
 <?php include("header.php"); ?>
 					<div class="parent dt-1-1 tb-1-1 mb-1-1 collapse-top">
 						<div>

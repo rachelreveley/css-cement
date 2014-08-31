@@ -1,3 +1,7 @@
+<?php
+$meta_title="CSS Cement - Non-semantic widgets";
+$slug="Non-semantic widgets";
+?>
 <?php include("header.php"); ?>
 					<div class="parent dt-1-1 tb-1-1 mb-1-1">
 						<h1>Widgets</h1>

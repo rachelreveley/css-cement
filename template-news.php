@@ -1,3 +1,7 @@
+<?php
+$meta_title="CSS Cement - Sample News Page";
+$slug="Sample News Page";
+?>
 <?php include("header.php"); ?>
 				<div class="content">
 					<div class="parent">
