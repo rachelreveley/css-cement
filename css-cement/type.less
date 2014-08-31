@@ -28,3 +28,9 @@
 
 	.fs-base {font-size: @fs-base;}
 	.fs-zero {font-size: 0;}
+	blockquote {font-style: italic;
+		&:before,
+		&:after {font-size: 500%; height: 35px;}
+		&:before {content: open-quote; float: left; margin-right: 10px; margin-top: -10px;}
+		&:after {content: close-quote; float: right; margin-top: -40px;}
+	}
