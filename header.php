@@ -58,7 +58,7 @@
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="template-widgets.php">Standard Widets</a>
-					<!--	<ul>
+						<ul>
 							<li><a href="#bar-chart">Bar charts</a></li>
 							<li><a href="#calendar">Calendar</a></li>
 							<li><a href="#chat-boxes">Chat boxes</a></li>
@@ -74,7 +74,7 @@
 							<li><a href="#tables">Tables</a></li>
 							<li><a href="#static-tabs">Static Tabs</a></li>
 							<li><a href="#tags">Tags</a></li>
-						</ul>-->
+						</ul>
 					</li>
 					<li><a href="template-grid-sizes.php">Grid system</a></li>
 					<li><a href="template-forms.php">Forms</a></li>
