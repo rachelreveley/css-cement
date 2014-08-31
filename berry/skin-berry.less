@@ -9,8 +9,8 @@
 	@colour-body-bg: #666; // @white, @black
 
 	@colour-tools-fg: @white; // 
-	@colour-tools-bg: #242424; // 
-	@colour-tools-inner-bg: #242424; // 
+	@colour-tools-bg: rgba(36,36,36,0.2); // 
+	@colour-tools-inner-bg: transparent; // 
 
 	@colour-header-fg: @white; // 
 	@colour-header-bg: @black; // 
@@ -63,17 +63,17 @@
 // header navigation
 // -------------------------------
 	@colour-header-nav-level-0-fg: @white; // 
-	@colour-header-nav-level-0-bg: rgba(36,36,36,0.8); // 
+	@colour-header-nav-level-0-bg: rgba(36,36,36,0.2); // 
 	@colour-header-nav-level-1-fg: @white; // 
-	@colour-header-nav-level-1-bg: #242424; // 
+	@colour-header-nav-level-1-bg: rgba(36,36,36,0.95); // 
 	@colour-header-nav-level-2-fg: @white; // 
 	@colour-header-nav-level-2-bg: #242424; // 
 	@colour-header-nav-border: #444; // 
 
 	@colour-header-nav-level-0-hover-fg: @white; // 
 	@colour-header-nav-level-0-hover-bg: rgba(51,0,102,0.8); // 
-	@colour-header-nav-level-1-hover-fg: @purple; // 
-	@colour-header-nav-level-1-hover-bg: #eee; // 
+	@colour-header-nav-level-1-hover-fg: @white; // 
+	@colour-header-nav-level-1-hover-bg: rgba(51,0,102,0.95); // 
 	@colour-header-nav-level-2-hover-fg: @purple; // 
 	@colour-header-nav-level-2-hover-bg: #eee; // 
 	@colour-header-nav-border: #282828; // 
@@ -128,7 +128,10 @@
 // -------------------------------
 // Flyout menus
 // -------------------------------
-	@has-flyout-header: enabled; // enabled, disabled
+	@has-flyout-tools: disabled; // full-width, multi-col, single-col
+	@has-flyout-header: disabled; // full-width, multi-col, single-col
+	@has-flyout-main: single-col; // full-width, multi-col, single-col
+
 	@flyout-layout: full-width; // single-col, multi-col, full-width
 	@flyout-width: 300px; // number
 // -------------------------------
@@ -466,7 +469,7 @@
 	@logo-position: center; // center, left, right
 	@logo-width: 200px;
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
-	@logo-margins: 24px 0 24px;
+	@logo-margins: 60px auto 5px;
 	@logo-case: uppercase;
 	@logo-url: disabled; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
 		// if disabled
@@ -540,7 +543,7 @@
 	@has-header-nav: enabled; //disabled, enabled
 	@header-nav-position: full-fluid; // full-fluid, full-equal, center, left, right
 	@header-nav-style: blocks; // blocks, dividers, tabs
-	@header-nav-padding: (@padding / 2) @padding;
+	@header-nav-padding: (@padding / 1.5) @padding;
 		// if blocks
 		@header-nav-border: 0;
 
@@ -624,15 +627,24 @@
 // end type.less
 // ###############################
 
-header {position: relative; overflow: hidden;
+header {position: relative;
 	.gradient (@stops: left, #141031, #752663, #6c4fad, #141031; @fallback: #141031;);
 	&:after  {.circle;border: 30px solid rgba(255,255,255,0.1); top: 35px; left: 60%;}
-	&:before {.circle; border: 70px solid rgba(255,255,255,0.1); top: 30px; left: 30%;}
+	&:before {.circle; border: 70px solid rgba(255,255,255,0.1); top: 170px; left: 26%;}
 	& > div {
-		&:after  {.circle; border: 50px solid rgba(255,255,255,0.1); top: -20px; left: 11%;}
-		&:before {.circle; border: 100px solid rgba(255,255,255,0.1); top: -10px; left: 75%;}
+		&:after  {.circle; border: 50px solid rgba(255,255,255,0.1); top: 10px; left: 11%;}
+		&:before {.circle; border: 100px solid rgba(255,255,255,0.1); top: 70px; left: 75%;}
 	}
-	& nav {z-index: 1; position: relative;}
+	& .logo p {font-size: 28px; text-transform: none;}
+	& nav {z-index: 1; position: relative;
+		& > ul > li:last-child a {color: @white; background-color: @bright-pink !important;
+			&:hover {color: @white; background-color: @purple !important;}
+		}
+	}
+	a.download {border: 1px solid #fff; border-radius: 6px; color: #fff; display: block; font-size: 20px; font-weight: normal; margin: 0 auto 40px; padding: 20px; text-align: center; text-decoration: none; text-transform: uppercase; width: 240px;
+		&:hover {background: none repeat scroll 0 0 rgba(22, 16, 50, 0.3);}
+		& span {font-size: 13px; display: block;}
+	}
 }
 .circle{.pseudo; width:0; height: 0; border-radius: 100%; box-shadow: 0 0 8px 8px rgba(255,255,255,0.1); position: absolute; visibility: visible; pointer-events: none;}
 div.main {padding-top: 20px;}
