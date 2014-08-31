@@ -5,7 +5,7 @@ $slug="Forms";
 <?php include("header.php"); ?>
 				<div class="parent dt-1-1 tb-1-1 mb-1-1 collapse-top">
 					<div>
-						<h3>Buttons</h3>
+						<h3>Primary Buttons</h3>
 
 						<button class="button">Button</button>
 						<button class="button sml arrow">Button</button>
@@ -14,7 +14,7 @@ $slug="Forms";
 						<button class="button lrg">Button</button>
 						<button class="button lrg arrow">Button</button>
 
-						<br />
+						<h3>Secondary Buttons</h3>
 
 						<button class="button sml secondary">Button</button>
 						<button class="button sml arrow secondary">Button</button>
@@ -23,18 +23,17 @@ $slug="Forms";
 						<button class="button lrg secondary">Button</button>
 						<button class="button lrg arrow secondary">Button</button>
 
-						<br />
+						<h3>Disabled Buttons</h3>
 
-						<button disabled=" disabled" class="button sml">Button</button>
-						<button disabled=" disabled" class="button sml arrow">Button</button>
-						<button disabled=" disabled" class="button std">Button</button>
-						<button disabled=" disabled" class="button std arrow">Button</button>
-						<button disabled=" disabled" class="button lrg">Button</button>
-						<button disabled=" disabled" class="button lrg arrow">Button</button>
+						<button disabled="disabled" class="button sml">Button</button>
+						<button disabled="disabled" class="button sml arrow">Button</button>
+						<button disabled="disabled" class="button std">Button</button>
+						<button disabled="disabled" class="button std arrow">Button</button>
+						<button disabled="disabled" class="button lrg">Button</button>
+						<button disabled="disabled" class="button lrg arrow">Button</button>
 
-						<br />
+						<h3>Links that look like buttons</h3>
 
-						<h3>Links</h3>
 						<a href="" class="button">Button</a>
 						<a href="" class="button sml arrow">Button</a>
 						<a href="" class="button std">Button</a>
@@ -42,39 +41,33 @@ $slug="Forms";
 						<a href="" class="button lrg">Button</a>
 						<a href="" class="button lrg arrow">Button</a>
 
-						<br />
+						<h3>Double decker buttons</h3>
 
-						<h3>Misc</h3>
-						<button class="button sml arrow">ä Ä é ö Ö ü Ü ß ù û ü ÿ à â æ ç é è ê ë ï î ô œ</button>
-						<button class="button sml arrow">abcdefghijklmnopqrstvwxyzabcdefghijklmnopqrstvwxyz</button>
-						<button class="button sml arrow"><span>abcdefghijklmnopqrstvwx</span><span>yzabcdefghijklmnopqrstvwxyz</span></button>
 						<button type="submit" class="button std-arrow double-decker">
-							<span class="top-deck">Add to Basket</span>
-							<span class="bottom-deck">with Free Delivery</span>
+							<span class="top-deck">Main text</span>
+							<span class="bottom-deck">sub text</span>
+						</button>
+						<button type="submit" class="button std-arrow double-decker secondary">
+							<span class="top-deck">Main text</span>
+							<span class="bottom-deck">sub text</span>
+						</button>
+						<button type="submit" class="button std-arrow double-decker" disabled="disabled">
+							<span class="top-deck">Main text</span>
+							<span class="bottom-deck">sub text</span>
 						</button>
 
 						<h3>Button group</h3>
 						<buttongroup>
-							<button disabled=" disabled" class="button std">Button</button>
-							<button disabled=" disabled" class="button std">Button</button>
+							<button class="button std">Button</button>
+							<button class="button std secondary">Button</button>
+							<button class="button std secondary">Button</button>
 							<button disabled=" disabled" class="button std">Button</button>
 						</buttongroup>
-
-						<br />
-
-						<h3>Links & buttons side by side</h3>
-						<a href="" class="button sml">Button</a>
-						<button class="button sml">Button</button>
-						<a href="" class="button sml arrow">Button</a>
-						<button class="button sml arrow">Button</button>
-						<a href="" class="button std">Button</a>
-						<button class="button std">Button</button>
-						<a href="" class="button std arrow">Button</a>
-						<button class="button std arrow">Button</button>
-						<a href="" class="button lrg">Button</a>
-						<button class="button lrg">Button</button>
-						<a href="" class="button lrg arrow">Button</a>
-						<button class="button lrg arrow">Button</button>
+						<buttongroup>
+							<button class="button lrg">Button</button>
+							<button class="button std">Button</button>
+							<button class="button sml">Button</button>
+						</buttongroup>
 
 					<form class="form" action="test">
 						<fieldset>
