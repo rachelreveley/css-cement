@@ -40,10 +40,10 @@ nav {
 	& nav {font-size: @tools-nav-font-size;
 		& a {padding: @tools-nav-padding;
 			&:link,
-			&:visited{color: @colour-tools-nav-level-0-fg;}
+			&:visited {color: @colour-tools-nav-level-0-fg;}
 			&:hover,
 			&:active,
-			&:focus{color: @colour-tools-nav-level-0-hover-fg;}
+			&:focus {color: @colour-tools-nav-level-0-hover-fg;}
 		}
 		& li:first-child a {padding-left: 0;}
 		& li:last-child a {padding-right: 0;}
@@ -247,22 +247,23 @@ nav.side when (@has-side-nav = enabled) {font-size: @side-nav-font-size;
 	.tool nav > ul > li:hover > ul when (@has-flyout-tools = full-width) {.flyout-layout-full-width;}
 	.tools nav > ul > li:hover > ul when (@has-flyout-tools = multi-col) {.flyout-layout-multi-col;}
 	.tools nav > ul > li:hover > ul when (@has-flyout-tools = single-col) {.flyout-layout-single-col;}
-
+/*
 	header when not (@has-flyout-header = disabled) {.has-flyouts;}
 	header nav > ul > li:hover > ul when (@has-flyout-header = full-width) {.flyout-layout-full-width;}
 	header nav > ul > li:hover > ul when (@has-flyout-header = multi-col) {.flyout-layout-multi-col;}
 	header nav > ul > li:hover > ul when (@has-flyout-header = single-col) {.flyout-layout-single-col;}
-
+*/
 	nav.main when not (@has-flyout-main = disabled) {.has-flyouts;}
 	nav.main  > ul > li:hover > ul when (@has-flyout-main = full-width) {.flyout-layout-full-width;}
 	nav.main > ul > li:hover > ul when (@has-flyout-main = multi-col) {.flyout-layout-multi-col;}
 	nav.main > ul > li:hover > ul when (@has-flyout-main = single-col) {.flyout-layout-single-col;}
 
 	.has-flyouts(){
-		& nav > ul {position: relative;
+		& > ul {position: relative;
 			& > li {
 				& > ul {position: absolute; display: none;
-					& > li {display: block; width: 100%;}
+					& > li {display: block; width: 100%; background-color: @colour-header-nav-level-1-bg; color: @colour-header-nav-level-1-fg;}
+					& > li:hover {background-color: @colour-header-nav-level-1-hover-bg; color: @colour-header-nav-level-1-hover-fg;}
 				}
 				&:hover {
 					& > ul {display: block;
