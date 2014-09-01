@@ -1,5 +1,5 @@
 <?php
-$meta_title="CSS Cement - Less powered CSS framework";
+$meta_title="CSS Cement - LESS powered CSS framework";
 $slug="Home";
 ?>
 <?php include("header.php"); ?>
@@ -10,7 +10,7 @@ $slug="Home";
 								<h1>CSS Cement is a CSS / HTML framework that uses the power of LESS to make a system that you not only build on top of but build with.</h1>
 							</div>
 
-							<p>The drive behind CSS Cement was my disapointment with some of the leading front-end frameworks. I wanted a framework that was more semantic with less framework specific markup and classes and less reliance on changing markup to change the look of an element. I also wanted something lightweight enough to be usable on customer facing sites, meaning that the code had to be lightweight and therefore configurable rather tha overridable.</p>
+							<p>The drive behind CSS Cement was my disapointment with some of the leading front-end frameworks. I wanted a framework that was more semantic with less framework specific markup and classes and less reliance on changing markup to change the look of an element. I also wanted something lightweight enough to be usable on customer facing sites, meaning that the code had to be lightweight and therefore configurable rather than overridable.</p>
 							<p>This is where the name CSS Cement came from, CSS Cement is supposed to be a framework you use to build your site with rather than a framework you build on top of.</p>
 
 					<div class="parent dt-1-2 tb-1-2 mb-1-1">
@@ -21,7 +21,7 @@ $slug="Home";
 						</div>
 						<div>
 							<h2><a href="template-grid.php"><a href="">The Grid</a></h2>
-							<p>The grid system is based on fractions and allows you to switch the number of columns even on the same page and allows up to 20 columns. The grid system is nestable and fully responsive with configurable break points and minimum / maximum site widths.</p>
+							<p>The grid system is based on fractions and allows you to switch the number of columns even on the same page and allows up to 20 columns. The grid system is nestable and fully responsive with configurable breakpoints and minimum / maximum site widths.</p>
 							<p>Another feature of the grid is that multiple rows of child elements can be used without specifying an nth class or clearing at a certain point, making the system ideal for ecommerce sites.</p>
 						</div>
 						<div>
@@ -46,7 +46,7 @@ $slug="Home";
 						<div class="dt-1-1 tb-1-1 mb-1-1">
 							<h2>Getting started</h2>
 							<p>The best way to get started is to download a theme and have a dig through it's files.</p>
-							<p>You will need Less to work with CSS Cement as we deliberately don't provide built versions. Rather than write lots of documenttaion here about how to use LESS I would rather point you to their very useful site at <a href="http://lesscss.org/">http://lesscss.org/</a></p>
+							<p>You will need LESS to work with CSS Cement as we deliberately don't provide built versions. Rather than write lots of documenttaion here about how to use LESS I would rather point you to their very useful site at <a href="http://lesscss.org/">http://lesscss.org/</a></p>
 						</div>
 						</div>
 					</div>
