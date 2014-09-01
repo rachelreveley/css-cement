@@ -120,6 +120,8 @@
 .chat when (@chat = bubbles){
 	& blockquote {
 		display: block; margin-bottom: @chat-margin; padding: @chat-padding; border-radius: @chat-radius; position: relative;
+		&:before,
+		&:after {height: 0;}
 		&:before {
 			position: absolute; border-style: solid; bottom: (-(@chat-tail-size / 1.5));
 			.pseudo;
