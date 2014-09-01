@@ -59,21 +59,21 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="template-widgets.php">Standard Widets</a>
 						<ul>
-							<li><a href="#bar-chart">Bar charts</a></li>
-							<li><a href="#calendar">Calendar</a></li>
-							<li><a href="#chat-boxes">Chat boxes</a></li>
-							<li><a href="#corner-ribbons">Corner ribbons</a></li>
-							<li><a href="#dialog-boxes">Dialog boxes</a></li>
-							<li><a href="#feature-boxes">Feature boxes</a></li>
-							<li><a href="#forum-threads">Forum threads</a></li>
-							<li><a href="#gallery">Gallery</a></li>
-							<li><a href="#highlight">Highlighted content box</a></li>
-							<li><a href="#loading">Loading</a></li>
-							<li><a href="#pagination">Pagination</a></li>
-							<li><a href="#progress-bar">Progress bar</a></li>
-							<li><a href="#tables">Tables</a></li>
-							<li><a href="#static-tabs">Static Tabs</a></li>
-							<li><a href="#tags">Tags</a></li>
+							<li><a href="template-widgets.php#bar-chart">Bar charts</a></li>
+							<li><a href="template-widgets.php#calendar">Calendar</a></li>
+							<li><a href="template-widgets.php#chat-boxes">Chat boxes</a></li>
+							<li><a href="template-widgets.php#corner-ribbons">Corner ribbons</a></li>
+							<li><a href="template-widgets.php#dialog-boxes">Dialog boxes</a></li>
+							<li><a href="template-widgets.php#feature-boxes">Feature boxes</a></li>
+							<li><a href="template-widgets.php#forum-threads">Forum threads</a></li>
+							<li><a href="template-widgets.php#gallery">Gallery</a></li>
+							<li><a href="template-widgets.php#highlight">Highlighted content box</a></li>
+							<li><a href="template-widgets.php#loading">Loading</a></li>
+							<li><a href="template-widgets.php#pagination">Pagination</a></li>
+							<li><a href="template-widgets.php#progress-bar">Progress bar</a></li>
+							<li><a href="template-widgets.php#tables">Tables</a></li>
+							<li><a href="template-widgets.php#static-tabs">Static Tabs</a></li>
+							<li><a href="template-widgets.php#tags">Tags</a></li>
 						</ul>
 					</li>
 					<li><a href="template-grid-sizes.php">Grid system</a></li>
