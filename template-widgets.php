@@ -210,7 +210,7 @@ $slug="Widgets";
 						<p>Portfolios, brochures and photo sharing sites can all make use of a gallery feature.</p>
 					<div class="parent dt-1-6 tb-1-6 mb-1-3 gallery" id="gallery">
 						<div> 
-							<a href=""><img src="http://fpoimg.com/200x200?text=1" alt="Alt text here" /></a></li>
+							<a href=""><img src="http://fpoimg.com/200x200?text=1" alt="Alt text here" /></a>
 						</div>
 						<div>
 							<a href=""><img src="http://fpoimg.com/200x200?text=1" alt="Alt text here" /><span class="caption">Short caption</span></a>
@@ -583,6 +583,14 @@ $slug="Widgets";
 								<li><a href="">Linked tag</a></li>
 								<li><a href="">Editable tag <i class="fa fa-times-circle"></i></a></li>
 							</ul>
+						</div>
+					</div>
+					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="tags">
+						<div>
+							<h2>Zoomer</h2>
+							<div class="zoomer">
+								<img src="http://lorempixel.com/400/200/food/" alt="" />
+							</div>
 						</div>
 					</div>
 <?php include("footer.php"); ?>

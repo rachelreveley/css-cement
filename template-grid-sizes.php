@@ -25,13 +25,13 @@ $slug="The optional grid system";
 						<p>This works well for ecommerce sites as yu only have to set the size of the grid once rather than for every child element.</p>
 						<p>You can have as many rows as you want within each grid container so there's no need for counting in order to add wrappers around each row.</p>
 
-<code><xmp><div class="parent dt-1-4 tb-1-10 mb-1-1">
+<xmp><div class="parent dt-1-4 tb-1-10 mb-1-1">
 	<div>&nbsp;</div>
 	<div>&nbsp;</div>
 	<div>&nbsp;</div>
 	<div>&nbsp;</div>
 </div>
-</xmp></code>
+</xmp>
 					</div>
 				</div>
 				<div class="parent dt-1-1 tb-1-20 mb-1-1">
@@ -89,7 +89,7 @@ $slug="The optional grid system";
 					<h3>Overide the grid size for an individual element.</h3>
 					<p>Whether or not you set the grid size at the parent level, you can also set it individually for each child.</p>
 
-<code><xmp><div class="parent dt-1-2 tb-1-2 mb-1-2">
+<xmp><div class="parent dt-1-2 tb-1-2 mb-1-2">
 	<div class="panel">&nbsp;</div>
 	<div class="panel">
 		<div class="parent dt-1-2 tb-1-2 mb-1-2">
@@ -98,7 +98,7 @@ $slug="The optional grid system";
 		</div>
 	</div>
 </div>
-</xmp></code>
+</xmp>
 					</div>
 				</div>
 				<div class="parent dt-1-2 tb-1-1 mb-1-1">
@@ -138,7 +138,7 @@ $slug="The optional grid system";
 						<p>It can be very useful to hae grids nested within grids. It also helps if you can choose whether these should line up with their parent containers or if they should create their own level.</p>
 						<h3>Invisibly nested grid, when you want your inner grid to line up with the outer grid.</h3>
 
-<code><xmp><div class="parent dt-1-2 tb-1-2 mb-1-2 nested">
+<xmp><div class="parent dt-1-2 tb-1-2 mb-1-2 nested">
 	<div>&nbsp;</div>
 	<div>
 		<div class="parent dt-1-2 tb-1-2 mb-1-2">
@@ -147,7 +147,7 @@ $slug="The optional grid system";
 		</div>
 	</div>
 </div>
-</xmp></code>
+</xmp>
 
 					</div>
 				</div>
@@ -174,7 +174,7 @@ $slug="The optional grid system";
 					<div>
 						<h3>Visibly nested grid, when you want your inner grid to be wrapped with a margin.</h3>
 
-<code><xmp><div class="parent dt-1-2 tb-1-2 mb-1-2">
+<xmp><div class="parent dt-1-2 tb-1-2 mb-1-2">
 	<div>&nbsp;</div>
 	<div>
 		<div class="parent dt-1-2 tb-1-2 mb-1-2">
@@ -183,7 +183,7 @@ $slug="The optional grid system";
 		</div>
 	</div>
 </div>
-</xmp></code>
+</xmp>
 
 					</div>
 				</div>
@@ -207,7 +207,5 @@ $slug="The optional grid system";
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
 
 <?php include("footer.php"); ?>

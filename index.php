@@ -20,7 +20,7 @@ $slug="Home";
 									<p>All the semantic widgets are documented in the Standard widgets page above. I have also created some non-semantic widgets that I didn't feel where apropriate to add with the semantic widgets but where nifty enough to include if needed. These are in the other widgets page.</p>
 								</div>
 								<div>
-									<h2><a href="template-grid.php"><a href="">The Grid</a></h2>
+									<h2><a href="template-grid.php">The Grid</a></h2>
 									<p>The grid system is based on fractions and allows you to switch the number of columns even on the same page and allows up to 20 columns. The grid system is nestable and fully responsive with configurable breakpoints and minimum / maximum site widths.</p>
 									<p>Another feature of the grid is that multiple rows of child elements can be used without specifying an nth class or clearing at a certain point, making the system ideal for ecommerce sites.</p>
 								</div>
@@ -51,4 +51,5 @@ $slug="Home";
 							</div>
 						</div>
 					</div>
+				</div>
 <?php include("footer.php"); ?>

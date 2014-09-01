@@ -43,9 +43,6 @@ $slug="Non-semantic widgets";
 									</fieldset>	
 								</form>
 							</div>
-							<div class="zoomer">
-								<img src="http://lorempixel.com/400/200/food/" />
-							</div>
 						</div>
 					</div>
 <?php include("footer.php"); ?>
