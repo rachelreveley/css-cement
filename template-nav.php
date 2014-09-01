@@ -21,7 +21,7 @@ $slug="Navigation";
 							<div class="highlight">
 								<p>This page is a demo to show how to add a side navigation bar.</p>
 							</div>
-							</div>
 						</div>
+					</div>
 
 <?php include("footer.php"); ?>
