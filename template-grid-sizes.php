@@ -14,7 +14,7 @@ $slug="The optional grid system";
 							<p>The grid system is based on fractions and allows from 1 to 20 columns of regular or irregular sizes.</p>
 							<p>The number of columns can be changed at any time, by setting the class name.</p>
 							<p>The grid has 3 break point sizes, these are roughly desktop, tablet and mobile.</p>
-							<p>The grid's margins and padding are configurable at the same 3 brakpoints s above.</p>
+							<p>The grid's margins and padding are configurable at the same 3 breakpoints above.</p>
 							<p>The grid elements in this page have an additional set of classes called, panel, inner-panel and outer-panel. The are to set the background colours of the panels. You can skip these if you are creating a simple layout or one that doesn't involve recolouring grid elements.</p> 
 						</div>
 					</div>
