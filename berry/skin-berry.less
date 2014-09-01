@@ -1,28 +1,34 @@
+// Berry Theme
+/* 
+The Berry theme is designed to be a bright and cheerful generic theme.
+*/
 // ###############################
 // start colours.less
 // ###############################
 	.base-colors(@white,#333); // hex
+
 // -------------------------------
 // primary containers
 // -------------------------------
-	@colour-body-fg: #222; // @white, @black
 	@colour-body-bg: #fff; // @white, @black
+	@colour-body-fg: #222; // @white, @black
 
-	@colour-tools-fg: @white; // 
 	@colour-tools-bg: rgba(36,36,36,0.2); // 
+	@colour-tools-fg: @white; // 
 	@colour-tools-inner-bg: transparent; // 
 
-	@colour-header-fg: @white; // 
 	@colour-header-bg: @black; // 
+	@colour-header-fg: @white; // 
 	@colour-header-inner-bg: transparent; // 
 
-	@colour-content-fg: #222; // 
 	@colour-content-bg: @white; // 
+	@colour-content-fg: #222; // 
 	@colour-content-inner-bg: @white; // 
 
-	@colour-footer-fg: #222; // 
 	@colour-footer-bg: #111; // 
+	@colour-footer-fg: #222; // 
 	@colour-footer-inner-bg: #111; // 
+
 // -------------------------------
 // links
 // -------------------------------
@@ -30,6 +36,7 @@
 	@colour-visited: #909; // 
 	@colour-hover: @teal; // 
 	@colour-active: #990; // 
+
 // -------------------------------
 // text
 // -------------------------------
@@ -40,34 +47,35 @@
 	@colour-text-alt-2: @black; // 
 	@colour-text-alt-3: @black; //
 	@colour-border: @white; // 
+
 // -------------------------------
 // tools navigation
 // -------------------------------
-	@colour-tools-nav-level-0-fg: @white; // 
 	@colour-tools-nav-level-0-bg: #242424; // 
-	@colour-tools-nav-level-1-fg: @white; // 
+	@colour-tools-nav-level-0-fg: @white; // 
 	@colour-tools-nav-level-1-bg: #242424; // 
-	@colour-tools-nav-level-2-fg: @white; // 
+	@colour-tools-nav-level-1-fg: @white; // 
 	@colour-tools-nav-level-2-bg: #242424; // 
+	@colour-tools-nav-level-2-fg: @white; // 
 	@colour-tools-nav-border: @white; // 
 
-	@colour-tools-nav-level-0-hover-fg: @bright-pink; // 
 	@colour-tools-nav-level-0-hover-bg: #333; // 
-	@colour-tools-nav-level-1-hover-fg: #ff0; // 
+	@colour-tools-nav-level-0-hover-fg: @bright-pink; // 
 	@colour-tools-nav-level-1-hover-bg: #333; // 
-	@colour-tools-nav-level-2-hover-fg: #ff0; // 
+	@colour-tools-nav-level-1-hover-fg: #ff0; // 
 	@colour-tools-nav-level-2-hover-bg: #333; // 
+	@colour-tools-nav-level-2-hover-fg: #ff0; // 
 	@colour-tools-nav-border: #444; // 
 
 // -------------------------------
 // header navigation
 // -------------------------------
-	@colour-header-nav-level-0-fg: @white; // 
 	@colour-header-nav-level-0-bg: rgba(36,36,36,0.2); // 
-	@colour-header-nav-level-1-fg: @white; // 
+	@colour-header-nav-level-0-fg: @white; // 
 	@colour-header-nav-level-1-bg: rgba(36,36,36,0.95); // 
-	@colour-header-nav-level-2-fg: @white; // 
+	@colour-header-nav-level-1-fg: @white; // 
 	@colour-header-nav-level-2-bg: #242424; // 
+	@colour-header-nav-level-2-fg: @white; // 
 	@colour-header-nav-border: #444; // 
 
 	@colour-header-nav-level-0-hover-fg: @white; // 
@@ -81,49 +89,49 @@
 // -------------------------------
 // breadcrumbs navigation
 // -------------------------------
-	@colour-breadcrumbs-nav-level-0-fg: @teal; // 
 	@colour-breadcrumbs-nav-level-0-bg: #f5f5f5; // 
-	@colour-breadcrumbs-nav-level-1-fg: @teal; // 
+	@colour-breadcrumbs-nav-level-0-fg: @teal; // 
 	@colour-breadcrumbs-nav-level-1-bg: #f0f0f0; // 
-	@colour-breadcrumbs-nav-level-1-hover-fg: @purple; // 
+	@colour-breadcrumbs-nav-level-1-fg: @teal; // 
 	@colour-breadcrumbs-nav-level-1-hover-bg: #eee; // 
+	@colour-breadcrumbs-nav-level-1-hover-fg: @purple; // 
 	@colour-breadcrumbs-nav-border: @white; // 
 
 // -------------------------------
 // side navigation
 // -------------------------------
-	@colour-side-nav-level-0-fg: @teal; // 
 	@colour-side-nav-level-0-bg: #eee; // 
-	@colour-side-nav-level-1-fg: @teal; // 
+	@colour-side-nav-level-0-fg: @teal; // 
 	@colour-side-nav-level-1-bg: @white; // 
-	@colour-side-nav-level-2-fg: @teal; // 
+	@colour-side-nav-level-1-fg: @teal; // 
 	@colour-side-nav-level-2-bg: @white; // 
+	@colour-side-nav-level-2-fg: @teal; // 
 	@colour-side-nav-border: @white; // 
-	@colour-side-nav-level-0-hover-fg: @purple; // 
 	@colour-side-nav-level-0-hover-bg: #ddd; // 
-	@colour-side-nav-level-1-hover-fg: @purple; // 
+	@colour-side-nav-level-0-hover-fg: @purple; // 
 	@colour-side-nav-level-1-hover-bg: #eee; // 
-	@colour-side-nav-level-2-hover-fg: @purple; // 
+	@colour-side-nav-level-1-hover-fg: @purple; // 
 	@colour-side-nav-level-2-hover-bg: #eee; //
+	@colour-side-nav-level-2-hover-fg: @purple; // 
 	@colour-side-nav-border: @white; // 
 
 // -------------------------------
 // footer navigation
 // -------------------------------
 // footer nav
-	@colour-footer-nav-level-0-fg: @teal; // 
 	@colour-footer-nav-level-0-bg: @white; // 
-	@colour-footer-nav-level-1-fg: @teal; // 
+	@colour-footer-nav-level-0-fg: @teal; // 
 	@colour-footer-nav-level-1-bg: @white; // 
-	@colour-footer-nav-level-2-fg: @teal; // 
+	@colour-footer-nav-level-1-fg: @teal; // 
 	@colour-footer-nav-level-2-bg: @white; // 
+	@colour-footer-nav-level-2-fg: @teal; // 
 	@colour-footer-nav-border: @white; // 
-	@colour-footer-nav-level-0-hover-fg: @purple; // 
 	@colour-footer-nav-level-0-hover-bg: #eee; // 
-	@colour-footer-nav-level-1-hover-fg: @purple; // 
+	@colour-footer-nav-level-0-hover-fg: @purple; // 
 	@colour-footer-nav-level-1-hover-bg: #eee; // 
-	@colour-footer-nav-level-2-hover-fg: @purple; // 
+	@colour-footer-nav-level-1-hover-fg: @purple; // 
 	@colour-footer-nav-level-2-hover-bg: #eee; // 
+	@colour-footer-nav-level-2-hover-fg: @purple; // 
 	@colour-footer-nav-border: @white; // 
 // -------------------------------
 // Flyout menus
@@ -134,6 +142,7 @@
 
 	@flyout-layout: full-width; // single-col, multi-col, full-width
 	@flyout-width: 300px; // number
+
 // -------------------------------
 // button colours
 // -------------------------------
@@ -170,7 +179,11 @@
 // -------------------------------
 // Badges
 // -------------------------------
-	@badge: enabled; // disabled, simple
+	@has-badge: enabled; // disabled, enabled
+	@badge-radius: 100%;
+	@badge-padding: 3px 4px;
+	@badge-font-size: 11px;
+
 // -------------------------------
 // Bar charts
 // -------------------------------
@@ -189,16 +202,19 @@
 	@bar-chart-value-move-below: 20;
 	@bar-chart-value-move-below-indent: 30px;
 	@bar-chart-label-angle: 0deg; // degrees, disabled
+
 // -------------------------------
 // Calendar
 // -------------------------------
 	@has-calendar: enabled; // enabled, disabled
 	@colour-calendar-current-bg: @deep-pink;
 	@colour-calendar-current-fg: @white;
-	@colour-calendar-next-bg: #f9f9f9;
-	@colour-calendar-next-fg: #999;
 	@colour-calendar-hover-bg: @purple;
 	@colour-calendar-hover-fg: @white;
+	@colour-calendar-next-bg: #f9f9f9;
+	@colour-calendar-next-fg: #999;
+	@colour-calendar-next-weekend-bg: fade(@primary-colour,13%); // Colour
+	@colour-calendar-next-weekend-fg: #000; // Colour
 	@colour-calendar-previous-bg: #eee;
 	@colour-calendar-previous-fg: #666;
 	@colour-calendar-weekend-bg: #ddd;
@@ -211,11 +227,12 @@
 	@calendar-padding: 5px;
 	@calendar-heading-padding: 5px;
 	@calendar-heading-position: 35px;
+
 // -------------------------------
 // Chat bubbles
 // -------------------------------
 	@chat: bubbles; // disable, bubbles
-	@colour-chat-even-bg: @bright-pink; // hex
+	@colour-chat-even-bg: @teal; // hex
 	@colour-chat-even-fg: @white; // hex
 	@colour-chat-odd-bg: @deep-pink; // hex
 	@colour-chat-odd-fg: @white; // hex
@@ -224,6 +241,7 @@
 	@chat-padding: 10px;
 	@chat-radius: 4px;
 	@chat-tail-size: 20px;
+
 // -------------------------------
 // corner ribbons
 // -------------------------------
@@ -231,12 +249,14 @@
 	@colour-corner-ribbon-bg: @deep-pink;
 	@colour-corner-ribbon-fg: @white;
 	@corner-ribbon-border: 0;
+
 // -------------------------------
 // Feature hover effects
 // -------------------------------
 	@feaure-hovers: darken; // disabled, lighten, darken
 	@feaure-hovers-bg: rgba(0,102,102,1);
 	@feature-hovers-fg: #666;
+
 // -------------------------------
 // Forums
 // -------------------------------
@@ -253,12 +273,14 @@
 	@forum-post-head: right; // left, right
 	@forum-post-meta-style: collapsed; // simple, collapsed
 	@forum-post-meta-width: 25%;
+
 // -------------------------------
 // Gallery
 // -------------------------------
 	@gallery: enabled; // disabled, simple, rounded-grid, filmstrip
 	@gallery-style: ; // simple, framed
 	@gallery-hover: border; // border, opacity, zoom
+
 // -------------------------------
 // Highlight-block
 // -------------------------------
@@ -268,6 +290,13 @@
 	@highlight-padding: @padding;
 	@highlight-radius: @border-radius; // disabled, number
 	@highlight-block: enabled; // disabled, simple
+
+// -------------------------------
+// Modal
+// -------------------------------	
+	@has-modal: enabled;
+	@modal-colour: rgba(0, 0, 0, 0.5);
+
 // -------------------------------
 // Pagination
 // -------------------------------
@@ -278,18 +307,18 @@
 	@colour-pagination-current-fg: @white; // hex
 	@colour-pagination-hover-bg: @purple; // hex
 	@colour-pagination-hover-fg: @white; // hex
-	@pagination-border-colour: @white; // disabled, hex
-	@pagination-border-style: solid; // disabled, style
-	@pagination-border-width: 1px; // disabled, 
+	@pagination-border: 1px solid @white; // Border style
 	@pagination-margin: 5px;
 	@pagination-padding: 0.75em 1em; // 1 - 4 numbers
 	@pagination-radius: @border-radius; // disabled, number
+
 // -------------------------------
 // Progress-bar
 // -------------------------------
 	@progress: enabled; // disabled, simple
 	@colour-progress-bg: @pale-pink;
 	@colour-progress-fg: @purple;
+
 // -------------------------------
 // Pull-quotes
 // -------------------------------
@@ -301,6 +330,42 @@
 	@pullquotes-font-size: 16px;
 	@pullquotes-margin: @padding;
 	@pullquotes-padding: @padding;
+
+// -------------------------------
+// Status Messages
+// -------------------------------
+	@has-status-messages: enabled; // disabled, enabled
+
+	@colour-status-messages-danger-bg: @danger-bg; // Colour
+	@colour-status-messages-danger-fg: @danger-fg; // Colour
+	@colour-status-messages-danger-a-fg: @danger-fg; // Colour
+	@colour-status-messages-danger-heading-fg: @danger-fg; // Colour
+	@status-messages-danger-border: 1px solid @danger-fg; // Border style
+
+	@colour-status-messages-default-bg: @default-bg; // Colour
+	@colour-status-messages-default-fg: @default-fg; // Colour
+	@colour-status-messages-default-a-fg: @default-fg; // Colour
+	@colour-status-messages-default-heading-fg: @default-fg; // Colour
+	@status-messages-default-border: 1px solid @default-fg; // Border style
+
+	@colour-status-messages-success-bg: @success-bg; // Colour
+	@colour-status-messages-success-fg: @success-fg; // Colour
+	@colour-status-messages-success-a-fg: @success-fg; // Colour
+	@colour-status-messages-success-heading-fg: @success-fg; // Colour
+	@status-messages-success-border: 1px solid @success-fg; // Border style
+
+	@colour-status-messages-warning-bg: @warning-bg; // Colour
+	@colour-status-messages-warning-fg: @warning-fg; // Colour
+	@colour-status-messages-warning-a-fg: @warning-fg; // Colour
+	@colour-status-messages-warning-heading-fg: @warning-fg; // Colour
+	@status-messages-warning-border: 1px solid @warning-fg; // Border style
+
+	@status-messages-radius: @border-radius; // Number and unit
+	@status-messages-font-size: 13px; // Number and unit
+	@status-messages-heading-font-size: 16px; // Number and unit
+	@status-messages-margin: @padding; // Number and unit
+	@status-messages-padding: @padding; // Number and unit
+
 // -------------------------------
 // Tables
 // -------------------------------
@@ -320,7 +385,7 @@
 	@colour-table-comparrison-col-5-fg: @black;
 	@colour-table-comparrison-col-6-fg: @black;
 	@colour-table-even-bg: @pale-pink; // hex
-	@colour-table-foot-bg: @bright-pink; // hex
+	@colour-table-foot-bg: @teal; // hex
 	@colour-table-foot-fg: @white; // hex
 	@colour-table-head-bg: @deep-pink; // hex
 	@colour-table-head-fg: @white; // hex
@@ -330,6 +395,7 @@
 	@table-head-font-weight: bold; // bold, normal
 	@table-padding: (@padding / 1.2) (@padding * 1.5);
 	@table-promote-border: 2px solid @purple;
+
 // -------------------------------
 // Tabs
 // -------------------------------
@@ -348,6 +414,7 @@
 	@tabs-radius: @border-radius; // disabled, number
 	@dynamic-tabs: enabled; // 
 	@dynamic-tabs-qty: 4;
+
 // -------------------------------
 // Tags
 // -------------------------------
@@ -358,6 +425,13 @@
 	@tags-border: @border-solid;
 	@tags-padding: 0.25em 1em; // 1 - 4 numbers
 	@tags: simple; // disabled, simple
+
+// -------------------------------
+// Zoomer
+// -------------------------------
+	@has-zoomer: enabled;
+	@zoomer-zoom-level: 2;
+
 // ###############################
 // end common.less
 // ###############################
@@ -384,7 +458,8 @@
 	@forms-input-focus-border: 1px solid #666;
 	@forms-input-focus-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 
-	@forms-highlight-bg: @bg - 10;
+	@forms-highlight-bg: @bg - 10; // Colour
+	@forms-hover-bg: @bg - 10; // Colour
 
 	@forms-error-text: #c00;
 	@forms-error-border: #fcc;
@@ -393,6 +468,9 @@
 	@forms-bordered-bg: transparent;
 	@forms-bordered-border: @border-solid;
 	@forms-bordered-footer: #f8f8f8;
+
+	@forms-dividers-border: @border-dotted; // Number and unit
+
 // New button styles with a pseudo element for an arrow
 // General styles
 	@has-pseudo-buttons: true;
@@ -405,25 +483,33 @@
 	@button-text-shadow: none;
 	@button-hover-box-shadow: none;
 	@button-hover-text-shadow: none;
+
 // Colours - primary
 	@button-bg: @purple;
 	@button-fg: #fff;
+	@cta-icon-fg: #fff; // Colour
+
 // Colours - primary - hover
 	@button-hover-bg: @deep-pink;
 	@button-hover-fg: #fff;
+
 // Colours - secondary
 	@button-secondary-bg: saturate(lighten(@purple,30),-40);
 	@button-secondary-fg: #fff;
+
 // Colours - secondary - hover
 	@button-secondary-hover-bg: saturate(lighten(@deep-pink,30),-40);
 	@button-secondary-hover-fg: #fff;
 	@cta-icon-secondary-hover-fg: #fff;
+
 // Colours - disabled
 	@button-disabled-bg: #ccc;
 	@button-disabled-fg: #fff;
+
 // Icons
 	@cta-icon: arrow; // disabled, arrow, arrow-in-circle
 	@cta-icon-position: right;
+
 // Button sizing and padding
 	@button-scale: 1em;
 	@sml-scale: 1.4;
@@ -431,6 +517,7 @@
 	@lrg-scale: 2.2;
 	@double-decker-scale: 2.4;
 	@double-decker-secondary-scale: 2.2;
+
 // ###############################
 // end forms.less
 // ###############################
@@ -444,18 +531,25 @@
 	@framework-h-gutter: 20px;
 	@framework-v-gutter: 20px;
 	@fs-base: 13px;
+// logo
+	@colour-logo: #fff; // Colour
+	@colour-logo-hover: #fff; // Colour
 	@logo-position: center; // center, left, right
 	@logo-width: 200px;
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
 	@logo-margins: 60px auto 5px;
 	@logo-case: uppercase;
+	@logo-sub-case: none; // none, default, capitalize, uppercase, lowercase, initial, inherit
 	@logo-url: disabled; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
+	@logo-sub: enabled; // enabled, disabled
 		// if disabled
 		@logo-font-size: 72px;
+		@logo-sub-font-size: 16px; // Number and unit
 
 	@images-url: ; // where you save all your images
 	@nav-width: 25%;
 	@nav-gutter: true;
+// Responsive breakpoints
 	@bp-350: 350px;
 	@bp-400: 400px;
 	@bp-450: 450px;
@@ -473,6 +567,7 @@
 	@bp-side-nav: ;
 	.fs-base {font-size: @fs-base;}
 	.fs-zero {font-size: 0;}
+
 // ###############################
 // end framework.less
 // ###############################
@@ -487,16 +582,9 @@
 	@dt: 960px;
 	@tb: 600px;
 	@mb: 320px;
+
 // ###############################
 // end grid.less
-// ###############################
-
-// ###############################
-// start mixins.less
-// ###############################
-
-// ###############################
-// end mixins.less
 // ###############################
 
 // ###############################
@@ -540,6 +628,7 @@
 
 // flyouts
 	@flyouts-width: disabled; // disabled, single, multi, full
+
 // ###############################
 // end navigation.less
 // ###############################
@@ -552,6 +641,7 @@
 	@border-solid: 1px solid #ccc;
 	@border-dotted: 1px dotted #ccc;
 	@opacity: 0.8;
+
 // ###############################
 // end styles.less
 // ###############################
@@ -585,18 +675,26 @@
 
 	@text-size: 13px;
 	@line-height: 1.4;
+
 	@h1-size: 40px;
 	@h1-line-height: 1.2;
+	@h1-margin: 0.3em; // Number and unit
 	@h2-size: 36px;
 	@h2-line-height: 1.2;
+	@h2-margin:  0.3em; // Number and unit
 	@h3-size: 32px;
 	@h3-line-height: 1.2;
+	@h3-margin: 0.3em; // Number and unit
 	@h4-size: 28px;
 	@h4-line-height: 1.2;
+	@h4-margin: 0.3em; // Number and unit
 	@h5-size: 24px;
 	@h5-line-height: 1.2;
+	@h5-margin: 0.3em; // Number and unit
 	@h6-size: 20px;
 	@h6-line-height: 1.4;
+	@h6-margin: 0.3em; // Number and unit
+
 	@tools-nav-font-size: 13px;
 	@header-nav-font-size: 13px;
 	@side-nav-font-size: 14px;
