@@ -57,7 +57,7 @@
 			<nav class="main">
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="template-widgets.php">Standard Widets</a>
+					<li><a href="template-widgets.php">Standard Widgets</a>
 						<ul>
 							<li><a href="#bar-chart">Bar charts</a></li>
 							<li><a href="#calendar">Calendar</a></li>
