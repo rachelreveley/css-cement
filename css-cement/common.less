@@ -408,8 +408,8 @@ table when not (@tables = disabled) {
 // -------------------------------
 // Tags
 // -------------------------------
-.tags when not (@tags = disabled){display: block;
-	& li {float: left;
+.tags when not (@tags = disabled){display: block; list-style-type: none;
+	& li {float: left; margin-left: none;
 		& a,
 		& span {display: block; padding:@tags-padding; text-decoration: none; margin-right: 2px;}
 		& span {background-color: @colour-tags-bg; color: @colour-tags-fg;}
