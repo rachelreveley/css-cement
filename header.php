@@ -53,7 +53,7 @@
 			<div>
 				<div class="logo">
 					<a href="/css-cement">CSS Cement</a>
-					<p>Less powered front-end framework</p>
+					<span>Less powered front-end framework</span>
 				</div>
 				<a href="https://github.com/rachelreveley/css-cement" class="download">Download<span>v1.1</span></a>
 			</div>
