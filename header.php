@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<title><?php echo $meta_title;?></title>
 		<meta name="author" content="Rachel Reveley">
-		<link rel="stylesheet/less" type="text/css" href="berry/berry.less" />
+		<link rel="stylesheet/less" type="text/css" href="<?php 
+			if( isset($_GET["theme"]) ){ echo $_GET["theme"],"/", $_GET["theme"], ".less"; }
+			else { echo "berry/berry.less"; }
+		?>" />
 		<script type="text/javascript">
 			less = {
 				env: "development", // or "production"
