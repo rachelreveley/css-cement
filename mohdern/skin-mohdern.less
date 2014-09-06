@@ -70,12 +70,12 @@ The Mohdern theme.
 // -------------------------------
 // header navigation
 // -------------------------------
-	@colour-header-nav-level-0-bg: #fff; // 
-	@colour-header-nav-level-0-fg: #000; // 
-	@colour-header-nav-level-1-bg: #fff; // 
-	@colour-header-nav-level-1-fg: #000; // 
-	@colour-header-nav-level-2-bg: #fff; // 
-	@colour-header-nav-level-2-fg: #000; // 
+	@colour-header-nav-level-0-bg: #000; // 
+	@colour-header-nav-level-0-fg: #fff; // 
+	@colour-header-nav-level-1-bg: #000; // 
+	@colour-header-nav-level-1-fg: #fff; // 
+	@colour-header-nav-level-2-bg: #000; // 
+	@colour-header-nav-level-2-fg: #fff; // 
 	@colour-header-nav-border: #000; // 
 
 	@colour-header-nav-level-0-hover-bg: #fff; // 
@@ -530,18 +530,18 @@ The Mohdern theme.
 	@framework-v-gutter: 20px; // Number and unit
 	@fs-base: 13px; // Number and unit
 // logo
-	@colour-logo: #fff; // Colour
-	@colour-logo-hover: #fff; // Colour
-	@logo-position: center; // center, left, right
+	@colour-logo: #000; // Colour
+	@colour-logo-hover: #666; // Colour
+	@logo-position: left; // center, left, right
 	@logo-width: 200px; // Number and unit
 	@logo-height: 52%; // set height as a ratio if width = 200px and height = 100px then this should be 50%
-	@logo-margins: 60px 0 60px; // Number and unit
+	@logo-margins: 0; // Number and unit
 	@logo-case: uppercase; // none, default, capitalize, uppercase, lowercase, initial, inherit
 	@logo-sub-case: none; // none, default, capitalize, uppercase, lowercase, initial, inherit
 	@logo-url: disabled; //  "@{images-url}yourimage.gif", disabled (if using plain text for a logo)
 	@logo-sub: enabled; // enabled, disabled
 		// if disabled
-		@logo-font-size: 56px; // Number and unit
+		@logo-font-size: 48px; // Number and unit
 		@logo-sub-font-size: 16px; // Number and unit
 
 	@images-url: ; // where you save all your images
@@ -594,7 +594,7 @@ The Mohdern theme.
 	@tools-nav-style: dividers; // blocks, dividers
 	@tools-nav-padding: @padding (@padding + 2); // Number and unit
 		// if blocks
-		@tools-nav-border: @border-solid; // Border style
+		@tools-nav-border: none; // Border style
 		// if pipes
 		@vertical-divider: \0020 |; // can be anything for example |, \, >, :, ][
 		// You can use utf8 hexc odes like the following 
@@ -606,8 +606,8 @@ The Mohdern theme.
 // header navigation
 	@has-header-nav: enabled; //disabled, enabled
 	@header-nav-position: full-fluid; // full-fluid, full-equal, center, left, right
-	@header-nav-style: blocks; // blocks, dividers, tabs
-	@header-nav-padding: (@padding + 2) (@padding + 4); // Number and unit
+	@header-nav-style: dividers; // blocks, dividers, tabs
+	@header-nav-padding: (@padding - 2) (@padding + 4); // Number and unit
 		// if blocks
 		@header-nav-border: 1px solid @colour-header-nav-border; // Border style
 
@@ -625,7 +625,7 @@ The Mohdern theme.
 	@side-nav-border: 1px solid @colour-side-nav-border; // Border style
 
 // flyouts
-	@flyouts-width: disabled; // disabled, single, multi, full
+	@flyouts-width: single; // disabled, single, multi, full
 
 // ###############################
 // end navigation.less
@@ -635,9 +635,9 @@ The Mohdern theme.
 // start styles.less
 // ###############################
 	@padding: 12px; // 0 - 9px
-	@border-radius: 5px; // 0 - 9px
-	@border-solid: 1px solid #ccc; //  Border style
-	@border-dotted: 1px dotted #ccc; //  Border style
+	@border-radius: 0; // 0 - 9px
+	@border-solid: 1px solid #000; //  Border style
+	@border-dotted: 1px dotted #000; //  Border style
 	@opacity: 0.8; // Number and unit
 
 // ###############################
@@ -648,27 +648,22 @@ The Mohdern theme.
 // start type.less
 // ###############################
 	// choose font pair from list below or add your own. Delete any that you aren't using.
-	// Raleway & Droid Sans
-		@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
-		@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+	@impact: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	@sans: sans-serif;
 
-	// Ubuntu & Vollkorn
-		@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
-		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700);
-
-	@heading-font-family: Raleway; // Font family name
+	@heading-font-family: @impact; // Font family name
 	@heading-font-weight: 200; // Font weight
 	@heading-alt-font-weight: 300; // Font weight
 	@heading-alt2-font-weight: 400; // Font weight
 
-	@body-font-family: "Droid Sans"; // Font family name
+	@body-font-family: @sans; // Font family name
 	@body-font-weight: 400; // Font weight
 	@body-alt-font-weight: 700; // Font weight
 
-	@nav-font-family: Raleway; // Font family name
+	@nav-font-family: @impact; // Font family name
 	@nav-font-weight: 400; // Font weight
 
-	@logo-font-family: Raleway; // Font family name
+	@logo-font-family: @impact; // Font family name
 	@logo-font-weight: 300; // Font weight
  
 	@text-size: 13px; // Number and unit
@@ -704,4 +699,7 @@ The Mohdern theme.
 	@secondary-colour: #ccc;
 
 
-header nav {border-bottom: 1px solid #000;}
+.header {margin-top: 40px;
+	& .logo span {margin-top: -9px;}
+	& nav {border-bottom: 1px solid #000;}
+}
