@@ -144,32 +144,47 @@ $slug="Forms";
 								</li>
 								<li>
 									<fieldset>
-										<input id="id-11" type="checkbox">
-										<label for="id-11">Checkbox:</label>
-										<input id="id-12" type="checkbox">
-										<label for="id-12">Checkbox:</label>
-										<input id="id-13" type="checkbox">
-										<label for="id-13">Checkbox:</label>
-										<input id="id-14" type="checkbox">
-										<label for="id-14">Checkbox:</label>
-										<input id="id-15" type="checkbox">
-										<label for="id-15">Checkbox:</label>
+										<ol>
+											<li><input id="id-11" type="checkbox">
+												<label for="id-11">Checkbox:</label>
+											</li>
+											<li><input id="id-12" type="checkbox">
+												<label for="id-12">Checkbox:</label>
+											</li>
+											<li><input id="id-13" type="checkbox">
+												<label for="id-13">Checkbox:</label>
+											</li>
+											<li><input id="id-14" type="checkbox">
+												<label for="id-14">Checkbox:</label>
+											</li>
+											<li><input id="id-15" type="checkbox">
+												<label for="id-15">Checkbox:</label>
+											</li>
+											</ol>
 									</fieldset>
 								</li>
 								<li>
 									<fieldset>
-										<input id="id-16" type="radio">
-										<label for="id-16">Radio:</label>
-										<input id="id-17" type="radio">
-										<label for="id-17">Radio:</label>
-										<input id="id-18" type="radio">
-										<label for="id-18">Radio:</label>
-										<input id="id-19" type="radio">
-										<label for="id-19">Radio:</label>
-										<input id="id-20" type="radio">
-										<label for="id-20">Radio:</label>
-										<input id="id-21" type="radio">
-										<label for="id-21">Radio:</label>
+										<ol>
+											<li><input id="id-16" type="radio">
+												<label for="id-16">Radio:</label>
+											</li>
+											<li><input id="id-17" type="radio">
+												<label for="id-17">Radio:</label>
+											</li>
+											<li><input id="id-18" type="radio">
+												<label for="id-18">Radio:</label>
+											</li>
+											<li><input id="id-19" type="radio">
+												<label for="id-19">Radio:</label>
+											</li>
+											<li><input id="id-20" type="radio">
+												<label for="id-20">Radio:</label>
+											</li>
+											<li><input id="id-21" type="radio">
+												<label for="id-21">Radio:</label>
+											</li>
+										</ol>
 									</fieldset>
 								</li>
 							</ol>
