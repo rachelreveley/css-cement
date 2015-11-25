@@ -238,18 +238,17 @@ $slug="Forms";
 							<legend>Directly set field widths.</legend>
 							<ol>
 								<li>
-									<input id="id-31" type="text" class="gs40">
-									<input id="id-32" type="text" class="gs100">
-									<input id="id-33" type="text" class="gs160">
-									<input id="id-34" type="text" class="gs220">
-									<input id="id-35" type="text" class="gs280">
-									<input id="id-36" type="text" class="gs340">
-									<input id="id-37" type="text" class="gs400">
-									<input id="id-38" type="text" class="gs460">
-									<input id="id-39" type="text" class="gs520">
-									<input id="id-40" type="text" class="gs580">
-									<input id="id-41" type="text" class="gs640">
-									<input id="id-42" type="text" class="gs700">
+									<input id="id-31" type="text" class="dt-1-1">
+									<input id="id-32" type="text" class="dt-1-2">
+									<input id="id-33" type="text" class="dt-1-3">
+									<input id="id-34" type="text" class="dt-1-4">
+									<input id="id-35" type="text" class="dt-1-5">
+									<input id="id-36" type="text" class="dt-1-6">
+									<input id="id-37" type="text" class="dt-1-8">
+									<input id="id-38" type="text" class="dt-1-10">
+									<input id="id-39" type="text" class="dt-1-12">
+									<input id="id-40" type="text" class="dt-1-16">
+									<input id="id-41" type="text" class="dt-1-20">
 								</li>
 							</ol>
 						</fieldset>

@@ -11,13 +11,11 @@
 		& .box {border: 0;}
 		& ol li fieldset {display: block; margin-bottom: 15px; width: 100%; border: 0;}
 
-		& ol li,
-		& .gs700 ol li {margin-bottom: 0; padding: 0 0 0 36%; text-indent: -32%; border: 0; float: none; width: 100% !important; font-size: 0; .box-sizing(border-box);
+		& ol li {margin-bottom: 0; padding: 0 0 0 36%; text-indent: -32%; border: 0; float: none; width: 100% !important; font-size: 0; .box-sizing(border-box);
 			& *{text-indent: 0; font-size: @form-font-size; display: inline-block; vertical-align: middle;}
 		}
 
 		& li > textarea,
-		& .gs700 li > textarea,
 		& select[multiple],
 		& select[size]{vertical-align: top;}
 
@@ -49,7 +47,6 @@
 			}
 			&:only-child {width: 150%;}
 			&:last-child {margin-bottom: .5em;}
-			& + textarea.gs700 {margin-left: -56%;}
 		}
 
 // Labels after input such as bolean inputs and erros
@@ -60,7 +57,7 @@
 ///		,
 ///		& .vertical li input ~ label,
 ///		& .vertical li textarea ~ label,
-///		& .vertical li select ~ label 
+///		& .vertical li select ~ label
 		{width: 90%; max-width: none; text-align: left; padding: 0;}
 
 // Notes after inputs
@@ -120,8 +117,6 @@
 		& select,
 		& textarea,
 		& span.readonly {min-width: 160px;}
-		& input.gs40 {min-width: 40px}
-		& input.gs100 {min-width: 100px}
 		& .button {margin-bottom: 10px;}
 
 // Prefixes and separators for currency inputs, dates etc
@@ -192,7 +187,6 @@
 
 // vertical forms
 		& .vertical p {margin-left: 0; max-width: 100%;}
-		& .vertical p + textarea.gs700 {margin-left: 0; width: 97.2222% !important;}
 		& .vertical {
 			& input[type=file]+input[type=file],
 			& buttongroup {margin-left: 0;}
@@ -256,20 +250,7 @@
 		}
 		& .hidden-labels {
 			& label {.hide-text; display: inline-block; margin: 0 !important; padding: 0 !important;}
-			& input {margin-right: 10px; padding-right: 10px;
-				&.gs700 {width:  calc(~"100% - 10px") !important;}
-				&.gs640 {width: calc(~"91.667% - 10px") !important;}
-				&.gs580 {width: calc(~"83.333% - 10px") !important;}
-				&.gs520 {width: calc(~"75% - 10px") !important;}
-				&.gs460 {width: calc(~"66.667% - 10px") !important;}
-				&.gs400 {width: calc(~"58.333% - 10px") !important;}
-				&.gs340 {width: calc(~"50% - 10px") !important;}
-				&.gs280 {width: calc(~"41.667% - 10px") !important;}
-				&.gs220 {width: calc(~"33.333% - 10px") !important;}
-				&.gs160 {width: calc(~"25% - 10px") !important;}
-				&.gs100 {width: calc(~"16.667% - 10px") !important;}
-				&.gs40 {width: calc(~"8.333% - 10px") !important;}
-			}
+			& input {margin-right: 10px; padding-right: 10px;}
 		}
 // override indenting style for inline, vertical and inline-vertical fields as well as nested fieldsets.
 		& fieldset fieldset li,
