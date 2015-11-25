@@ -267,11 +267,11 @@ $slug="Forms";
 								</li>
 								<li>
 									<label for="id-45">Date:</label>
-									<input id="id-45" type="text" class="gs40">
+									<input id="id-45" type="text" class="dt-1-12">
 									<span class="separator">/</span>
-									<input id="id-46" type="text" class="gs40">
+									<input id="id-46" type="text" class="dt-1-12">
 									<span class="separator">/</span>
-									<input id="id-47" type="text" class="gs40">
+									<input id="id-47" type="text" class="dt-1-12">
 								</li>
 							</ol>
 						</fieldset>
@@ -295,7 +295,7 @@ $slug="Forms";
 									<p>
 										<label for="id-50">Sometimes you want a text area with a paragraph of information relating to it. It can still be a label. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</label>
 									</p>
-									<textarea class="gs700" id="id-50"></textarea>
+									<textarea id="id-50"></textarea>
 								</li>
 							</ol>
 						</fieldset>
@@ -306,7 +306,7 @@ $slug="Forms";
 									<p>
 										<label for="id-51">Sometimes you want a text area with a paragraph of information relating to it. It can still be a label. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</label>
 									</p>
-									<textarea class="gs700" id="id-51"></textarea>
+									<textarea id="id-51"></textarea>
 								</li>
 							</ol>
 						</fieldset>
@@ -553,19 +553,19 @@ $slug="Forms";
 							<ol>
 								<li>
 									<label for="id-103">Title:</label>
-									<input id="id-103" type="text" class="gs40" placeholder="Title:">
+									<input id="id-103" type="text" placeholder="Title:">
 								</li>
 								<li>
 									<label for="id-104">First Name:</label>
-									<input id="id-104" type="text" class="gs160" placeholder="First Name:">
+									<input id="id-104" type="text" placeholder="First Name:">
 								</li>
 								<li>
 									<label for="id-105">Last Name:</label>
-									<input id="id-105" type="text" class="gs160" placeholder="Last Name:">
+									<input id="id-105" type="text" placeholder="Last Name:">
 								</li>
 								<li>
 									<label for="id-106">Message:</label>
-									<textarea class="gs400" placeholder="Message:" id="id-106"></textarea>
+									<textarea placeholder="Message:" id="id-106"></textarea>
 								</li>
 								<li class="buttongroup">
 									<input type="button" value="button" class="button">
