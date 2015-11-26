@@ -15,7 +15,7 @@ $slug="The optional grid system";
 						<p>The number of columns can be changed at any time, by setting the class name.</p>
 						<p>The grid has 3 break point sizes, these are roughly desktop, tablet and mobile.</p>
 						<p>The grid's margins and padding are configurable at the same 3 breakpoints above.</p>
-						<p>The grid elements in this page have an additional set of classes called, panel, inner-panel and outer-panel. The are to set the background colours of the panels. You can skip these if you are creating a simple layout or one that doesn't involve recolouring grid elements.</p> 
+						<p>The grid elements in this page have an additional set of classes called, panel, inner-panel and outer-panel. The are to set the background colours of the panels. You can skip these if you are creating a simple layout or one that doesn't involve recolouring grid elements.</p>
 					</div>
 				</div>
 				<div class="parent dt-1-1 tb-1-1 mb-1-1">
@@ -24,7 +24,7 @@ $slug="The optional grid system";
 						<h3>Set the size for all of the columns within the parent element.</h3>
 						<p>This works well for ecommerce sites as yu only have to set the size of the grid once rather than for every child element.</p>
 						<p>You can have as many rows as you want within each grid container so there's no need for counting in order to add wrappers around each row.</p>
-
+						<p>The dt-..., tb-... and mb-... classes set the sizes for desktops, tablets and mobiles respectively.</p>
 <xmp><div class="parent dt-1-4 tb-1-10 mb-1-1">
 	<div>&nbsp;</div>
 	<div>&nbsp;</div>
@@ -135,8 +135,9 @@ $slug="The optional grid system";
 				<div class="parent dt-1-1 tb-1-1 mb-1-1">
 					<div>
 						<h2> Nesting grids</h2>
-						<p>It can be very useful to hae grids nested within grids. It also helps if you can choose whether these should line up with their parent containers or if they should create their own level.</p>
+						<p>It can be very useful to have grids nested within grids. It also helps if you can choose whether these should line up with their parent containers or if they should create their own level.</p>
 						<h3>Invisibly nested grid, when you want your inner grid to line up with the outer grid.</h3>
+						<p>See the nested class in the example below. This alows you to create very complex layouts with multiple levels of nested grids.</p>
 
 <xmp><div class="parent dt-1-2 tb-1-2 mb-1-2 nested">
 	<div>&nbsp;</div>
@@ -173,6 +174,7 @@ $slug="The optional grid system";
 				<div class="parent dt-1-1 tb-1-1 mb-1-1">
 					<div>
 						<h3>Visibly nested grid, when you want your inner grid to be wrapped with a margin.</h3>
+						<p>This is the behaviour I see most commonly in open source grid systems though it makes them less useful for complex layouts.</p>
 
 <xmp><div class="parent dt-1-2 tb-1-2 mb-1-2">
 	<div>&nbsp;</div>
