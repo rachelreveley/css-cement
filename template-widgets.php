@@ -80,7 +80,7 @@ $slug="Widgets";
 					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="chat-boxes">
 						<div>
 							<h2>Chat boxes, messaging or quotes</h2>
-							<p>Comments or live chat can be displayed as speach bubbles.</p>
+							<p>Comments or live chat can be displayed as speach bubbles. They will fit the width of their parent container.</p>
 							<div class="chat">
 								<blockquote>Ah'll learn thi breadcake god's own county.</blockquote>
 								<blockquote>Tha what shu' thi gob.</blockquote>
@@ -113,7 +113,8 @@ $slug="Widgets";
 					<div class="parent dt-1-1 tb-1-1 mb-1-1" id="dialog-boxes">
 						<div>
 							<h2>Dialog boxes</h2>
-							<p><a href="#modal1" id="modal1-call">Sed quis enim nisl</a>. </p> 
+							<p>It is perfectly possible to build a simple dialog box without adding Javascript. It is fully responsive on the fly and includes a clickable grey overall to close the dialog.</p>
+							<p><a href="#modal1" id="modal1-call">Sed quis enim nisl</a>. </p>
 							<div class="modal" id="modal1">
 								<a href="#modal1-call">Close Dialogue</a>
 								<div>
@@ -141,7 +142,7 @@ $slug="Widgets";
 					<div class="parent dt-1-1 tb-1-1 mb-1-1 forum" id="forum-threads">
 						<div>
 							<h2>Forum threads</h2>
-							<p>A clean and simple way to style a user forum.</p>
+							<p>A clean and simple way to mark up a community forum.</p>
 							<div class="thread">
 								<div class="post">
 									<div class="post-head">
@@ -209,7 +210,7 @@ $slug="Widgets";
 						<h2>Gallery</h2>
 						<p>Portfolios, brochures and photo sharing sites can all make use of a gallery feature.</p>
 					<div class="parent dt-1-6 tb-1-6 mb-1-3 gallery" id="gallery">
-						<div> 
+						<div>
 							<a href=""><img src="http://fpoimg.com/200x200?text=1" alt="Alt text here" /></a>
 						</div>
 						<div>
