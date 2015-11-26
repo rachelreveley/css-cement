@@ -17,7 +17,7 @@
 		& .y-axis {display: block; position: absolute;}
 		& .x-axis {bottom: 0; left: @bar-chart-outer-padding;}
 		& .y-axis {.rotate(90deg); top: @bar-chart-outer-padding; left: 0;  .origin(50% 0% 0);}
-		& dl {width: @bar-chart-width; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg; margin: 0 @bar-chart-outer-padding @bar-chart-outer-padding; 	
+		& dl {width: @bar-chart-width; border: @bar-chart-border; background-color: @colour-bar-chart-bg; color: @colour-bar-chart-fg; margin: 0 @bar-chart-outer-padding @bar-chart-outer-padding;
 			.clearfix;
 		}
 		& dt {float: left; clear: left; text-align: right; margin: @bar-chart-bar-margin; padding: @bar-chart-bar-padding;}
@@ -260,7 +260,7 @@
 // Progress-bar
 // -------------------------------
 progress when not (@progress = disabled) {
-	-webkit-appearance: none; border: 0; height: @padding; 
+	-webkit-appearance: none; border: 0; height: @padding;
 	background: @colour-progress-bg;
 	&::-webkit-progress-bar {background: @colour-progress-bg;}
 	&::-moz-progress-bar {background: @colour-progress-fg;}
@@ -400,9 +400,9 @@ table when not (@tables = disabled) {
 		& input[type=radio] {display: none;}
 	}
 	@iterations: @dynamic-tabs-qty;
-	.qtyLoopingClass (@index) when (@index > -1){
+	.qtyLoopingClass (@index) when ((@index > -1)){
 		& input[id="tab-@{index}"]:checked ~ #tabbed-content-@{index} {display: block;}
-		.qtyLoopingClass (@index - 1);
+		.qtyLoopingClass ((@index - 1));
 	}
 	.qtyLoopingClass (@iterations);
 }
