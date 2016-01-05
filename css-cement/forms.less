@@ -11,7 +11,7 @@
 		& .box {border: 0;}
 		& ol li fieldset {display: block; margin-bottom: 15px; width: 100%; border: 0;}
 
-		& ol li {margin-bottom: 0; padding: 0 0 0 36%; text-indent: -32%; border: 0; float: none; width: 100% !important; font-size: 0; .box-sizing(border-box);
+		& ol li {margin-bottom: 0; margin: 0 0 0 36%; text-indent: -32%; border: 0; float: none; font-size: 0; .box-sizing(border-box);
 			& *{text-indent: 0; font-size: @form-font-size; display: inline-block; vertical-align: middle;}
 		}
 
@@ -64,6 +64,7 @@
 		& .note {color: @text6; margin-bottom: 10px; margin-right: 10px;
 			& a:first-child {margin-left: 0 !important;}
 		}
+		& .dropped {display: block;}
 		& .summary {font-size: 13px; font-weight: bold; margin-bottom: 2em!important;}
 
 // Indent buttons
@@ -243,7 +244,7 @@
 		& fieldset fieldset li,
 		& .vertical li,
 		& .inline li,
-		& .inline-vertical li {padding-left: 0 !important; text-indent: 0;
+		& .inline-vertical li {margin-left: 0 !important; text-indent: 0; width: 100%;
 			.box-sizing(border-box);
 			& label:first-child {text-indent: 0;}
 		}
