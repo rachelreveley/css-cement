@@ -190,7 +190,7 @@ $slug="Forms";
 							</ol>
 						</fieldset>
 						<fieldset>
-							<legend>Notes and error messages</legend>
+							<legend>Flexible notes and error messages</legend>
 							<ol>
 								<li>
 									<label for="id-22">Short note:</label>
@@ -231,6 +231,52 @@ $slug="Forms";
 									<label for="id-28">Name:</label>
 									<input id="id-28" type="text" class="error">
 									<label class="error">This is a long error message because you must have really done something very seriously wrong</label>
+								</li>
+							</ol>
+						</fieldset>
+						<fieldset>
+							<legend>Dropped notes and error messages</legend>
+							<p>If you always want your notes to drop below inputs instead of wrapping only when needed then you can add a class of .dropped.</p>
+							<ol>
+								<li>
+									<label for="id-22">Short note:</label>
+									<input id="id-22" type="text">
+									<span class="note dropped">A short note about this field.</span>
+								</li>
+								<li>
+									<label for="id-23">Slightly longer:</label>
+									<input id="id-23" type="text">
+									<span class="note dropped">TSlightly longer note.</span>
+								</li>
+								<li>
+									<label for="id-24">Field with help:</label>
+									<input id="id-24" type="text">
+									<span class="note dropped"><a href="">Help</a></span>
+								</li>
+								<li>
+									<label for="id-25">Long note:</label>
+									<input id="id-25" type="text">
+									<span class="note dropped">Really long note really long note really long note really long note really long note really long note really long note really long note.</span>
+								</li>
+								<li>
+									<label for="id-26">Long note in a P tag:</label>
+									<input id="id-26" type="text">
+									<p><span class="note dropped">Really long note really long note really long note really long note really long note really long note really long note really long note.</span></p>
+								</li>
+							</ol>
+						</fieldset>
+						<fieldset>
+							<legend>Errors</legend>
+							<ol>
+								<li>
+									<label for="id-27" class="required">Name:</label>
+									<input id="id-27" type="text" class="required error">
+									<label class="error dropped">Error message</label>
+								</li>
+								<li>
+									<label for="id-28">Name:</label>
+									<input id="id-28" type="text" class="error">
+									<label class="error dropped">This is a long error message because you must have really done something very seriously wrong</label>
 								</li>
 							</ol>
 						</fieldset>
@@ -436,7 +482,7 @@ $slug="Forms";
 								</li>
 							</ol>
 						</fieldset>
-						
+
 						<fieldset class="inline-vertical">
 							<legend>Inline-vertical forms</legend>
 							<ol>
