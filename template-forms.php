@@ -296,7 +296,7 @@ $slug="Forms";
 							</ol>
 						</fieldset>
 						<fieldset class="inline">
-							<legend>Directly set field widths.</legend>
+							<legend>Directly set field widths (in progress).</legend>
 							<ol>
 								<li>
 									<input id="id-31" type="text" class="dt-1-1">
